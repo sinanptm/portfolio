@@ -18,7 +18,7 @@ export default function ProfileSummary() {
         <CardContent>
           <p className="text-gray-300 leading-relaxed text-lg mb-6">
             Self-taught MERN stack developer passionate about building scalable, efficient applications. 
-            Fascinated by technology from a young age, I've continuously expanded my expertise across 
+            Fascinated by technology from a young age, I&apos;ve continuously expanded my expertise across 
             various tools and frameworks. Committed to improving my skills, writing better code, and 
             delivering impactful solutions.
           </p>
