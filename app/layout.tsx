@@ -1,32 +1,38 @@
 import { Metadata } from "next";
-import localFont from "next/font/local";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { cn } from "@/lib/utils";
 import "../style/globals.css";
 
-const geistSans = localFont({
-  src: "../public/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "../public/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
-  title: "Muhammed Sinan",
-  description: "sinanptm's portfolio",
+  title: "Muhammed Sinan | MERN Stack Developer",
+  description: "Portfolio of Muhammed Sinan, a passionate MERN stack developer building scalable and efficient web applications.",
+  keywords: ["MERN", "Full Stack", "Developer", "React", "Node.js", "MongoDB", "Express.js"],
+  authors: [{ name: "Muhammed Sinan" }],
+  creator: "Muhammed Sinan",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+interface RootLayoutProps {
+  readonly children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
-        {children}
+    <html lang="en" suppressHydrationWarning >
+      <body className={cn("min-h-screen bg-background font-sans antialiased", plusJakartaSans.variable)} suppressHydrationWarning={true} >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+        >
+          <div className="relative flex min-h-screen flex-col">
+            <div className="flex-1">{children}</div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
