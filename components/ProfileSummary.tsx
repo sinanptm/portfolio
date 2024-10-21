@@ -9,6 +9,14 @@ export default function ProfileSummary() {
     visible: { y: 0, opacity: 1 },
   }
 
+  const download = ()=>{
+    const link = document.createElement('a');
+    link.href = 'resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <motion.section className="mb-16" variants={itemVariants}>
       <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-700/50 transition-all duration-300">
@@ -29,7 +37,7 @@ export default function ProfileSummary() {
             <Button variant="outline" className="w-full sm:w-auto text-gray-300 hover:text-purple-400 hover:border-purple-400 transition-all duration-300">
               <Image alt="Phone" width={13} height={13} src={'/assets/phone.svg'} className="mr-2 h-4 w-4" /> +91 8089507749
             </Button>
-            <Button variant="outline" className="w-full sm:w-auto text-gray-300 hover:text-purple-400 hover:border-purple-400 transition-all duration-300">
+            <Button variant="outline" onClick={download} className="w-full sm:w-auto text-gray-300 hover:text-purple-400 hover:border-purple-400 transition-all duration-300">
               <Image alt="Resume" width={13} height={13} src={'/assets/download.svg'} className="mr-2 h-4 w-4" /> Download Resume
             </Button>
           </div>

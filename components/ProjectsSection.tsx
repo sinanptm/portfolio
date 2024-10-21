@@ -12,6 +12,7 @@ const projects = [
     technologies: ["Next.js", "Node.js", "Express.js", "MongoDB", "WebRTC", "WebSocket"],
     liveLink: "http://avm-ayurvedic.online/",
     githubLink: "https://github.com/sinanptm/avm-ayurvedic",
+    demoLink: "https://youtu.be/fpOPtDixtD4",
     achievements: [
       "Optimized the front end for performance, achieving 90+ scores in Google Lighthouse for SEO, accessibility, and page speed.",
       "Implemented real-time video consultations and communication features.",
@@ -46,6 +47,7 @@ const projects = [
     technologies: ["React", "Redux", "Express.js", "Node.js", "MongoDB"],
     liveLink: "https://sahityotsav-manager.onrender.com/",
     githubLink: "https://github.com/sinanptm/Program-manager",
+    demoLink: "https://www.linkedin.com/posts/sinanptm_mern-react-redux-activity-7220717132450254848-7bGb?utm_source=share&utm_medium=member_desktop",
     achievements: [
       "Implemented features for mark lists, team marks, program registrations, and participant management.",
       "Optimized performance with memoization, achieving a 70% boost, and reduced API calls by 80% through smart caching and state management.",
@@ -59,6 +61,7 @@ const projects = [
     technologies: ["NestJS", "MongoDB", "React"],
     liveLink: "https://vercel.com/sinans-projects-8d312afe/url-shortener",
     githubLink: "https://github.com/sinanptm/url-shortener",
+    demoLink:"https://www.linkedin.com/posts/sinanptm_nestjs-typescript-nodejs-activity-7252588020401389568-tyYv?utm_source=share&utm_medium=member_desktop",
     achievements: [
       "Added URL shortening, click tracking, and user authentication with a personalized dashboard.",
       "Gained experience with NestJS, focusing on modular architecture, dependency injection, and JWT authentication."
@@ -70,6 +73,7 @@ const projects = [
     technologies: ["Next.js", "TypeScript", "MongoDB", "Redux", "Express.js", "Node.js"],
     liveLink: "https://quiz-app-six-dusky.vercel.app/",
     githubLink: "https://github.com/sinanptm/Quiz-app",
+    demoLink:"https://www.linkedin.com/posts/sinanptm_nextjs-typescript-cleanarchitecture-activity-7232711700452425729-J_81?utm_source=share&utm_medium=member_desktop",
     achievements: [
       "Integrated tools like Radix UI for accessible components, Redux Toolkit for efficient state management, and Node.js/Express for the backend.",
       "Gained hands-on experience with GitHub workflows and CI, enhancing skills in automated deployment and testing."
@@ -80,6 +84,7 @@ const projects = [
     description: "Developed comprehensive clones of Netflix and OLX using ReactJS and Firebase, ensuring responsive and dynamic user interfaces.",
     technologies: ["React.js", "Firebase", "TMDb API"],
     githubLink: "https://github.com/sinanptm/OLX-clone",
+    demoLink:"https://www.linkedin.com/posts/sinanptm_reactjs-firebase-tmdb-activity-7211610477729054720-nLr1?utm_source=share&utm_medium=member_desktop",
     achievements: [
       "Integrated The Movie Database (TMDb) API for real-time movie data in the Netflix clone.",
       "Implemented secure user authentication with Firebase for both projects.",
