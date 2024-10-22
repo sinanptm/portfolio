@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { Badge } from "./ui/badge";
 
 export default function HeaderSection() {
     const itemVariants = {
@@ -19,6 +20,7 @@ export default function HeaderSection() {
 
     return (
         <motion.header className="text-center mb-16" variants={itemVariants}>
+            <Badge variant={'outline'} className="bg-yellow-950">🚧 Construction in Progress 😊</Badge>
             <h2
                 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-4"
             >
