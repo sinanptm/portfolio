@@ -3,19 +3,17 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ProfileSummary() {
+  const router = useRouter()
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   }
 
   const download = ()=>{
-    const link = document.createElement('a');
-    link.href = 'resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    router.push('/resume.pdf')
   }
 
   return (

@@ -16,19 +16,11 @@ export default function SkillsSection() {
     },
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  };
-
   const Skills = useMemo(()=>{
     return skills.map((skill, index) => (
-      <motion.div key={index} variants={itemVariants}>
+      <div key={index}>
         <img src={skill.url} alt={skill.name} className="h-6" />
-      </motion.div>
+      </div>
     ))
   },skills)
 
