@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 import "../style/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -30,7 +31,10 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
           defaultTheme="dark"
         >
           <div className="relative flex min-h-screen flex-col">
-            <div className="flex-1">{children}</div>
+            <div className="flex-1">
+              {children}
+              <Analytics debug={false} />
+              </div>
           </div>
         </ThemeProvider>
       </body>
