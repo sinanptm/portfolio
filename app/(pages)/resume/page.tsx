@@ -1,6 +1,13 @@
+import PdfViewer from '@/components/ui/pdfViewer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata ={
+  description:"Muhammed sinan's resume"
+}
+
 const page = () => {
   return (
-    <div>page</div>
+    <PdfViewer url='/resume.pdf' />
   )
 }
 

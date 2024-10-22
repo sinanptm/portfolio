@@ -1,23 +1,13 @@
-'use client';
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link"; 
 
 export default function ProfileSummary() {
-  const router = useRouter()
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
-  }
 
-  const download = ()=>{
-    router.push('/resume.pdf')
-  }
 
   return (
-    <motion.section className="mb-16" variants={itemVariants}>
+    <section className="mb-16">
       <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-700/50 transition-all duration-300">
         <CardHeader>
           <CardTitle className="text-3xl text-purple-400">Profile Summary</CardTitle>
@@ -30,18 +20,27 @@ export default function ProfileSummary() {
             delivering impactful solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-between gap-4">
-            <Button variant="outline" className="w-full sm:w-auto text-gray-300 hover:text-purple-400 hover:border-purple-400 transition-all duration-300">
-              <Image alt="Email" width={13} height={13} src={'/assets/email.svg'} className="mr-2 h-4 w-4" /> muhammedsinan0549@gmail.com
-            </Button>
-            <Button variant="outline" className="w-full sm:w-auto text-gray-300 hover:text-purple-400 hover:border-purple-400 transition-all duration-300">
-              <Image alt="Phone" width={13} height={13} src={'/assets/phone.svg'} className="mr-2 h-4 w-4" /> +91 8089507749
-            </Button>
-            <Button variant="outline" onClick={download} className="w-full sm:w-auto text-gray-300 hover:text-purple-400 hover:border-purple-400 transition-all duration-300">
-              <Image alt="Resume" width={13} height={13} src={'/assets/download.svg'} className="mr-2 h-4 w-4" /> Download Resume
-            </Button>
+            <Link href="mailto:muhammedsinan0549@gmail.com">
+              <Button variant="outline" className="w-full sm:w-auto text-gray-300 hover:text-purple-400 hover:border-purple-400 transition-all duration-300">
+                <Image alt="Email" width={13} height={13} src={'/assets/email.svg'} className="mr-2 h-4 w-4" /> 
+                muhammedsinan0549@gmail.com
+              </Button>
+            </Link>
+            <Link href="tel:+918089507749">
+              <Button variant="outline" className="w-full sm:w-auto text-gray-300 hover:text-purple-400 hover:border-purple-400 transition-all duration-300">
+                <Image alt="Phone" width={13} height={13} src={'/assets/phone.svg'} className="mr-2 h-4 w-4" /> 
+                +91 8089507749
+              </Button>
+            </Link>
+            <Link href="/resume">
+              <Button variant="outline" className="w-full sm:w-auto text-gray-300 hover:text-purple-400 hover:border-purple-400 transition-all duration-300">
+                <Image alt="Resume" width={13} height={13} src={'/assets/download.svg'} className="mr-2 h-4 w-4" /> 
+                Download Resume
+              </Button>
+            </Link>
           </div>
         </CardContent>
       </Card>
-    </motion.section>
-  )
+    </section>
+  );
 }

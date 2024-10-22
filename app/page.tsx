@@ -1,8 +1,7 @@
 import HeaderSection from "@/components/HeaderSection"
 import ProfileSummary from "@/components/ProfileSummary"
 import SkillsSection from "@/components/SkillsSection"
-import ProjectsSection from "@/components/ProjectsSection";
-import Footer from "@/components/FooterSection";
+// import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Portfolio() {
   return (
@@ -10,8 +9,7 @@ export default function Portfolio() {
         <HeaderSection />
         <ProfileSummary />
         <SkillsSection />
-        <ProjectsSection />
-        <Footer />
+        {/* <ProjectsSection /> */}
     </div>
   )
 }
