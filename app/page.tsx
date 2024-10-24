@@ -1,5 +1,5 @@
 import About from '@/components/About';
-import StarsCanvas from '@/components/canvas/Stars';
+import StarsCanvas from '@/components/3D/Stars';
 import Contact from '@/components/Contact';
 import Experience from '@/components/Experience';
 import Feedbacks from '@/components/Feedbacks';
