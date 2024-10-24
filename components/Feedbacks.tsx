@@ -1,3 +1,4 @@
+import { memo } from "react";
 
 
 const Feedbacks = () => {
@@ -6,4 +7,4 @@ const Feedbacks = () => {
   )
 }
 
-export default Feedbacks
+export default memo(Feedbacks)

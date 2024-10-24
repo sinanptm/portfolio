@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import ThemeProvider from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 import "../style/globals.css";
 import { Analytics } from "@vercel/analytics/react";

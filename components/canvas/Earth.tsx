@@ -1,3 +1,4 @@
+import { memo } from "react";
 
 
 const Earth = () => {
@@ -6,4 +7,4 @@ const Earth = () => {
   )
 }
 
-export default Earth
+export default memo(Earth);

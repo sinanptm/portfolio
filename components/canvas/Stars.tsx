@@ -1,4 +1,4 @@
-
+import { memo } from "react";
 
 const Stars = () => {
   return (
@@ -6,4 +6,4 @@ const Stars = () => {
   )
 }
 
-export default Stars
+export default memo(Stars);

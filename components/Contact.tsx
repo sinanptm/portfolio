@@ -1,3 +1,4 @@
+import { memo } from "react";
 
 
 const Contact = () => {
@@ -6,4 +7,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default memo(Contact)

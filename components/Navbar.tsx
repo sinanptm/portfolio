@@ -1,3 +1,4 @@
+import { memo } from "react";
 
 
 const Navbar = () => {
@@ -6,4 +7,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar;
+export default memo(Navbar);

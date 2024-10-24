@@ -1,3 +1,4 @@
+import { memo } from "react";
 
 
 const Ball = () => {
@@ -6,4 +7,4 @@ const Ball = () => {
   )
 }
 
-export default Ball
+export default memo(Ball);

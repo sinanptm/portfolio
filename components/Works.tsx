@@ -1,3 +1,4 @@
+import { memo } from "react";
 
 
 const Works = () => {
@@ -6,4 +7,4 @@ const Works = () => {
   )
 }
 
-export default Works
+export default memo(Works)

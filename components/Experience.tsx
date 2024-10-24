@@ -1,3 +1,4 @@
+import { memo } from "react";
 
 
 const Experience = () => {
@@ -6,4 +7,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default memo(Experience)

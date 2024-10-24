@@ -6,8 +6,9 @@ import Feedbacks from '@/components/Feedbacks';
 import Hero from '@/components/Hero';
 import Tech from '@/components/Tech';
 import Works from '@/components/Works';
+import { memo } from 'react';
 
-export default function Portfolio() {
+const page = () => {
   return (
     <>
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
@@ -25,3 +26,5 @@ export default function Portfolio() {
     </>
   );
 }
+
+export default memo(page);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 
 
 const Computers = () => {
@@ -6,4 +7,4 @@ const Computers = () => {
   )
 }
 
-export default Computers
+export default memo(Computers);
