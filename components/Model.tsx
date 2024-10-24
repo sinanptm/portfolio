@@ -10,7 +10,7 @@ export default function Model() {
   const { scene } = useGLTF("/robot.glb");
   const scroll = useScroll();
 
-  useFrame((state, delta) => {
+  useFrame((state) => {
     if (group.current) {
       const offset = scroll.offset;
       
