@@ -22,10 +22,9 @@ export default function SkillsSection() {
 
   return (
     <section className="mb-16">
-      <h2 className="text-3xl font-semibold text-purple-400 mb-6">Technical Skills</h2>
-      <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-700/50 transition-all duration-300">
+      <Card className="bg-transparent border-none">
         <CardHeader>
-          <CardTitle className="text-xl text-purple-400">Skills & Technologies</CardTitle>
+          <CardTitle className="text-xl text-purple-400">Technologies</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap gap-2">

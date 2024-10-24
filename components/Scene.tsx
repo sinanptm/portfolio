@@ -1,13 +1,13 @@
 "use client"
 
-import { Canvas } from "@react-three/fiber"
-import Model from "./Model"
-import { Suspense } from "react"
-import { useProgress, Html, ScrollControls, Scroll, OrbitControls } from "@react-three/drei"
+import { Canvas } from "@react-three/fiber";
+import Model from "./Model";
+import { Suspense } from "react";
+import { useProgress, Html, OrbitControls } from "@react-three/drei";
 
 function Loader() {
-  const { progress } = useProgress()
-  return <Html center>{progress.toFixed(1)} % loaded</Html>
+  const { progress } = useProgress();
+  return <Html center>{progress.toFixed(1)} % loaded</Html>;
 }
 
 export default function Scene() {
@@ -25,13 +25,9 @@ export default function Scene() {
       <directionalLight position={[-5, 5, 5]} intensity={1} />
       <ambientLight intensity={0.5} />
       <Suspense fallback={<Loader />}>
-        <ScrollControls damping={0.5} pages={3} distance={1}>
-          <Scroll>
-            <Model />
-          </Scroll>
-        </ScrollControls>
+        <Model />
       </Suspense>
       <OrbitControls enableZoom={false} enablePan={false} />
     </Canvas>
-  )
+  );
 }
