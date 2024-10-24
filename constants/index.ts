@@ -1,3 +1,19 @@
+export  const socialLinks = [
+    { image: '/assets/linkedin.svg', href: 'https://www.linkedin.com/in/sinanptm/', label: 'LinkedIn' },
+    { image: '/assets/github.svg', href: 'https://github.com/sinanptm/', label: 'GitHub' },
+    { image: '/assets/instagram.svg', href: 'https://www.instagram.com/si_an_z/', label: 'Instagram' },
+    { image: '/assets/stackoverflow.svg', href: 'https://stackoverflow.com/users/25472984/sinan', label: 'Stack Overflow' },
+];
+
+export const profile = {
+    summary: ` Self-taught MERN stack developer passionate about building scalable, efficient applications. 
+              Fascinated by technology from a young age, I&apos;ve continuously expanded my expertise across 
+              various tools and frameworks. Committed to improving my skills, writing better code, and 
+              delivering impactful solutions.`,
+    email:'muhammedsinan0549@gmail.com',
+    phone:"+91 8089507749"
+  };
+
 export const projects = [
     {
         title: "AVM Ayurvedic: Hospital Management",
