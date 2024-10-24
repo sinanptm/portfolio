@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 import "../style/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import Navbar from "@/components/Navbar";
+
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -24,12 +26,13 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn("bg-background font-sans antialiased", plusJakartaSans.variable)} suppressHydrationWarning={true}>
+    <html lang="en" suppressHydrationWarning >
+      <body className={cn("bg-background font-sans antialiased relative z-0", plusJakartaSans.variable)} suppressHydrationWarning={true}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
         >
+          <Navbar />
           {children}
           <Analytics debug={false} />
         </ThemeProvider>
