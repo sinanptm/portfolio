@@ -6,7 +6,7 @@ const useScreen = () => {
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 500px)");
         setIsMobile(mediaQuery.matches);
-        const handleMediaQueryChange = (event: any) => setIsMobile(event.matches);
+        const handleMediaQueryChange = (event:MediaQueryListEvent ) => setIsMobile(event.matches);
         mediaQuery.addEventListener("change", handleMediaQueryChange);
         return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
     }, [setIsMobile]);
