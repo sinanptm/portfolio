@@ -2,6 +2,38 @@
 
 import { memo } from "react"
 import ComputersCanvas from "./3D/ComputerCanvas"
+import { TypewriterEffect } from "./ui/typewriter-effect";
+
+const words = [
+  {
+    text:"I",
+  },
+  {
+    text:"Build",
+  },
+  {
+    text:"Awesome",
+  },
+  {
+    text:"Applications",
+  },
+  {
+    text:"Using",
+  },
+  {
+    text:"Mern",
+    className:"text-violet-600"
+  },
+  {
+    text:"Stack",
+  },
+  {
+    text:"And",
+  },
+  {
+    text:"Next.JS",
+  },
+]
 
 const Hero = () => {
   return (
@@ -16,9 +48,7 @@ const Hero = () => {
           <h1 className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}>
             Hi, I'm <span className="text-violet-600">Muhammed Sinan</span>
           </h1>
-          <p className={`text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2 text-white-100`}>
-            I am MERN Stack Developer <br className="sm:block hidden" /> I Build Full-Stack Web Applications with the MERN Stack
-          </p>
+          <TypewriterEffect words={words} />
         </div>
       </div>
       
