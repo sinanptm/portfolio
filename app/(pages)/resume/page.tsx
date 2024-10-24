@@ -7,7 +7,7 @@ export const metadata: Metadata ={
 
 const page = () => {
   return (
-    <PdfViewer url='/resume.pdf' />
+    <PdfViewer url='/assets/resume.pdf' />
   )
 }
 
