@@ -9,7 +9,7 @@ const useScreen = () => {
         const handleMediaQueryChange = (event: any) => setIsMobile(event.matches);
         mediaQuery.addEventListener("change", handleMediaQueryChange);
         return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    });
+    }, [setIsMobile]);
 
     return { isMobile };
 };

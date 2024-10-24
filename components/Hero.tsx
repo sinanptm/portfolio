@@ -46,7 +46,7 @@ const Hero = () => {
 
         <div>
           <h1 className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}>
-            Hi, I'm <span className="text-violet-600">Muhammed Sinan</span>
+            Hi, I&apos;m <span className="text-violet-600">Muhammed Sinan</span>
           </h1>
           <TypewriterEffect words={words} />
         </div>
