@@ -3,18 +3,17 @@ import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { Group } from "three";
 
-useGLTF.preload("/robot.glb");
 
-export default function Model() {
+export default function Model({ src }: { src: string; }) {
+  useGLTF.preload(src);
   const group = useRef<Group>(null);
-  const { scene } = useGLTF("/robot.glb");
+  const { scene } = useGLTF(src);
 
   useFrame((state) => {
     if (group.current) {
-      
+
       group.current.rotation.y += 0.01;
-      
-      
+
       const breathingScale = 1 + Math.sin(state.clock.elapsedTime * 2) * 0.02;
       group.current.scale.setScalar(breathingScale);
     }

@@ -4,16 +4,15 @@ const Scene = dynamic(() => import('@/components/Scene'), { ssr: false });
 
 interface ModelSceneBackgroundProps {
   children: ReactNode;
+  src:string;
 }
 
-const ModelSceneBackground: React.FC<ModelSceneBackgroundProps> = ({ children }) => {
+const ModelSceneBackground: React.FC<ModelSceneBackgroundProps> = ({ children, src }) => {
   return (
-    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
-      
+    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>  
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}>
-        <Scene  />
+        <Scene src={src} />
       </div>
-
       <main style={{ position: 'relative', zIndex: 1 }}>
         {children}
       </main>

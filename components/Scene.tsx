@@ -10,7 +10,7 @@ function Loader() {
   return <Html center>{progress.toFixed(1)} % loaded</Html>;
 }
 
-export default function Scene() {
+export default function Scene({src}:{src:string}) {
   return (
     <Canvas
       style={{
@@ -25,7 +25,7 @@ export default function Scene() {
       <directionalLight position={[-5, 5, 5]} intensity={1} />
       <ambientLight intensity={0.5} />
       <Suspense fallback={<Loader />}>
-        <Model />
+        <Model src={src} />
       </Suspense>
       <OrbitControls enableZoom={false} enablePan={false} />
     </Canvas>

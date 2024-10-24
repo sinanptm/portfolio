@@ -24,7 +24,7 @@ export default function SkillsSection() {
     <section className="mb-16">
       <Card className="bg-transparent border-none">
         <CardHeader>
-          <CardTitle className="text-xl text-purple-400">Technologies</CardTitle>
+          <CardTitle className="text-xl text-purple-400">Skills</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap gap-2">

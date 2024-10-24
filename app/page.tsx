@@ -6,7 +6,7 @@ import ModelSceneBackground from "@/components/ModelSceneBackground";
 export default function Portfolio() {
   return (
     <div className="h-[300vh] remove-scrollbar overflow-hidden">
-      <ModelSceneBackground>
+      <ModelSceneBackground src="/model/robot.glb">
         <HeaderSection />
         <SkillsSection />
       </ModelSceneBackground>
