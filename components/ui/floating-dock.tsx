@@ -48,13 +48,15 @@ const FloatingDock = ({
   return (
     <motion.div
       className={cn(
-        "fixed right-4 top-1/2 -translate-y-1/2 z-[9999] flex flex-col gap-4 pointer-events-none",
+        "fixed right-4 top-1/2 -translate-y-1/2 z-[9999] ",
         className
       )}
     >
+      <div className="flex flex-col gap-4 pointer-events-none">
       {items.map((item) => (
         <IconContainer mouseY={mouseY} key={item.title} {...item} />
       ))}
+      </div>
     </motion.div>
   )
 }

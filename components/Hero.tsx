@@ -9,14 +9,15 @@ const ComputerCanvas = dynamic(() => import('./3D/ComputerCanvas'), { ssr: false
 
 const words = [
   { text: "I" },
-  { text: "Craft" },
+  { text: "Build" },
   { text: "Innovative", },
   { text: "Digital", },
-  { text: "Experiences", },
+  { text: "Solutions", },
   { text: "With", },
   { text: "Precision" },
   { text: "And" },
   { text: "Passion" },
+  { text: "!" },
 ];
 
 const Hero = () => {

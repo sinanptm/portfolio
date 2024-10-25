@@ -15,8 +15,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: "Muhammed Sinan | MERN Stack Developer",
-  description: "Portfolio of Muhammed Sinan, a passionate MERN stack developer building scalable and efficient web applications.",
-  keywords: ["MERN", "Full Stack", "Developer", "React", "Node.js", "MongoDB", "Express.js"],
+  description: "Portfolio of Muhammed Sinan (sinanptm), a passionate MERN stack developer building scalable and efficient web applications.",
+  keywords: ["MERN", "Full Stack", "Developer", "React", "Node.js", "MongoDB", "Express.js", "MERN Stack Developer", "Muhammed Sinan", "sinanptm","portfolio", "Nextjs portfolio"],
   authors: [{ name: "Muhammed Sinan" }],
   creator: "Muhammed Sinan",
 };

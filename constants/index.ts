@@ -14,6 +14,17 @@ export const profile = {
     phone:"+91 8089507749"
   };
 
+export const navLinks = [
+    { title: "Home", icon: "/assets/home.svg", href: "/" },
+    { title: "GitHub", icon: "/assets/social/github.svg", href: "https://github.com/sinanptm" },
+    { title: "LinkedIn", icon: "/assets/social/linkedin.svg", href: "https://www.linkedin.com/in/sinanptm" },
+    { title: "Resume", icon: "/assets/social/resume.svg", href: "/resume" },
+    { title: "Instagram", icon: "/assets/social/instagram.svg", href: "https://www.instagram.com/si_an_z" },
+    { title: "Email", icon: "/assets/social/email.svg", href: "mailto:muhammedsinan0549@gmail.com" },
+    { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+918089507749" },
+  ];
+  
+
 export const projects = [
     {
         title: "Trends: E-commerce Store",
