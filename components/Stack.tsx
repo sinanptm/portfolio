@@ -1,5 +1,5 @@
-import Image from "next/image";
-import CardSpotlight from "./ui/card-spotlight";
+import Image from "next/image"
+import CardSpotlight from "./ui/card-spotlight"
 
 const technologies = [
   { name: "ReactJS", src: "/assets/tech/react.svg" },
@@ -8,11 +8,11 @@ const technologies = [
   { name: "MongoDB", src: "/assets/tech/mongodb.svg" },
   { name: "NextJS", src: "/assets/tech/nextjs.svg" },
   { name: "NestJS", src: "/assets/tech/nestjs.svg" },
-];
+]
 
 const Stack = () => {
   return (
-    <section className="relative w-full min-h-screen mx-auto sm:px-16 px-6">
+    <section id="stack-section" className="relative w-full min-h-screen mx-auto sm:px-16 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-white mb-8">My Tech Stack</h2>
         <p className="text-xl text-center text-gray-300 mb-12">
@@ -20,7 +20,7 @@ const Stack = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech) => (
-            <CardSpotlight key={tech.name} className="h-64 flex flex-col items-center justify-center" >
+            <CardSpotlight key={tech.name} className="h-64 flex flex-col items-center justify-center">
               <div className="text-white mb-4">
                 <Image
                   alt={tech.name}
@@ -36,7 +36,7 @@ const Stack = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Stack;
+export default Stack
