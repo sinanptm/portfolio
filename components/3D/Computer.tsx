@@ -2,9 +2,10 @@
 import { useRef, useEffect, useMemo, FC, memo } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import type { Group } from 'three';
+import { Mesh, type Group, type Object3D } from 'three';
 import type { SpotLightProps } from '@react-three/fiber';
 import useScreen from "@/lib/useScreen";
+
 
 const MODEL_PATH = "/desktop/scene.gltf";
 useGLTF.preload(MODEL_PATH);
@@ -45,19 +46,26 @@ const Computers: FC = () => {
     }
   });
 
-  useEffect(() => {
-    const scene = computer?.scene;
-    return () => {
-      scene?.traverse((object: any) => {
-        if (object.material && (object.material).dispose) {
-          (object.material).dispose();
+ 
+useEffect(() => {
+  const scene = computer?.scene;
+  return () => {
+    scene?.traverse((object: Object3D) => {
+      if (object instanceof Mesh) {
+        if (object.material) {
+          if (Array.isArray(object.material)) {
+            object.material.forEach(material => material?.dispose?.());
+          } else {
+            object.material.dispose();
+          }
         }
-        if (object.geometry && (object.geometry).dispose) {
-          (object.geometry).dispose();
+        if (object.geometry) {
+          object.geometry.dispose();
         }
-      });
-    };
-  }, [computer]);
+      }
+    });
+  };
+}, [computer]);
 
   return (
     <group ref={meshRef}>

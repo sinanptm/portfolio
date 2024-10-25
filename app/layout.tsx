@@ -28,7 +28,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en" suppressHydrationWarning >
-      <body className={cn("bg-background font-sans antialiased relative z-0", plusJakartaSans.variable)} suppressHydrationWarning={true}>
+      <body className={cn("bg-background font-sans antialiased relative z-0  remove-scrollbar", plusJakartaSans.variable)} suppressHydrationWarning={true}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
