@@ -1,4 +1,4 @@
-import About from '@/components/About';
+import Stack from '@/components/Stack';
 // import StarsCanvas from '@/components/3D/Stars';
 import Contact from '@/components/Contact';
 import Experience from '@/components/Experience';
@@ -14,7 +14,7 @@ const page = () => {
       <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
         <Hero />
       </div>
-      <About />
+      <Stack />
       <Experience />
       <Tech />
       <Works />

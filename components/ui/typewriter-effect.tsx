@@ -32,11 +32,10 @@ export const TypewriterEffect = ({
         "span",
         {
           display: "inline-block",
-          opacity: 1,
+          opacity: 4,
           width: "fit-content",
         },
         {
-          duration: 0.3,
           delay: stagger(0.1),
           ease: "easeInOut",
         }
