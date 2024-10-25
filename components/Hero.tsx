@@ -18,7 +18,7 @@ const words = [
     text: "Applications",
   },
   {
-    text: "Using",
+    text: "In",
   },
   {
     text: "Mern",
