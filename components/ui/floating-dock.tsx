@@ -10,7 +10,7 @@ import {
 } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
-import { useRef, useState, useCallback, useEffect } from "react"
+import { useRef, useState, useCallback, useEffect, memo } from "react"
 
 type FloatingDockItem = {
   title: string
@@ -18,7 +18,7 @@ type FloatingDockItem = {
   href: string
 }
 
-const SimplifiedFloatingDock = ({
+const FloatingDock = ({
   items,
   className,
 }: {
@@ -140,4 +140,4 @@ const IconContainer = ({
   )
 }
 
-export default SimplifiedFloatingDock
+export default memo(FloatingDock);

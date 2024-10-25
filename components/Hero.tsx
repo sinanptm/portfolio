@@ -8,31 +8,15 @@ import dynamic from "next/dynamic";
 const ComputerCanvas = dynamic(() => import('./3D/ComputerCanvas'), { ssr: false });
 
 const words = [
-  {
-    text: "Crafting",
-  },
-  {
-    text: "Innovative",
-  },
-  {
-    text: "Digital",
-  },
-  {
-    text: "Experiences",
-  },
-  {
-    text: "With",
-  },
-  {
-    text: "Precision",
-    className: "text-violet-600"
-  },
-  {
-    text: "And",
-  },
-  {
-    text: "Passion",
-  },
+  { text: "I" },
+  { text: "Craft" },
+  { text: "Innovative", },
+  { text: "Digital", },
+  { text: "Experiences", },
+  { text: "With", },
+  { text: "Precision" },
+  { text: "And" },
+  { text: "Passion" },
 ];
 
 const Hero = () => {

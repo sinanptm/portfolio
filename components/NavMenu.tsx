@@ -1,6 +1,6 @@
 'use client';
 
-import SimplifiedFloatingDock from '@/components/ui/floating-dock';
+import FloatingDock from '@/components/ui/floating-dock';
 import { memo } from 'react';
 
 const links = [
@@ -14,7 +14,7 @@ const links = [
 
 const NavMenu = () => {
   return (
-    <SimplifiedFloatingDock items={links} />
+    <FloatingDock items={links} />
   );
 };
 
