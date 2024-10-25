@@ -1,25 +1,25 @@
 'use client';
-import React, { Suspense, useState, useEffect } from "react";
+import { Suspense, useState, useEffect, FC, memo } from "react";
 import dynamic from 'next/dynamic';
 import { Canvas, GroupProps } from "@react-three/fiber";
 import { OrbitControls, Preload } from "@react-three/drei";
-import CanvasLoader from "../CanvasLoader";
+import CanvasLoader from "./CanvasLoader";
 
 const Computers = dynamic<GroupProps>(() => import('./Computer').then(mod => mod.default),
-  { 
-    ssr: false, 
+  {
+    ssr: false,
     loading: () => <CanvasLoader />
   }
 );
 
-const ComputersCanvas: React.FC = () => {
+const ComputersCanvas: FC = () => {
   const [cameraSettings] = useState({
     position: [20, 3, 5] as [number, number, number],
     fov: 25,
   });
 
   const [size, setSize] = useState({ width: 0, height: 0 });
-  
+
   useEffect(() => {
     const handleResize = () => {
       setSize({
@@ -54,17 +54,17 @@ const ComputersCanvas: React.FC = () => {
     <Canvas
       frameloop="demand"
       shadows
-      dpr={[1, Math.min(2, window.devicePixelRatio)]} 
+      dpr={[1, Math.min(2, window.devicePixelRatio)]}
       camera={cameraSettings}
       gl={{
         preserveDrawingBuffer: true,
-        antialias: false, 
+        antialias: false,
         powerPreference: "high-performance",
       }}
       className="w-full h-full"
-      style={{ 
-        width: size.width, 
-        height: size.height 
+      style={{
+        width: size.width,
+        height: size.height
       }}
       performance={{ min: 0.5 }}
     >
@@ -77,4 +77,4 @@ const ComputersCanvas: React.FC = () => {
   );
 };
 
-export default React.memo(ComputersCanvas);
+export default memo(ComputersCanvas);

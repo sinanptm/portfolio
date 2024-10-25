@@ -5,7 +5,7 @@ import { TypewriterEffect } from "./ui/typewriter-effect";
 import { motion } from 'framer-motion';
 import useScreen from "@/lib/useScreen";
 import dynamic from "next/dynamic";
-const ComputerCanvas = dynamic(() => import('./3D/computer/ComputerCanvas'), { ssr: false });
+const ComputerCanvas = dynamic(() => import('./3D/ComputerCanvas'), { ssr: false });
 
 const words = [
   {
