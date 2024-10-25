@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import "../style/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
+import NavMenu from "@/components/NavMenu";
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
           attribute="class"
           defaultTheme="dark"
         >
+          <NavMenu />
           <HeroHighlight>
             {children}
           </HeroHighlight>
