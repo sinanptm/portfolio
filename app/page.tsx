@@ -7,6 +7,7 @@ import Hero from '@/components/Hero';
 import Tech from '@/components/Tech';
 import Works from '@/components/Works';
 import { memo } from 'react';
+import Projects from '@/components/Projects';
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
         <Hero />
       </div>
       <Stack />
+      <Projects />
       <Experience />
       <Tech />
       <Works />

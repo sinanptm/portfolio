@@ -16,26 +16,11 @@ export const profile = {
 
 export const projects = [
     {
-        title: "AVM Ayurvedic: Hospital Management",
-        description: "A wellness platform with AI-powered health insights and Ayurvedic consultations, featuring video calls, smart booking, and secure payments.",
-        technologies: ["Next.js", "Node.js", "Express.js", "MongoDB", "WebRTC", "WebSocket"],
-        liveLink: "http://avm-ayurvedic.online/",
-        githubLink: "https://github.com/sinanptm/avm-ayurvedic",
-        demoLink: "https://youtu.be/fpOPtDixtD4",
-        achievements: [
-            "Optimized the front end for performance, achieving 90+ scores in Google Lighthouse for SEO, accessibility, and page speed.",
-            "Implemented real-time video consultations and communication features.",
-            "Architected the backend using Node.js, Express.js, and MongoDB hosted on AWS, ensuring scalability and secure data handling.",
-            "Followed clean architecture and SOLID principles for maintainable, modular code, with robust error logging via Winston.",
-            "Deployed the platform using Vercel, managing CI/CD pipelines with GitHub Actions for automated testing and deployment workflows.",
-            "Implemented Role-Based Authorization, ensuring secure access management and differentiated user permissions for various platform features."
-        ]
-    },
-    {
         title: "Trends: E-commerce Store",
         description: "A full-featured e-commerce platform with secure authentication, dynamic product management, and integrated payment systems.",
         technologies: ["Node.js", "Express.js", "MongoDB", "EJS", "Razorpay"],
-        liveLink: "https://trendsonline.online/",
+        link: "https://trendsonline.online/",
+        thumbnail:"/assets/projects/trends.png",
         githubLink: "https://github.com/sinanptm/ecommerse-project",
         demoLink: "https://youtu.be/8w6HqmgeDcA",
         features: [
@@ -51,12 +36,30 @@ export const projects = [
         ]
     },
     {
+        title: "AVM Ayurvedic: Hospital Management",
+        description: "A wellness platform with AI-powered health insights and Ayurvedic consultations, featuring video calls, smart booking, and secure payments.",
+        technologies: ["Next.js", "Node.js", "Express.js", "MongoDB", "WebRTC", "WebSocket"],
+        link: "http://avm-ayurvedic.online",
+        githubLink: "https://github.com/sinanptm/avm-ayurvedic",
+        thumbnail:"/assets/projects/avm.png",
+        demoLink: "https://youtu.be/fpOPtDixtD4",
+        achievements: [
+            "Optimized the front end for performance, achieving 90+ scores in Google Lighthouse for SEO, accessibility, and page speed.",
+            "Implemented real-time video consultations and communication features.",
+            "Architected the backend using Node.js, Express.js, and MongoDB hosted on AWS, ensuring scalability and secure data handling.",
+            "Followed clean architecture and SOLID principles for maintainable, modular code, with robust error logging via Winston.",
+            "Deployed the platform using Vercel, managing CI/CD pipelines with GitHub Actions for automated testing and deployment workflows.",
+            "Implemented Role-Based Authorization, ensuring secure access management and differentiated user permissions for various platform features."
+        ]
+    },
+    {
         title: "Sahithyolsav Manager",
         description: "A program management application for the SSF Kerala community, built using the MERN stack within three days.",
         technologies: ["React", "Redux", "Express.js", "Node.js", "MongoDB"],
-        liveLink: "https://sahityotsav-manager.onrender.com/",
+        link: "https://sahityotsav-manager.onrender.com/",
         githubLink: "https://github.com/sinanptm/Program-manager",
         demoLink: "https://www.linkedin.com/posts/sinanptm_mern-react-redux-activity-7220717132450254848-7bGb?utm_source=share&utm_medium=member_desktop",
+        thumbnail:"/assets/projects/program-manager.png",
         achievements: [
             "Implemented features for mark lists, team marks, program registrations, and participant management.",
             "Optimized performance with memoization, achieving a 70% boost, and reduced API calls by 80% through smart caching and state management.",
@@ -68,9 +71,10 @@ export const projects = [
         title: "URL Shortener",
         description: "Developed a URL shortener with the MERN stack and NestJS backend for efficient server-side operations.",
         technologies: ["NestJS", "MongoDB", "React"],
-        liveLink: "https://vercel.com/sinans-projects-8d312afe/url-shortener",
+        link: "https://url-shortener-sooty-five.vercel.app/",
         githubLink: "https://github.com/sinanptm/url-shortener",
         demoLink: "https://www.linkedin.com/posts/sinanptm_nestjs-typescript-nodejs-activity-7252588020401389568-tyYv?utm_source=share&utm_medium=member_desktop",
+        thumbnail:"/assets/projects/url-shortener.png",
         achievements: [
             "Added URL shortening, click tracking, and user authentication with a personalized dashboard.",
             "Gained experience with NestJS, focusing on modular architecture, dependency injection, and JWT authentication."
@@ -80,7 +84,8 @@ export const projects = [
         title: "Ace-Quiz: Quiz App",
         description: "A quiz application built using Next.js, TypeScript, and Clean Architecture, focusing on a scalable and maintainable codebase.",
         technologies: ["Next.js", "TypeScript", "MongoDB", "Redux", "Express.js", "Node.js"],
-        liveLink: "https://quiz-app-six-dusky.vercel.app/",
+        link: "https://quiz-app-six-dusky.vercel.app/",
+        thumbnail:"/assets/projects/quiz.png",
         githubLink: "https://github.com/sinanptm/Quiz-app",
         demoLink: "https://www.linkedin.com/posts/sinanptm_nextjs-typescript-cleanarchitecture-activity-7232711700452425729-J_81?utm_source=share&utm_medium=member_desktop",
         achievements: [
@@ -93,6 +98,8 @@ export const projects = [
         description: "Developed comprehensive clones of Netflix and OLX using ReactJS and Firebase, ensuring responsive and dynamic user interfaces.",
         technologies: ["React.js", "Firebase", "TMDb API"],
         githubLink: "https://github.com/sinanptm/OLX-clone",
+        link:"https://netflix-clone-gamma-virid.vercel.app",
+        thumbnail:"/assets/projects/netflix.png",
         demoLink: "https://www.linkedin.com/posts/sinanptm_reactjs-firebase-tmdb-activity-7211610477729054720-nLr1?utm_source=share&utm_medium=member_desktop",
         achievements: [
             "Integrated The Movie Database (TMDb) API for real-time movie data in the Netflix clone.",
