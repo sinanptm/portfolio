@@ -12,7 +12,7 @@ const technologies = [
 
 const Stack = () => {
   return (
-    <section id="stack-section" className="relative w-full min-h-screen mx-auto sm:px-16 px-6">
+    <section id="stack" className="relative w-full min-h-screen mx-auto sm:px-16 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-white mb-8">My Tech Stack</h2>
         <p className="text-xl text-center text-gray-300 mb-12">
