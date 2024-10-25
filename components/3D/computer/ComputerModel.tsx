@@ -4,6 +4,7 @@ import { useGLTF } from "@react-three/drei";
 import useScreen from "@/lib/useScreen";
 
 useGLTF.preload("/desktop/scene.gltf");
+
 const Computers = () => {
   const computer = useGLTF("/desktop/scene.gltf")
   const { isMobile } = useScreen()

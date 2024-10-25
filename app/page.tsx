@@ -1,5 +1,5 @@
 import About from '@/components/About';
-import StarsCanvas from '@/components/3D/Stars';
+// import StarsCanvas from '@/components/3D/Stars';
 import Contact from '@/components/Contact';
 import Experience from '@/components/Experience';
 import Feedbacks from '@/components/Feedbacks';
@@ -21,7 +21,7 @@ const page = () => {
       <Feedbacks />
       <div className="relative z-0">
         <Contact />
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
       </div>
     </>
   );

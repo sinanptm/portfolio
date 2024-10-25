@@ -3,9 +3,13 @@ import React, { Suspense } from "react";
 import dynamic from 'next/dynamic';
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload } from "@react-three/drei";
-import CanvasLoader from "./CanvasLoader";
+import CanvasLoader from "../CanvasLoader";
 
-const Computers = dynamic(() => import('./ComputerModel'), { ssr: false });
+const Computers = dynamic(() => import('./ComputerModel'),
+ { 
+  ssr: false, 
+  loading: () => <CanvasLoader />
+});
 
 const ComputersCanvas = () => {
   return (
