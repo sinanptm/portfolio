@@ -1,10 +1,11 @@
 'use client';
 
 import { memo } from "react";
-import ComputersCanvas from "./3D/computer/ComputerCanvas";
 import { TypewriterEffect } from "./ui/typewriter-effect";
 import { motion } from 'framer-motion';
 import useScreen from "@/lib/useScreen";
+import dynamic from "next/dynamic";
+const ComputerCanvas = dynamic(() => import('./3D/computer/ComputerCanvas'), { ssr: false });
 
 const words = [
   {
@@ -48,7 +49,7 @@ const Hero = () => {
           <TypewriterEffect words={words} />
         </div>
       </div>
-      <ComputersCanvas />
+      <ComputerCanvas />
 
       {isMobile && (
         <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>

@@ -1,17 +1,43 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from 'react';
 
-const useScreen = () => {
-    const [isMobile, setIsMobile] = useState(false);
+interface ScreenSize {
+  isMobile: boolean;
+  width: number;
+  height: number;
+}
 
-    useEffect(() => {
-        const mediaQuery = window.matchMedia("(max-width: 500px)");
-        setIsMobile(mediaQuery.matches);
-        const handleMediaQueryChange = (event:MediaQueryListEvent ) => setIsMobile(event.matches);
-        mediaQuery.addEventListener("change", handleMediaQueryChange);
-        return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    }, [setIsMobile]);
+const useScreen = (): ScreenSize => {
+  const [screenSize, setScreenSize] = useState<ScreenSize>({
+    isMobile: false,
+    width: typeof window !== 'undefined' ? window.innerWidth : 0,
+    height: typeof window !== 'undefined' ? window.innerHeight : 0,
+  });
 
-    return { isMobile };
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenSize({
+        isMobile: window.innerWidth <= 768,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    let timeoutId: NodeJS.Timeout;
+    const debouncedResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(handleResize, 100);
+    };
+
+    window.addEventListener('resize', debouncedResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', debouncedResize);
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  return screenSize;
 };
 
 export default useScreen;
