@@ -1,23 +1,16 @@
-import { technologies } from "@/constants";
-import Image from "next/image";
+import { frontendTechnologies, backendAndDevOpsTechnologies, toolsAndMiscellaneous } from "@/constants";
 import { memo } from "react";
+import { AnimatedTooltip } from "./ui/animated-tooltip";
 
 const Tech = () => {
   return (
     <section className='relative w-full min-h-screen mx-auto sm:px-16 px-6 mt-3'>
-      <div className="flex flex-row">
-        {technologies.map((tech, index) => (
-          <div className="w-28 h-28" key={index}>
-            <Image
-              alt={tech.name}
-              src={tech.url}
-              width={28}
-              height={28}
-              className="w-full h-full"
-            />
-          </div>
-        ))}
-      </div>
+      <h2>Front End</h2>
+      <AnimatedTooltip items={frontendTechnologies} />
+      <h2>Backend End</h2>
+      <AnimatedTooltip items={backendAndDevOpsTechnologies} />
+      <h2>Other Tools</h2>
+      <AnimatedTooltip items={toolsAndMiscellaneous} />
     </section>
   );
 };
