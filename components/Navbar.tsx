@@ -12,7 +12,7 @@ const Navbar = () => {
   ]
 
   return (
-    <nav className="w-full flex justify-center py-4 px-6 bg-stone-950 text-white">
+    <nav className="w-full flex justify-center py-4 px-6 bg-stone-950 bg-opacity-50">
       <div className="flex space-x-6">
         {navItems.map((item) => (
           <Link
