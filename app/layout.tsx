@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   keywords: ["MERN", "Full Stack", "Developer", "React", "Node.js", "MongoDB", "Express.js", "MERN Stack Developer", "Muhammed Sinan", "sinanptm","portfolio", "Nextjs portfolio"],
   authors: [{ name: "Muhammed Sinan" }],
   creator: "Muhammed Sinan",
+  icons:{
+    icon:"/favicon.png",
+  }
 };
 
 interface RootLayoutProps {
@@ -28,7 +31,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en" suppressHydrationWarning >
-      <body className={cn("bg-background font-sans antialiased relative z-0  remove-scrollbar", plusJakartaSans.variable)} suppressHydrationWarning={true}>
+      <body className={cn("bg-background font-sans antialiased z-0  remove-scrollbar", plusJakartaSans.variable)} suppressHydrationWarning={true}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -36,6 +39,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
           <NavMenu />
           <HeroHighlight>
             {children}
+            Hello
           </HeroHighlight>
           <Analytics debug={false} />
         </ThemeProvider>

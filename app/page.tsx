@@ -7,14 +7,12 @@ import Projects from '@/components/Projects';
 const page = () => {
   return (
     <>
-      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center remove-scrollbar">
-        <Hero />
-      </div>
+      <Hero />
       <Stack />
       <Tech />
       <Projects />
     </>
   );
-}
+};
 
 export default memo(page);

@@ -23,7 +23,7 @@ const Computers: FC = () => {
 
   const lights = useMemo(() => ({
     hemisphereLight: {
-      intensity: 0.9,
+      intensity: 1.3,
       groundColor: "black"
     },
     spotLight: {
@@ -34,7 +34,7 @@ const Computers: FC = () => {
       castShadow: true,
     } satisfies Partial<SpotLightProps>,
     pointLight: {
-      intensity: 1
+      intensity: 2
     }
   }), []);
 
@@ -46,26 +46,26 @@ const Computers: FC = () => {
     }
   });
 
- 
-useEffect(() => {
-  const scene = computer?.scene;
-  return () => {
-    scene?.traverse((object: Object3D) => {
-      if (object instanceof Mesh) {
-        if (object.material) {
-          if (Array.isArray(object.material)) {
-            object.material.forEach(material => material?.dispose?.());
-          } else {
-            object.material.dispose();
+
+  useEffect(() => {
+    const scene = computer?.scene;
+    return () => {
+      scene?.traverse((object: Object3D) => {
+        if (object instanceof Mesh) {
+          if (object.material) {
+            if (Array.isArray(object.material)) {
+              object.material.forEach(material => material?.dispose?.());
+            } else {
+              object.material.dispose();
+            }
+          }
+          if (object.geometry) {
+            object.geometry.dispose();
           }
         }
-        if (object.geometry) {
-          object.geometry.dispose();
-        }
-      }
-    });
-  };
-}, [computer]);
+      });
+    };
+  }, [computer]);
 
   return (
     <group ref={meshRef}>

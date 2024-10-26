@@ -1,5 +1,4 @@
-'use client'
-import { cn } from "@/lib/utils"
+'use client';
 import {
   AnimatePresence,
   MotionValue,
@@ -7,59 +6,50 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-} from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { useRef, useState, useCallback, useEffect, memo } from "react"
+} from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useRef, useState, useCallback, useEffect, memo } from "react";
 
 type FloatingDockItem = {
-  title: string
-  icon: string
-  href: string
-}
+  title: string;
+  icon: string;
+  href: string;
+};
 
 const FloatingDock = ({
   items,
-  className,
 }: {
-  items: FloatingDockItem[]
-  className?: string
+  items: FloatingDockItem[];
 }) => {
-  const mouseY = useMotionValue(Infinity)
+  const mouseY = useMotionValue(Infinity);
 
   useEffect(() => {
     const handleGlobalMouseMove = (e: MouseEvent) => {
-      mouseY.set(e.pageY)
-    }
+      mouseY.set(e.pageY);
+    };
 
     const handleGlobalMouseLeave = () => {
-      mouseY.set(Infinity)
-    }
+      mouseY.set(Infinity);
+    };
 
-    window.addEventListener('mousemove', handleGlobalMouseMove)
-    window.addEventListener('mouseleave', handleGlobalMouseLeave)
+    window.addEventListener('mousemove', handleGlobalMouseMove);
+    window.addEventListener('mouseleave', handleGlobalMouseLeave);
 
     return () => {
-      window.removeEventListener('mousemove', handleGlobalMouseMove)
-      window.removeEventListener('mouseleave', handleGlobalMouseLeave)
-    }
-  }, [mouseY])
+      window.removeEventListener('mousemove', handleGlobalMouseMove);
+      window.removeEventListener('mouseleave', handleGlobalMouseLeave);
+    };
+  }, [mouseY]);
 
   return (
-    <motion.div
-      className={cn(
-        "fixed right-4 top-1/2 -translate-y-1/2 z-[9999] ",
-        className
-      )}
-    >
-      <div className="flex flex-col gap-4 pointer-events-none">
+    <div className="flex flex-col gap-4 pointer-events-none">
       {items.map((item) => (
         <IconContainer mouseY={mouseY} key={item.title} {...item} />
       ))}
-      </div>
-    </motion.div>
-  )
-}
+    </div>
+  );
+};
 
 const IconContainer = ({
   mouseY,
@@ -67,48 +57,48 @@ const IconContainer = ({
   icon,
   href,
 }: {
-  mouseY: MotionValue
-  title: string
-  icon: string
-  href: string
+  mouseY: MotionValue;
+  title: string;
+  icon: string;
+  href: string;
 }) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const [hovered, setHovered] = useState(false)
+  const ref = useRef<HTMLDivElement>(null);
+  const [hovered, setHovered] = useState(false);
 
   const distance = useTransform(mouseY, (val) => {
     if (!ref.current || !hovered) return 150;
     const bounds = ref.current.getBoundingClientRect();
     return val - (bounds.top + window.scrollY) - bounds.height / 2;
-  })
+  });
 
-  const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40])
-  const heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40])
-  const widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20])
-  const heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20])
+  const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  const heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  const widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
+  const heightTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
 
   const width = useSpring(widthTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
-  })
+  });
   const height = useSpring(heightTransform, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
-  })
+  });
   const widthIcon = useSpring(widthTransformIcon, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
-  })
+  });
   const heightIcon = useSpring(heightTransformIcon, {
     mass: 0.1,
     stiffness: 150,
     damping: 12,
-  })
+  });
 
-  const handleMouseEnter = useCallback(() => setHovered(true), [])
-  const handleMouseLeave = useCallback(() => setHovered(false), [])
+  const handleMouseEnter = useCallback(() => setHovered(true), []);
+  const handleMouseLeave = useCallback(() => setHovered(false), []);
 
   return (
     <Link href={href} className="pointer-events-auto">
@@ -139,7 +129,7 @@ const IconContainer = ({
         </motion.div>
       </motion.div>
     </Link>
-  )
-}
+  );
+};
 
 export default memo(FloatingDock);

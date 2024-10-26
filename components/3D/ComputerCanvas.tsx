@@ -1,5 +1,5 @@
 'use client';
-import { Suspense, useState, useEffect, FC, memo } from "react";
+import { Suspense, useState, FC, memo } from "react";
 import dynamic from 'next/dynamic';
 import { Canvas, GroupProps } from "@react-three/fiber";
 import { OrbitControls, Preload } from "@react-three/drei";
@@ -17,32 +17,6 @@ const ComputersCanvas: FC = () => {
     position: [20, 3, 5] as [number, number, number],
     fov: 25,
   });
-
-  const [size, setSize] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
-    handleResize();
-
-    let timeoutId: NodeJS.Timeout;
-    const debouncedResize = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(handleResize, 100);
-    };
-
-    window.addEventListener('resize', debouncedResize);
-    return () => {
-      window.removeEventListener('resize', debouncedResize);
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
   const orbitControlsProps = {
     enableZoom: false,
     maxPolarAngle: Math.PI / 2,
@@ -62,10 +36,6 @@ const ComputersCanvas: FC = () => {
         powerPreference: "high-performance",
       }}
       className="w-full h-full"
-      style={{
-        width: size.width,
-        height: size.height
-      }}
       performance={{ min: 0.5 }}
     >
       <Suspense fallback={<CanvasLoader />}>
