@@ -29,7 +29,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "bg-black w-full group",
+        " w-full group",
         containerClassName
       )}
       onMouseMove={handleMouseMove}

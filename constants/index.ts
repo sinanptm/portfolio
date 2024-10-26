@@ -1,4 +1,4 @@
-export  const socialLinks = [
+export const socialLinks = [
     { image: '/assets/linkedin.svg', href: 'https://www.linkedin.com/in/sinanptm/', label: 'LinkedIn' },
     { image: '/assets/github.svg', href: 'https://github.com/sinanptm/', label: 'GitHub' },
     { image: '/assets/instagram.svg', href: 'https://www.instagram.com/si_an_z/', label: 'Instagram' },
@@ -10,9 +10,9 @@ export const profile = {
               Fascinated by technology from a young age, I&apos;ve continuously expanded my expertise across 
               various tools and frameworks. Committed to improving my skills, writing better code, and 
               delivering impactful solutions.`,
-    email:'muhammedsinan0549@gmail.com',
-    phone:"+91 8089507749"
-  };
+    email: 'muhammedsinan0549@gmail.com',
+    phone: "+91 8089507749"
+};
 
 export const navLinks = [
     { title: "Home", icon: "/assets/home.svg", href: "/" },
@@ -22,8 +22,8 @@ export const navLinks = [
     { title: "Instagram", icon: "/assets/social/instagram.svg", href: "https://www.instagram.com/si_an_z" },
     { title: "Email", icon: "/assets/social/email.svg", href: "mailto:muhammedsinan0549@gmail.com" },
     { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+918089507749" },
-  ];
-  
+];
+
 
 export const projects = [
     {
@@ -31,7 +31,7 @@ export const projects = [
         description: "A full-featured e-commerce platform with secure authentication, dynamic product management, and integrated payment systems.",
         technologies: ["Node.js", "Express.js", "MongoDB", "EJS", "Razorpay"],
         link: "https://trendsonline.online/",
-        thumbnail:"/assets/projects/trends.png",
+        thumbnail: "/assets/projects/trends.png",
         githubLink: "https://github.com/sinanptm/ecommerse-project",
         demoLink: "https://youtu.be/8w6HqmgeDcA",
         features: [
@@ -52,7 +52,7 @@ export const projects = [
         technologies: ["Next.js", "Node.js", "Express.js", "MongoDB", "WebRTC", "WebSocket"],
         link: "http://avm-ayurvedic.online",
         githubLink: "https://github.com/sinanptm/avm-ayurvedic",
-        thumbnail:"/assets/projects/avm.png",
+        thumbnail: "/assets/projects/avm.png",
         demoLink: "https://youtu.be/fpOPtDixtD4",
         achievements: [
             "Optimized the front end for performance, achieving 90+ scores in Google Lighthouse for SEO, accessibility, and page speed.",
@@ -70,7 +70,7 @@ export const projects = [
         link: "https://sahityotsav-manager.onrender.com/",
         githubLink: "https://github.com/sinanptm/Program-manager",
         demoLink: "https://www.linkedin.com/posts/sinanptm_mern-react-redux-activity-7220717132450254848-7bGb?utm_source=share&utm_medium=member_desktop",
-        thumbnail:"/assets/projects/program-manager.png",
+        thumbnail: "/assets/projects/program-manager.png",
         achievements: [
             "Implemented features for mark lists, team marks, program registrations, and participant management.",
             "Optimized performance with memoization, achieving a 70% boost, and reduced API calls by 80% through smart caching and state management.",
@@ -85,7 +85,7 @@ export const projects = [
         link: "https://url-shortener-sooty-five.vercel.app/",
         githubLink: "https://github.com/sinanptm/url-shortener",
         demoLink: "https://www.linkedin.com/posts/sinanptm_nestjs-typescript-nodejs-activity-7252588020401389568-tyYv?utm_source=share&utm_medium=member_desktop",
-        thumbnail:"/assets/projects/url-shortener.png",
+        thumbnail: "/assets/projects/url-shortener.png",
         achievements: [
             "Added URL shortening, click tracking, and user authentication with a personalized dashboard.",
             "Gained experience with NestJS, focusing on modular architecture, dependency injection, and JWT authentication."
@@ -96,7 +96,7 @@ export const projects = [
         description: "A quiz application built using Next.js, TypeScript, and Clean Architecture, focusing on a scalable and maintainable codebase.",
         technologies: ["Next.js", "TypeScript", "MongoDB", "Redux", "Express.js", "Node.js"],
         link: "https://quiz-app-six-dusky.vercel.app/",
-        thumbnail:"/assets/projects/quiz.png",
+        thumbnail: "/assets/projects/quiz.png",
         githubLink: "https://github.com/sinanptm/Quiz-app",
         demoLink: "https://www.linkedin.com/posts/sinanptm_nextjs-typescript-cleanarchitecture-activity-7232711700452425729-J_81?utm_source=share&utm_medium=member_desktop",
         achievements: [
@@ -109,8 +109,8 @@ export const projects = [
         description: "Developed comprehensive clones of Netflix and OLX using ReactJS and Firebase, ensuring responsive and dynamic user interfaces.",
         technologies: ["React.js", "Firebase", "TMDb API"],
         githubLink: "https://github.com/sinanptm/OLX-clone",
-        link:"https://netflix-clone-gamma-virid.vercel.app",
-        thumbnail:"/assets/projects/netflix.png",
+        link: "https://netflix-clone-gamma-virid.vercel.app",
+        thumbnail: "/assets/projects/netflix.png",
         demoLink: "https://www.linkedin.com/posts/sinanptm_reactjs-firebase-tmdb-activity-7211610477729054720-nLr1?utm_source=share&utm_medium=member_desktop",
         achievements: [
             "Integrated The Movie Database (TMDb) API for real-time movie data in the Netflix clone.",
@@ -119,64 +119,66 @@ export const projects = [
         ]
     }
 ];
+
 const basedUrl = "/assets/tech";
-export const frontendTechnologies = [
+
+export const technologies = [
+    { name: "ReactJS", url: `${basedUrl}/react.svg` },
+    { name: "NodeJS", url: `${basedUrl}/nodejs.svg` },
+    { name: "ExpressJS", url: `${basedUrl}/express.svg` },
+    { name: "MongoDB", url: `${basedUrl}/mongodb.svg` },
+    { name: "NextJS", url: `${basedUrl}/nextjs.svg` },
+    { name: "NestJS", url: `${basedUrl}/nestjs.svg` },
+    { name: "WebRTC", url: `${basedUrl}/webrtc.svg` },
+    { name: "Socket.io", url: `${basedUrl}/socket-io.svg` },
+    { name: "Three.JS", url: `${basedUrl}/threejs-1.svg` },
+    { name: "AWS", url: `${basedUrl}/aws.svg` },
+    { name: "Google AI", url: `${basedUrl}/google-ai.svg` },
+    { name: "OpenAI", url: `${basedUrl}/openai.svg` },
+    { name: "Firebase", url: `${basedUrl}/firebase.svg` },
+    { name: "Stripe", url: `${basedUrl}/stripe.svg` },
     { name: "TypeScript", url: `${basedUrl}/typescript.svg` },
     { name: "Next JS", url: `${basedUrl}/nextjs.svg` },
     { name: "React", url: `${basedUrl}/react.svg` },
     { name: "Redux", url: `${basedUrl}/redux.svg` },
     { name: "React Query", url: `${basedUrl}/react-query.svg` },
-    { name: "Vite", url: `${basedUrl}/vite.svg` },
+    { name: "Postgres", url: `${basedUrl}/postgresql.svg` },
+    { name: "MySQL", url: `${basedUrl}/mysql.svg` },
+    { name: "JWT", url: `${basedUrl}/jwt.svg` },
+    { name: "OAuth", url: `${basedUrl}/oauth.svg` },
+    { name: "Framer Motion", url: `${basedUrl}/framer-motion.svg` },
     { name: "TailwindCSS", url: `${basedUrl}/tailwind.svg` },
-    { name: "Styled Components", url: `${basedUrl}/styled-components.svg` },
     { name: "Radix UI", url: `${basedUrl}/radix-ui.svg` },
+    { name: "shadcn", url: `${basedUrl}/shadcn.svg` },
+    { name: "Vercel", url: `${basedUrl}/vercel.svg` },
+    { name: "Vercel Analytics", url: `${basedUrl}/vercel-analytics.svg` },
+    { name: "Google Analytics", url: `${basedUrl}/google-analytics.svg` },
+    { name: "Razorpay", url: `${basedUrl}/razorpay.svg` },
+    { name: "Vite", url: `${basedUrl}/vite.svg` },
+    { name: "React Form", url: `${basedUrl}/react-hook-form.svg` },
+    { name: "Chart.js", url: `${basedUrl}/chartjs.svg` },
+    { name: "Styled Components", url: `${basedUrl}/styled-components.svg` },
     { name: "Axios", url: `${basedUrl}/axios.svg` },
     { name: "Bootstrap", url: `${basedUrl}/bootstrap.svg` },
     { name: "jQuery", url: `${basedUrl}/jquery.svg` },
-    { name: "React Hook Form", url: `${basedUrl}/react-hook-form.svg` },
-    { name: "Framer Motion", url: `${basedUrl}/framer-motion.svg` },
-    { name: "Three.JS", url: `${basedUrl}/threejs-1.svg` }
-  ];
-  
-  export const backendAndDevOpsTechnologies = [
     { name: "NodeJS", url: `${basedUrl}/nodejs.svg` },
     { name: "Nest.js", url: `${basedUrl}/nestjs.svg` },
     { name: "Express.js", url: `${basedUrl}/express.svg` },
     { name: "MongoDB", url: `${basedUrl}/mongodb.svg` },
-    { name: "Postgres", url: `${basedUrl}/postgresql.svg` },
-    { name: "MySQL", url: `${basedUrl}/mysql.svg` },
-    { name: "AWS", url: `${basedUrl}/aws.svg` },
-    { name: "Firebase", url: `${basedUrl}/firebase.svg` },
-    { name: "Stripe", url: `${basedUrl}/stripe.svg` },
-    { name: "Razorpay", url: `${basedUrl}/razorpay.svg` },
-    { name: "WebRTC", url: `${basedUrl}/webrtc.svg` },
-    { name: "Socket.io", url: `${basedUrl}/socket-io.svg` },
-    { name: "JWT", url: `${basedUrl}/jwt.svg` },
-    { name: "OAuth", url: `${basedUrl}/oauth.svg` },
-    { name: "Joi", url: `${basedUrl}/joi.svg` },
-    { name: "Winston", url: `${basedUrl}/winston.svg` },
     { name: "Nginx", url: `${basedUrl}/nginx.svg` },
-    { name: "Render", url: `${basedUrl}/render.svg` }
-  ];
-  
-  export const toolsAndMiscellaneous = [
-    { name: "Google AI", url: `${basedUrl}/google-ai.svg` },
-    { name: "OpenAI", url: `${basedUrl}/openai.svg` },
-    { name: "Vercel", url: `${basedUrl}/vercel.svg` },
-    { name: "Google Analytics", url: `${basedUrl}/google-analytics.svg` },
-    { name: "Vercel Analytics", url: `${basedUrl}/vercel-analytics.svg` },
-    { name: "shadcn", url: `${basedUrl}/shadcn.svg` },
-    { name: "Chart.js", url: `${basedUrl}/chartjs.svg` },
-    { name: "Prettier", url: `${basedUrl}/prettier.svg` },
-    { name: "ESLint", url: `${basedUrl}/eslint.svg` },
     { name: "GitHub Actions", url: `${basedUrl}/github-action.svg` },
+    { name: "ESLint", url: `${basedUrl}/eslint.svg` },
+    { name: "Prettier", url: `${basedUrl}/prettier.svg` },
     { name: "NPM", url: `${basedUrl}/npm.svg` },
     { name: "Nodemon", url: `${basedUrl}/nodemon.svg` },
     { name: "Postman", url: `${basedUrl}/postman.svg` },
     { name: "Figma", url: `${basedUrl}/figma-icon.svg` },
-    { name: "V0", url: `${basedUrl}/v0.webp` }
-  ];
-  
+    { name: "V0", url: `${basedUrl}/v0.webp` },
+    { name: "Joi", url: `${basedUrl}/joi.svg` },
+    { name: "Winston", url: `${basedUrl}/winston.svg` },
+    { name: "Render", url: `${basedUrl}/render.svg` }
+ ];
+
 
 // { name: "Clean Architecture", url: "https://img.shields.io/badge/Clean_Architecture-%230D6EFD.svg?style=flat&logo=architecture&logoColor=white" },
 // { name: "SOLID Principles", url: "https://img.shields.io/badge/SOLID_Principles-%230D6EFD.svg?style=flat&logo=architecture&logoColor=white" },

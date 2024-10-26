@@ -32,11 +32,16 @@ const projects = [
     link: 'https://quiz-app-six-dusky.vercel.app/',
     title: 'Ace-Quiz: Quiz App'
   },
+  {
+    thumbnail:"/assets/projects/portfolio.png",
+    link:"https://sinanptm.vercel.app",
+    title:"Portfolio"
+  }
 ]
 
 const Projects = () => {
   return (
-    <section className="relative w-full min-h-screen mx-auto sm:px-16 px-6 flex items-center">
+    <section className="relative w-full min-h-fit mx-auto sm:px-16 px-6 flex items-center">
       <HeroParallax projects={projects} />
     </section>
   );

@@ -1,6 +1,5 @@
 import Stack from '@/components/Stack';
 import Hero from '@/components/Hero';
-import Tech from '@/components/Tech';
 import { memo } from 'react';
 import Projects from '@/components/Projects';
 
@@ -9,7 +8,6 @@ const page = () => {
     <>
       <Hero />
       <Stack />
-      <Tech />
       <Projects />
     </>
   );

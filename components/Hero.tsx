@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center mt-5 ml-5">
         </div>
         <div>
-          <h1 className={`font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}>
+          <h1 className={`font-black  lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}>
             Hi, I&apos;m <span className="text-violet-600">Muhammed Sinan</span>
           </h1>
           <TypewriterEffect words={words} />
