@@ -4,9 +4,11 @@ import { memo, useState } from "react"
 import { motion } from "framer-motion"
 import { projects } from "@/constants"
 import { Project } from "@/types"
-import ProjectModel from "./ProjectModel"
-import ProjectCard from "./ProjectsCard"
-import { containerVariants, itemVariants, textVariants } from "./animationVariants"
+import ProjectModel from "./project/ProjectModel"
+import ProjectCard from "./project/ProjectsCard"
+import { containerVariants, itemVariants, textVariants } from "./project/animationVariants"
+
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
@@ -53,7 +55,9 @@ const Projects = () => {
           ))}
         </motion.div>
       </div>
-      <ProjectModel project={selectedProject} isOpen={isModalOpen} setOpen={setIsModalOpen} />
+      {isModalOpen&&(
+        <ProjectModel project={selectedProject} isOpen={isModalOpen} setOpen={setIsModalOpen} />
+      )}
     </section>
   )
 }

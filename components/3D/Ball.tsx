@@ -2,12 +2,10 @@
 
 import { useEffect, useState } from "react"
 import { Decal, Float } from "@react-three/drei"
-import { useThree } from "@react-three/fiber"
 import { Texture, TextureLoader } from "three";
 
 function Ball({ icon }: { icon: string }) {
   const [decal, setDecal] = useState<Texture | null>(null)
-  const { gl } = useThree()
 
   useEffect(() => {
     const loader = new TextureLoader()

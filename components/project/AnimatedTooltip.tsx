@@ -3,12 +3,11 @@ import { motion, AnimatePresence, MotionValue } from "framer-motion"
 type AnimatedTooltipProps = {
   show: boolean
   text: string
-  x: MotionValue<number>
   rotate: MotionValue<number>
   translateX: MotionValue<number>
 }
 
-const AnimatedTooltip = ({ show, text, x, rotate, translateX }: AnimatedTooltipProps) => (
+const AnimatedTooltip = ({ show, text,  rotate, translateX }: AnimatedTooltipProps) => (
   <AnimatePresence>
     {show && (
       <motion.div

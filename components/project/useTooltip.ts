@@ -15,10 +15,6 @@ export const useTooltip = () => {
     springConfig
   )
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    const halfWidth = event.currentTarget.offsetWidth / 2
-    x.set(event.nativeEvent.offsetX - halfWidth)
-  }
 
   const handleButtonHover = (buttonType: string | null) => {
     setHoveredButton(buttonType)
@@ -26,10 +22,8 @@ export const useTooltip = () => {
 
   return {
     hoveredButton,
-    x,
     rotate,
     translateX,
-    handleMouseMove,
     handleButtonHover,
   }
 }

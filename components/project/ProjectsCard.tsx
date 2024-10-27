@@ -13,7 +13,7 @@ type ProjectCardProps = {
 }
 
 const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
-  const { hoveredButton, x, rotate, translateX, handleMouseMove, handleButtonHover } = useTooltip()
+  const { hoveredButton, rotate, translateX, handleButtonHover } = useTooltip()
 
   return (
     <div className="rounded-xl group/bento hover:shadow-xl transition duration-300 shadow-input dark:shadow-none p-4 bg-black flex flex-col h-full">
@@ -58,9 +58,8 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
             text="Live"
             onMouseEnter={() => handleButtonHover('live')}
             onMouseLeave={() => handleButtonHover(null)}
-            onMouseMove={handleMouseMove}
           >
-            <AnimatedTooltip show={hoveredButton === 'live'} text={project.link} x={x} rotate={rotate} translateX={translateX} />
+            <AnimatedTooltip show={hoveredButton === 'live'} text={project.link} rotate={rotate} translateX={translateX} />
           </ProjectButton>
           <ProjectButton
             href={project.githubLink}
@@ -68,9 +67,8 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
             text="GitHub"
             onMouseEnter={() => handleButtonHover('github')}
             onMouseLeave={() => handleButtonHover(null)}
-            onMouseMove={handleMouseMove}
           >
-            <AnimatedTooltip show={hoveredButton === 'github'} text={project.githubLink} x={x} rotate={rotate} translateX={translateX} />
+            <AnimatedTooltip show={hoveredButton === 'github'} text={project.githubLink} rotate={rotate} translateX={translateX} />
           </ProjectButton>
           <ProjectButton
             href={project.demoLink}
@@ -78,9 +76,8 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
             text="Demo"
             onMouseEnter={() => handleButtonHover('demo')}
             onMouseLeave={() => handleButtonHover(null)}
-            onMouseMove={handleMouseMove}
           >
-            <AnimatedTooltip show={hoveredButton === 'demo'} text={project.demoLink} x={x} rotate={rotate} translateX={translateX} />
+            <AnimatedTooltip show={hoveredButton === 'demo'} text={project.demoLink} rotate={rotate} translateX={translateX} />
           </ProjectButton>
           <motion.div variants={buttonVariants}>
             <Button
@@ -103,11 +100,10 @@ type ProjectButtonProps = {
   text: string
   onMouseEnter: () => void
   onMouseLeave: () => void
-  onMouseMove: (event: React.MouseEvent<HTMLDivElement>) => void
   children: React.ReactNode
 }
 
-const ProjectButton = ({ href, icon, text, onMouseEnter, onMouseLeave, onMouseMove, children }: ProjectButtonProps) => (
+const ProjectButton = ({ href, icon, text, onMouseEnter, onMouseLeave, children }: ProjectButtonProps) => (
   <motion.div
     variants={buttonVariants}
     onMouseEnter={onMouseEnter}
@@ -117,7 +113,6 @@ const ProjectButton = ({ href, icon, text, onMouseEnter, onMouseLeave, onMouseMo
     <Link href={href}>
       <Button
         className="transition-colors duration-300 hover:bg-gray-600 hover:text-primary-foreground"
-        // onMouseMove={onMouseMove}
       >
         <Image width={10} height={10} src={icon} alt={text} className="w-3 h-3 mr-1" />
         {text}

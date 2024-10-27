@@ -8,6 +8,8 @@ type Props = {
 };
 
 const ProjectModel = ({ isOpen, project, setOpen }: Props) => {
+    console.log(isOpen, project, setOpen);
+    
     return (
         <div></div>
     );
