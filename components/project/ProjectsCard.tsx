@@ -1,19 +1,21 @@
-import { motion } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { Project } from "@/types"
-import Button from "@/components/project/Button"
-import AnimatedTooltip from "./AnimatedTooltip"
-import { useTooltip } from "../../lib/useTooltip"
-import { imageVariants, titleVariants, buttonVariants } from "../../constants/animationVariants"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Project } from "@/types";
+import AnimatedTooltip from "./AnimatedTooltip";
+import { useTooltip } from "../../lib/useTooltip";
+import { imageVariants, titleVariants, buttonVariants } from "../../constants/animationVariants";
+import { memo } from "react";
+import ProjectButton from "@/components/project/Button";
+import { cn } from "@/lib/utils";
+import { buttonBaseStyles } from "@/style/styles";
 
 type ProjectCardProps = {
-  project: Project
-  onViewDetails: (project: Project) => void
-}
+  project: Project;
+  onViewDetails: (project: Project) => void;
+};
 
 const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
-  const { hoveredButton, rotate, translateX, handleButtonHover } = useTooltip()
+  const { hoveredButton, rotate, translateX, handleButtonHover } = useTooltip();
 
   return (
     <div className="rounded-xl group/bento hover:shadow-xl transition duration-300 shadow-input dark:shadow-none p-4 bg-black flex flex-col h-full">
@@ -80,46 +82,19 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
             <AnimatedTooltip show={hoveredButton === 'demo'} text={project.demoLink} rotate={rotate} translateX={translateX} />
           </ProjectButton>
           <motion.div variants={buttonVariants}>
-            <Button
+            <button
               onClick={() => onViewDetails(project)}
-              className="transition-colors duration-300 hover:bg-gray-600 hover:text-slate-500"
+              className={cn(buttonBaseStyles, 'transition-colors duration-300 hover:bg-gray-600 hover:text-slate-500')}
             >
               <Image width={10} height={10} src='/assets/info.svg' alt="Info" className="w-3 h-3 mr-1" />
               Details
-            </Button>
+            </button>
           </motion.div>
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-type ProjectButtonProps = {
-  href: string
-  icon: string
-  text: string
-  onMouseEnter: () => void
-  onMouseLeave: () => void
-  children: React.ReactNode
-}
 
-const ProjectButton = ({ href, icon, text, onMouseEnter, onMouseLeave, children }: ProjectButtonProps) => (
-  <motion.div
-    variants={buttonVariants}
-    onMouseEnter={onMouseEnter}
-    onMouseLeave={onMouseLeave}
-    className="relative"
-  >
-    <Link href={href}>
-      <Button
-        className="transition-colors duration-300 hover:bg-gray-600 hover:text-blue-700"
-      >
-        <Image width={10} height={10} src={icon} alt={text} className="w-3 h-3 mr-1" />
-        {text}
-      </Button>
-    </Link>
-    {children}
-  </motion.div>
-)
-
-export default ProjectCard
+export default memo(ProjectCard);

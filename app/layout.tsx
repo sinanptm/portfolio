@@ -15,14 +15,74 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammed Sinan | MERN Stack Developer",
-  description: "Portfolio of Muhammed Sinan (sinanptm), a passionate MERN stack developer building scalable and efficient web applications.",
-  keywords: ["MERN", "Full Stack", "Developer", "React", "Node.js", "MongoDB", "Express.js", "MERN Stack Developer", "Muhammed Sinan", "sinanptm", "portfolio", "Nextjs portfolio"],
-  authors: [{ name: "Muhammed Sinan" }],
-  creator: "Muhammed Sinan",
+  title: {
+    default: "Muhammed Sinan (sinanptm) | Full Stack Developer",
+    template: "%s | Muhammed Sinan",
+  },
+  description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Known as sinanptm on GitHub and LinkedIn.",
+  keywords: [
+    "Muhammed Sinan",
+    "sinanptm",
+    "Full Stack Developer",
+    "MERN Stack",
+    "React Developer",
+    "Node.js Developer",
+    "Web Developer",
+    "Software Engineer",
+    "Next.js Developer",
+    "MongoDB",
+    "Express.js",
+    "TypeScript",
+    "JavaScript",
+    "Portfolio",
+    "Full Stack Engineer",
+  ],
+  authors: [
+    {
+      name: "Muhammed Sinan",
+      url: "https://github.com/sinanptm",
+    }
+  ],
+  creator: "Muhammed Sinan (sinanptm)",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://sinanptm.vercel.app", 
+    siteName: "Muhammed Sinan Portfolio",
+    title: "Muhammed Sinan (sinanptm) | Full Stack Developer",
+    description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Known as sinanptm on GitHub and LinkedIn.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Muhammed Sinan (sinanptm) - Full Stack Developer Portfolio",
+      }
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
-    icon: "/favicon.png",
-  }
+    icon: [
+      { url: "/favicon.png" },
+    ],
+    apple: [
+      { url: "/favicon.png" },
+    ],
+  },
+  alternates: {
+    canonical: "https://sinanptm.vercel.app", 
+  },
+  metadataBase: new URL("https://your-domain.com"), 
 };
 
 interface RootLayoutProps {

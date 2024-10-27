@@ -1,5 +1,6 @@
 import { motion, AnimatePresence, MotionValue } from "framer-motion";
 import Link from "next/link";
+import { memo } from "react";
 
 type AnimatedTooltipProps = {
   show: boolean;
@@ -43,4 +44,4 @@ const AnimatedTooltip = ({ show, text, rotate, translateX }: AnimatedTooltipProp
   </AnimatePresence>
 );
 
-export default AnimatedTooltip;
+export default memo(AnimatedTooltip);

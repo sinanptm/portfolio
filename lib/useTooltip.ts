@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { use, useCallback, useState } from "react"
 import { useMotionValue, useSpring, useTransform } from "framer-motion"
 
 export const useTooltip = () => {
@@ -16,9 +16,9 @@ export const useTooltip = () => {
   )
 
 
-  const handleButtonHover = (buttonType: string | null) => {
+  const handleButtonHover = useCallback((buttonType: string | null) => {
     setHoveredButton(buttonType)
-  }
+  },[]);
 
   return {
     hoveredButton,

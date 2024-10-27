@@ -1,6 +1,6 @@
 'use client'
 
-import { memo, useState } from "react"
+import { memo, useCallback, useState } from "react"
 import { motion } from "framer-motion"
 import { projects } from "@/constants"
 import { Project } from "@/types"
@@ -14,10 +14,10 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const handleViewDetails = (project: Project) => {
+  const handleViewDetails = useCallback((project: Project) => {
     setSelectedProject(project)
     setIsModalOpen(true)
-  }
+  },[]);
 
   return (
     <section id="projects" className="relative py-16">

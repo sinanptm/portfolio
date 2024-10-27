@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -21,12 +21,27 @@ type Props = {
     setOpen: (open: boolean) => void;
 };
 
-export default function ProjectModal({ isOpen, project, setOpen }: Props) {
+const ProjectModal = ({ isOpen, project, setOpen }: Props) => {
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
         setIsMounted(true);
     }, []);
+  
+    const MemoizedTechnologies = useMemo(() => {
+        if (!project) return null;
+        
+        return project.technologies.map((techIndex) => (
+            <Image
+                key={techIndex}
+                src={skills[techIndex].url}
+                alt={skills[techIndex].name}
+                width={80}
+                height={20}
+                className="h-6"
+            />
+        ));
+    }, [project]);
 
     if (!isMounted) {
         return null;
@@ -61,17 +76,7 @@ export default function ProjectModal({ isOpen, project, setOpen }: Props) {
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Technologies Used</h3>
                         <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((techIndex) => (
-                                // eslint-disable-next-line
-                                <img
-                                    key={techIndex}
-                                    src={skills[techIndex].url}
-                                    alt={skills[techIndex].name}
-                                    width={80}
-                                    height={20}
-                                    className="h-6"
-                                />
-                            ))}
+                            {MemoizedTechnologies}
                         </div>
                     </div>
                     {project.achievements && project.achievements.length > 0 && (
@@ -112,4 +117,6 @@ export default function ProjectModal({ isOpen, project, setOpen }: Props) {
             </DialogContent>
         </Dialog>
     );
-}
+};
+
+export default memo(ProjectModal);
