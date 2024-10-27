@@ -2,10 +2,10 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { Project } from "@/types"
-import Button from "@/components/ui/Button"
+import Button from "@/components/project/Button"
 import AnimatedTooltip from "./AnimatedTooltip"
-import { useTooltip } from "./useTooltip"
-import { imageVariants, titleVariants, buttonVariants } from "./animationVariants"
+import { useTooltip } from "../../lib/useTooltip"
+import { imageVariants, titleVariants, buttonVariants } from "../../constants/animationVariants"
 
 type ProjectCardProps = {
   project: Project
@@ -47,7 +47,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           {project.description}
         </p>
         <motion.div
-          className="flex flex-wrap gap-2"
+          className="flex flex-wrap gap-x-4"
           initial="rest"
           whileHover="hover"
           animate="rest"
@@ -82,7 +82,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           <motion.div variants={buttonVariants}>
             <Button
               onClick={() => onViewDetails(project)}
-              className="transition-colors duration-300 hover:bg-gray-600 hover:text-primary-foreground"
+              className="transition-colors duration-300 hover:bg-gray-600 hover:text-slate-500"
             >
               <Image width={10} height={10} src='/assets/info.svg' alt="Info" className="w-3 h-3 mr-1" />
               Details
@@ -112,7 +112,7 @@ const ProjectButton = ({ href, icon, text, onMouseEnter, onMouseLeave, children 
   >
     <Link href={href}>
       <Button
-        className="transition-colors duration-300 hover:bg-gray-600 hover:text-primary-foreground"
+        className="transition-colors duration-300 hover:bg-gray-600 hover:text-blue-700"
       >
         <Image width={10} height={10} src={icon} alt={text} className="w-3 h-3 mr-1" />
         {text}

@@ -1,13 +1,14 @@
-import { motion, AnimatePresence, MotionValue } from "framer-motion"
+import { motion, AnimatePresence, MotionValue } from "framer-motion";
+import Link from "next/link";
 
 type AnimatedTooltipProps = {
-  show: boolean
-  text: string
-  rotate: MotionValue<number>
-  translateX: MotionValue<number>
-}
+  show: boolean;
+  text: string;
+  rotate: MotionValue<number>;
+  translateX: MotionValue<number>;
+};
 
-const AnimatedTooltip = ({ show, text,  rotate, translateX }: AnimatedTooltipProps) => (
+const AnimatedTooltip = ({ show, text, rotate, translateX }: AnimatedTooltipProps) => (
   <AnimatePresence>
     {show && (
       <motion.div
@@ -33,11 +34,13 @@ const AnimatedTooltip = ({ show, text,  rotate, translateX }: AnimatedTooltipPro
         <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px" />
         <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px" />
         <div className="font-semibold relative z-30 text-sm">
-          {text}
+          <Link href={text}>
+            {text}
+          </Link>
         </div>
       </motion.div>
     )}
   </AnimatePresence>
-)
+);
 
-export default AnimatedTooltip
+export default AnimatedTooltip;

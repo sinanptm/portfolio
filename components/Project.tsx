@@ -6,7 +6,7 @@ import { projects } from "@/constants"
 import { Project } from "@/types"
 import ProjectModel from "./project/ProjectModel"
 import ProjectCard from "./project/ProjectsCard"
-import { containerVariants, itemVariants, textVariants } from "./project/animationVariants"
+import { containerVariants, itemVariants, textVariants } from "../constants/animationVariants"
 
 
 
@@ -20,7 +20,7 @@ const Projects = () => {
   }
 
   return (
-    <section className="relative py-16">
+    <section id="projects" className="relative py-16">
       <div className="mx-auto px-4">
         <motion.div
           initial="hidden"
