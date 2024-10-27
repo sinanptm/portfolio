@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://sinanptm.vercel.app", 
   },
-  metadataBase: new URL("https://your-domain.com"), 
+  metadataBase: new URL("https://sinanptm.vercel.app"), 
 };
 
 interface RootLayoutProps {
