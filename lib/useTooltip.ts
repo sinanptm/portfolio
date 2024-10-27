@@ -1,4 +1,4 @@
-import { use, useCallback, useState } from "react"
+import { useCallback, useState } from "react"
 import { useMotionValue, useSpring, useTransform } from "framer-motion"
 
 export const useTooltip = () => {

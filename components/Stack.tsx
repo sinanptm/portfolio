@@ -20,7 +20,7 @@ const Stack = () => {
         <h3 className="text-sm sm:text-base md:text-lg font-medium text-center">{tech.name}</h3>
       </CardSpotlight>
     ));
-  }, [technologies]);
+  }, []);
 
   return (
     <section id="stack" className="relative w-full min-h-fit mx-auto px-4 sm:px-6 lg:px-8 py-12">
