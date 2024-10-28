@@ -1,5 +1,3 @@
-import { Project } from "@/types";
-
 export const socialLinks = [
     { image: '/assets/linkedin.svg', href: 'https://www.linkedin.com/in/sinanptm/', label: 'LinkedIn' },
     { image: '/assets/github.svg', href: 'https://github.com/sinanptm/', label: 'GitHub' },
@@ -31,17 +29,32 @@ export const projects = [
     {
         title: "AVM Ayurvedic: Hospital Management",
         description: "A wellness platform with AI-powered health insights and Ayurvedic consultations.",
-        detailedDescription: "A comprehensive Ayurvedic platform with video consultations, secure payments, and real-time notifications. Optimized for performance with Google Lighthouse 90+ scores. The backend is designed for scalability and secure data handling using Node.js, Express.js, and MongoDB on AWS. It includes role-based authorization and is deployed with Vercel, utilizing GitHub Actions for CI/CD.",
+        detailedDescription: "A comprehensive Ayurvedic platform with video consultations, secure payments, and real-time notifications. Optimized for performance with Google Lighthouse 90+ scores. The backend is designed for scalability and secure data handling using Node.js, Express.js, and MongoDB on AWS. It includes role-based authorization and is deployed frontend with Vercel, utilizing GitHub Actions for CI/CD.",
         technologies: [1, 18, 19, 13, 9, 10, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 51, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
         link: "http://avm-ayurvedic.online",
         githubLink: "https://github.com/sinanptm/avm-ayurvedic",
         thumbnail: "/assets/projects/avm.png",
         demoLink: "https://youtu.be/fpOPtDixtD4",
         achievements: [
-            "Achieved 90+ scores in Google Lighthouse.",
-            "Implemented real-time video consultations.",
-            "Secure data management with Node.js and MongoDB on AWS.",
-            "CI/CD pipeline with GitHub Actions and Vercel."
+            "🌟 Achieved 90+ scores on Google Lighthouse for performance.",
+            "📹 Video Consultations: Global access with WebRTC and Socket.io.",
+            "🔔 Notifications: Real-time alerts via Socket.io.",
+            "🔐 Image Uploads: Securely managed with AWS S3 presigned URLs.",
+            "📅 Appointment Booking: Streamlined scheduling with reminders.",
+            "💳 Payments: Integrated Stripe for secure transactions.",
+            "🤖 AI Wellness Insights: Personalized health recommendations.",
+            "🌐 High-Performance Frontend: Optimized with Next.js and Vercel.",
+            "🔒 Role-Based Access Control for Admin, Doctor, and Patient.",
+            "📑 Prescription Management: Prescriptions Download for patients.",
+            "📊 Admin Dashboard: Analytics for effective management.",
+            "🛠️ Modular Architecture: Clean Architecture and SOLID principles.",
+            "⚙️ Logging: Error tracking with Winston.",
+            "📈 Analytics: Google and Vercel Analytics for optimization.",
+            "🔄 CI/CD: Automated deployment with GitHub Actions.",
+            "🖼️ SEO & Social: Open Graph and Twitter Card integration.",
+            "🎨 Responsive Design: Styled with TailwindCSS and Framer Motion.",
+            "🛡️ Data Validation: Schema validation with Zod and Joi.",
+            "🌐 Deployed on AWS with NGINX for scalability and reliability.",
         ]
     },
     {
@@ -57,7 +70,12 @@ export const projects = [
             "Secure JWT-based authentication and OTP validation.",
             "Integrated Razorpay payment gateway.",
             "Comprehensive admin panel and sales tracking.",
-            "AWS-hosted with NGINX for scalability."
+            "Deployed on AWS with NGINX for scalability and reliability.",
+            "Bootstrap for a responsive and modern UI.",
+            "PDFKIT For generating invoices.",
+            "Wallet for managing transactions.",
+            "Fully functional Cart and Wishlist functionality.",
+            "Customer support via chat."
         ]
     },
     {
@@ -73,14 +91,16 @@ export const projects = [
         achievements: [
             "Boosted performance by 70% through memoization.",
             "Smart caching reduced API calls by 80%.",
-            "JWT authentication for security."
+            "JWT authentication for security.",
+            "Implemented mark lists and participant management.",
+            "Utilized Mui Components for a smooth user experience."
         ]
     },
     {
         title: "URL Shortener",
         description: "A URL shortener with click tracking and personalized dashboards.",
         detailedDescription: "Developed with MERN stack and NestJS, this app offers URL shortening, click tracking, and personalized user dashboards. It provides experience in NestJS, focusing on modular architecture and dependency injection.",
-        technologies: [2, 13, 3],  // NestJS, MongoDB, React
+        technologies: [2, 13, 3],
         link: "https://url-shortener-sooty-five.vercel.app",
         isLinkedin: true,
         githubLink: "https://github.com/sinanptm/url-shortener",
@@ -88,14 +108,14 @@ export const projects = [
         thumbnail: "/assets/projects/url-shortener.png",
         achievements: [
             "Implemented click tracking and user dashboards.",
-            "Hands-on experience with NestJS and modular architecture."
+            "Hands-on experience with NestJS and modular clean architecture.",
         ]
     },
     {
         title: "Ace-Quiz: Quiz App",
         description: "A quiz application built with Next.js and TypeScript following clean architecture principles.",
         detailedDescription: "This quiz app focuses on scalability and maintainable code, using tools like Radix UI and Redux for efficient state management. GitHub workflows and CI enhance deployment and testing capabilities.",
-        technologies: [1, 0, 13, 4, 19, 18],
+        technologies: [1, 0, 13, 4, 19, 18, 27, 33],
         link: "https://quiz-app-six-dusky.vercel.app",
         githubLink: "https://github.com/sinanptm/Quiz-app",
         thumbnail: "/assets/projects/quiz.png",
@@ -110,7 +130,7 @@ export const projects = [
         title: "OLX & Netflix Clones",
         description: "Clones of Netflix and OLX with real-time data and secure authentication.",
         detailedDescription: "These clones, developed using React and Firebase, showcase responsive design and real-time data. TMDb API is used in the Netflix clone for movie data, and Firebase handles authentication and image uploads for the OLX clone.",
-        technologies: [3, 22],
+        technologies: [3, 22 ],
         githubLink: "https://github.com/sinanptm/OLX-clone",
         link: "https://netflix-clone-gamma-virid.vercel.app",
         thumbnail: "/assets/projects/netflix.png",
@@ -122,6 +142,69 @@ export const projects = [
         ]
     }
 ];
+
+const INDEXES = {
+    "TypeScript": 0,
+    "Next JS": 1,
+    "Nest.js": 2,
+    "React": 3,
+    "Redux": 4,
+    "React Query": 5,
+    "Vite": 6,
+    "AWS": 7,
+    "Stripe": 8,
+    "WebRTC": 9,
+    "Socket.io": 10,
+    "Google AI": 11,
+    "OpenAI": 12,
+    "MongoDB": 13,
+    "Postgres": 14,
+    "Zod": 15,
+    "Clean Architecture": 16,
+    "SOLID Principles": 17,
+    "NodeJS": 18,
+    "Express.js": 19,
+    "TailwindCSS": 20,
+    "Vercel": 21,
+    "Firebase": 22,
+    "Razorpay": 23,
+    "Google Analytics": 24,
+    "Vercel Analytics": 25,
+    "Styled Components": 26,
+    "Radix UI": 27,
+    "Axios": 28,
+    "JWT": 29,
+    "OAuth": 30,
+    "Joi": 31,
+    "Winston": 32,
+    "shadcn": 33,
+    "Recharts": 34,
+    "Prettier": 35,
+    "ESLint": 36,
+    "GitHub Actions": 37,
+    "Nginx": 38,
+    "Render": 39,
+    "Cloudflare": 40,
+    "V0": 41,
+    "React Hook Form": 42,
+    "Context-API": 43,
+    "JavaScript": 44,
+    "MySQL": 45,
+    "Bootstrap": 46,
+    "jQuery": 47,
+    "NPM": 48,
+    "Nodemon": 49,
+    "Postman": 50,
+    "Figma": 51,
+    "Framer": 52,
+    "PDFKit": 53,
+    "Sharp": 54,
+    "PDF Viewer": 55,
+    "Cookies": 56,
+    "EJS": 57
+};
+
+
 
 const badgeBase = "https://img.shields.io/badge";
 
@@ -185,7 +268,6 @@ export const skills = [
     { name: "Cookies", url: `${badgeBase}/Cookies-ffcc00.svg?style=flat&logo=cookie&logoColor=white` },
     { name: "EJS", url: `${badgeBase}/EJS-8A3FFA.svg?style=flat&logo=ejs&logoColor=white` },
 ];
-
 
 
 const basedUrl = "/assets/tech";
