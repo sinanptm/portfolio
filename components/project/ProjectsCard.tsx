@@ -49,7 +49,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           {project.description}
         </p>
         <motion.div
-          className="flex flex-wrap gap-x-4"
+          className="flex flex-wrap gap-x-4 gap-y-2"
           initial="rest"
           whileHover="hover"
           animate="rest"

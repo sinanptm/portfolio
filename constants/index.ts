@@ -79,6 +79,28 @@ export const projects = [
         ]
     },
     {
+        title: "Readify: Article Management Platform",
+        description: "Discover, read, and manage your favorite articles effortlessly.",
+        detailedDescription: "Readify is an article management platform featuring anonymous posting, theme customization, and a personalized feed. The platform is built with Next.js 15, TailwindCSS, and Radix UI, and uses MongoDB for data storage. Cloudinary handles image uploads, and JWT ensures secure access. The project is deployed on Vercel with GitHub Actions for CI/CD.",
+        technologies: [60, 13, 59, 0, 61, 58, 29, 15, 36],
+        link: "http://readify-gamma.vercel.app",
+        githubLink: "https://github.com/sinanptm/readify",
+        isLinkedin: true,
+        thumbnail: "/assets/projects/readify.png",
+        demoLink: "https://www.linkedin.com/posts/sinanptm_nuqs-statemanagement-urlpersistence-activity-7259535302615080961-F5Pf?utm_source=share&utm_medium=member_desktop",
+        achievements: [
+            "🕶️ Anonymous Posting: Share thoughts without an account.",
+            "🎨 Theme Customization: Toggle between light and dark themes.",
+            "📖 Personalized Feed: Customize your article feed.",
+            "👍 Like & Share: Interact with favorite articles.",
+            "🔍 Search with Debounce: Smooth, responsive searching.",
+            "📸 Cloudinary Image Uploads: Effortless image management.",
+            "📊 Nuqs State Management: Efficient search and pagination.",
+            "🔐 JWT Authentication: Secure and private access.",
+            "💻 Deployed with Vercel and GitHub Actions for CI/CD."
+        ]
+    },
+    {
         title: "Sahithyolsav Manager",
         description: "Program management app for SSF Kerala with features for managing events and participants.",
         detailedDescription: "Developed in three days using the MERN stack, this app includes mark lists, participant management, and caching for performance boosts. The UI is optimized for fast load times, and JWT authentication ensures data security.",
@@ -126,23 +148,24 @@ export const projects = [
             "Experienced with CI for deployment and testing."
         ]
     },
-    {
-        title: "OLX & Netflix Clones",
-        description: "Clones of Netflix and OLX with real-time data and secure authentication.",
-        detailedDescription: "These clones, developed using React and Firebase, showcase responsive design and real-time data. TMDb API is used in the Netflix clone for movie data, and Firebase handles authentication and image uploads for the OLX clone.",
-        technologies: [3, 22 ],
-        githubLink: "https://github.com/sinanptm/OLX-clone",
-        link: "https://netflix-clone-gamma-virid.vercel.app",
-        thumbnail: "/assets/projects/netflix.png",
-        isLinkedin: true,
-        demoLink: "https://www.linkedin.com/posts/sinanptm_reactjs-firebase-tmdb-activity-7211610477729054720-nLr1?utm_source=share&utm_medium=member_desktop",
-        achievements: [
-            "Integrated TMDb API for Netflix clone.",
-            "Firebase for secure authentication and image uploads."
-        ]
-    }
+    // {
+    //     title: "OLX & Netflix Clones",
+    //     description: "Clones of Netflix and OLX with real-time data and secure authentication.",
+    //     detailedDescription: "These clones, developed using React and Firebase, showcase responsive design and real-time data. TMDb API is used in the Netflix clone for movie data, and Firebase handles authentication and image uploads for the OLX clone.",
+    //     technologies: [3, 22],
+    //     githubLink: "https://github.com/sinanptm/OLX-clone",
+    //     link: "https://netflix-clone-gamma-virid.vercel.app",
+    //     thumbnail: "/assets/projects/netflix.png",
+    //     isLinkedin: true,
+    //     demoLink: "https://www.linkedin.com/posts/sinanptm_reactjs-firebase-tmdb-activity-7211610477729054720-nLr1?utm_source=share&utm_medium=member_desktop",
+    //     achievements: [
+    //         "Integrated TMDb API for Netflix clone.",
+    //         "Firebase for secure authentication and image uploads."
+    //     ]
+    // }
 ];
 
+//eslint-disable-next-line
 const INDEXES = {
     "TypeScript": 0,
     "Next JS": 1,
@@ -201,8 +224,13 @@ const INDEXES = {
     "Sharp": 54,
     "PDF Viewer": 55,
     "Cookies": 56,
-    "EJS": 57
+    "EJS": 57,
+    "Nuqs": 58,
+    "Clodinary": 59,
+    "Nextjs 15": 60,
+    "React 19": 61
 };
+
 
 
 
@@ -267,6 +295,10 @@ export const skills = [
     { name: "PDF Viewer", url: `${badgeBase}/PDF_Viewer-ff4f00.svg?style=flat&logo=pdf&logoColor=white` },
     { name: "Cookies", url: `${badgeBase}/Cookies-ffcc00.svg?style=flat&logo=cookie&logoColor=white` },
     { name: "EJS", url: `${badgeBase}/EJS-8A3FFA.svg?style=flat&logo=ejs&logoColor=white` },
+    { name: "Nuqs", url: `${badgeBase}/Nuqs-000000?style=flat&logo=react&logoColor=white` },
+    { name: "Clodinary", url: `${badgeBase}/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white` },
+    { name: "Nextjs 15", url: `${badgeBase}/Next%20JS-15-black?style=flat&logo=next.js&logoColor=white` },
+    { name: "React 19", url: `${badgeBase}/React-19-%2320232a?style=flat&logo=react&logoColor=%2361DAF` }
 ];
 
 
@@ -290,6 +322,7 @@ export const technologies = [
     { name: "TypeScript", url: `${basedUrl}/typescript.svg` },
     { name: "Redux", url: `${basedUrl}/redux.svg` },
     { name: "React Query", url: `${basedUrl}/react-query.svg` },
+    { name: "Nuqs", url: `${basedUrl}/nuqs.svg` },
     { name: "Postgres", url: `${basedUrl}/postgresql.svg` },
     { name: "MySQL", url: `${basedUrl}/mysql.svg` },
     { name: "JWT", url: `${basedUrl}/jwt.svg` },
@@ -317,7 +350,7 @@ export const technologies = [
     { name: "Nodemon", url: `${basedUrl}/nodemon.svg` },
     { name: "Postman", url: `${basedUrl}/postman.svg` },
     { name: "Figma", url: `${basedUrl}/figma-icon.svg` },
-    { name: "V0", url: `${basedUrl}/v0.webp` },
+    { name: "V0", url: `${basedUrl}/v0.svg` },
     { name: "Joi", url: `${basedUrl}/joi.svg` },
     { name: "Winston", url: `${basedUrl}/winston.svg` },
     { name: "Render", url: `${basedUrl}/render.svg` }
