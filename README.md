@@ -1,25 +1,12 @@
 <div align="center">
-  <img src="https://your-image-url.com/portfolio-logo.png" alt="Portfolio Logo" width="200"/>
   <h1>🌟 3D Interactive Portfolio</h1>
   <p><em>A unique and immersive way to showcase your skills and projects</em></p>
-  
-  <a href="https://sinanptm.vercel.app">View Demo</a> ·
-  <a href="https://github.com/sinanptm/portfolio/issues">Report Bug</a> ·
-  <a href="https://github.com/sinanptm/portfolio/issues">Request Feature</a>
-</div>
-
-<div align="center">
-  <img src="https://your-image-url.com/portfolio-preview.gif" alt="Portfolio Preview" width="600"/>
-</div>
-
-<h2 align="center">🚀 Features</h2>
-
-<p align="center">
   <img src="https://img.shields.io/badge/-3D%20Environment-blueviolet" alt="3D Environment"/>
   <img src="https://img.shields.io/badge/-Customizable-orange" alt="Customizable"/>
   <img src="https://img.shields.io/badge/-Responsive-blue" alt="Responsive"/>
   <img src="https://img.shields.io/badge/-Interactive-green" alt="Interactive"/>
-</p>
+</div>
+
 
 <div align="center">
   <ul>
