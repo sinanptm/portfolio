@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <img src="https://your-image-url.com/portfolio-logo.png" alt="Portfolio Logo" width="200"/>
+  <h1>🌟 3D Interactive Portfolio</h1>
+  <p><em>A unique and immersive way to showcase your skills and projects</em></p>
+  
+  <a href="https://sinanptm.vercel.app">View Demo</a> ·
+  <a href="https://github.com/sinanptm/portfolio/issues">Report Bug</a> ·
+  <a href="https://github.com/sinanptm/portfolio/issues">Request Feature</a>
+</div>
 
-## Getting Started
+<div align="center">
+  <img src="https://your-image-url.com/portfolio-preview.gif" alt="Portfolio Preview" width="600"/>
+</div>
 
-First, run the development server:
+<h2 align="center">🚀 Features</h2>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  <img src="https://img.shields.io/badge/-3D%20Environment-blueviolet" alt="3D Environment"/>
+  <img src="https://img.shields.io/badge/-Customizable-orange" alt="Customizable"/>
+  <img src="https://img.shields.io/badge/-Responsive-blue" alt="Responsive"/>
+  <img src="https://img.shields.io/badge/-Interactive-green" alt="Interactive"/>
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<div align="center">
+  <ul>
+    <li>Fully interactive 3D environment</li>
+    <li>Customizable content and appearance</li>
+    <li>Responsive design for various devices</li>
+    <li>Engaging user experience</li>
+  </ul>
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<h2 align="center">🛠 Installation</h2>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<ol>
+  <li>Clone the repository:
+    <pre><code>git clone https://github.com/sinanptm/portfolio.git</code></pre>
+  </li>
+  <li>Navigate to the project directory:
+    <pre><code>cd portfolio</code></pre>
+  </li>
+  <li>Install dependencies:
+    <pre><code>npm install</code></pre>
+  </li>
+  <li>Start the development server:
+    <pre><code>npm run dev</code></pre>
+  </li>
+  <li>Open your browser and visit <code>http://localhost:3000</code> to view the portfolio.</li>
+</ol>
 
-## Learn More
+<h2 align="center">🎨 Customization</h2>
 
-To learn more about Next.js, take a look at the following resources:
+<h3>Changing Content</h3>
+<p>All the content is stored in the <code>constants</code> folder. You can easily modify the text, links, and other information to personalize the portfolio:</p>
+<ol>
+  <li>Open the <code>constants/index.ts</code> file in the project root.</li>
+  <li>Update the values to reflect your personal information, skills, and projects.</li>
+</ol>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<h3>Updating Metadata</h3>
+<p>To change the metadata of the portfolio:</p>
+<ol>
+  <li>Navigate to the <code>app/layout.ts</code> file.</li>
+  <li>Modify the metadata fields to match your information.</li>
+</ol>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<h3>Changing the 3D Model Desktop Wallpaper</h3>
+<p>To personalize the desktop wallpaper in the 3D environment:</p>
+<ol>
+  <li>Go to the <code>/public/desktop/textures</code> directory.</li>
+  <li>Replace the existing <code>profile.png</code> with your own image (keep the same filename).</li>
+</ol>
 
-## Deploy on Vercel
+<h2 align="center">🤝 Contributing</h2>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<p align="center">
+  Contributions, issues, and feature requests are welcome!<br>
+  Feel free to check <a href="https://github.com/sinanptm/portfolio/issues">issues page</a>.
+</p>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<h2 align="center">👨‍💻 Author</h2>
+
+<div align="center">
+  <h3><strong>Muhammed Sinan</strong></h3>
+  <p>
+    <a href="https://github.com/sinanptm">GitHub</a> ·
+    <a href="https://sinanptm.vercel.app">Portfolio</a> ·
+    <a href="https://www.linkedin.com/in/sinanptm/">LinkedIn</a>
+  </p>
+</div>
+
+<hr>
+
+<p align="center">Made with ❤️ by Muhammed Sinan</p>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/>
+</div>
