@@ -8,14 +8,6 @@
 </div>
 
 
-<div align="center">
-  <ul>
-    <li>Fully interactive 3D environment</li>
-    <li>Customizable content and appearance</li>
-    <li>Responsive design for various devices</li>
-    <li>Engaging user experience</li>
-  </ul>
-</div>
 
 <h2 align="center">🛠 Installation</h2>
 
