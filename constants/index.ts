@@ -1,3 +1,5 @@
+import { Tech } from "@/types";
+
 export const socialLinks = [
     { image: '/assets/linkedin.svg', href: 'https://www.linkedin.com/in/sinanptm/', label: 'LinkedIn' },
     { image: '/assets/github.svg', href: 'https://github.com/sinanptm/', label: 'GitHub' },
@@ -228,7 +230,7 @@ const INDEXES = {
     "Nuqs": 58,
     "Clodinary": 59,
     "Nextjs 15": 60,
-    "React 19": 61
+    "React 19": 61,
 };
 
 
@@ -236,7 +238,7 @@ const INDEXES = {
 
 const badgeBase = "https://img.shields.io/badge";
 
-export const skills = [
+export const skills: Tech[] = [
     { name: "TypeScript", url: `${badgeBase}/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white` },
     { name: "Next JS", url: `${badgeBase}/Next-black?style=flat&logo=next.js&logoColor=white` },
     { name: "Nest.js", url: `${badgeBase}/nestjs-%23E0234E.svg?style=flat&logo=Nestjs&logoColor=%2361DAFB` },
@@ -298,65 +300,104 @@ export const skills = [
     { name: "Nuqs", url: `${badgeBase}/Nuqs-000000?style=flat&logo=react&logoColor=white` },
     { name: "Clodinary", url: `${badgeBase}/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white` },
     { name: "Nextjs 15", url: `${badgeBase}/Next%20JS-15-black?style=flat&logo=next.js&logoColor=white` },
-    { name: "React 19", url: `${badgeBase}/React-19-%2320232a?style=flat&logo=react&logoColor=%2361DAF` }
+    { name: "React 19", url: `${badgeBase}/React-19-%2320232a?style=flat&logo=react&logoColor=%2361DAF` },
 ];
+
 
 
 const basedUrl = "/assets/tech";
 
-export const technologies = [
-    { name: "ReactJS", url: `${basedUrl}/react.svg` },
+export const technologies: Tech[] = [
+    // Languages
+    { name: "TypeScript", url: `${basedUrl}/typescript.svg` },
+    { name: "JavaScript", url: `${basedUrl}/javascript.svg` },
+
+    // Backend Frameworks
     { name: "NodeJS", url: `${basedUrl}/nodejs.svg` },
     { name: "ExpressJS", url: `${basedUrl}/express.svg` },
-    { name: "MongoDB", url: `${basedUrl}/mongodb.svg` },
-    { name: "Next JS", url: `${basedUrl}/nextjs.svg` },
     { name: "Nest JS", url: `${basedUrl}/nestjs.svg` },
-    { name: "WebRTC", url: `${basedUrl}/webrtc.svg` },
-    { name: "Socket.io", url: `${basedUrl}/socket-io.svg` },
-    { name: "Three.JS", url: `${basedUrl}/threejs-1.svg` },
-    { name: "AWS", url: `${basedUrl}/aws.svg` },
-    { name: "Google AI", url: `${basedUrl}/google-ai.svg` },
-    { name: "OpenAI", url: `${basedUrl}/openai.svg` },
-    { name: "Firebase", url: `${basedUrl}/firebase.svg` },
-    { name: "Stripe", url: `${basedUrl}/stripe.svg` },
-    { name: "TypeScript", url: `${basedUrl}/typescript.svg` },
+
+    // Frontend Frameworks/Libraries
+    { name: "ReactJS", url: `${basedUrl}/react.svg` },
+    { name: "Next JS", url: `${basedUrl}/nextjs.svg` },
+    { name: "Vite", url: `${basedUrl}/vite.svg` },
+
+    // Databases
+    { name: "MongoDB", url: `${basedUrl}/mongodb.svg` },
+    { name: "Postgres", url: `${basedUrl}/postgresql.svg` },
+    { name: "MySQL", url: `${basedUrl}/mysql.svg` },
+
+    // State-management
     { name: "Redux", url: `${basedUrl}/redux.svg` },
     { name: "React Query", url: `${basedUrl}/react-query.svg` },
     { name: "Nuqs", url: `${basedUrl}/nuqs.svg` },
-    { name: "Postgres", url: `${basedUrl}/postgresql.svg` },
-    { name: "MySQL", url: `${basedUrl}/mysql.svg` },
-    { name: "JWT", url: `${basedUrl}/jwt.svg` },
-    { name: "OAuth", url: `${basedUrl}/oauth.svg` },
-    { name: "Framer Motion", url: `${basedUrl}/framer-motion.svg` },
+
+    // Styling & Animations
     { name: "TailwindCSS", url: `${basedUrl}/tailwind.svg` },
+    { name: "Rombo", url: `${basedUrl}/rombo.svg` },
+    { name: "Framer Motion", url: `${basedUrl}/framer-motion.svg` },
+    { name: "Styled Components", url: `${basedUrl}/styled-components.svg` },
+    { name: "Bootstrap", url: `${basedUrl}/bootstrap.svg` },
+
+
+    // Cloud & Hosting
+    { name: "AWS", url: `${basedUrl}/aws.svg` },
+    { name: "Firebase", url: `${basedUrl}/firebase.svg` },
+    { name: "Vercel", url: `${basedUrl}/vercel.svg` },
+    { name: "Render", url: `${basedUrl}/render.svg` },
+    { name: "Nginx", url: `${basedUrl}/nginx.svg` },
+
+    // UI Component Libraries
     { name: "Radix UI", url: `${basedUrl}/radix-ui.svg` },
     { name: "shadcn", url: `${basedUrl}/shadcn.svg` },
-    { name: "Vercel", url: `${basedUrl}/vercel.svg` },
+
+    // Payment Systems
+    { name: "Stripe", url: `${basedUrl}/stripe.svg` },
+    { name: "Razorpay", url: `${basedUrl}/razorpay.svg` },
+
+    // Authentication & Authorization
+    { name: "JWT", url: `${basedUrl}/jwt.svg` },
+    { name: "OAuth", url: `${basedUrl}/oauth.svg` },
+
+    // APIs & Utilities
+    { name: "Axios", url: `${basedUrl}/axios.svg` },
+    { name: "React Form", url: `${basedUrl}/react-hook-form.svg` },
+    { name: "Joi", url: `${basedUrl}/joi.svg` },
+    { name: "Postman", url: `${basedUrl}/postman.svg` },
+
+    // WebRTC & Real-Time Communication
+    { name: "WebRTC", url: `${basedUrl}/webrtc.svg` },
+    { name: "Socket.io", url: `${basedUrl}/socket-io.svg` },
+
+    // 3D & Visuals
+    { name: "Three.JS", url: `${basedUrl}/threejs-1.svg` },
+
+    // AI & Analytics
+    { name: "Google AI", url: `${basedUrl}/google-ai.svg` },
+    { name: "OpenAI", url: `${basedUrl}/openai.svg` },
     { name: "Vercel Analytics", url: `${basedUrl}/vercel-analytics.svg` },
     { name: "Google Analytics", url: `${basedUrl}/google-analytics.svg` },
-    { name: "Razorpay", url: `${basedUrl}/razorpay.svg` },
-    { name: "Vite", url: `${basedUrl}/vite.svg` },
-    { name: "React Form", url: `${basedUrl}/react-hook-form.svg` },
     { name: "Chart.js", url: `${basedUrl}/chartjs.svg` },
-    { name: "Styled Components", url: `${basedUrl}/styled-components.svg` },
-    { name: "Axios", url: `${basedUrl}/axios.svg` },
-    { name: "Bootstrap", url: `${basedUrl}/bootstrap.svg` },
-    { name: "jQuery", url: `${basedUrl}/jquery.svg` },
-    { name: "Nginx", url: `${basedUrl}/nginx.svg` },
+
+    // DevOps & CI/CD
     { name: "GitHub Actions", url: `${basedUrl}/github-action.svg` },
-    { name: "ESLint", url: `${basedUrl}/eslint.svg` },
-    { name: "Prettier", url: `${basedUrl}/prettier.svg` },
     { name: "NPM", url: `${basedUrl}/npm.svg` },
     { name: "Nodemon", url: `${basedUrl}/nodemon.svg` },
-    { name: "Postman", url: `${basedUrl}/postman.svg` },
-    { name: "Figma", url: `${basedUrl}/figma-icon.svg` },
-    { name: "V0", url: `${basedUrl}/v0.svg` },
-    { name: "Joi", url: `${basedUrl}/joi.svg` },
+
+    // Code Quality & Logging
+    { name: "ESLint", url: `${basedUrl}/eslint.svg` },
+    { name: "Prettier", url: `${basedUrl}/prettier.svg` },
     { name: "Winston", url: `${basedUrl}/winston.svg` },
-    { name: "Render", url: `${basedUrl}/render.svg` }
+
+    // Design & Prototyping
+    { name: "Figma", url: `${basedUrl}/figma-icon.svg` },
+
+    // Legacy Support
+    { name: "jQuery", url: `${basedUrl}/jquery.svg` },
+
+    // Miscellaneous
+    { name: "V0", url: `${basedUrl}/v0.svg` }
 ];
 
 
-// { name: "Clean Architecture", url: "https://img.shields.io/badge/Clean_Architecture-%230D6EFD.svg?style=flat&logo=architecture&logoColor=white" },
-// { name: "SOLID Principles", url: "https://img.shields.io/badge/SOLID_Principles-%230D6EFD.svg?style=flat&logo=architecture&logoColor=white" },
 

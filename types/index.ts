@@ -10,3 +10,8 @@ export interface Project {
     achievements: string[];
     isLinkedin?: boolean;
 }
+
+export interface Tech{
+    name:string;
+    url:string
+}
