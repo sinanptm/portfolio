@@ -82,7 +82,7 @@ export const projects = [
         title: "Readify: Article Management Platform",
         description: "Discover, read, and manage your favorite articles effortlessly.",
         detailedDescription: "Readify is an article management platform featuring anonymous posting, theme customization, and a personalized feed. The platform is built with Next.js 15, TailwindCSS, and Radix UI, and uses MongoDB for data storage. Cloudinary handles image uploads, and JWT ensures secure access. The project is deployed on Vercel with GitHub Actions for CI/CD.",
-        technologies: [60, 13, 59, 0, 61, 58, 29, 15, 36],
+        technologies: [60, 13, 59, 0, 61, 58, 29, 27, 15, 36],
         link: "http://readify-gamma.vercel.app",
         githubLink: "https://github.com/sinanptm/readify",
         isLinkedin: true,
