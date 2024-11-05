@@ -332,28 +332,34 @@ export const technologies: Tech[] = [
     { name: "React Query", url: `${basedUrl}/react-query.svg` },
     { name: "Nuqs", url: `${basedUrl}/nuqs.svg` },
 
-    // Styling & Animations
-    { name: "TailwindCSS", url: `${basedUrl}/tailwind.svg` },
-    { name: "Rombo", url: `${basedUrl}/rombo.svg` },
-    { name: "Framer Motion", url: `${basedUrl}/framer-motion.svg` },
-    { name: "Styled Components", url: `${basedUrl}/styled-components.svg` },
-    { name: "Bootstrap", url: `${basedUrl}/bootstrap.svg` },
-
-
     // Cloud & Hosting
     { name: "AWS", url: `${basedUrl}/aws.svg` },
+    { name: "Cloudinary", url: `${basedUrl}/cloudinary.png` },
     { name: "Firebase", url: `${basedUrl}/firebase.svg` },
     { name: "Vercel", url: `${basedUrl}/vercel.svg` },
     { name: "Render", url: `${basedUrl}/render.svg` },
     { name: "Nginx", url: `${basedUrl}/nginx.svg` },
 
+    // WebRTC & Real-Time Communication
+    { name: "WebRTC", url: `${basedUrl}/webrtc.svg` },
+    { name: "Socket.io", url: `${basedUrl}/socket-io.svg` },
+
+    // Styling & Animations
+    { name: "TailwindCSS", url: `${basedUrl}/tailwind.svg` },
+    { name: "Three.JS", url: `${basedUrl}/threejs-1.svg` },
+    { name: "Rombo", url: `${basedUrl}/rombo.svg` },
+    { name: "Framer Motion", url: `${basedUrl}/framer-motion.svg` },
+    { name: "Styled Components", url: `${basedUrl}/styled-components.svg` },
+    { name: "Bootstrap", url: `${basedUrl}/bootstrap.svg` },
+    
+    // Payment Systems
+    { name: "Stripe", url: `${basedUrl}/stripe.svg` },
+    { name: "Razorpay", url: `${basedUrl}/razorpay.svg` },
+
     // UI Component Libraries
     { name: "Radix UI", url: `${basedUrl}/radix-ui.svg` },
     { name: "shadcn", url: `${basedUrl}/shadcn.svg` },
 
-    // Payment Systems
-    { name: "Stripe", url: `${basedUrl}/stripe.svg` },
-    { name: "Razorpay", url: `${basedUrl}/razorpay.svg` },
 
     // Authentication & Authorization
     { name: "JWT", url: `${basedUrl}/jwt.svg` },
@@ -363,14 +369,9 @@ export const technologies: Tech[] = [
     { name: "Axios", url: `${basedUrl}/axios.svg` },
     { name: "React Form", url: `${basedUrl}/react-hook-form.svg` },
     { name: "Joi", url: `${basedUrl}/joi.svg` },
+    { name: "Zod", url: `${basedUrl}/zod.svg` },
     { name: "Postman", url: `${basedUrl}/postman.svg` },
-
-    // WebRTC & Real-Time Communication
-    { name: "WebRTC", url: `${basedUrl}/webrtc.svg` },
-    { name: "Socket.io", url: `${basedUrl}/socket-io.svg` },
-
-    // 3D & Visuals
-    { name: "Three.JS", url: `${basedUrl}/threejs-1.svg` },
+    { name: "Thunder Client", url: `${basedUrl}/thunder-client.png` },
 
     // AI & Analytics
     { name: "Google AI", url: `${basedUrl}/google-ai.svg` },
@@ -394,9 +395,6 @@ export const technologies: Tech[] = [
 
     // Legacy Support
     { name: "jQuery", url: `${basedUrl}/jquery.svg` },
-
-    // Miscellaneous
-    { name: "V0", url: `${basedUrl}/v0.svg` }
 ];
 
 
