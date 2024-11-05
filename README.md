@@ -50,25 +50,7 @@
   <li>Replace the existing <code>profile.png</code> with your own image (keep the same filename).</li>
 </ol>
 
-<h2 align="center">🤝 Contributing</h2>
 
-<p align="center">
-  Contributions, issues, and feature requests are welcome!<br>
-  Feel free to check <a href="https://github.com/sinanptm/portfolio/issues">issues page</a>.
-</p>
-
-<h2 align="center">👨‍💻 Author</h2>
-
-<div align="center">
-  <h3><strong>Muhammed Sinan</strong></h3>
-  <p>
-    <a href="https://github.com/sinanptm">GitHub</a> ·
-    <a href="https://sinanptm.vercel.app">Portfolio</a> ·
-    <a href="https://www.linkedin.com/in/sinanptm/">LinkedIn</a>
-  </p>
-</div>
-
-<hr>
 
 <p align="center">Made with ❤️ by Muhammed Sinan</p>
 
