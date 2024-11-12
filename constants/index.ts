@@ -327,11 +327,7 @@ export const technologies: Tech[] = [
     { name: "Postgres", url: `${basedUrl}/postgresql.svg` },
     { name: "MySQL", url: `${basedUrl}/mysql.svg` },
 
-    // State-management
-    { name: "Redux", url: `${basedUrl}/redux.svg` },
-    { name: "React Query", url: `${basedUrl}/react-query.svg` },
-    { name: "Nuqs", url: `${basedUrl}/nuqs.svg` },
-
+    
     // Cloud & Hosting
     { name: "AWS", url: `${basedUrl}/aws.svg` },
     { name: "Cloudinary", url: `${basedUrl}/cloudinary.png` },
@@ -343,6 +339,15 @@ export const technologies: Tech[] = [
     // WebRTC & Real-Time Communication
     { name: "WebRTC", url: `${basedUrl}/webrtc.svg` },
     { name: "Socket.io", url: `${basedUrl}/socket-io.svg` },
+    
+    // State-management
+    { name: "Redux", url: `${basedUrl}/redux.svg` },
+    { name: "React Query", url: `${basedUrl}/react-query.svg` },
+    { name: "Nuqs", url: `${basedUrl}/nuqs.svg` },
+
+    // Payment Systems
+    { name: "Stripe", url: `${basedUrl}/stripe.svg` },
+    { name: "Razorpay", url: `${basedUrl}/razorpay.svg` },
 
     // Styling & Animations
     { name: "TailwindCSS", url: `${basedUrl}/tailwind.svg` },
@@ -352,10 +357,6 @@ export const technologies: Tech[] = [
     { name: "Styled Components", url: `${basedUrl}/styled-components.svg` },
     { name: "Bootstrap", url: `${basedUrl}/bootstrap.svg` },
     
-    // Payment Systems
-    { name: "Stripe", url: `${basedUrl}/stripe.svg` },
-    { name: "Razorpay", url: `${basedUrl}/razorpay.svg` },
-
     // UI Component Libraries
     { name: "Radix UI", url: `${basedUrl}/radix-ui.svg` },
     { name: "shadcn", url: `${basedUrl}/shadcn.svg` },
