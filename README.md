@@ -9,17 +9,25 @@
 
 
 
-<h2 align="center">🛠 Installation</h2>
+<h3>🛠 Installation</h3>
 
 <ol>
   <li>Clone the repository:
-    <pre><code>git clone https://github.com/sinanptm/portfolio.git</code></pre>
-  </li>
-  <li>Navigate to the project directory:
-    <pre><code>cd portfolio</code></pre>
+    <pre><code>git clone https://github.com/sinanptm/portfolio.git
+cd portfolio</code></pre>
   </li>
   <li>Install dependencies:
     <pre><code>npm install</code></pre>
+  </li>
+  <li>Set up environment variables:
+    <ul>
+      <li>Create a <code>.env</code> file in the root directory</li>
+      <li>Add the following variables to the <code>.env</code> file:
+        <pre><code>SENDER_EMAIL=your_email@example.com
+NODEMAILER_PASSKEY=your_nodemailer_password
+RECEIVER_EMAIL=recipient_email@example.com</code></pre>
+      </li>
+    </ul>
   </li>
   <li>Start the development server:
     <pre><code>npm run dev</code></pre>
@@ -27,6 +35,30 @@
   <li>Open your browser and visit <code>http://localhost:3000</code> to view the portfolio.</li>
 </ol>
 
+<h3>🔧 Environment Variables</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>SENDER_EMAIL</code></td>
+      <td>Email address used to send contact form messages</td>
+    </tr>
+    <tr>
+      <td><code>NODEMAILER_PASSKEY</code></td>
+      <td>Password/API key for email service</td>
+    </tr>
+    <tr>
+      <td><code>RECEIVER_EMAIL</code></td>
+      <td>Email address where contact form messages will be received</td>
+    </tr>
+  </tbody>
+</table>
 <h2 align="center">🎨 Customization</h2>
 
 <h3>Changing Content</h3>
