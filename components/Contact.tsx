@@ -1,24 +1,32 @@
 'use client';
 
-import { memo, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Image from 'next/image';
+import { submitMessage } from '@/action';
+import { toast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [contactInfo, setContactInfo] = useState('');
   const [message, setMessage] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', { name, contactInfo, message });
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
+    toast({
+      title: "Message Sent Successfully! 🎉",
+      description: "Thank you for reaching out! I'll get back to you soon. 😊👍",
+      variant: "success",
+      duration: 5000,
+    });
+    await submitMessage(name, contactInfo, message);
+    setName('');
+    setContactInfo('');
+    setMessage('');
+  },[contactInfo, message, name]);
 
   return (
     <div
@@ -96,13 +104,6 @@ const Contact = () => {
           />
         </Button>
       </form>
-      {isSubmitted && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-r from-purple-600/90 to-blue-600/90 rounded-lg">
-          <p className="text-white text-2xl font-bold">
-            Message Sent!
-          </p>
-        </div>
-      )}
     </div>
   );
 };

@@ -21,6 +21,13 @@
   <li>Install dependencies:
     <pre><code>npm install</code></pre>
   </li>
+  <li>Set up environment variables:
+    - Create a \`.env\` file in the root directory
+    - Add the following variables to the \`.env\` file:
+    SENDER_EMAIL=[your_email@example.com](mailto:your_email@example.com)
+    NODEMAILER_PASSKEY=your_nodemailer_password
+    RECEIVER_EMAIL=[recipient_email@example.com](mailto:recipient_email@example.com)
+  </li>
   <li>Start the development server:
     <pre><code>npm run dev</code></pre>
   </li>

@@ -8,3 +8,5 @@
 .env*.local
 
 next-env.d.ts
+
+.env

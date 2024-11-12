@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import NavMenu from "@/components/NavMenu";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://sinanptm.vercel.app", 
+    url: "https://sinanptm.vercel.app",
     siteName: "Muhammed Sinan Portfolio",
     title: "Muhammed Sinan (sinanptm) | Full Stack Developer",
     description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Known as sinanptm on GitHub and LinkedIn.",
@@ -80,9 +81,9 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://sinanptm.vercel.app", 
+    canonical: "https://sinanptm.vercel.app",
   },
-  metadataBase: new URL("https://sinanptm.vercel.app"), 
+  metadataBase: new URL("https://sinanptm.vercel.app"),
 };
 
 interface RootLayoutProps {
@@ -101,6 +102,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
             <NavMenu />
             {children}
             <Footer />
+            <Toaster />
           </HeroHighlight>
           <Analytics debug={false} />
         </ThemeProvider>
