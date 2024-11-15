@@ -57,7 +57,7 @@ export const projects = [
         title: "Trends: E-commerce Store",
         description: "A full-featured e-commerce platform with dynamic product management and payment integration.",
         detailedDescription: "Trends is an e-commerce store with secure authentication, Razorpay payment integration, and extensive product management. It has features like real-time chat for customer support, order tracking, and a comprehensive admin panel for managing products and sales reports. Deployed on AWS with NGINX for scalability and reliability.",
-        technologies: [18, 19, 13, 29, 7, 44, 23, 30, 62, 38, 39, 54, 57, 49, 56],
+        technologies: [18, 19, 13, 29, 7, 44, 23, 63, 30, 62, 38, 39, 54, 57, 49, 56],
         link: "https://trendsonline.online",
         githubLink: "https://github.com/sinanptm/ecommerse-project",
         thumbnail: "/assets/projects/trends.png",
@@ -225,7 +225,8 @@ const INDEXES = {
     "Clodinary": 59,
     "Nextjs 15": 60,
     "React 19": 61,
-    "Hostinger": 62
+    "Hostinger": 62, 
+    "Multer":63
 };
 
 
@@ -296,7 +297,8 @@ export const skills: Tech[] = [
     { name: "Clodinary", url: `${badgeBase}/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white` },
     { name: "Nextjs 15", url: `${badgeBase}/Next%20JS-15-black?style=flat&logo=next.js&logoColor=white` },
     { name: "React 19", url: `${badgeBase}/React-19-%2320232a?style=flat&logo=react&logoColor=%2361DAF` },
-    { name: "Hostinger", url: `${badgeBase}/Hostinger-%23F7931E.svg?style=flat&logo=hostinger&logoColor=white` }
+    { name: "Hostinger", url: `${badgeBase}/Hostinger-%23F7931E.svg?style=flat&logo=hostinger&logoColor=white` },
+    { name: "Multer", url: `${badgeBase}/Multer-%23FEFEFE.svg?style=flat&logo=multer&logoColor=black` }
 ];
 
 
