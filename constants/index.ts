@@ -26,7 +26,7 @@ export const projects = [
         title: "AVM Ayurvedic: Hospital Management",
         description: "A wellness platform with AI-powered health insights and Ayurvedic consultations.",
         detailedDescription: "A comprehensive Ayurvedic platform with video consultations, secure payments, and real-time notifications. Optimized for performance with Google Lighthouse 90+ scores. The backend is designed for scalability and secure data handling using Node.js, Express.js, and MongoDB on AWS. It includes role-based authorization and is deployed frontend with Vercel, utilizing GitHub Actions for CI/CD.",
-        technologies: [1, 18, 19, 13, 9, 10, 17, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 51, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
+        technologies: [1, 18, 19, 13, 9, 10, 17, 20, 21, 22, 23, 24, 25, 26, 27, 62, 28, 29, 30, 31, 32, 33, 51, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
         link: "http://avm-ayurvedic.online",
         githubLink: "https://github.com/sinanptm/avm-ayurvedic",
         thumbnail: "/assets/projects/avm.png",
@@ -57,7 +57,7 @@ export const projects = [
         title: "Trends: E-commerce Store",
         description: "A full-featured e-commerce platform with dynamic product management and payment integration.",
         detailedDescription: "Trends is an e-commerce store with secure authentication, Razorpay payment integration, and extensive product management. It has features like real-time chat for customer support, order tracking, and a comprehensive admin panel for managing products and sales reports. Deployed on AWS with NGINX for scalability and reliability.",
-        technologies: [0, 19, 30, 29, 35, 44, 48, 51, 57, 56,],
+        technologies: [18, 19, 13, 29, 7, 44, 23, 30, 62, 38, 39, 54, 57, 49, 56],
         link: "https://trendsonline.online",
         githubLink: "https://github.com/sinanptm/ecommerse-project",
         thumbnail: "/assets/projects/trends.png",
@@ -78,7 +78,7 @@ export const projects = [
         title: "Readify: Article Management Platform",
         description: "Discover, read, and manage your favorite articles effortlessly.",
         detailedDescription: "Readify is an article management platform featuring anonymous posting, theme customization, and a personalized feed. The platform is built with Next.js 15, TailwindCSS, and Radix UI, and uses MongoDB for data storage. Cloudinary handles image uploads, and JWT ensures secure access. The project is deployed on Vercel with GitHub Actions for CI/CD.",
-        technologies: [60, 13, 59, 0, 61, 58, 29, 27, 15, 36],
+        technologies: [60, 13, 59, 0, 61, 58, 29, 27, 15, 36, 18],
         link: "http://readify-gamma.vercel.app",
         githubLink: "https://github.com/sinanptm/readify",
         isLinkedin: true,
@@ -118,7 +118,7 @@ export const projects = [
         title: "URL Shortener",
         description: "A URL shortener with click tracking and personalized dashboards.",
         detailedDescription: "Developed with MERN stack and NestJS, this app offers URL shortening, click tracking, and personalized user dashboards. It provides experience in NestJS, focusing on modular architecture and dependency injection.",
-        technologies: [2, 13, 3],
+        technologies: [2, 18, 13, 3, 21],
         link: "https://url-shortener-sooty-five.vercel.app",
         isLinkedin: true,
         githubLink: "https://github.com/sinanptm/url-shortener",
@@ -225,6 +225,7 @@ const INDEXES = {
     "Clodinary": 59,
     "Nextjs 15": 60,
     "React 19": 61,
+    "Hostinger": 62
 };
 
 
@@ -295,6 +296,7 @@ export const skills: Tech[] = [
     { name: "Clodinary", url: `${badgeBase}/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white` },
     { name: "Nextjs 15", url: `${badgeBase}/Next%20JS-15-black?style=flat&logo=next.js&logoColor=white` },
     { name: "React 19", url: `${badgeBase}/React-19-%2320232a?style=flat&logo=react&logoColor=%2361DAF` },
+    { name: "Hostinger", url: `${badgeBase}/Hostinger-%23F7931E.svg?style=flat&logo=hostinger&logoColor=white` }
 ];
 
 
@@ -329,7 +331,7 @@ export const technologies: Tech[] = [
     { name: "Vercel", url: `${baseUrlTech}/vercel.svg` },
     { name: "Render", url: `${baseUrlTech}/render.svg` },
     { name: "Nginx", url: `${baseUrlTech}/nginx.svg` },
-    {name:"Hostinger", url:`${baseUrlTech}/hostinger.png`},
+    { name: "Hostinger", url: `${baseUrlTech}/hostinger.png` },
 
     // WebRTC & Real-Time Communication
     { name: "WebRTC", url: `${baseUrlTech}/webrtc.svg` },
