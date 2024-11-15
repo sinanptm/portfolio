@@ -299,97 +299,100 @@ export const skills: Tech[] = [
 
 
 
-const basedUrl = "/assets/tech";
+const baseUrlTech = "/assets/tech";
 
 export const technologies: Tech[] = [
     // Languages
-    { name: "TypeScript", url: `${basedUrl}/typescript.svg` },
-    { name: "JavaScript", url: `${basedUrl}/javascript.svg` },
+    { name: "TypeScript", url: `${baseUrlTech}/typescript.svg` },
+    { name: "JavaScript", url: `${baseUrlTech}/javascript.svg` },
 
     // Backend Frameworks
-    { name: "NodeJS", url: `${basedUrl}/nodejs.svg` },
-    { name: "ExpressJS", url: `${basedUrl}/express.svg` },
-    { name: "Nest JS", url: `${basedUrl}/nestjs.svg` },
+    { name: "NodeJS", url: `${baseUrlTech}/nodejs.svg` },
+    { name: "ExpressJS", url: `${baseUrlTech}/express.svg` },
+    { name: "Nest JS", url: `${baseUrlTech}/nestjs.svg` },
 
     // Frontend Frameworks/Libraries
-    { name: "ReactJS", url: `${basedUrl}/react.svg` },
-    { name: "Next JS", url: `${basedUrl}/nextjs.svg` },
-    { name: "Vite", url: `${basedUrl}/vite.svg` },
+    { name: "ReactJS", url: `${baseUrlTech}/react.svg` },
+    { name: "Next JS", url: `${baseUrlTech}/nextjs.svg` },
+    { name: "Vite", url: `${baseUrlTech}/vite.svg` },
 
     // Databases
-    { name: "MongoDB", url: `${basedUrl}/mongodb.svg` },
-    { name: "Postgres", url: `${basedUrl}/postgresql.svg` },
-    { name: "MySQL", url: `${basedUrl}/mysql.svg` },
+    { name: "MongoDB", url: `${baseUrlTech}/mongodb.svg` },
+    { name: "Postgres", url: `${baseUrlTech}/postgresql.svg` },
+    { name: "MySQL", url: `${baseUrlTech}/mysql.svg` },
 
 
     // Cloud & Hosting
-    { name: "AWS", url: `${basedUrl}/aws.svg` },
-    { name: "Cloudinary", url: `${basedUrl}/cloudinary.png` },
-    { name: "Firebase", url: `${basedUrl}/firebase.svg` },
-    { name: "Vercel", url: `${basedUrl}/vercel.svg` },
-    { name: "Render", url: `${basedUrl}/render.svg` },
-    { name: "Nginx", url: `${basedUrl}/nginx.svg` },
+    { name: "AWS", url: `${baseUrlTech}/aws.svg` },
+    { name: "Cloudinary", url: `${baseUrlTech}/cloudinary.png` },
+    { name: "Firebase", url: `${baseUrlTech}/firebase.svg` },
+    { name: "Vercel", url: `${baseUrlTech}/vercel.svg` },
+    { name: "Render", url: `${baseUrlTech}/render.svg` },
+    { name: "Nginx", url: `${baseUrlTech}/nginx.svg` },
+    {name:"Hostinger", url:`${baseUrlTech}/hostinger.png`},
 
     // WebRTC & Real-Time Communication
-    { name: "WebRTC", url: `${basedUrl}/webrtc.svg` },
-    { name: "Socket.io", url: `${basedUrl}/socket-io.svg` },
+    { name: "WebRTC", url: `${baseUrlTech}/webrtc.svg` },
+    { name: "Socket.io", url: `${baseUrlTech}/socket-io.svg` },
 
     // State-management
-    { name: "Redux", url: `${basedUrl}/redux.svg` },
-    { name: "React Query", url: `${basedUrl}/react-query.svg` },
-    { name: "Nuqs", url: `${basedUrl}/nuqs.svg` },
+    { name: "Redux", url: `${baseUrlTech}/redux.svg` },
+    { name: "React Query", url: `${baseUrlTech}/react-query.svg` },
+    { name: "Nuqs", url: `${baseUrlTech}/nuqs.svg` },
 
     // Payment Systems
-    { name: "Stripe", url: `${basedUrl}/stripe.svg` },
-    { name: "Razorpay", url: `${basedUrl}/razorpay.svg` },
+    { name: "Stripe", url: `${baseUrlTech}/stripe.svg` },
+    { name: "Razorpay", url: `${baseUrlTech}/razorpay.svg` },
 
     // Styling & Animations
-    { name: "TailwindCSS", url: `${basedUrl}/tailwind.svg` },
-    { name: "Three.JS", url: `${basedUrl}/threejs-1.svg` },
-    { name: "Rombo", url: `${basedUrl}/rombo.svg` },
-    { name: "Framer Motion", url: `${basedUrl}/framer-motion.svg` },
-    { name: "Styled Components", url: `${basedUrl}/styled-components.svg` },
-    { name: "Bootstrap", url: `${basedUrl}/bootstrap.svg` },
+    { name: "TailwindCSS", url: `${baseUrlTech}/tailwind.svg` },
+    { name: "Three.JS", url: `${baseUrlTech}/threejs-1.svg` },
+    { name: "Rombo", url: `${baseUrlTech}/rombo.svg` },
+    { name: "Framer Motion", url: `${baseUrlTech}/framer-motion.svg` },
+    { name: "Styled Components", url: `${baseUrlTech}/styled-components.svg` },
+    { name: "Bootstrap", url: `${baseUrlTech}/bootstrap.svg` },
 
     // UI Component Libraries
-    { name: "Radix UI", url: `${basedUrl}/radix-ui.svg` },
-    { name: "shadcn", url: `${basedUrl}/shadcn.svg` },
+    { name: "Radix UI", url: `${baseUrlTech}/radix-ui.svg` },
+    { name: "shadcn", url: `${baseUrlTech}/shadcn.svg` },
 
 
     // Authentication & Authorization
-    { name: "JWT", url: `${basedUrl}/jwt.svg` },
-    { name: "OAuth", url: `${basedUrl}/oauth.svg` },
+    { name: "JWT", url: `${baseUrlTech}/jwt.svg` },
+    { name: "OAuth", url: `${baseUrlTech}/oauth.svg` },
 
     // APIs & Utilities
-    { name: "Axios", url: `${basedUrl}/axios.svg` },
-    { name: "React Form", url: `${basedUrl}/react-hook-form.svg` },
-    { name: "Joi", url: `${basedUrl}/joi.svg` },
-    { name: "Zod", url: `${basedUrl}/zod.svg` },
-    { name: "Postman", url: `${basedUrl}/postman.svg` },
-    { name: "Thunder Client", url: `${basedUrl}/thunder-client.png` },
+    { name: "Axios", url: `${baseUrlTech}/axios.svg` },
+    { name: "React Form", url: `${baseUrlTech}/react-hook-form.svg` },
+    { name: "Joi", url: `${baseUrlTech}/joi.svg` },
+    { name: "Zod", url: `${baseUrlTech}/zod.svg` },
+    { name: "Postman", url: `${baseUrlTech}/postman.svg` },
+    { name: "Thunder Client", url: `${baseUrlTech}/thunder-client.png` },
 
     // AI & Analytics
-    { name: "Google AI", url: `${basedUrl}/google-ai.svg` },
-    { name: "OpenAI", url: `${basedUrl}/openai.svg` },
-    { name: "Vercel Analytics", url: `${basedUrl}/vercel-analytics.svg` },
-    { name: "Google Analytics", url: `${basedUrl}/google-analytics.svg` },
-    { name: "Chart.js", url: `${basedUrl}/chartjs.svg` },
+    { name: "Google AI", url: `${baseUrlTech}/google-ai.svg` },
+    { name: "OpenAI", url: `${baseUrlTech}/openai.svg` },
+    { name: "Vercel Analytics", url: `${baseUrlTech}/vercel-analytics.svg` },
+    { name: "Google Analytics", url: `${baseUrlTech}/google-analytics.svg` },
+    { name: "Chart.js", url: `${baseUrlTech}/chartjs.svg` },
 
     // DevOps & CI/CD
-    { name: "GitHub Actions", url: `${basedUrl}/github-action.svg` },
-    { name: "NPM", url: `${basedUrl}/npm.svg` },
-    { name: "Nodemon", url: `${basedUrl}/nodemon.svg` },
+    { name: "GitHub Actions", url: `${baseUrlTech}/github-action.svg` },
+    { name: "NPM", url: `${baseUrlTech}/npm.svg` },
+    { name: "Nodemon", url: `${baseUrlTech}/nodemon.svg` },
+    { name: "PNPM", url: `${baseUrlTech}/pnpm.png` },
+    { name: "YARN", url: `${baseUrlTech}/yarn.png` },
 
     // Code Quality & Logging
-    { name: "ESLint", url: `${basedUrl}/eslint.svg` },
-    { name: "Prettier", url: `${basedUrl}/prettier.svg` },
-    { name: "Winston", url: `${basedUrl}/winston.svg` },
+    { name: "ESLint", url: `${baseUrlTech}/eslint.svg` },
+    { name: "Prettier", url: `${baseUrlTech}/prettier.svg` },
+    { name: "Winston", url: `${baseUrlTech}/winston.svg` },
 
     // Design & Prototyping
-    { name: "Figma", url: `${basedUrl}/figma-icon.svg` },
+    { name: "Figma", url: `${baseUrlTech}/figma-icon.svg` },
 
     // Legacy Support
-    { name: "jQuery", url: `${basedUrl}/jquery.svg` },
+    { name: "jQuery", url: `${baseUrlTech}/jquery.svg` },
 ];
 
 
