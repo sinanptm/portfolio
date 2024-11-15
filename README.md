@@ -17,7 +17,7 @@
 cd portfolio</code></pre>
   </li>
   <li>Install dependencies:
-    <pre><code>npm install</code></pre>
+    <pre><code>pnpm install</code></pre>
   </li>
   <li>Set up environment variables:
     <ul>
@@ -30,7 +30,7 @@ RECEIVER_EMAIL=recipient_email@example.com</code></pre>
     </ul>
   </li>
   <li>Start the development server:
-    <pre><code>npm run dev</code></pre>
+    <pre><code>pnpm run dev</code></pre>
   </li>
   <li>Open your browser and visit <code>http://localhost:3000</code> to view the portfolio.</li>
 </ol>

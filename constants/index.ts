@@ -1,12 +1,5 @@
 import { Tech } from "@/types";
 
-export const socialLinks = [
-    { image: '/assets/linkedin.svg', href: 'https://www.linkedin.com/in/sinanptm/', label: 'LinkedIn' },
-    { image: '/assets/github.svg', href: 'https://github.com/sinanptm/', label: 'GitHub' },
-    { image: '/assets/instagram.svg', href: 'https://www.instagram.com/si_an_z/', label: 'Instagram' },
-    { image: '/assets/stackoverflow.svg', href: 'https://stackoverflow.com/users/25472984/sinan', label: 'Stack Overflow' },
-];
-
 export const profile = {
     summary: ` Self-taught MERN stack developer passionate about building scalable, efficient applications. 
               Fascinated by technology from a young age, I&apos;ve continuously expanded my expertise across 
@@ -22,8 +15,9 @@ export const navLinks = [
     { title: "LinkedIn", icon: "/assets/social/linkedin.svg", href: "https://www.linkedin.com/in/sinanptm" },
     { title: "GitHub", icon: "/assets/social/github.svg", href: "https://github.com/sinanptm" },
     { title: "Instagram", icon: "/assets/social/instagram.svg", href: "https://www.instagram.com/si_an_z" },
-    { title: "Email", icon: "/assets/social/email.svg", href: "mailto:muhammedsinan0549@gmail.com" },
-    { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+918089507749" },
+    { title: 'Stack Overflow', icon: '/assets/social/stackoverflow.png', href: 'https://stackoverflow.com/users/25472984/sinan' },
+    // { title: "Email", icon: "/assets/social/email.svg", href: "mailto:mail@gmail.com" },
+    // { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+8989348934" },
 ];
 
 
@@ -327,7 +321,7 @@ export const technologies: Tech[] = [
     { name: "Postgres", url: `${basedUrl}/postgresql.svg` },
     { name: "MySQL", url: `${basedUrl}/mysql.svg` },
 
-    
+
     // Cloud & Hosting
     { name: "AWS", url: `${basedUrl}/aws.svg` },
     { name: "Cloudinary", url: `${basedUrl}/cloudinary.png` },
@@ -339,7 +333,7 @@ export const technologies: Tech[] = [
     // WebRTC & Real-Time Communication
     { name: "WebRTC", url: `${basedUrl}/webrtc.svg` },
     { name: "Socket.io", url: `${basedUrl}/socket-io.svg` },
-    
+
     // State-management
     { name: "Redux", url: `${basedUrl}/redux.svg` },
     { name: "React Query", url: `${basedUrl}/react-query.svg` },
@@ -356,7 +350,7 @@ export const technologies: Tech[] = [
     { name: "Framer Motion", url: `${basedUrl}/framer-motion.svg` },
     { name: "Styled Components", url: `${basedUrl}/styled-components.svg` },
     { name: "Bootstrap", url: `${basedUrl}/bootstrap.svg` },
-    
+
     // UI Component Libraries
     { name: "Radix UI", url: `${basedUrl}/radix-ui.svg` },
     { name: "shadcn", url: `${basedUrl}/shadcn.svg` },
