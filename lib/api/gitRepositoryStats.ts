@@ -1,20 +1,6 @@
 import { GitHubError, GitHubStats } from "@/types";
+import { GITHUB_API_BASE_URL, GitHubApiError, githubApiHeaders } from ".";
 
-const GITHUB_API_BASE_URL = 'https://api.github.com';
-const GITHUB_TOKEN = process.env.NEXT_PUBLIC_GITHUB_TOKEN || '';
-
-const githubApiHeaders = {
-    'Authorization': `Bearer ${GITHUB_TOKEN}`,
-    'Accept': 'application/vnd.github.v3+json',
-    'X-GitHub-Api-Version': '2022-11-28'
-};
-
-class GitHubApiError extends Error {
-    constructor(message: string, public status?: number, public response?: any) {
-        super(message);
-        this.name = 'GitHubApiError';
-    }
-}
 
 const extractRepoInfo = (githubLink: string): { owner: string; repo: string } | null => {
     const match = githubLink.match(/github\.com\/([^/]+)\/([^/]+)/);
