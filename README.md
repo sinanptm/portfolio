@@ -13,14 +13,6 @@
 
 </div>
 
-## 📌 Table of Contents
-- [Installation](#-installation)
-- [Environment Variables](#-environment-variables)
-- [Customization](#-customization)
-- [Contributing](#-contributing)
-- [License](#-license)
-
-<br>
 
 ## 🛠 Installation
 
