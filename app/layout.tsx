@@ -1,17 +1,41 @@
 import { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import { Fira_Code, Source_Code_Pro } from 'next/font/google';
+import { HeroHighlight } from "@/components/ui/hero-highlight";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Toaster } from "@/components/ui/toaster";
+import NavBar from "@/components/layout/NavBar";
+import { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
 import "../style/globals.css";
-import { Analytics } from "@vercel/analytics/react";
-import { HeroHighlight } from "@/components/ui/hero-highlight";
-import { Toaster } from "@/components/ui/toaster";
 
+const firaCode = Fira_Code({ subsets: ['latin'] });
+const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const layout = ({ children }: Readonly<RootLayoutProps>) => {
+  return (
+    <html lang="en" suppressHydrationWarning >
+      <body
+        className={cn("bg-background antialiased relative remove-scrollbar", firaCode.className, sourceCodePro.className)}
+        suppressHydrationWarning={true}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+        >
+          <HeroHighlight>
+            <NavBar />
+            {children}
+            <Toaster />
+          </HeroHighlight>
+          <Analytics debug={false} />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+
+};
+
 
 export const metadata: Metadata = {
   title: {
@@ -42,20 +66,20 @@ export const metadata: Metadata = {
       url: "https://github.com/sinanptm",
     }
   ],
-  creator: "Muhammed Sinan (sinanptm)",
+  creator: "Muhammed Sinan sinanptm",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://sinanptm.vercel.app",
     siteName: "Muhammed Sinan Portfolio",
-    title: "Muhammed Sinan (sinanptm) | Full Stack Developer",
-    description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Known as sinanptm on GitHub and LinkedIn.",
+    title: "Muhammed Sinan | Full Stack Developer",
+    description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Known as sinanptm on Social medias.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Muhammed Sinan (sinanptm) - Full Stack Developer Portfolio",
+        alt: "Muhammed Sinan - Full Stack Developer Portfolio",
       }
     ],
   },
@@ -84,25 +108,5 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://sinanptm.vercel.app"),
 };
 
-interface RootLayoutProps {
-  readonly children: React.ReactNode;
-}
 
-export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
-  return (
-    <html lang="en" suppressHydrationWarning >
-      <body className={cn("bg-background antialiased relative remove-scrollbar", plusJakartaSans.variable)} suppressHydrationWarning={true}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-        >
-          <HeroHighlight>
-            {children}
-            <Toaster />
-          </HeroHighlight>
-          <Analytics debug={false} />
-        </ThemeProvider>
-      </body>
-    </html>
-  );
-}
+export default layout;

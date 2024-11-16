@@ -9,15 +9,23 @@ export const profile = {
     phone: "+91 8089507749"
 };
 
-export const navLinks = [
-    { title: "Home", icon: "/assets/home.svg", href: "/" },
-    { title: "Resume", icon: "/assets/social/resume.svg", href: "/resume" },
+export const navMenuLinks = [
     { title: "LinkedIn", icon: "/assets/social/linkedin.svg", href: "https://www.linkedin.com/in/sinanptm" },
     { title: "GitHub", icon: "/assets/social/github.svg", href: "https://github.com/sinanptm" },
     { title: "Instagram", icon: "/assets/social/instagram.svg", href: "https://www.instagram.com/si_an_z" },
     { title: 'Stack Overflow', icon: '/assets/social/stackoverflow.png', href: 'https://stackoverflow.com/users/25472984/sinan' },
     // { title: "Email", icon: "/assets/social/email.svg", href: "mailto:mail@gmail.com" },
     // { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+8989348934" },
+];
+
+
+export const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/projects", label: "Projects" },
+    { href: "/open-source", label: "Open Source" },
+    { href: "/stack", label: "Stack" },
+    { href: "/resume", label: "Resume" },
+    { href: "/contact", label: "Contact" },
 ];
 
 
