@@ -1,4 +1,4 @@
-import { Tech } from "@/types";
+import { Project, Tech } from "@/types";
 
 export const profile = {
     summary: ` Self-taught MERN stack developer passionate about building scalable, efficient applications. 
@@ -29,7 +29,7 @@ export const navLinks = [
 ];
 
 
-export const projects = [
+export const projects:Project[] = [
     {
         title: "AVM Ayurvedic: Hospital Management",
         description: "A wellness platform with AI-powered health insights and Ayurvedic consultations.",
@@ -37,6 +37,7 @@ export const projects = [
         technologies: [1, 18, 19, 13, 9, 10, 17, 20, 21, 22, 23, 24, 25, 26, 27, 62, 28, 29, 30, 31, 32, 33, 51, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
         link: "http://avm-ayurvedic.online",
         githubLink: "https://github.com/sinanptm/avm-ayurvedic",
+        showGitStats:true,
         thumbnail: "/assets/projects/avm.png",
         demoLink: "https://youtu.be/fpOPtDixtD4",
         achievements: [

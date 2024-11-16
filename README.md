@@ -42,6 +42,7 @@
      SENDER_EMAIL=your_email@example.com
      NODEMAILER_PASSKEY=your_nodemailer_password
      RECEIVER_EMAIL=recipient_email@example.com
+     NEXT_PUBLIC_GITHUB_TOKEN=your_github_apiToken
      ```
 
 4. **Start the development server:**
@@ -123,7 +124,6 @@ Contributions are always welcome! Here's how you can help:
 ## 💝 Support & Community
 
 [![Star this repo](https://img.shields.io/github/stars/sinanptm/portfolio?style=social)](https://github.com/sinanptm/portfolio)
-[![Follow](https://img.shields.io/github/followers/sinanptm?style=social)](https://github.com/sinanptm)
 
 Made with ❤️ by [Muhammed Sinan](https://github.com/sinanptm)
 

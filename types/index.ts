@@ -9,6 +9,7 @@ export interface Project {
     demoLink: string;
     achievements: string[];
     isLinkedin?: boolean;
+    showGitStats?: true;
 }
 
 export interface Tech {
@@ -18,4 +19,23 @@ export interface Tech {
 
 export interface RootLayoutProps {
     readonly children: React.ReactNode;
+}
+
+export type ProjectModelProps = {
+    project: Project | null;
+    isOpen: boolean;
+    setOpen: (open: boolean) => void;
+};
+
+export type GitHubStats = {
+    stars: number;
+    forks: number;
+    openIssues: number;
+    closedIssues: number;
+    pullRequests: number;
+};
+
+export interface GitHubError {
+    message: string;
+    documentation_url?: string;
 }

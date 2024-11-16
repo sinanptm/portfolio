@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect, memo, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,25 +10,36 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
-import { Project } from "@/types";
+import { GitHubStats, ProjectModelProps } from "@/types";
 import { skills } from "@/constants";
+import { getRepositoryStats } from "@/lib/gitApi";
 
-type Props = {
-    project: Project | null;
-    isOpen: boolean;
-    setOpen: (open: boolean) => void;
-};
 
-const ProjectModal = ({ isOpen, project, setOpen }: Props) => {
+const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
     const [isMounted, setIsMounted] = useState(false);
+    const [githubStats, setGithubStats] = useState<GitHubStats | null>(null);
 
     useEffect(() => {
         setIsMounted(true);
     }, []);
-  
+
+    useEffect(() => {
+        const fetchGitHubStats = async () => {
+            // without this the api call will exceed the rate limit 
+            if (project?.githubLink && project.showGitStats) {
+                const stats = await getRepositoryStats(project.githubLink);
+                if (stats) {
+                    setGithubStats(stats);
+                }
+            }
+        };
+
+        fetchGitHubStats();
+    }, [project]);
+
     const MemoizedTechnologies = useMemo(() => {
         if (!project) return null;
-        
+
         return project.technologies.map((techIndex) => (
             <Image
                 key={techIndex}
@@ -43,11 +52,7 @@ const ProjectModal = ({ isOpen, project, setOpen }: Props) => {
         ));
     }, [project]);
 
-    if (!isMounted) {
-        return null;
-    }
-
-    if (!project) {
+    if (!isMounted || !project) {
         return null;
     }
 
@@ -69,6 +74,76 @@ const ProjectModal = ({ isOpen, project, setOpen }: Props) => {
                             className="object-cover"
                         />
                     </div>
+                    {project.showGitStats && githubStats && (
+                        <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+                            <Link href={`${project.githubLink}`}>
+                                <div className="flex items-center gap-1.5 bg-secondary/50 rounded-lg p-2">
+                                    <Image
+                                        src={'/assets/icons/star.svg'}
+                                        width={12}
+                                        height={12}
+                                        alt="Stars"
+                                        className="w-3 h-3 text-yellow-500"
+                                    />
+                                    <div>
+                                        <p className="text-xs text-muted-foreground">Stars</p>
+                                        <p className="text-sm font-medium">{githubStats.stars}</p>
+                                    </div>
+                                </div>
+                            </Link>
+                            <Link href={`${project.githubLink}/forks`}>
+                                <div className="flex items-center gap-1.5 bg-secondary/50 rounded-lg p-2">
+                                    <Image
+                                        src={'/assets/icons/fork.svg'}
+                                        width={12}
+                                        height={12}
+                                        alt="Forks"
+                                        className="w-3 h-3 text-blue-500"
+                                    />
+                                    <div>
+                                        <p className="text-xs text-muted-foreground">Forks</p>
+                                        <p className="text-sm font-medium">{githubStats.forks}</p>
+                                    </div>
+                                </div>
+                            </Link>
+                            <Link href={`${project.githubLink}/issues`}>
+                                <div className="flex items-center gap-1.5 bg-secondary/50 rounded-lg p-2">
+                                    <div className="flex gap-1">
+                                        <Image
+                                            src={'/assets/icons/dot.svg'}
+                                            width={12}
+                                            height={12}
+                                            alt="Issues"
+                                            className="w-3 h-3 text-red-500"
+                                        />
+                                    </div>
+                                    <div>
+                                        <p className="text-xs text-muted-foreground">Issues</p>
+                                        <p className="text-sm font-medium">
+                                            <span className="text-red-500">{githubStats.openIssues}</span>
+                                            <span className="text-muted-foreground mx-1">/</span>
+                                            <span className="text-green-500">{githubStats.closedIssues}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </Link>
+                            <Link href={`${project.githubLink}/pulls`}>
+                                <div className="flex items-center gap-1.5 bg-secondary/50 rounded-lg p-2">
+                                    <Image
+                                        src={'/assets/icons/pr.svg'}
+                                        width={12}
+                                        height={12}
+                                        alt="Pull Requests"
+                                        className="w-3 h-3 text-green-500"
+                                    />
+                                    <div>
+                                        <p className="text-xs text-muted-foreground">PRs</p>
+                                        <p className="text-sm font-medium">{githubStats.pullRequests}</p>
+                                    </div>
+                                </div>
+                            </Link>
+                        </div>
+                    )}
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Project Details</h3>
                         <p className="text-sm text-muted-foreground">{project.detailedDescription}</p>
