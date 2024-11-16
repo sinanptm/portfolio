@@ -1,8 +1,3 @@
-// TODO: Separate Skills, Contact, and Projects into Separate Pages
-// - Create separate routes and components for:
-//   - Skills: List of technologies, frameworks, and tools
-//   - Contact: Contact form and social media links
-//   - Projects: Showcase projects with descriptions, tech stack, and links
 
 // TODO: Add Timeline on the Main Page
 // - Create a visual timeline of major achievements or milestones
