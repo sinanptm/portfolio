@@ -25,7 +25,7 @@ const Stack = () => {
   return (
     <section id="stack" className="relative w-full min-h-fit mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 sm:mb-8">My Tech Stack</h2>
+        <h2 className="heading">My Tech Stack</h2>
         <p className="text-lg sm:text-xl text-center text-gray-300 mb-8 sm:mb-12">
           These are the primary technologies I work with to build robust and scalable applications.
         </p>

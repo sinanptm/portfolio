@@ -1,14 +1,14 @@
 import { memo } from 'react';
 import Hero from '@/components/Hero';
-import Stack from '@/components/Stack';
-import Projects from '@/components/Project';
+import NavMenu from '@/components/layout/NavMenu';
+import About from '@/components/About';
 
 const page = () => {
   return (
     <>
+      <NavMenu />
       <Hero />
-      <Projects />
-      <Stack />
+      <About />
     </>
   );
 };

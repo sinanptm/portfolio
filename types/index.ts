@@ -1,7 +1,7 @@
 export interface Project {
     title: string;
     description: string;
-    detailedDescription:string;
+    detailedDescription: string;
     technologies: number[];
     link: string;
     githubLink: string;
@@ -11,7 +11,11 @@ export interface Project {
     isLinkedin?: boolean;
 }
 
-export interface Tech{
-    name:string;
-    url:string
+export interface Tech {
+    name: string;
+    url: string;
+}
+
+export interface RootLayoutProps {
+    readonly children: React.ReactNode;
 }

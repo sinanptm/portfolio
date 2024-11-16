@@ -5,6 +5,7 @@ import { TypewriterEffect } from "./ui/typewriter-effect";
 import { motion } from 'framer-motion';
 import useScreen from "@/lib/useScreen";
 import dynamic from "next/dynamic";
+import { containerVariants } from "@/constants/animationVariants";
 const ComputerCanvas = dynamic(() => import('./3D/ComputerCanvas'), { ssr: false });
 
 const words = [
@@ -28,9 +29,14 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center mt-5 ml-5">
         </div>
         <div>
-          <h1 className={`font-black  lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}>
-            Hi, I&apos;m <span className="text-violet-600">Muhammed Sinan</span>
-          </h1>
+          <motion.h1
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className={`font-black  lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}
+          >
+            I&apos;m <span className="text-violet-600">Muhammed Sinan</span>
+          </motion.h1>
           <TypewriterEffect words={words} />
         </div>
       </div>
@@ -38,7 +44,7 @@ const Hero = () => {
 
       {isMobile && (
         <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-          <a href='#projects'>
+          <a href='#about'>
             <div className='w-[35px] h-[64px] rounded-3xl border-4 border-slate-700 flex justify-center items-start p-2'>
               <motion.div
                 animate={{

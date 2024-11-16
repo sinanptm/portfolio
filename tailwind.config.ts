@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import svgToDataUri from "mini-svg-data-uri";
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
+
 function addVariablesForColors({ addBase, theme }: any) {
 	let allColors = flattenColorPalette(theme("colors"));
 	let newVars = Object.fromEntries(
@@ -57,6 +58,10 @@ const config: Config = {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				'fira-code': ['Fira Code', 'monospace'],
+				'source-code-pro': ['Source Code Pro', 'monospace'],
 			},
 		}
 	},
