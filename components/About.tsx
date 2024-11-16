@@ -73,6 +73,7 @@ const About = () => {
         <motion.section
             initial="hidden"
             animate="visible"
+            id='about'
             variants={containerVariants}
             className="relative w-full min-h-screen mx-auto sm:px-16 px-6 pb-10"
         >

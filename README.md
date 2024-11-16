@@ -79,9 +79,9 @@ RECEIVER_EMAIL=recipient_email@example.com</code></pre>
 <p>To personalize the desktop wallpaper in the 3D environment:</p>
 <ol>
   <li>Go to the <code>/public/desktop/textures</code> directory.</li>
-  <li>Replace the existing <code>profile.png</code> with your own image (keep the same filename).</li>
+  <li>Replace the existing <code>desktop.png</code> with your own image (keep the same filename).</li>
+  <li>Since the model displays a mirror reflection of the image, you need to rotate your image horizontally (flip it) before saving it as <code>desktop.png</code>.</li>
 </ol>
-
 
 
 <p align="center">Made with ❤️ by Muhammed Sinan</p>
