@@ -14,8 +14,8 @@ export const navMenuLinks = [
     { title: "GitHub", icon: "/assets/social/github.svg", href: "https://github.com/sinanptm" },
     { title: "Instagram", icon: "/assets/social/instagram.svg", href: "https://www.instagram.com/si_an_z" },
     { title: 'Stack Overflow', icon: '/assets/social/stackoverflow.png', href: 'https://stackoverflow.com/users/25472984/sinan' },
-    // { title: "Email", icon: "/assets/social/email.svg", href: "mailto:mail@gmail.com" },
-    // { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+8989348934" },
+    { title: "Email", icon: "/assets/social/email.svg", href: "mailto:mail@gmail.com" },
+    { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+8989348934" },
 ];
 
 
@@ -24,7 +24,6 @@ export const navLinks = [
     { href: "/projects", label: "Projects" },
     { href: "/open-source", label: "Open Source" },
     { href: "/stack", label: "Stack" },
-    { href: "/resume", label: "Resume" },
     { href: "/contact", label: "Contact" },
 ];
 

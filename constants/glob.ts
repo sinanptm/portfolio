@@ -29,7 +29,7 @@ export const colors = [
     "#10b981", // Emerald
 ];
 
-export const sampleArcs = [
+export const globArcs = [
     {
         order: 1,
         startLat: -19.885592,

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Fira_Code, Source_Code_Pro } from 'next/font/google';
 import { HeroHighlight } from "@/components/ui/hero-highlight";
-import ThemeProvider from "@/components/ThemeProvider";
+import ThemeProvider from "@/components/layout/ThemeProvider";
 import { Toaster } from "@/components/ui/toaster";
 import NavBar from "@/components/layout/NavBar";
 import { RootLayoutProps } from "@/types";
