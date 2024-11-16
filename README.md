@@ -63,6 +63,7 @@
 | `SENDER_EMAIL` | Email address used to send contact form messages |
 | `NODEMAILER_PASSKEY` | Password/API key for email service |
 | `RECEIVER_EMAIL` | Email address where contact form messages will be received |
+| `NEXT_PUBLIC_GITHUB_TOKEN` | For getting Github Stats and Activities with more Rate Limit |
 
 <br>
 
@@ -111,11 +112,6 @@ Contributions are always welcome! Here's how you can help:
    ```
 5. Open a Pull Request
 
-**Guidelines:**
-- Follow the existing code style
-- Write descriptive commit messages
-- Test your changes thoroughly
-- Update documentation as needed
 
 <br>
 
