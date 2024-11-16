@@ -5,8 +5,6 @@ import { cn } from "@/lib/utils";
 import "../style/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
-import NavMenu from "@/components/NavMenu";
-import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
 
@@ -17,7 +15,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Muhammed Sinan (sinanptm) | Full Stack Developer",
+    default: "Muhammed Sinan | Full Stack Developer",
     template: "%s | Muhammed Sinan",
   },
   description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Known as sinanptm on GitHub and LinkedIn.",
@@ -99,9 +97,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
           defaultTheme="dark"
         >
           <HeroHighlight>
-            <NavMenu />
             {children}
-            <Footer />
             <Toaster />
           </HeroHighlight>
           <Analytics debug={false} />
