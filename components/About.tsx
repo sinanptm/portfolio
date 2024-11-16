@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { memo, useMemo } from 'react';
 import AnimatedTooltip from './project/AnimatedTooltip';
-import { useTooltip } from '@/lib/useTooltip';
+import { useTooltip } from '@/hooks/useTooltip';
 
 const About = () => {
     const { rotate, translateX, handleHover, hoveredItem } = useTooltip();

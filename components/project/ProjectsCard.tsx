@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Project } from "@/types";
 import AnimatedTooltip from "./AnimatedTooltip";
-import { useTooltip } from "../../lib/useTooltip";
+import { useTooltip } from "../../hooks/useTooltip";
 import { imageVariants, titleVariants, buttonVariants } from "../../constants/animationVariants";
 import { memo } from "react";
 import ProjectButton from "@/components/project/Button";

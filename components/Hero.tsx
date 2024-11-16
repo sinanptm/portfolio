@@ -3,7 +3,7 @@
 import { memo } from "react";
 import { TypewriterEffect } from "./ui/typewriter-effect";
 import { motion } from 'framer-motion';
-import useScreen from "@/lib/useScreen";
+import useScreen from "@/hooks/useScreen";
 import dynamic from "next/dynamic";
 import { containerVariants } from "@/constants/animationVariants";
 const ComputerCanvas = dynamic(() => import('./3D/ComputerCanvas'), { ssr: false });

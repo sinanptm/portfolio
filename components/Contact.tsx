@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Image from 'next/image';
 import { submitMessage } from '@/action';
-import { toast } from '@/hooks/use-toast';
+import { toast } from '@/hooks/useToast';
 
 const Contact = () => {
   const [name, setName] = useState('');

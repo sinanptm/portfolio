@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { Mesh, type Group, type Object3D } from 'three';
 import type { SpotLightProps } from '@react-three/fiber';
-import useScreen from "@/lib/useScreen";
+import useScreen from "@/hooks/useScreen";
 
 
 const MODEL_PATH = "/desktop/scene.gltf";

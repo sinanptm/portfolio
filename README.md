@@ -1,92 +1,132 @@
 <div align="center">
-  <h1>🌟 3D Interactive Portfolio</h1>
-  <p><em>A unique and immersive way to showcase your skills and projects</em></p>
-  <img src="https://img.shields.io/badge/-3D%20Environment-blueviolet" alt="3D Environment"/>
-  <img src="https://img.shields.io/badge/-Customizable-orange" alt="Customizable"/>
-  <img src="https://img.shields.io/badge/-Responsive-blue" alt="Responsive"/>
-  <img src="https://img.shields.io/badge/-Interactive-green" alt="Interactive"/>
+  
+# 🌟 3D Interactive Portfolio
+
+<p style="font-size: 1.2em"><em>A unique and immersive way to showcase your skills and projects</em></p>
+
+[![3D Environment](https://img.shields.io/badge/-3D%20Environment-blueviolet?style=for-the-badge)](https://github.com/sinanptm/portfolio)
+[![Customizable](https://img.shields.io/badge/-Customizable-orange?style=for-the-badge)](https://github.com/sinanptm/portfolio)
+[![Responsive](https://img.shields.io/badge/-Responsive-blue?style=for-the-badge)](https://github.com/sinanptm/portfolio)
+[![Interactive](https://img.shields.io/badge/-Interactive-green?style=for-the-badge)](https://github.com/sinanptm/portfolio)
+
+---
+
 </div>
 
+## 📌 Table of Contents
+- [Installation](#-installation)
+- [Environment Variables](#-environment-variables)
+- [Customization](#-customization)
+- [Contributing](#-contributing)
+- [License](#-license)
 
+<br>
 
-<h3>🛠 Installation</h3>
+## 🛠 Installation
 
-<ol>
-  <li>Clone the repository:
-    <pre><code>git clone https://github.com/sinanptm/portfolio.git
-cd portfolio</code></pre>
-  </li>
-  <li>Install dependencies:
-    <pre><code>pnpm install</code></pre>
-  </li>
-  <li>Set up environment variables:
-    <ul>
-      <li>Create a <code>.env</code> file in the root directory</li>
-      <li>Add the following variables to the <code>.env</code> file:
-        <pre><code>SENDER_EMAIL=your_email@example.com
-NODEMAILER_PASSKEY=your_nodemailer_password
-RECEIVER_EMAIL=recipient_email@example.com</code></pre>
-      </li>
-    </ul>
-  </li>
-  <li>Start the development server:
-    <pre><code>pnpm run dev</code></pre>
-  </li>
-  <li>Open your browser and visit <code>http://localhost:3000</code> to view the portfolio.</li>
-</ol>
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sinanptm/portfolio.git
+   cd portfolio
+   ```
 
-<h3>🔧 Environment Variables</h3>
+2. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
 
-<table>
-  <thead>
-    <tr>
-      <th>Variable</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>SENDER_EMAIL</code></td>
-      <td>Email address used to send contact form messages</td>
-    </tr>
-    <tr>
-      <td><code>NODEMAILER_PASSKEY</code></td>
-      <td>Password/API key for email service</td>
-    </tr>
-    <tr>
-      <td><code>RECEIVER_EMAIL</code></td>
-      <td>Email address where contact form messages will be received</td>
-    </tr>
-  </tbody>
-</table>
-<h2 align="center">🎨 Customization</h2>
+3. **Set up environment variables:**
+   - Create a `.env` file in the root directory
+   - Add the following variables:
+     ```env
+     SENDER_EMAIL=your_email@example.com
+     NODEMAILER_PASSKEY=your_nodemailer_password
+     RECEIVER_EMAIL=recipient_email@example.com
+     ```
 
-<h3>Changing Content</h3>
-<p>All the content is stored in the <code>constants</code> folder. You can easily modify the text, links, and other information to personalize the portfolio:</p>
-<ol>
-  <li>Open the <code>constants/index.ts</code> file in the project root.</li>
-  <li>Update the values to reflect your personal information, skills, and projects.</li>
-</ol>
+4. **Start the development server:**
+   ```bash
+   pnpm run dev
+   ```
 
-<h3>Updating Metadata</h3>
-<p>To change the metadata of the portfolio:</p>
-<ol>
-  <li>Navigate to the <code>app/layout.ts</code> file.</li>
-  <li>Modify the metadata fields to match your information.</li>
-</ol>
+5. **View the portfolio:**
+   - Open your browser
+   - Visit `http://localhost:3000`
 
-<h3>Changing the 3D Model Desktop Wallpaper</h3>
-<p>To personalize the desktop wallpaper in the 3D environment:</p>
-<ol>
-  <li>Go to the <code>/public/desktop/textures</code> directory.</li>
-  <li>Replace the existing <code>desktop.png</code> with your own image (keep the same filename).</li>
-  <li>Since the model displays a mirror reflection of the image, you need to rotate your image horizontally (flip it) before saving it as <code>desktop.png</code>.</li>
-</ol>
+<br>
 
+## 🔧 Environment Variables
 
-<p align="center">Made with ❤️ by Muhammed Sinan</p>
+| Variable | Description |
+|----------|-------------|
+| `SENDER_EMAIL` | Email address used to send contact form messages |
+| `NODEMAILER_PASSKEY` | Password/API key for email service |
+| `RECEIVER_EMAIL` | Email address where contact form messages will be received |
+
+<br>
+
+## 🎨 Customization
+
+### Content Modification
+All content is stored in the `constants` folder for easy personalization:
+
+1. **Update Personal Information:**
+   - Navigate to `constants/index.ts`
+   - Modify values to reflect your:
+     - Personal information
+     - Skills
+     - Projects
+     - Experience
+
+2. **Metadata Updates:**
+   - Open `app/layout.ts`
+   - Update metadata fields with your information
+
+### 3D Environment Customization
+
+**Desktop Wallpaper:**
+1. Navigate to `/public/desktop/textures`
+2. Replace `desktop.png` with your image
+   > ⚠️ **Note:** The model displays a mirror reflection, so rotate your image horizontally before saving
+
+<br>
+
+## 👥 Contributing
+
+Contributions are always welcome! Here's how you can help:
+
+1. Fork the repository
+2. Create your feature branch:
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. Open a Pull Request
+
+**Guidelines:**
+- Follow the existing code style
+- Write descriptive commit messages
+- Test your changes thoroughly
+- Update documentation as needed
+
+<br>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/>
+
+## 💝 Support & Community
+
+[![Star this repo](https://img.shields.io/github/stars/sinanptm/portfolio?style=social)](https://github.com/sinanptm/portfolio)
+[![Follow](https://img.shields.io/github/followers/sinanptm?style=social)](https://github.com/sinanptm)
+
+Made with ❤️ by [Muhammed Sinan](https://github.com/sinanptm)
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 </div>
