@@ -1,10 +1,11 @@
 'use client';
 
 import { memo } from 'react';
-import { World } from '@/components/ui/globe';
 import { globeConfig, sampleArcs } from "@/constants/glob";
 import Contact from '@/components/Contact';
+import dynamic from 'next/dynamic';
 
+const World = dynamic(() => import('@/components/ui/globe').then(b => b.World), { ssr: false });
 
 const page = () => {
   return (
