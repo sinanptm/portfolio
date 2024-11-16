@@ -57,7 +57,7 @@ const Contact = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            placeholder="Your name"
+            placeholder="John Doe"
             className="mt-1 w-full bg-gray-900/50 border-gray-800 text-gray-100 placeholder:text-gray-500 focus:border-purple-500 focus:ring-purple-500 transition-colors duration-300"
           />
         </div>
@@ -71,7 +71,7 @@ const Contact = () => {
             value={contactInfo}
             onChange={(e) => setContactInfo(e.target.value)}
             required
-            placeholder="your@email.com or +91 808493737"
+            placeholder="johndoe@email.com"
             className="mt-1 w-full bg-gray-900/50 border-gray-800 text-gray-100 placeholder:text-gray-500 focus:border-purple-500 focus:ring-purple-500 transition-colors duration-300"
           />
         </div>
@@ -84,7 +84,7 @@ const Contact = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-            placeholder="Your message here..."
+            placeholder="Hello Sinan! I Want to Hire You 😊..."
             rows={4}
             className="mt-1 w-full bg-gray-900/50 border-gray-800 text-gray-100 placeholder:text-gray-500 focus:border-purple-500 focus:ring-purple-500 resize-none transition-colors duration-300"
           />

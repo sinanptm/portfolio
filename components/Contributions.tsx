@@ -11,7 +11,7 @@ const Contributions = () => {
           <h2 className="text-2xl font-semibold text-white mb-6">Contribute to This Portfolio</h2>
           <p className="text-gray-300 mb-6">
             This portfolio is a continuous work in progress. Your support and feedback are 
-            invaluable for making it better. Whether it's starring the repository, suggesting 
+            invaluable for making it better. Whether it&apos;s starring the repository, suggesting 
             features, or reporting issues, every contribution counts!
           </p>
           <p className="text-gray-300 mb-6">

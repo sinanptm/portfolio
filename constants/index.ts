@@ -2,7 +2,7 @@ import { Project, Tech } from "@/types";
 
 export const profile = {
     summary: ` Self-taught MERN stack developer passionate about building scalable, efficient applications. 
-              Fascinated by technology from a young age, I&apos;ve continuously expanded my expertise across 
+              Fascinated by technology from a young age, I've continuously expanded my expertise across 
               various tools and frameworks. Committed to improving my skills, writing better code, and 
               delivering impactful solutions.`,
     email: 'muhammedsinan0549@gmail.com',
@@ -15,7 +15,8 @@ export const navMenuLinks = [
     { title: "Instagram", icon: "/assets/social/instagram.svg", href: "https://www.instagram.com/si_an_z" },
     { title: 'Stack Overflow', icon: '/assets/social/stackoverflow.png', href: 'https://stackoverflow.com/users/25472984/sinan' },
     { title: "Email", icon: "/assets/social/email.svg", href: "mailto:mail@gmail.com" },
-    { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+8989348934" },
+    { title: "Twitter", icon: "/assets/social/x.png", href: "https://x.com/luffy_kuns" }
+    // { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+8989348934" },
 ];
 
 
@@ -24,7 +25,7 @@ export const navLinks = [
     { href: "/projects", label: "Projects" },
     { href: "/open-source", label: "Open Source" },
     { href: "/stack", label: "Stack" },
-    { href: "/contact", label: "Contact" },
+    { href: "/contact", label: "Contact Me" },
 ];
 
 
