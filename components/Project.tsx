@@ -29,7 +29,7 @@ const Projects = () => {
           className="text-center mb-12"
         >
           <motion.h2 
-            className="text-4xl font-bold text-primary mb-4"
+            className="heading"
             variants={textVariants}
           >
             My Projects

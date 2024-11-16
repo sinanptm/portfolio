@@ -44,7 +44,7 @@ const Hero = () => {
 
       {isMobile && (
         <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-          <a href='#projects'>
+          <a href='#about'>
             <div className='w-[35px] h-[64px] rounded-3xl border-4 border-slate-700 flex justify-center items-start p-2'>
               <motion.div
                 animate={{

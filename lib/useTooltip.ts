@@ -2,10 +2,11 @@ import { useCallback, useState } from "react"
 import { useMotionValue, useSpring, useTransform } from "framer-motion"
 
 export const useTooltip = () => {
-  const [hoveredButton, setHoveredButton] = useState<string | null>(null)
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null)
 
   const springConfig = { stiffness: 100, damping: 5 }
-  const x = useMotionValue(0)
+  const x = useMotionValue(0);
+
   const rotate = useSpring(
     useTransform(x, [-100, 100], [-45, 45]),
     springConfig
@@ -16,14 +17,14 @@ export const useTooltip = () => {
   )
 
 
-  const handleButtonHover = useCallback((buttonType: string | null) => {
-    setHoveredButton(buttonType)
+  const handleHover = useCallback((type: string | null ) => {
+    setHoveredItem(type)
   },[]);
 
   return {
-    hoveredButton,
+    hoveredItem,
     rotate,
     translateX,
-    handleButtonHover,
+    handleHover,
   }
 }

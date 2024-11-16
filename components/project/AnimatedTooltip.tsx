@@ -7,9 +7,10 @@ type AnimatedTooltipProps = {
   text: string;
   rotate: MotionValue<number>;
   translateX: MotionValue<number>;
+  isLink?: boolean;
 };
 
-const AnimatedTooltip = ({ show, text, rotate, translateX }: AnimatedTooltipProps) => (
+const AnimatedTooltip = ({ show, text, rotate, translateX, isLink = true }: AnimatedTooltipProps) => (
   <AnimatePresence>
     {show && (
       <motion.div
@@ -35,9 +36,13 @@ const AnimatedTooltip = ({ show, text, rotate, translateX }: AnimatedTooltipProp
         <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px" />
         <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px" />
         <div className="font-semibold relative z-30 text-sm">
-          <Link href={text}>
-            {text}
-          </Link>
+          {isLink ? (
+            <Link href={text}>
+              {text}
+            </Link>
+          ) : (
+            text
+          )}
         </div>
       </motion.div>
     )}

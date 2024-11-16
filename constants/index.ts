@@ -408,4 +408,43 @@ export const technologies: Tech[] = [
 ];
 
 
-
+export const thingsIDo = [
+    {
+        name: "Full Stack Development",
+        image: "/assets/images/fullstack.svg",
+        tech: [
+            { name: "TypeScript", url: `${baseUrlTech}/typescript.svg` },
+            { name: "NodeJS", url: `${baseUrlTech}/nodejs.svg` },
+            { name: "React", url: `${baseUrlTech}/react.svg` },
+            { name: "Next.js", url: `${baseUrlTech}/nextjs.svg` },
+            { name: "ExpressJS", url: `${baseUrlTech}/express.svg` },
+            { name: "Nest JS", url: `${baseUrlTech}/nestjs.svg` },
+            { name: "WebRTC", url: `${baseUrlTech}/webrtc.svg` },
+            { name: "Socket.io", url: `${baseUrlTech}/socket-io.svg` },
+            { name: "Tailwind", url: `${baseUrlTech}/tailwind.svg` },
+            { name: "Sass", url: `${baseUrlTech}/saas.svg` },
+        ],
+        capabilities: [
+            { text: 'Building responsive website front end using React and NextJs', icon: '💻' },
+            { text: 'Creating application backend in Node, Express & NestJs', icon: '⚙️' },
+            { text: 'Writing clean and maintainable code following best practices', icon: '✨' },
+        ]
+    },
+    {
+        name: "Cloud Infra-Architecture",
+        image: "/assets/images/statics.svg",
+        tech: [
+            { name: "AWS", url: `${baseUrlTech}/aws.svg` },
+            { name: "Firebase", url: `${baseUrlTech}/firebase.svg` },
+            { name: "MongoDB", url: `${baseUrlTech}/mongodb.svg` },
+            { name: "Vercel", url: `${baseUrlTech}/vercel.svg` },
+            { name: "Nginx", url: `${baseUrlTech}/nginx.svg` },
+            { name: "Postgres", url: `${baseUrlTech}/postgresql.svg` },
+        ],
+        capabilities: [
+            { text: 'Designing and managing scalable cloud infrastructure on AWS, Firebase, and Vercel', icon: '☁️' },
+            { text: 'Implementing secure and efficient database solutions using MongoDB, Postgres and Nginx', icon: '🔒' },
+            { text: 'Optimizing application deployment pipelines and ensuring high availability across environments', icon: '🚀' },
+        ]        
+    }
+];
