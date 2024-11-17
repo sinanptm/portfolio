@@ -27,9 +27,6 @@
 ### 📨 Email Integration
 - **Contact Form Integration:** Built-in contact form using Nodemailer
 - **Secure Communication:** Encrypted email transmission
-- **Custom Templates:** Professionally formatted email notifications
-- **Auto-Response:** Configurable confirmation messages
-- **Spam Protection:** Basic spam filtering mechanisms
 
 ### 🔄 GitHub Integration
 - **Live Repository Data:** Real-time fetch of:
