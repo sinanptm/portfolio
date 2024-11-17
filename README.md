@@ -14,6 +14,56 @@
 </div>
 
 
+## ✨ Features
+
+### 🌐 Progressive Web App (PWA)
+- **Cross-Platform Installation:** Install and use as a native app on:
+  - 💻 Desktop (Windows, macOS, Linux)
+  - 📱 Mobile devices (iOS, Android)
+- **Offline Functionality:** Access basic content without internet connection
+- **Fast Loading:** Optimized performance with caching strategies
+- **Automatic Updates:** Always stay up-to-date with the latest version
+
+### 📨 Email Integration
+- **Contact Form Integration:** Built-in contact form using Nodemailer
+- **Secure Communication:** Encrypted email transmission
+- **Custom Templates:** Professionally formatted email notifications
+- **Auto-Response:** Configurable confirmation messages
+- **Spam Protection:** Basic spam filtering mechanisms
+
+### 🔄 GitHub Integration
+- **Live Repository Data:** Real-time fetch of:
+  - Repository statistics
+  - Contribution graph
+  - Star counts
+  - Fork metrics
+- **Activity Timeline:** Display recent GitHub activities
+- **Project Showcase:** Automatic import of pinned repositories
+- **Rate Limit Handling:** Optimized API calls with token authentication
+
+### 🎮 3D Models & Environment
+- **Interactive Desktop Setup:** Fully 3D rendered workspace
+- **Custom Model Import:** Support for various 3D model formats
+- **Real-time Rendering:** Smooth performance with Three.js
+- **Environment Mapping:** Realistic lighting and reflections
+- **Mobile-Optimized:** Responsive 3D rendering for all devices
+
+### 🎯 Animations & Interactions
+- **Smooth Page Transitions:** Seamless navigation between sections
+- **Scroll Animations:** Interactive elements reveal on scroll
+- **Hover Effects:** Dynamic feedback on user interaction
+- **Loading Animations:** Engaging loading states
+- **Particle Effects:** Background particle system for visual appeal
+
+### 🎨 Additional Features
+- **Responsive Design:** Adapts to all screen sizes
+- **SEO Optimized:** Enhanced search engine visibility
+- **Performance Optimized:** Fast loading times
+- **Accessibility:** WCAG compliant design elements
+
+  
+
+
 ## 🛠 Installation
 
 1. **Clone the repository:**
