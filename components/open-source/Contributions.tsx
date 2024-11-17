@@ -6,12 +6,10 @@ import ContributionChart from "./ContributionChart";
 import { fetchUserContributions, fetchUserIssueStats, fetchUserPRStats } from '@/lib/github/getContributions';
 import { profile } from '@/constants';
 import ChartSkeleton from './ChartSkeleton';
-// import { ContributionStats } from '@/lib/github';
 
 const Contributions = () => {
   const [prData, setPrData] = useState<ChartDataType>([]);
   const [issueData, setIssueData] = useState<ChartDataType>([]);
-  // const [contributionData, setContributionData] = useState<ContributionStats | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -35,7 +33,7 @@ const Contributions = () => {
           { status: "open", count: issueStats.open, fill: "hsl(var(--chart-4))" },
           { status: "closed", count: issueStats.closed, fill: "hsl(var(--chart-5))" },
         ]);
-        // setContributionData(contributions);
+
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to fetch GitHub data');
       } finally {
@@ -59,21 +57,20 @@ const Contributions = () => {
       <div className="space-y-4">
         <h2 className="heading">Contributions</h2>
 
-        {loading ? (
-          <>
-            <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
+          {loading ? (
+            <>
               <ChartSkeleton />
               <ChartSkeleton />
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="flex flex-col md:flex-row gap-4">
+            </>
+          ) : (
+            <>
               <ContributionChart title="Pull Requests" data={prData} />
               <ContributionChart title="Issues" data={issueData} />
-            </div>
-          </>
-        )}
+            </>
+          )}
+        </div>
+
       </div>
     </div>
   );
