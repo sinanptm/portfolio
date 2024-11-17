@@ -71,6 +71,8 @@ export const skills: Tech[] = [
 ];
 export const baseUrlTech = "/assets/tech";
 
+export const techNames = skills.map(({ name }) => name);
+
 export const technologies: Tech[] = [
     // Languages
     { name: "TypeScript", url: `${baseUrlTech}/typescript.svg` },

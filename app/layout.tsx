@@ -8,6 +8,7 @@ import { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
 import "../style/globals.css";
 import { Metadata } from "next";
+import { techNames } from "@/constants/techData";
 
 const firaCode = Fira_Code({ subsets: ['latin'] });
 const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });
@@ -50,16 +51,13 @@ export const metadata: Metadata = {
     "Muhammed Sinan",
     "sinanptm",
     "Full Stack Developer",
+    "Sinanptm portfolio",
     "MERN Stack",
     "React Developer",
     "Node.js Developer",
     "Web Developer",
     "Software Engineer",
     "Next.js Developer",
-    "MongoDB",
-    "Express.js",
-    "TypeScript",
-    "JavaScript",
     "Portfolio",
     "Full Stack Engineer",
     "Web Applications",
@@ -71,9 +69,8 @@ export const metadata: Metadata = {
     "REST API",
     "Responsive Design",
     "UI/UX Development",
-    "Kerala Developer",
-    "Indian Developer",
-    "Freelance Developer",
+    "portfolio template",
+    ...techNames
   ],
   authors: [
     {
@@ -97,10 +94,10 @@ export const metadata: Metadata = {
     url: "https://sinanptm.vercel.app",
     siteName: "Muhammed Sinan Portfolio",
     title: "Muhammed Sinan | Full Stack Developer",
-    description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Known as sinanptm on Social media.",
+    description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js.",
     images: [
       {
-        url: "/screenshots/twitter-image.png",
+        url: "/screenshots/og-image.png",
         width: 1200,
         height: 630,
         alt: "Muhammed Sinan - Full Stack Developer Portfolio",
