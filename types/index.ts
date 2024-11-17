@@ -54,4 +54,5 @@ export type ChartDataType = {
     status: string;
     count: number;
     fill: string;
-  }[];
+}[];
+

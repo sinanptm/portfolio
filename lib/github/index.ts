@@ -1,4 +1,3 @@
-
 export const GITHUB_API_BASE_URL = 'https://api.github.com';
 const GITHUB_TOKEN = process.env.NEXT_PUBLIC_GITHUB_TOKEN || '';
 
@@ -13,4 +12,27 @@ export class GitHubApiError extends Error {
         super(message);
         this.name = 'GitHubApiError';
     }
+}
+
+export interface PullRequestStats {
+    open: number;
+    closed: number;
+    merged: number;
+}
+
+export interface IssueStats {
+    open: number;
+    closed: number;
+}
+
+
+export interface ContributionDay {
+    date: string;
+    count: number;
+    level: 0 | 1 | 2 | 3 | 4;
+}
+
+export interface ContributionStats {
+    totalContributions: number;
+    contributionDays: ContributionDay[];
 }

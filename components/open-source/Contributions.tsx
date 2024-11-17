@@ -1,27 +1,79 @@
+"use client";
+
+import { useEffect, useState } from 'react';
 import { ChartDataType } from "@/types";
 import ContributionChart from "./ContributionChart";
-
-
-const pullRequestData: ChartDataType = [
-  { status: "open", count: 15, fill: "hsl(var(--chart-1))" },
-  { status: "closed", count: 45, fill: "hsl(var(--chart-2))" },
-  { status: "merged", count: 30, fill: "hsl(var(--chart-3))" },
-];
-
-const issuesData: ChartDataType = [
-  { status: "open", count: 20, fill: "hsl(var(--chart-4))" },
-  { status: "closed", count: 35, fill: "hsl(var(--chart-5))" },
-];
+import { fetchUserContributions, fetchUserIssueStats, fetchUserPRStats } from '@/lib/github/getContributions';
+import { profile } from '@/constants';
+import ChartSkeleton from './ChartSkeleton';
+// import { ContributionStats } from '@/lib/github';
 
 const Contributions = () => {
+  const [prData, setPrData] = useState<ChartDataType>([]);
+  const [issueData, setIssueData] = useState<ChartDataType>([]);
+  // const [contributionData, setContributionData] = useState<ContributionStats | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const [prStats, issueStats] = await Promise.all([
+          fetchUserPRStats(profile.gitHubUserName),
+          fetchUserIssueStats(profile.gitHubUserName),
+          fetchUserContributions(profile.gitHubUserName)
+        ]);
+
+        setPrData([
+          { status: "open", count: prStats.open, fill: "hsl(var(--chart-1))" },
+          { status: "closed", count: prStats.closed, fill: "hsl(var(--chart-2))" },
+          { status: "merged", count: prStats.merged, fill: "hsl(var(--chart-3))" },
+        ]);
+
+        setIssueData([
+          { status: "open", count: issueStats.open, fill: "hsl(var(--chart-4))" },
+          { status: "closed", count: issueStats.closed, fill: "hsl(var(--chart-5))" },
+        ]);
+        // setContributionData(contributions);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch GitHub data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (error) {
+    return (
+      <div className="p-4 text-red-500">
+        Error loading contributions: {error}
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className="space-y-4">
         <h2 className="heading">Contributions</h2>
-        <div className="flex flex-col md:flex-row gap-4">
-          <ContributionChart title="Pull Requests" data={pullRequestData} />
-          <ContributionChart title="Issues" data={issuesData} />
-        </div>
+
+        {loading ? (
+          <>
+            <div className="flex flex-col md:flex-row gap-4">
+              <ChartSkeleton />
+              <ChartSkeleton />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="flex flex-col md:flex-row gap-4">
+              <ContributionChart title="Pull Requests" data={prData} />
+              <ContributionChart title="Issues" data={issueData} />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

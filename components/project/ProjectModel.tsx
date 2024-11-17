@@ -12,7 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { GitHubStats, ProjectModelProps } from "@/types";
 import { skills } from "@/constants";
-import { getRepositoryStats } from "@/lib/api/gitRepositoryStats";
+import { getRepositoryStats } from "@/lib/github/gitRepositoryStats";
 
 
 const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {

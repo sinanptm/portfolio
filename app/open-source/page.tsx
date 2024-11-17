@@ -10,9 +10,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { memo } from "react";
 
-const Page = ()=> {
+const Page = () => {
     const { handleHover, hoveredItem, rotate, translateX } = useTooltip();
-    
+
     return (
         <motion.section
             className="relative w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 py-6"
@@ -30,34 +30,36 @@ const Page = ()=> {
                             onMouseLeave={() => handleHover(null)}
                             className="relative flex items-center justify-center"
                         >
-                            <Link
-                                href={org.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <div>
                                 <AnimatedTooltip
                                     rotate={rotate}
                                     translateX={translateX}
                                     text={org.name}
                                     show={hoveredItem === org.url}
                                 />
-                                <div className="relative w-20 h-20">
-                                    <Image
-                                        src={org.logo}
-                                        alt={`${org.name} logo`}
-                                        fill
-                                        className="object-contain"
-                                        sizes="(max-width: 768px) 80px, 80px"
-                                    />
-                                </div>
-                            </Link>
+                                <Link
+                                    href={org.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <div className="relative w-20 h-20">
+                                        <Image
+                                            src={org.logo}
+                                            alt={`${org.name} logo`}
+                                            fill
+                                            className="object-contain"
+                                            sizes="(max-width: 768px) 80px, 80px"
+                                        />
+                                    </div>
+                                </Link>
+                            </div>
                         </div>
                     ))}
                 </div>
                 <Contributions />
             </div>
-        </motion.section>
+        </motion.section >
     );
-}
+};
 
 export default memo(Page);

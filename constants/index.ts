@@ -6,7 +6,8 @@ export const profile = {
               various tools and frameworks. Committed to improving my skills, writing better code, and 
               delivering impactful solutions.`,
     gitHub: "https://github.com/sinanptm/portfolio",
-    name: "Muhammed Sinan"
+    name: "Muhammed Sinan",
+    gitHubUserName:"sinanptm"
 };
 
 export const socialMediaLinks = [
