@@ -1,12 +1,13 @@
 'use client';
 
 import { memo } from "react";
-import { TypewriterEffect } from "./ui/typewriter-effect";
+import { TypewriterEffect } from "../ui/typewriter-effect";
 import { motion } from 'framer-motion';
 import useScreen from "@/hooks/useScreen";
 import dynamic from "next/dynamic";
 import { containerVariants } from "@/constants/animationVariants";
-const ComputerCanvas = dynamic(() => import('./3D/ComputerCanvas'), { ssr: false });
+import { profile } from "@/constants";
+const ComputerCanvas = dynamic(() => import('../3D/ComputerCanvas'), { ssr: false });
 
 const words = [
   { text: "I" },
@@ -35,7 +36,7 @@ const Hero = () => {
             variants={containerVariants}
             className={`font-black  lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}
           >
-            I&apos;m <span className="text-violet-600">Muhammed Sinan</span>
+            I&apos;m <span className="text-violet-600">{profile.name}</span>
           </motion.h1>
           <TypewriterEffect words={words} />
         </div>

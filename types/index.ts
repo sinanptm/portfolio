@@ -39,3 +39,13 @@ export interface GitHubError {
     message: string;
     documentation_url?: string;
 }
+
+export type ThingsIDo = {
+    name: string;
+    image: string;
+    tech: Tech[],
+    capabilities: {
+        text: string;
+        icon: string;
+    }[];
+};

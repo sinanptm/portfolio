@@ -1,20 +1,20 @@
-import { Project, Tech } from "@/types";
+import { Project, Tech, ThingsIDo } from "@/types";
 
 export const profile = {
     summary: ` Self-taught MERN stack developer passionate about building scalable, efficient applications. 
               Fascinated by technology from a young age, I've continuously expanded my expertise across 
               various tools and frameworks. Committed to improving my skills, writing better code, and 
               delivering impactful solutions.`,
-    email: 'muhammedsinan0549@gmail.com',
-    phone: "+91 8089507749"
+    gitHub: "https://github.com/sinanptm/portfolio",
+    name: "Muhammed Sinan"
 };
 
-export const navMenuLinks = [
+export const socialMediaLinks = [
     { title: "LinkedIn", icon: "/assets/social/linkedin.svg", href: "https://www.linkedin.com/in/sinanptm" },
     { title: "GitHub", icon: "/assets/social/github.svg", href: "https://github.com/sinanptm" },
     { title: "Instagram", icon: "/assets/social/instagram.svg", href: "https://www.instagram.com/si_an_z" },
     { title: 'Stack Overflow', icon: '/assets/social/stackoverflow.png', href: 'https://stackoverflow.com/users/25472984/sinan' },
-    { title: "Email", icon: "/assets/social/email.svg", href: "mailto:mail@gmail.com" },
+    { title: "Email", icon: "/assets/social/email.svg", href: "mailto:muhammedsinan0549@gmail.com@gmail.com" },
     { title: "Twitter", icon: "/assets/social/x.png", href: "https://x.com/luffy_kuns" }
     // { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+8989348934" },
 ];
@@ -29,15 +29,15 @@ export const navLinks = [
 ];
 
 
-export const projects:Project[] = [
+export const projects: Project[] = [
     {
         title: "AVM Ayurvedic: Hospital Management",
         description: "A wellness platform with AI-powered health insights and Ayurvedic consultations.",
         detailedDescription: "A comprehensive Ayurvedic platform with video consultations, secure payments, and real-time notifications. Optimized for performance with Google Lighthouse 90+ scores. The backend is designed for scalability and secure data handling using Node.js, Express.js, and MongoDB on AWS. It includes role-based authorization and is deployed frontend with Vercel, utilizing GitHub Actions for CI/CD.",
         technologies: [1, 18, 19, 13, 9, 10, 17, 20, 21, 22, 23, 24, 25, 26, 27, 62, 28, 29, 30, 31, 32, 33, 51, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
         link: "http://avm-ayurvedic.online",
-        githubLink: "https://github.com/sinanptm/avm-ayurvedic",
-        showGitStats:true,
+        githubLink: "https://github.com/sinanptm/hospital-management-system",
+        showGitStats: true,
         thumbnail: "/assets/projects/avm.png",
         demoLink: "https://youtu.be/fpOPtDixtD4",
         achievements: [
@@ -153,21 +153,21 @@ export const projects:Project[] = [
             "Experienced with CI for deployment and testing."
         ]
     },
-    // {
-    //     title: "OLX & Netflix Clones",
-    //     description: "Clones of Netflix and OLX with real-time data and secure authentication.",
-    //     detailedDescription: "These clones, developed using React and Firebase, showcase responsive design and real-time data. TMDb API is used in the Netflix clone for movie data, and Firebase handles authentication and image uploads for the OLX clone.",
-    //     technologies: [3, 22],
-    //     githubLink: "https://github.com/sinanptm/OLX-clone",
-    //     link: "https://netflix-clone-gamma-virid.vercel.app",
-    //     thumbnail: "/assets/projects/netflix.png",
-    //     isLinkedin: true,
-    //     demoLink: "https://www.linkedin.com/posts/sinanptm_reactjs-firebase-tmdb-activity-7211610477729054720-nLr1?utm_source=share&utm_medium=member_desktop",
-    //     achievements: [
-    //         "Integrated TMDb API for Netflix clone.",
-    //         "Firebase for secure authentication and image uploads."
-    //     ]
-    // }
+    {
+        title: "OLX & Netflix Clones",
+        description: "Clones of Netflix and OLX with real-time data and secure authentication.",
+        detailedDescription: "These clones, developed using React and Firebase, showcase responsive design and real-time data. TMDb API is used in the Netflix clone for movie data, and Firebase handles authentication and image uploads for the OLX clone.",
+        technologies: [3, 22],
+        githubLink: "https://github.com/sinanptm/OLX-clone",
+        link: "https://netflix-clone-gamma-virid.vercel.app",
+        thumbnail: "/assets/projects/netflix.png",
+        isLinkedin: true,
+        demoLink: "https://www.linkedin.com/posts/sinanptm_reactjs-firebase-tmdb-activity-7211610477729054720-nLr1?utm_source=share&utm_medium=member_desktop",
+        achievements: [
+            "Integrated TMDb API for Netflix clone.",
+            "Firebase for secure authentication and image uploads."
+        ]
+    }
 ];
 
 //eslint-disable-next-line
@@ -234,8 +234,8 @@ const INDEXES = {
     "Clodinary": 59,
     "Nextjs 15": 60,
     "React 19": 61,
-    "Hostinger": 62, 
-    "Multer":63
+    "Hostinger": 62,
+    "Multer": 63
 };
 
 
@@ -409,7 +409,7 @@ export const technologies: Tech[] = [
 ];
 
 
-export const thingsIDo = [
+export const thingsIDo: ThingsIDo[] = [
     {
         name: "Full Stack Development",
         image: "/assets/images/fullstack.svg",
@@ -446,6 +446,6 @@ export const thingsIDo = [
             { text: 'Designing and managing scalable cloud infrastructure on AWS, Firebase, and Vercel', icon: '☁️' },
             { text: 'Implementing secure and efficient database solutions using MongoDB, Postgres and Nginx', icon: '🔒' },
             { text: 'Optimizing application deployment pipelines and ensuring high availability across environments', icon: '🚀' },
-        ]        
+        ]
     }
 ];

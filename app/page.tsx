@@ -1,12 +1,10 @@
 import { memo } from 'react';
-import Hero from '@/components/Hero';
-import NavMenu from '@/components/layout/NavMenu';
-import About from '@/components/About';
+import Hero from '@/components/home/Hero';
+import About from '@/components/home/About';
 
 const page = () => {
   return (
     <>
-      <NavMenu />
       <Hero />
       <About />
     </>

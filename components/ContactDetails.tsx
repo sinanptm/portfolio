@@ -3,8 +3,9 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { navMenuLinks } from '@/constants';
+import { socialMediaLinks } from '@/constants';
 import { memo } from 'react';
+import SocialLinks from './SocialLinks';
 
 const ContactDetails = () => {
     return (
@@ -29,22 +30,9 @@ const ContactDetails = () => {
                         I&apos;m available on various social media platforms. Feel free to connect with me! <br />
                         I Usually get back to you in 24 hours.
                     </p>
-                    <div className="grid grid-cols-2 gap-4 mb-8">
-                        {navMenuLinks.map((link) => (
-                            <a
-                                key={link.title}
-                                href={link.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors duration-300"
-                            >
-                                <Image src={link.icon} alt={link.title} width={24} height={24} className="mr-3" />
-                                <span className="text-gray-300">{link.title}</span>
-                            </a>
-                        ))}
-                    </div>
+                    <SocialLinks />
                     <Link href="/resume" passHref>
-                        <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white transition-colors duration-300 py-3 relative overflow-hidden group">
+                        <Button className="inline-flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white transition-colors duration-300 py-3 px-6 relative overflow-hidden group">
                             <span className="relative z-10">View My Resume</span>
                             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                         </Button>
