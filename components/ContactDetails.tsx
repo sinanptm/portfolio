@@ -1,15 +1,20 @@
-'use client';
-
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { socialMediaLinks } from '@/constants';
 import { memo } from 'react';
 import SocialLinks from './SocialLinks';
+import { motion } from 'framer-motion';
+import { staggerVariants } from '@/constants/animationVariants';
 
 const ContactDetails = () => {
     return (
-        <div className="w-full max-w-4xl mx-auto px-4 py-12">
+        <motion.section
+            className="w-full max-w-4xl mx-auto px-4 py-12"
+            custom={1}
+            initial="hidden"
+            animate="visible"
+            variants={staggerVariants}
+        >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
                 <div className="w-full md:w-1/2 flex flex-col items-center">
                     <div className="relative w-[350px] h-[350px] rounded-full overflow-hidden ring-4 ring-purple-500/20">
@@ -39,7 +44,7 @@ const ContactDetails = () => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </motion.section>
     );
 };
 
