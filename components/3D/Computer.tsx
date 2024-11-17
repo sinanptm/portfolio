@@ -7,7 +7,7 @@ import type { SpotLightProps } from '@react-three/fiber';
 import useScreen from "@/hooks/useScreen";
 
 
-const MODEL_PATH = "/desktop/scene.gltf";
+const MODEL_PATH = "/assets/desktop/scene.gltf";
 useGLTF.preload(MODEL_PATH);
 
 const Computers: FC = () => {

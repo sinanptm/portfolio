@@ -1,6 +1,6 @@
 import Image from "next/image";
 import CardSpotlight from "./ui/card-spotlight";
-import { technologies } from "@/constants";
+import { technologies } from "@/constants/techData";
 import { memo } from "react";
 
 

@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
 import { GitHubStats, ProjectModelProps } from "@/types";
-import { skills } from "@/constants";
+import { skills } from "@/constants/techData";
 import { getRepositoryStats } from "@/lib/github/gitRepositoryStats";
 
 

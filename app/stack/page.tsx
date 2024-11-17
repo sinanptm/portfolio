@@ -4,23 +4,9 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { containerVariants, staggerVariants } from '@/constants/animationVariants';
 import { memo } from 'react';
+import { quotes } from '@/constants';
 
 const Stack = () => {
-  const quotes = [
-    {
-      text: "Engineering scalable systems with precision and creativity.",
-      subtitle: "System Design",
-    },
-    {
-      text: "Building innovative solutions that empower businesses to grow.",
-      subtitle: "Development Vision",
-    },
-    {
-      text: "Blending code and design for intuitive digital experiences.",
-      subtitle: "User-Centric Approach",
-    },
-  ];
-
   return (
     <motion.section
       className="relative w-full min-h-fit mx-auto px-4 sm:px-6 lg:px-8 py-12"
