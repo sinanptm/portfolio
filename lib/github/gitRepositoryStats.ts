@@ -10,7 +10,10 @@ const extractRepoInfo = (githubLink: string): { owner: string; repo: string } | 
 };
 
 const fetchWithAuth = async (url: string) => {
-    const response = await fetch(url, { headers: githubApiHeaders });
+    const response = await fetch(url, { 
+        headers: githubApiHeaders,
+        cache:"force-cache"
+     });
     
     if (!response.ok) {
         const error: GitHubError = await response.json();

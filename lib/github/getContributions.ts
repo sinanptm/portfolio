@@ -7,12 +7,18 @@ export async function fetchUserPRStats(username: string): Promise<PullRequestSta
   try {
     const openPRsResponse = await fetch(
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:pr+state:open`,
-      { headers: githubApiHeaders }
+      { 
+        headers: githubApiHeaders,
+        cache:"force-cache"
+      }
     );
 
     const closedPRsResponse = await fetch(
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:pr+state:closed`,
-      { headers: githubApiHeaders }
+      { 
+        headers: githubApiHeaders,
+        cache:"force-cache"
+       }
     );
 
     if (!openPRsResponse.ok || !closedPRsResponse.ok) {
@@ -49,7 +55,10 @@ export async function fetchUserIssueStats(username: string): Promise<IssueStats>
   try {
     const openIssuesResponse = await fetch(
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:issue+state:open`,
-      { headers: githubApiHeaders }
+      {
+        headers: githubApiHeaders,
+        cache:"force-cache"
+      },
     );
 
     const closedIssuesResponse = await fetch(
@@ -104,6 +113,7 @@ export async function fetchUserContributions(username: string): Promise<Contribu
         query,
         variables: { username },
       }),
+      cache: "force-cache"
     });
 
     if (!response.ok) {
@@ -111,7 +121,7 @@ export async function fetchUserContributions(username: string): Promise<Contribu
     }
 
     const data = await response.json();
-    
+
     if (data.errors) {
       throw new GitHubApiError(data.errors[0].message);
     }
