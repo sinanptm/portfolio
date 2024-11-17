@@ -7,6 +7,7 @@ import useScreen from "@/hooks/useScreen";
 import dynamic from "next/dynamic";
 import { containerVariants } from "@/constants/animationVariants";
 import { profile } from "@/constants";
+import Link from "next/link";
 const ComputerCanvas = dynamic(() => import('../3D/ComputerCanvas'), { ssr: false });
 
 const words = [
@@ -36,16 +37,20 @@ const Hero = () => {
             variants={containerVariants}
             className={`font-black  lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}
           >
-            I&apos;m <span className="text-violet-600">{profile.name}</span>
+            <header>
+              I&apos;m <span className="text-violet-600">{profile.name}</span>
+            </header>
           </motion.h1>
-          <TypewriterEffect words={words} />
+          <article>
+            <TypewriterEffect words={words} />
+          </article>
         </div>
       </div>
       <ComputerCanvas />
 
       {isMobile && (
         <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-          <a href='#about'>
+          <Link href='#about' prefetch={false}>
             <div className='w-[35px] h-[64px] rounded-3xl border-4 border-slate-700 flex justify-center items-start p-2'>
               <motion.div
                 animate={{
@@ -59,7 +64,7 @@ const Hero = () => {
                 className='w-3 h-3 rounded-full bg-slate-700 mb-1'
               />
             </div>
-          </a>
+          </Link>
         </div>
       )}
     </section>

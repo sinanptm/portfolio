@@ -19,12 +19,14 @@ const ThingCard = ({ name, image, tech, capabilities }: ThingsIDo) => {
                     alt={`${name} Illustration`}
                     fill
                     className="object-contain"
-                    priority
+                    loading="lazy"
                 />
             </div>
 
             <div className="space-y-8">
-                <h3 className="text-2xl sm:text-3xl font-bold">{name}</h3>
+                <header>
+                    <h3 className="text-2xl sm:text-3xl font-bold">{name}</h3>
+                </header>
 
                 <div className="grid grid-cols-6 sm:grid-cols-8 md:grid-cols-10 gap-2 max-w-2xl">
                     {tech.map((tech) => (
@@ -38,6 +40,7 @@ const ThingCard = ({ name, image, tech, capabilities }: ThingsIDo) => {
                                 src={tech.url}
                                 alt={tech.name}
                                 fill
+                                loading="lazy"
                                 className="object-contain p-1 transition-transform duration-200 group-hover:scale-110"
                             />
                             <AnimatedTooltip
@@ -51,18 +54,18 @@ const ThingCard = ({ name, image, tech, capabilities }: ThingsIDo) => {
                     ))}
                 </div>
 
-                <div className="space-y-4">
+                <ul className="space-y-4">
                     {capabilities.map((capability, index) => (
-                        <div key={index} className="flex items-start gap-3">
+                        <li key={index} className="flex items-start gap-3">
                             <span className="text-2xl flex-shrink-0 mt-1">
                                 {capability.icon}
                             </span>
                             <p className="text-lg text-muted-foreground">
                                 {capability.text}
                             </p>
-                        </div>
+                        </li>
                     ))}
-                </div>
+                </ul>
             </div>
         </div>
     );

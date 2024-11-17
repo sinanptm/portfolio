@@ -20,29 +20,33 @@ const About = () => {
             className="relative w-full min-h-screen mx-auto sm:px-16 px-6 pb-10"
         >
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-3xl sm:text-4xl font-bold heading text-center mb-4 sm:mb-8">About Me</h2>
+                <header>
+                    <h2 className="text-3xl sm:text-4xl font-bold heading text-center mb-4 sm:mb-8">About Me</h2>
+                </header>
 
                 <div className="space-y-16">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                         <div className="relative aspect-square w-full max-w-xl mx-auto">
                             <Image
                                 src="/assets/images/sitting.svg"
-                                alt="Developer at desk illustration"
+                                alt="Illustration of a developer sitting at a desk, coding with a laptop and books around"
                                 fill
                                 className="object-contain"
-                                priority
+                                loading="lazy"
                             />
                         </div>
 
                         <div className="space-y-6">
-                            <p className="text-lg leading-relaxed">
-                                {profile.summary}
-                            </p>
+                            <article>
+                                <p className="text-lg leading-relaxed">
+                                    {profile.summary}
+                                </p>
+                            </article>
 
                             <SocialLinks />
-                            
+
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Link href={profile.gitHub}>
+                                <Link href={profile.gitHub} prefetch={false}>
                                     <Button
                                         className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700"
                                     >
@@ -50,7 +54,8 @@ const About = () => {
                                             src={'/assets/icons/star.svg'}
                                             width={12}
                                             height={12}
-                                            alt="Stars"
+                                            alt="Yellow Star"
+                                            loading="lazy"
                                             className="w-5 h-5 text-yellow-500"
                                         />
                                         Star me on GitHub

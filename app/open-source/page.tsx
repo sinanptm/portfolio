@@ -20,8 +20,8 @@ const Page = () => {
             animate="visible"
             variants={containerVariants}
         >
-            <div className="max-w-7xl mx-auto space-y-10">
-                <h2 className="heading">Contributed Organizations</h2>
+            <div className="max-w-7xl mx-auto space-y-16">
+                <h2 className="heading text-3xl sm:text-4xl font-bold text-center mb-4 sm:mb-8">Contributed Organizations</h2>
                 <div className="flex flex-wrap items-center justify-center gap-16">
                     {openSourceOrganizations.map((org) => (
                         <div
@@ -56,9 +56,36 @@ const Page = () => {
                         </div>
                     ))}
                 </div>
+                
+                <div className="space-y-16">
+                    <div className="grid lg:grid-cols-2 gap-8 items-center">
+                        <div className="relative aspect-square w-full max-w-xl mx-auto">
+                            <Image
+                                src="/assets/images/coding.svg"
+                                alt="Illustration of a developer coding, representing open source collaboration"
+                                fill
+                                className="object-contain"
+                                loading="lazy"
+                            />
+                        </div>
+
+                        <div className="space-y-6">
+                    <h2 className="text-3xl sm:text-3xl font-bold text-center mb-4 sm:mb-8">What Open Source Taught Me</h2>
+                            <article>
+                                <p className="text-lg leading-relaxed">
+                                    Open source collaboration has been a transformative experience in my journey as a developer. It taught me the value of community-driven development, where diverse minds come together to create something greater than the sum of its parts. Through open source, I learned the importance of clear communication, thorough documentation, and writing clean, maintainable code that others can understand and build upon.
+                                </p>
+                                <p className="text-lg leading-relaxed mt-4">
+                                    Participating in open source projects honed my ability to work with different coding styles and philosophies, making me a more adaptable and versatile developer. It also instilled in me a deep appreciation for the power of shared knowledge and the impact that collaborative efforts can have on the tech community and beyond.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                
                 <Contributions />
             </div>
-        </motion.section >
+        </motion.section>
     );
 };
 
