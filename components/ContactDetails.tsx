@@ -19,7 +19,7 @@ const ContactDetails = () => {
                 <div className="w-full md:w-1/2 flex flex-col items-center">
                     <div className="relative w-[350px] h-[350px] rounded-full overflow-hidden ring-4 ring-purple-500/20">
                         <Image
-                            src="/assets/images/me.jpg.jpg"
+                            src="/assets/images/me.jpg"
                             alt="Profile photo"
                             fill
                             className="object-cover"

@@ -86,7 +86,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
               onClick={() => onViewDetails(project)}
               className={cn(buttonBaseStyles, 'transition-colors duration-300 hover:bg-gray-600 hover:text-slate-500')}
             >
-              <Image width={10} height={10} src='/assets/icons/info.svg.svg' alt="Info" className="w-3 h-3 mr-1" />
+              <Image width={10} height={10} src='/assets/icons/info.svg' alt="Info" className="w-3 h-3 mr-1" />
               Details
             </button>
           </motion.div>

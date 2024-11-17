@@ -58,7 +58,7 @@ const NavBar = () => {
           <DropdownMenuTrigger asChild className="md:hidden">
             <Button variant="outline" size="icon">
               <Image
-                src={'/assets/icons/menu.svg.svg'}
+                src={'/assets/icons/menu.svg'}
                 alt="menu"
                 width={15}
                 height={15}

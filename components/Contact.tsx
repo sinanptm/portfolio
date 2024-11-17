@@ -96,7 +96,7 @@ const Contact = () => {
           <span className="relative z-10">Send Message</span>
           <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
           <Image
-            src="/assets/icons/send.svg.svg"
+            src="/assets/icons/send.svg"
             width={16}
             height={16}
             alt="Send"

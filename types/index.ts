@@ -49,3 +49,9 @@ export type ThingsIDo = {
         icon: string;
     }[];
 };
+
+export type ChartDataType = {
+    status: string;
+    count: number;
+    fill: string;
+  }[];

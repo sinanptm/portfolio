@@ -28,6 +28,12 @@ export const navLinks = [
     { href: "/contact", label: "Contact Me" },
 ];
 
+export const openSourceOrganizations = [
+    { name: "Impler", url: "https://impler.io", logo: "/assets/org/impler.png" },
+    { name: "Strapi", url: "https://strapi.io", logo: "/assets/org/strapi.png" },
+    { name: "Origin Ui", url: "https://originui.com", logo: "/assets/org/origin.ico" }
+];
+
 
 export const projects: Project[] = [
     {
