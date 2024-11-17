@@ -100,7 +100,7 @@ export const metadata: Metadata = {
     description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Known as sinanptm on Social media.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/screenshots/twitter-image.png",
         width: 1200,
         height: 630,
         alt: "Muhammed Sinan - Full Stack Developer Portfolio",
@@ -113,7 +113,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Muhammed Sinan | Full Stack Developer",
     description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js.",
-    images: ["/screenshots/og-image.png"],
+    images: ["/screenshots/twitter-image.png"],
     creator: "@luffy_kuns",
     site: "@luffy_kuns",
     creatorId: "1467726470533754880",
