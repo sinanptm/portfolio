@@ -7,32 +7,4 @@ export const githubApiHeaders = {
     'X-GitHub-Api-Version': '2022-11-28'
 };
 
-export class GitHubApiError extends Error {
-    constructor(message: string, public status?: number, public response?: unknown) {
-        super(message);
-        this.name = 'GitHubApiError';
-    }
-}
 
-export interface PullRequestStats {
-    open: number;
-    closed: number;
-    merged: number;
-}
-
-export interface IssueStats {
-    open: number;
-    closed: number;
-}
-
-
-export interface ContributionDay {
-    date: string;
-    count: number;
-    level: 0 | 1 | 2 | 3 | 4;
-}
-
-export interface ContributionStats {
-    totalContributions: number;
-    contributionDays: ContributionDay[];
-}

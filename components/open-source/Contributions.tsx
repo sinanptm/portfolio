@@ -3,13 +3,16 @@
 import { useEffect, useState } from 'react';
 import { ChartDataType } from "@/types";
 import ContributionChart from "./ContributionChart";
-import { fetchUserContributions, fetchUserIssueStats, fetchUserPRStats } from '@/lib/github/getContributions';
+import { fetchAllUserPullRequests, fetchUserIssueStats, fetchUserPRStats } from '@/lib/github/getContributions';
 import { profile } from '@/constants';
 import ChartSkeleton from './ChartSkeleton';
+import { PullRequest } from "@/types/github";
+import PullRequestsTable from './PullRequests';
 
 const Contributions = () => {
   const [prData, setPrData] = useState<ChartDataType>([]);
   const [issueData, setIssueData] = useState<ChartDataType>([]);
+  const [pullRequests, setPullRequests] = useState<PullRequest[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -17,10 +20,10 @@ const Contributions = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const [prStats, issueStats] = await Promise.all([
+        const [prStats, issueStats, prs] = await Promise.all([
           fetchUserPRStats(profile.gitHubUserName),
           fetchUserIssueStats(profile.gitHubUserName),
-          fetchUserContributions(profile.gitHubUserName)
+          fetchAllUserPullRequests(profile.gitHubUserName)
         ]);
 
         setPrData([
@@ -33,6 +36,8 @@ const Contributions = () => {
           { status: "open", count: issueStats.open, fill: "hsl(var(--chart-4))" },
           { status: "closed", count: issueStats.closed, fill: "hsl(var(--chart-5))" },
         ]);
+
+        setPullRequests(prs);
 
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to fetch GitHub data');
@@ -70,7 +75,7 @@ const Contributions = () => {
             </>
           )}
         </div>
-
+        <PullRequestsTable pullRequests={pullRequests} />
       </div>
     </div>
   );

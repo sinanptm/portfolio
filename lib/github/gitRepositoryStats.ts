@@ -1,5 +1,6 @@
 import { GitHubError, GitHubStats } from "@/types";
-import { GITHUB_API_BASE_URL, GitHubApiError, githubApiHeaders } from ".";
+import { GITHUB_API_BASE_URL, githubApiHeaders } from ".";
+import { GitHubApiError } from "../../types/github";
 
 
 const extractRepoInfo = (githubLink: string): { owner: string; repo: string } | null => {

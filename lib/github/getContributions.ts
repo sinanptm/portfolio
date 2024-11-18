@@ -1,5 +1,6 @@
-import { ContributionDay, ContributionStats, IssueStats, PullRequestStats } from ".";
-import { GITHUB_API_BASE_URL, GitHubApiError, githubApiHeaders } from ".";
+import { IssueStats, PullRequest, PullRequestResponse, PullRequestStats, Repository } from "../../types/github";
+import { GITHUB_API_BASE_URL, githubApiHeaders } from ".";
+import { GitHubApiError } from "../../types/github";
 
 
 
@@ -84,77 +85,90 @@ export async function fetchUserIssueStats(username: string): Promise<IssueStats>
   }
 }
 
-
-
-export async function fetchUserContributions(username: string): Promise<ContributionStats> {
+export async function fetchAllUserPullRequests(username: string): Promise<PullRequest[]> {
   try {
-    const query = `
-      query($username: String!) {
-        user(login: $username) {
-          contributionsCollection {
-            contributionCalendar {
-              totalContributions
-              weeks {
-                contributionDays {
-                  contributionCount
-                  date
-                }
-              }
-            }
-          }
-        }
+    const response = await fetch(
+      `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:pr`,
+      {
+        headers: githubApiHeaders,
+        cache: "force-cache"
       }
-    `;
-
-    const response = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: githubApiHeaders,
-      body: JSON.stringify({
-        query,
-        variables: { username },
-      }),
-      cache: "force-cache"
-    });
+    );
 
     if (!response.ok) {
-      throw new GitHubApiError('Failed to fetch contribution data', response.status);
+      throw new GitHubApiError('Failed to fetch pull requests', response.status);
     }
 
-    const data = await response.json();
-
-    if (data.errors) {
-      throw new GitHubApiError(data.errors[0].message);
-    }
-
-    const calendar = data.data.user.contributionsCollection.contributionCalendar;
-    const contributionDays: ContributionDay[] = [];
-    //eslint-disable-next-line
-    calendar.weeks.forEach((week: any) => {
-      //eslint-disable-next-line
-      week.contributionDays.forEach((day: any) => {
-
-        let level: 0 | 1 | 2 | 3 | 4 = 0;
-        if (day.contributionCount > 0) {
-          if (day.contributionCount <= 3) level = 1;
-          else if (day.contributionCount <= 6) level = 2;
-          else if (day.contributionCount <= 9) level = 3;
-          else level = 4;
-        }
-
-        contributionDays.push({
-          date: day.date,
-          count: day.contributionCount,
-          level,
+    const data = await response.json() as PullRequestResponse;
+    
+    const enrichedPRs = await Promise.all(
+      data.items.map(async (pr) => {
+        const prDetailsResponse = await fetch(pr.pull_request.url, {
+          headers: githubApiHeaders,
+          cache: "force-cache"
         });
-      });
-    });
+        
+        if (!prDetailsResponse.ok) {
+          throw new GitHubApiError('Failed to fetch PR details', prDetailsResponse.status);
+        }
+        
+        const prDetails = await prDetailsResponse.json();
+        
+        const repository: Repository = {
+          name: prDetails.base.repo.name,
+          full_name: prDetails.base.repo.full_name,
+          html_url: prDetails.base.repo.html_url,
+        };
 
-    return {
-      totalContributions: calendar.totalContributions,
-      contributionDays,
-    };
+        return {
+          id: Number(pr.id),
+          number: Number(pr.number),
+          title: String(pr.title),
+          state: String(pr.state),
+          created_at: String(pr.created_at),
+          html_url: String(pr.html_url),
+          diff_url: String(prDetails.diff_url),
+          additions: Number(prDetails.additions),
+          deletions: Number(prDetails.deletions),
+          changed_files: Number(prDetails.changed_files),
+          commits: Number(prDetails.commits),
+          comments: Number(prDetails.comments),
+          review_comments: Number(prDetails.review_comments),
+          merge_commit_sha: prDetails.merge_commit_sha ? String(prDetails.merge_commit_sha) : null,
+          //eslint-disable-next-line
+          labels: pr.labels.map((label: any) => ({
+            name: String(label.name),
+            color: String(label.color),
+            description: label.description ? String(label.description) : null
+          })),
+          repository,
+          head: {
+            ref: String(prDetails.head.ref),
+            sha: String(prDetails.head.sha),
+            repo: {
+              name: String(prDetails.head.repo?.name || ''),
+              full_name: String(prDetails.head.repo?.full_name || ''),
+              html_url: String(prDetails.head.repo?.html_url || ''),
+              description: String(prDetails.head.repo?.description || ''),
+              private: Boolean(prDetails.head.repo?.private || false),
+              language: String(prDetails.head.repo?.language || '')
+            }
+          },
+          base: {
+            ref: String(prDetails.base.ref),
+            sha: String(prDetails.base.sha),
+            repo: repository
+          }
+        };
+      })
+    );
+
+    return enrichedPRs.sort((a, b) => 
+      new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    );
+
   } catch (error) {
     if (error instanceof GitHubApiError) throw error;
-    throw new GitHubApiError('Failed to fetch contribution statistics', undefined, error);
+    throw new GitHubApiError('Failed to fetch pull requests', undefined, error);
   }
-}
+};
