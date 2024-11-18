@@ -4,7 +4,7 @@
 import { useTooltip } from '@/hooks/useTooltip';
 import Image from 'next/image';
 import { memo } from 'react';
-import AnimatedTooltip from '../project/AnimatedTooltip';
+import AnimatedTooltip from '../AnimatedTooltip';
 import { ThingsIDo } from '@/types';
 
 

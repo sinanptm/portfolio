@@ -35,7 +35,7 @@ const ComputersCanvas: FC = () => {
         antialias: false,
         powerPreference: "high-performance",
       }}
-      className="w-full h-full"
+      className="w-full"
       performance={{ min: 0.5 }}
     >
       <Suspense fallback={<CanvasLoader />}>

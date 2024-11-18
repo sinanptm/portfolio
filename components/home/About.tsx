@@ -17,13 +17,9 @@ const About = () => {
             animate="visible"
             id="about"
             variants={containerVariants}
-            className="relative w-full min-h-screen mx-auto sm:px-16 px-6 pb-10"
+            className="w-full mx-auto sm:px-16 px-6 pb-10"
         >
             <div className="max-w-7xl mx-auto">
-                <header>
-                    <h2 className="text-3xl sm:text-4xl font-bold heading text-center mb-4 sm:mb-8">About Me</h2>
-                </header>
-
                 <div className="space-y-16">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                         <div className="relative aspect-square w-full max-w-xl mx-auto">

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useTooltip } from '@/hooks/useTooltip';
 import { memo } from 'react';
 import dynamic from 'next/dynamic';
-const AnimatedTooltip = dynamic(() => import("./project/AnimatedTooltip"));
+const AnimatedTooltip = dynamic(() => import("./AnimatedTooltip"));
 
 const SocialLinks = () => {
     const { rotate, translateX, handleHover, hoveredItem } = useTooltip();

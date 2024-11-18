@@ -1,7 +1,7 @@
 'use client';
 
 import Contributions from "@/components/open-source/Contributions";
-import AnimatedTooltip from "@/components/project/AnimatedTooltip";
+import AnimatedTooltip from "@/components/AnimatedTooltip";
 import { openSourceOrganizations } from "@/constants";
 import { containerVariants } from "@/constants/animationVariants";
 import { useTooltip } from "@/hooks/useTooltip";
