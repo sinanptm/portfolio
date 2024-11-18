@@ -2,7 +2,7 @@
 import Technologies from '@/components/Technologies';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { containerVariants, staggerVariants } from '@/constants/animationVariants';
+import { containerVariants, paragraphVariants, staggerVariants, titleVariants } from '@/style';
 import { memo } from 'react';
 import { quotes } from '@/constants';
 
@@ -15,10 +15,10 @@ const Stack = () => {
       variants={containerVariants}
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="heading">Technologies I Excel At</h2>
-        <p className="text-lg sm:text-xl text-center text-gray-300 mb-8 sm:mb-12">
+        <motion.h2 variants={titleVariants} className="heading">Technologies I Excel At</motion.h2>
+        <motion.p variants={paragraphVariants} className="text-lg sm:text-xl text-center text-gray-300 mb-8 sm:mb-12">
           These are the tools and technologies I use to create dynamic, robust, and efficient applications tailored to your needs.
-        </p>
+        </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {quotes.map((quote, index) => (

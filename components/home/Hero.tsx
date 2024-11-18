@@ -3,7 +3,7 @@
 import { memo } from "react";
 import { TypewriterEffect } from "../ui/typewriter-effect";
 import { motion } from 'framer-motion';
-import { containerVariants } from "@/constants/animationVariants";
+import { containerVariants } from "@/style";
 import { profile } from "@/constants";
 
 const words = [

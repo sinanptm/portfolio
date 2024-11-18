@@ -4,22 +4,26 @@ import Link from 'next/link';
 import { useTooltip } from '@/hooks/useTooltip';
 import { memo } from 'react';
 import dynamic from 'next/dynamic';
+import { motion } from "framer-motion";
+import { containerVariants, techIconVariants } from '@/style';
 const AnimatedTooltip = dynamic(() => import("./AnimatedTooltip"));
 
 const SocialLinks = () => {
     const { rotate, translateX, handleHover, hoveredItem } = useTooltip();
 
     return (
-        <div
+        <motion.ul
+            variants={containerVariants}
             className="grid grid-flow-col auto-cols-max gap-4 mb-6"
             aria-label='Owner Social media links'
         >
             {socialMediaLinks.map((link, i) => (
-                <div
+                <motion.li
                     key={i}
                     className="relative flex items-center justify-center"
                     onMouseEnter={() => handleHover(link.href)}
                     onMouseLeave={() => handleHover(null)}
+                    variants={techIconVariants}
                     aria-label={`${link.title} link: ${link.title}`}
                 >
                     {hoveredItem === link.href && (
@@ -47,9 +51,9 @@ const SocialLinks = () => {
                             className="w-6 h-6"
                         />
                     </Link>
-                </div>
+                </motion.li>
             ))}
-        </div>
+        </motion.ul>
     );
 };
 

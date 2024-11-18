@@ -5,7 +5,7 @@ import Contact from '@/components/Contact';
 import dynamic from 'next/dynamic';
 import ContactDetails from '@/components/ContactDetails';
 import { motion } from "framer-motion";
-import { containerVariants } from '@/constants/animationVariants';
+import { containerVariants } from '@/style';
 
 const World = dynamic(() => import('@/components/ui/globe').then(b => b.World), { ssr: false });
 

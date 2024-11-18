@@ -3,11 +3,11 @@ import Image from "next/image";
 import { Project } from "@/types";
 import AnimatedTooltip from "../AnimatedTooltip";
 import { useTooltip } from "../../hooks/useTooltip";
-import { imageVariants, titleVariants, buttonVariants } from "../../constants/animationVariants";
+import { imageVariants, titleVariants, buttonVariants } from "../../style";
 import { memo } from "react";
 import ProjectButton from "@/components/project/Button";
 import { cn } from "@/lib/utils";
-import { buttonBaseStyles } from "@/style/styles";
+import { buttonBaseStyles } from "@/style";
 
 type ProjectCardProps = {
   project: Project;

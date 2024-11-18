@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { buttonVariants } from "@/constants/animationVariants";
+import { buttonVariants } from "@/style";
 import { memo, ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { buttonBaseStyles } from "@/style/styles";
+import { buttonBaseStyles } from "@/style";
 
 type Props = {
   href: string;

@@ -1,6 +1,6 @@
 'use client';
 
-import { containerVariants } from '@/constants/animationVariants';
+import { buttonHover, buttonVariants, containerVariants, fadeInUp, imageVariants, staggerChildren } from '@/style';
 import { motion } from 'framer-motion';
 import { memo } from 'react';
 import { profile, thingsIDo } from '@/constants';
@@ -11,6 +11,8 @@ import { Button } from '../ui/button';
 import SocialLinks from '../SocialLinks';
 
 const About = () => {
+
+
     return (
         <motion.section
             initial="hidden"
@@ -19,10 +21,13 @@ const About = () => {
             variants={containerVariants}
             className="w-full mx-auto px-6 pb-10"
         >
-            <div className="max-w-7xl mx-auto">
+            <motion.div className="max-w-7xl mx-auto" variants={staggerChildren}>
                 <div className="space-y-16 overflow-hidden">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
-                        <div className="relative aspect-square w-full h-64 sm:h-auto max-w-xl mx-auto ">
+                        <motion.div
+                            className="relative aspect-square w-full h-64 sm:h-auto max-w-xl mx-auto"
+                            variants={imageVariants}
+                        >
                             <Image
                                 src="/assets/images/sitting.svg"
                                 alt="Illustration of a developer sitting at a desk, coding with a laptop and books around"
@@ -30,48 +35,69 @@ const About = () => {
                                 className="object-contain"
                                 loading="lazy"
                             />
-                        </div>
+                        </motion.div>
 
-                        <div className="space-y-6">
-                            <article className="text-lg text-muted-foreground">
+                        <motion.div className="space-y-6" variants={staggerChildren}>
+                            <motion.article
+                                className="text-lg text-muted-foreground"
+                                variants={fadeInUp}
+                            >
                                 {profile.summary}
-                            </article>
+                            </motion.article>
 
-                            <SocialLinks />
+                            <motion.div variants={fadeInUp}>
+                                <SocialLinks />
+                            </motion.div>
 
-                            <div className="flex flex-col sm:flex-row gap-4">
+                            <motion.div
+                                className="flex flex-col sm:flex-row gap-4"
+                                variants={fadeInUp}
+                            >
                                 <Link href={profile.gitHub} prefetch={false}>
-                                    <Button
-                                        className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700"
-                                        aria-label='Star me on github'
-                                    >
-                                        <Image
-                                            src={'/assets/icons/star.svg'}
-                                            width={12}
-                                            height={12}
-                                            alt="Star"
-                                            loading="lazy"
-                                            className="w-5 h-5 text-yellow-500"
-                                        />
-                                        Star me on GitHub
-                                    </Button>
+                                    <motion.div whileHover={buttonHover} variants={buttonVariants} whileTap={{ scale: 0.95 }}>
+                                        <Button
+                                            className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700"
+                                            aria-label='Star me on github'
+                                        >
+                                            <Image
+                                                src={'/assets/icons/star.svg'}
+                                                width={12}
+                                                height={12}
+                                                alt="Star"
+                                                loading="lazy"
+                                                className="w-5 h-5 text-yellow-500"
+                                            />
+                                            Star me on GitHub
+                                        </Button>
+                                    </motion.div>
                                 </Link>
-                            </div>
-
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className="max-w-7xl mx-auto mt-16">
-                <h2 className="text-3xl sm:text-4xl font-bold heading text-center mb-4 sm:mb-8">What I Do?</h2>
+            <motion.div
+                className="max-w-7xl mx-auto mt-16"
+                variants={staggerChildren}
+                initial="hidden"
+                animate="visible"
+            >
+                <motion.h2
+                    className="text-3xl sm:text-4xl font-bold heading text-center mb-4 sm:mb-8"
+                    variants={fadeInUp}
+                >
+                    What I Do?
+                </motion.h2>
 
-                <div className="space-y-16">
+                <motion.div className="space-y-16" variants={staggerChildren}>
                     {thingsIDo.map((thing, index) => (
-                        <ThingsCard key={index} {...thing} />
+                        <motion.div key={index} variants={fadeInUp}>
+                            <ThingsCard {...thing} />
+                        </motion.div>
                     ))}
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </motion.section>
     );
 };

@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { motion } from "framer-motion";
-import { containerVariants } from "@/constants/animationVariants";
+import { containerVariants, itemVariants } from "@/style";
 import { navLinks } from "@/constants";
 
 const NavBar = () => {
@@ -48,6 +48,7 @@ const NavBar = () => {
                   transition: { duration: 0.2 }
                 }}
                 whileTap={{ scale: 0.95 }}
+                variants={itemVariants}
               >
                 {item.label}
               </motion.p>
