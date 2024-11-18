@@ -2,15 +2,15 @@
 
 import { memo, useCallback, useState } from "react";
 import { motion } from "framer-motion";
-import { projects } from "@/constants";
+import { projects } from "@/constants/projects";
 import { Project } from "@/types";
-import ProjectModel from "./project/ProjectModel";
-import ProjectCard from "./project/ProjectsCard";
-import { containerVariants, itemVariants, textVariants } from "../style";
+import ProjectModel from "../../components/project/ProjectModel";
+import ProjectCard from "../../components/project/ProjectsCard";
+import { containerVariants, itemVariants, textVariants } from "../../style";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const ComputerCanvas = dynamic(() => import("./3D/ComputerCanvas"), { ssr: false });
+const ComputerCanvas = dynamic(() => import("../../components/3D/ComputerCanvas"), { ssr: false });
 
 export default memo(function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);

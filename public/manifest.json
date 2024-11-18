@@ -1,11 +1,11 @@
 {
-  "short_name": "Sinan PTM",
-  "name": "Sinan PTM Portfolio",
+  "short_name": "Sinan ptm",
+  "name": "Sinan ptm Portfolio",
   "description": "Full Stack Developer specializing in MERN stack development with expertise in building scalable web applications",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#5bbad5",
+  "background_color": "#3E3E42",
+  "theme_color": "#d830dc",
   "icons": [
     {
       "src": "/icons/android-icon-36x36.png",
