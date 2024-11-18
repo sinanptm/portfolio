@@ -31,16 +31,16 @@ const Hero = () => {
         <div className="flex flex-col justify-center items-center mt-5 ml-5">
         </div>
         <div>
-          <motion.h1
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-            className={`font-black  lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}
-          >
-            <header>
+          <header>
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              className={`font-black  lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px]`}
+            >
               I&apos;m <span className="text-violet-600">{profile.name}</span>
-            </header>
-          </motion.h1>
+            </motion.h1>
+          </header>
           <article>
             <TypewriterEffect words={words} />
           </article>

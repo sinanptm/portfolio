@@ -1,21 +1,21 @@
-'use client'
+'use client';
 
-import { memo, useState } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { memo, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { motion } from "framer-motion"
-import { containerVariants } from "@/constants/animationVariants"
-import { navLinks } from "@/constants"
+} from "@/components/ui/dropdown-menu";
+import { motion } from "framer-motion";
+import { containerVariants } from "@/constants/animationVariants";
+import { navLinks } from "@/constants";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <motion.header
@@ -73,6 +73,7 @@ const NavBar = () => {
                 <Link
                   href={item.href}
                   className="w-full"
+                  prefetch={false}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -83,7 +84,7 @@ const NavBar = () => {
         </DropdownMenu>
       </div>
     </motion.header>
-  )
-}
+  );
+};
 
-export default memo(NavBar)
+export default memo(NavBar);

@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import "../style/globals.css";
 import { Metadata } from "next";
 import { techNames } from "@/constants/techData";
+import { hostedUrl, profile } from "@/constants";
 
 const firaCode = Fira_Code({ subsets: ['latin'] });
 const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });
@@ -91,7 +92,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://sinanptm.vercel.app",
+    url: hostedUrl,
     siteName: "Muhammed Sinan Portfolio",
     title: "Muhammed Sinan | Full Stack Developer",
     description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js.",
@@ -111,9 +112,8 @@ export const metadata: Metadata = {
     title: "Muhammed Sinan | Full Stack Developer",
     description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js.",
     images: ["/screenshots/twitter-image.png"],
-    creator: "@luffy_kuns",
-    site: "@luffy_kuns",
-    creatorId: "1467726470533754880",
+    creator:  `@${profile.xUserName}`,
+    site:  `@${profile.xUserName}`,
   },
   robots: {
     index: true,
@@ -155,14 +155,14 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   alternates: {
-    canonical: "https://sinanptm.vercel.app",
+    canonical: hostedUrl,
     languages: {
-      "en-US": "https://sinanptm.vercel.app",
+      "en-US": hostedUrl,
     },
   },
   category: "technology",
   classification: "Portfolio Website",
-  metadataBase: new URL("https://sinanptm.vercel.app"),
+  metadataBase: new URL(hostedUrl),
 };
 
 export default layout;

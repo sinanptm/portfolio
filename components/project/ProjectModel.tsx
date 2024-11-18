@@ -70,6 +70,7 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
                         <Image
                             src={project.thumbnail}
                             alt={project.title}
+                            loading="lazy"
                             fill
                             className="object-cover"
                         />
@@ -83,7 +84,7 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
                                         width={12}
                                         height={12}
                                         alt="Stars"
-                                        className="w-3 h-3 text-yellow-500"
+                                        className="w-3 h-3"
                                     />
                                     <div>
                                         <p className="text-xs text-muted-foreground">Stars</p>
@@ -144,10 +145,12 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
                             </Link>
                         </div>
                     )}
-                    <div className="space-y-2">
-                        <h3 className="text-lg font-semibold">Project Details</h3>
-                        <p className="text-sm text-muted-foreground">{project.detailedDescription}</p>
-                    </div>
+                    <article>
+                        <div className="space-y-2">
+                            <h3 className="text-lg font-semibold">Project Details</h3>
+                            <p className="text-sm text-muted-foreground">{project.detailedDescription}</p>
+                        </div>
+                    </article>
                     <div className="space-y-2">
                         <h3 className="text-lg font-semibold">Technologies Used</h3>
                         <div className="flex flex-wrap gap-2">
@@ -166,27 +169,21 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
                     )}
                     <Separator />
                     <div className="flex flex-wrap justify-between gap-2">
-                        {project.link && (
-                            <Button asChild className="flex-1">
-                                <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                                    Visit Project
-                                </Link>
-                            </Button>
-                        )}
-                        {project.githubLink && (
-                            <Button variant="outline" asChild className="flex-1">
-                                <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                                    View on GitHub
-                                </Link>
-                            </Button>
-                        )}
-                        {project.demoLink && (
-                            <Button variant="secondary" asChild className="flex-1">
-                                <Link href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                                    {project.isLinkedin ? "View on LinkedIn" : "Watch Demo"}
-                                </Link>
-                            </Button>
-                        )}
+                        <Button asChild className="flex-1">
+                            <Link href={project.link} prefetch={false} target="_blank" rel="noopener noreferrer">
+                                Visit Project
+                            </Link>
+                        </Button>
+                        <Button variant="outline" asChild className="flex-1">
+                            <Link href={project.githubLink} prefetch={false} target="_blank" rel="noopener noreferrer">
+                                View on GitHub
+                            </Link>
+                        </Button>
+                        <Button variant="secondary" asChild className="flex-1">
+                            <Link href={project.demoLink} prefetch={false} target="_blank" rel="noopener noreferrer">
+                                {project.isLinkedin ? "View on LinkedIn" : "Watch Demo"}
+                            </Link>
+                        </Button>
                     </div>
                 </div>
             </DialogContent>

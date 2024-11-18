@@ -20,12 +20,20 @@ type Props = {
 
 const ProjectButton = ({ href, icon, text, onMouseEnter, onMouseLeave, children }: Props) => (
   <motion.div
-    variants={buttonVariants}
+    variants={{
+      ...buttonVariants
+    }}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
     className="relative"
+    aria-label={`Project link on ${text}`}
   >
-    <Link href={href}>
+    <Link
+      href={href}
+      prefetch={false}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <button
         className={cn(buttonBaseStyles, "transition-colors duration-300 hover:bg-gray-600 hover:text-blue-700")}
       >

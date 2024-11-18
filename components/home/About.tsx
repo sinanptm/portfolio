@@ -38,7 +38,7 @@ const About = () => {
 
                         <div className="space-y-6">
                             <article>
-                                <p className="text-lg leading-relaxed">
+                                <p className="text-lg text-muted-foreground">
                                     {profile.summary}
                                 </p>
                             </article>
@@ -49,12 +49,13 @@ const About = () => {
                                 <Link href={profile.gitHub} prefetch={false}>
                                     <Button
                                         className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700"
+                                        aria-label='Star me on github'
                                     >
                                         <Image
                                             src={'/assets/icons/star.svg'}
                                             width={12}
                                             height={12}
-                                            alt="Yellow Star"
+                                            alt="Star"
                                             loading="lazy"
                                             className="w-5 h-5 text-yellow-500"
                                         />
@@ -62,6 +63,7 @@ const About = () => {
                                     </Button>
                                 </Link>
                             </div>
+                            
                         </div>
                     </div>
                 </div>

@@ -8,8 +8,10 @@ export const profile = {
               delivering impactful solutions.`,
     gitHub: "https://github.com/sinanptm/portfolio",
     name: "Muhammed Sinan",
-    gitHubUserName: "sinanptm"
+    gitHubUserName: "sinanptm",
+    xUserName: "sinanptm",
 };
+export const hostedUrl = "https://sinanptm.vercel.app";
 
 export const socialMediaLinks = [
     { title: "LinkedIn", icon: "/assets/social/linkedin.svg", href: "https://www.linkedin.com/in/sinanptm" },
@@ -17,24 +19,24 @@ export const socialMediaLinks = [
     { title: "Instagram", icon: "/assets/social/instagram.svg", href: "https://www.instagram.com/si_an_z" },
     { title: 'Stack Overflow', icon: '/assets/social/stackoverflow.png', href: 'https://stackoverflow.com/users/25472984/sinan' },
     { title: "Email", icon: "/assets/social/email.svg", href: "mailto:muhammedsinan0549@gmail.com@gmail.com" },
-    { title: "Twitter", icon: "/assets/social/x.png", href: "https://x.com/luffy_kuns" }
+    { title: "Twitter", icon: "/assets/social/x.png", href: "https://x.com/sinanptm" }
     // { title: "phone", icon: "/assets/social/phone.svg", href: "tel:+8989348934" },
 ];
 
-export  const quotes = [
+export const quotes = [
     {
-      text: "Engineering scalable systems with precision and creativity.",
-      subtitle: "System Design",
+        text: "Engineering scalable systems with precision and creativity.",
+        subtitle: "System Design",
     },
     {
-      text: "Building innovative solutions that empower businesses to grow.",
-      subtitle: "Development Vision",
+        text: "Building innovative solutions that empower businesses to grow.",
+        subtitle: "Development Vision",
     },
     {
-      text: "Blending code and design for intuitive digital experiences.",
-      subtitle: "User-Centric Approach",
+        text: "Blending code and design for intuitive digital experiences.",
+        subtitle: "User-Centric Approach",
     },
-  ];
+];
 
 export const navLinks = [
     { href: "/", label: "Home" },
