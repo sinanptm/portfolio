@@ -8,6 +8,7 @@ export const profile = {
               delivering impactful solutions.`,
     gitHub: "https://github.com/sinanptm/portfolio",
     name: "Muhammed Sinan",
+    title:"Full Stack Developer",
     gitHubUserName: "sinanptm",
     xUserName: "sinanptm",
 };

@@ -20,7 +20,8 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
       <body
         className={
           cn("bg-background antialiased relative remove-scrollbar",
-            firaCode.className, sourceCodePro.className)}
+            firaCode.className, sourceCodePro.className
+          )}
         suppressHydrationWarning={true}
       >
         <ThemeProvider
@@ -44,7 +45,7 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
 
 export const metadata: Metadata = {
   title: {
-    default: "Muhammed Sinan | Full Stack Developer",
+    default: `${profile.name} | ${profile.title}`,
     template: "%s | Muhammed Sinan",
   },
   description: "Experienced Full Stack Developer specializing in MERN stack development with expertise in building high-performance, scalable web applications. Expert in React, Node.js, Express, MongoDB, Next.js, and TypeScript. Available for collaboration and exciting projects.",
@@ -80,21 +81,21 @@ export const metadata: Metadata = {
     }
   ],
   creator: "Muhammed Sinan (sinanptm)",
-  publisher: "Muhammed Sinan",
+  publisher: "sinanptm",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  applicationName: "Muhammed Sinan Portfolio",
+  applicationName: "sinanptm Portfolio",
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: hostedUrl,
-    siteName: "Muhammed Sinan Portfolio",
-    title: "Muhammed Sinan | Full Stack Developer",
+    siteName: "sinanptm Portfolio",
+    title: `${profile.name} | ${profile.title}`,
     description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js.",
     images: [
       {
@@ -109,11 +110,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammed Sinan | Full Stack Developer",
+    title: `${profile.name} | ${profile.title}`,
     description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js.",
     images: ["/screenshots/twitter-image.png"],
-    creator:  `@${profile.xUserName}`,
-    site:  `@${profile.xUserName}`,
+    creator: `@${profile.xUserName}`,
+    site: `@${profile.xUserName}`,
   },
   robots: {
     index: true,
