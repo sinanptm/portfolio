@@ -17,12 +17,12 @@ const About = () => {
             animate="visible"
             id="about"
             variants={containerVariants}
-            className="w-full mx-auto sm:px-16 px-6 pb-10"
+            className="w-full mx-auto px-6 pb-10"
         >
             <div className="max-w-7xl mx-auto">
-                <div className="space-y-16">
+                <div className="space-y-16 overflow-hidden">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
-                        <div className="relative aspect-square w-full max-w-xl mx-auto">
+                        <div className="relative aspect-square w-full h-64 sm:h-auto max-w-xl mx-auto ">
                             <Image
                                 src="/assets/images/sitting.svg"
                                 alt="Illustration of a developer sitting at a desk, coding with a laptop and books around"
@@ -33,10 +33,8 @@ const About = () => {
                         </div>
 
                         <div className="space-y-6">
-                            <article>
-                                <p className="text-lg text-muted-foreground">
-                                    {profile.summary}
-                                </p>
+                            <article className="text-lg text-muted-foreground">
+                                {profile.summary}
                             </article>
 
                             <SocialLinks />
@@ -59,7 +57,7 @@ const About = () => {
                                     </Button>
                                 </Link>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

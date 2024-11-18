@@ -4,7 +4,7 @@ import About from '@/components/home/About';
 
 const page = () => {
   return (
-    <main className='flex flex-col  space-y-3 pt-12 '>
+    <main className='flex flex-col pt-12'>
       <Hero />
       <About />
     </main>
