@@ -4,14 +4,16 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: {
-        default: `${profile.name} | ${profile.title}`,
+        default: `Muhammed Sinan | Full Stack Developer | MERN Stack Expert`,
         template: "%s | Muhammed Sinan",
     },
-    description: "Full Stack Developer specializing in MERN stack development. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Available for collaboration.",
+    description: "Full Stack Developer specializing in MERN stack. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Available for collaboration.",
     keywords: [
+        "Muhammed sinan ptm",
         "Muhammed Sinan",
         "sinanptm",
-        "Muhammed sinan sinanptm",
+        "sinan",
+        "ptm",
         "Full Stack Developer",
         "Sinanptm portfolio",
         "MERN Stack",
@@ -30,6 +32,26 @@ export const metadata: Metadata = {
         "Responsive Design",
         "UI/UX Development",
         "portfolio template",
+        "Personal Portfolio",
+        "Web Developer Portfolio",
+        "Full Stack Developer Portfolio",
+        "React Developer Portfolio",
+        "MERN Stack Portfolio",
+        "Web Applications Portfolio",
+        "Software Engineering Portfolio",
+        "Tech Portfolio",
+        "Showcase Portfolio",
+        "Developer Projects Portfolio",
+        "Frontend & Backend Developer Portfolio",
+        "Responsive Portfolio Design",
+        "Interactive Portfolio",
+        "UX/UI Portfolio",
+        "Creative Portfolio",
+        "Nextjs portfolio",
+        "3d portfolio",
+        "animated portfolio",
+        "GitHub Projects Portfolio",
+        "Tech Showcase Portfolio",
         ...techNames
     ],
     authors: [
@@ -116,7 +138,7 @@ export const metadata: Metadata = {
     category: "technology",
     classification: "Portfolio Website",
     metadataBase: new URL(hostedUrl),
-    assets:'/assets'
+    assets: '/assets'
 };
 
-export default metadata
+export default metadata;
