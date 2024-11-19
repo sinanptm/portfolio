@@ -70,9 +70,6 @@ export const skills: Tech[] = [
     { name: "Multer", url: `${badgeBase}/Multer-%23FEFEFE.svg?style=flat&logo=multer&logoColor=black` }
 ];
 export const baseUrlTech = "/assets/tech";
-
-export const techNames = skills.map(({ name }) => name);
-
 export const technologies: Tech[] = [
     // Languages
     { name: "TypeScript", url: `${baseUrlTech}/typescript.svg` },

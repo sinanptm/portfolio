@@ -1,5 +1,4 @@
 import { hostedUrl, profile } from "@/constants";
-import { techNames } from "@/constants/techData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -52,7 +51,6 @@ export const metadata: Metadata = {
         "animated portfolio",
         "GitHub Projects Portfolio",
         "Tech Showcase Portfolio",
-        ...techNames
     ],
     authors: [
         {
