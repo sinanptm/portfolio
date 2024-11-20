@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/react";
 import { Fira_Code, Source_Code_Pro } from 'next/font/google';
 import { HeroHighlight } from "@/components/ui/hero-highlight";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import ThemeProvider from "@/components/layout/ThemeProvider";
 import { Toaster } from "@/components/ui/toaster";
 import NavBar from "@/components/layout/NavBar";
@@ -34,6 +35,7 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
             <Toaster />
           </HeroHighlight>
           <Analytics debug={false} />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
