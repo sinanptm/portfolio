@@ -2,8 +2,6 @@ import { IssueStats, PullRequest, PullRequestResponse, PullRequestStats, Reposit
 import { GITHUB_API_BASE_URL, githubApiHeaders } from ".";
 import { GitHubApiError } from "../../types/github";
 
-
-
 export async function fetchUserPRStats(username: string): Promise<PullRequestStats> {
   try {
     const openPRsResponse = await fetch(
@@ -106,7 +104,7 @@ export async function fetchAllUserPullRequests(username: string): Promise<PullRe
         const prDetailsResponse = await fetch(pr.pull_request.url, {
           headers: githubApiHeaders,
           cache: "force-cache"
-        });
+        });        
         
         if (!prDetailsResponse.ok) {
           throw new GitHubApiError('Failed to fetch PR details', prDetailsResponse.status);
@@ -126,6 +124,7 @@ export async function fetchAllUserPullRequests(username: string): Promise<PullRe
           title: String(pr.title),
           state: String(pr.state),
           created_at: String(pr.created_at),
+          updated_at:String(pr.updated_at),
           html_url: String(pr.html_url),
           diff_url: String(prDetails.diff_url),
           additions: Number(prDetails.additions),
@@ -164,7 +163,7 @@ export async function fetchAllUserPullRequests(username: string): Promise<PullRe
     );
 
     return enrichedPRs.sort((a, b) => 
-      new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
     );
 
   } catch (error) {

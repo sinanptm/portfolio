@@ -7,8 +7,8 @@ import { Toaster } from "@/components/ui/toaster";
 import NavBar from "@/components/layout/NavBar";
 import { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
-import "../style/globals.css";
 import metadata from "./metadata";
+import "../style/globals.css";
 
 const firaCode = Fira_Code({ subsets: ['latin'] });
 const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });

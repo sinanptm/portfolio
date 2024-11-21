@@ -45,6 +45,7 @@ export interface PullRequest {
     title: string;
     state: string;
     created_at: string;
+    updated_at:string;
     html_url: string;
     diff_url: string;
     additions: number;

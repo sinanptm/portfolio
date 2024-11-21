@@ -118,7 +118,7 @@ export const technologies: Tech[] = [
     { name: "Three.JS", url: `${baseUrlTech}/threejs-1.svg` },
     { name: "Rombo", url: `${baseUrlTech}/rombo.svg` },
     { name: "Framer Motion", url: `${baseUrlTech}/framer-motion.svg` },
-    { name: "Styled Components", url: `${baseUrlTech}/styled-components.svg` },
+    // { name: "Styled Components", url: `${baseUrlTech}/styled-components.svg` },
     { name: "Bootstrap", url: `${baseUrlTech}/bootstrap.svg` },
 
     // UI Component Libraries
@@ -148,7 +148,7 @@ export const technologies: Tech[] = [
     // DevOps & CI/CD
     { name: "GitHub Actions", url: `${baseUrlTech}/github-action.svg` },
     { name: "NPM", url: `${baseUrlTech}/npm.svg` },
-    { name: "Nodemon", url: `${baseUrlTech}/nodemon.svg` },
+    // { name: "Nodemon", url: `${baseUrlTech}/nodemon.svg` },
     { name: "PNPM", url: `${baseUrlTech}/pnpm.png` },
     { name: "YARN", url: `${baseUrlTech}/yarn.png` },
 

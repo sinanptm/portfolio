@@ -23,8 +23,6 @@ import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 import { memo } from "react";
 
-
-
 const Keypad = () => {
   return (
     <div className="h-full rounded-md  mx-1 p-2">
