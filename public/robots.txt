@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sinanptm.vercel.app
+
+# Sitemaps
+Sitemap: https://sinanptm.vercel.app/sitemap.xml
