@@ -1,3 +1,5 @@
+import { MouseEvent, ReactNode } from "react";
+
 export interface Project {
     title: string;
     description: string;
@@ -56,3 +58,14 @@ export type ChartDataType = {
     fill: string;
 }[];
 
+
+
+export type ProjectButtonProps = {
+    href: string;
+    icon: string;
+    text: string;
+    onMouseEnter: () => void;
+    onMouseLeave: () => void;
+    children: ReactNode;
+    handleMouseMove: (event: MouseEvent<HTMLElement>) => void;
+  };

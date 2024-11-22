@@ -11,8 +11,6 @@ import { Button } from '../ui/button';
 import SocialLinks from '../SocialLinks';
 
 const About = () => {
-
-
     return (
         <motion.section
             initial="hidden"
@@ -50,7 +48,7 @@ const About = () => {
                             </motion.div>
 
                             <motion.div
-                                className="flex flex-col sm:flex-row gap-4"
+                                className="flex-col sm:flex-row gap-4 hidden sm:flex"
                                 variants={fadeInUp}
                             >
                                 <Link href={profile.gitHub} prefetch={false}>

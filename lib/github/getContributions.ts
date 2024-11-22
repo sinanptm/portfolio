@@ -6,18 +6,18 @@ export async function fetchUserPRStats(username: string): Promise<PullRequestSta
   try {
     const openPRsResponse = await fetch(
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:pr+state:open`,
-      { 
+      {
         headers: githubApiHeaders,
-        cache:"force-cache"
+        cache: "force-cache"
       }
     );
 
     const closedPRsResponse = await fetch(
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:pr+state:closed`,
-      { 
+      {
         headers: githubApiHeaders,
-        cache:"force-cache"
-       }
+        cache: "force-cache"
+      }
     );
 
     if (!openPRsResponse.ok || !closedPRsResponse.ok) {
@@ -56,7 +56,7 @@ export async function fetchUserIssueStats(username: string): Promise<IssueStats>
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:issue+state:open`,
       {
         headers: githubApiHeaders,
-        cache:"force-cache"
+        cache: "force-cache"
       },
     );
 
@@ -98,20 +98,23 @@ export async function fetchAllUserPullRequests(username: string): Promise<PullRe
     }
 
     const data = await response.json() as PullRequestResponse;
-    
+
     const enrichedPRs = await Promise.all(
       data.items.map(async (pr) => {
         const prDetailsResponse = await fetch(pr.pull_request.url, {
           headers: githubApiHeaders,
-          cache: "force-cache"
-        });        
-        
+          cache: "reload",
+          next: {
+            revalidate: 60 * 2 // 2min
+          }
+        });
+
         if (!prDetailsResponse.ok) {
           throw new GitHubApiError('Failed to fetch PR details', prDetailsResponse.status);
         }
-        
+
         const prDetails = await prDetailsResponse.json();
-        
+
         const repository: Repository = {
           name: prDetails.base.repo.name,
           full_name: prDetails.base.repo.full_name,
@@ -124,7 +127,7 @@ export async function fetchAllUserPullRequests(username: string): Promise<PullRe
           title: String(pr.title),
           state: String(pr.state),
           created_at: String(pr.created_at),
-          updated_at:String(pr.updated_at),
+          updated_at: String(pr.updated_at),
           html_url: String(pr.html_url),
           diff_url: String(prDetails.diff_url),
           additions: Number(prDetails.additions),
@@ -162,7 +165,7 @@ export async function fetchAllUserPullRequests(username: string): Promise<PullRe
       })
     );
 
-    return enrichedPRs.sort((a, b) => 
+    return enrichedPRs.sort((a, b) =>
       new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
     );
 

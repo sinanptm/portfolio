@@ -11,7 +11,7 @@ import Link from "next/link";
 import { memo } from "react";
 
 const OpenSource = () => {
-    const { handleHover, hoveredItem, rotate, translateX } = useTooltip();
+    const { handleHover, hoveredItem, rotate, translateX , handleMouseMove} = useTooltip();
     
     return (
         <motion.section
@@ -40,15 +40,15 @@ const OpenSource = () => {
                                 <Link
                                     href={org.url}
                                     target="_blank"
+                                    onMouseMove={handleMouseMove}
                                     rel="noopener noreferrer"
                                 >
-                                    <motion.div variants={containerVariants} className="relative w-20 h-20">
+                                    <motion.div variants={containerVariants} className="relative w-16 h-16">
                                         <Image
                                             src={org.logo}
                                             alt={`${org.name} logo`}
                                             fill
                                             className="object-contain"
-                                            sizes="(max-width: 768px) 80px, 80px"
                                         />
                                     </motion.div>
                                 </Link>

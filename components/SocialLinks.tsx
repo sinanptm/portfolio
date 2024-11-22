@@ -9,7 +9,7 @@ import { containerVariants, techIconVariants } from '@/style';
 const AnimatedTooltip = dynamic(() => import("./AnimatedTooltip"));
 
 const SocialLinks = () => {
-    const { rotate, translateX, handleHover, hoveredItem } = useTooltip();
+    const { rotate, translateX, handleHover, hoveredItem, handleMouseMove } = useTooltip();
 
     return (
         <motion.ul
@@ -41,6 +41,7 @@ const SocialLinks = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         prefetch={false}
+                        onMouseMove={handleMouseMove}
                     >
                         <Image
                             src={link.icon}

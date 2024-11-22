@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { containerVariants, imageVariants, itemVariants, techIconVariants } from '@/style';
 
 const ThingCard = ({ name, image, tech, capabilities }: ThingsIDo) => {
-    const { rotate, translateX, handleHover, hoveredItem } = useTooltip();
+    const { rotate, translateX, handleHover, hoveredItem, handleMouseMove } = useTooltip();
 
     return (
         <motion.div
@@ -46,6 +46,7 @@ const ThingCard = ({ name, image, tech, capabilities }: ThingsIDo) => {
                             className="relative aspect-square w-10 h-10 sm:w-14 sm:h-14 group"
                             onMouseEnter={() => handleHover(tech.name)}
                             onMouseLeave={() => handleHover(null)}
+                            onMouseMove={handleMouseMove}
                             variants={techIconVariants}
                             whileHover={{ scale: 1.1 }}
                         >

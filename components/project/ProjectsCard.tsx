@@ -15,7 +15,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
-  const { hoveredItem, rotate, translateX, handleHover } = useTooltip();
+  const { hoveredItem, rotate, translateX, handleHover, handleMouseMove } = useTooltip();
 
   return (
     <div className="rounded-xl group/bento hover:shadow-xl transition duration-300 shadow-input dark:shadow-none p-4 bg-black flex flex-col h-full">
@@ -56,6 +56,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
         >
           <ProjectButton
             href={project.link}
+            handleMouseMove={handleMouseMove}
             icon="/assets/social/world.svg"
             text="Live"
             onMouseEnter={() => handleHover('live')}
@@ -64,6 +65,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
             <AnimatedTooltip show={hoveredItem === 'live'} text={project.link} rotate={rotate} translateX={translateX} />
           </ProjectButton>
           <ProjectButton
+          handleMouseMove={handleMouseMove}
             href={project.githubLink}
             icon="/assets/social/github.svg"
             text="GitHub"
@@ -73,6 +75,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
             <AnimatedTooltip show={hoveredItem === 'github'} text={project.githubLink} rotate={rotate} translateX={translateX} />
           </ProjectButton>
           <ProjectButton
+          handleMouseMove={handleMouseMove}
             href={project.demoLink}
             icon={`${project.isLinkedin ? '/assets/social/linkedin.svg' : '/assets/social/youtube.svg'}`}
             text="Demo"
