@@ -1,6 +1,5 @@
 import { Tech } from "@/types";
 
-
 const badgeBase = "https://img.shields.io/badge";
 
 export const skills: Tech[] = [
@@ -104,6 +103,10 @@ export const technologies: Tech[] = [
     { name: "WebRTC", url: `${baseUrlTech}/webrtc.svg` },
     { name: "Socket.io", url: `${baseUrlTech}/socket-io.svg` },
 
+    // DevOps & CI/CD
+    { name: "Docker", url: `${baseUrlTech}/docker.svg` },
+    { name: "GitHub Actions", url: `${baseUrlTech}/github-action.svg` },
+
     // State-management
     { name: "Redux", url: `${baseUrlTech}/redux.svg` },
     { name: "React Query", url: `${baseUrlTech}/react-query.svg` },
@@ -120,6 +123,9 @@ export const technologies: Tech[] = [
     { name: "Framer Motion", url: `${baseUrlTech}/framer-motion.svg` },
     // { name: "Styled Components", url: `${baseUrlTech}/styled-components.svg` },
     { name: "Bootstrap", url: `${baseUrlTech}/bootstrap.svg` },
+    
+    // Design & Prototyping
+    { name: "Figma", url: `${baseUrlTech}/figma-icon.svg` },
 
     // UI Component Libraries
     { name: "Radix UI", url: `${baseUrlTech}/radix-ui.svg` },
@@ -145,8 +151,7 @@ export const technologies: Tech[] = [
     { name: "Google Analytics", url: `${baseUrlTech}/google-analytics.svg` },
     { name: "Chart.js", url: `${baseUrlTech}/chartjs.svg` },
 
-    // DevOps & CI/CD
-    { name: "GitHub Actions", url: `${baseUrlTech}/github-action.svg` },
+    { name: "Winston", url: `${baseUrlTech}/winston.svg` },
     { name: "NPM", url: `${baseUrlTech}/npm.svg` },
     // { name: "Nodemon", url: `${baseUrlTech}/nodemon.svg` },
     { name: "PNPM", url: `${baseUrlTech}/pnpm.png` },
@@ -155,10 +160,7 @@ export const technologies: Tech[] = [
     // Code Quality & Logging
     { name: "ESLint", url: `${baseUrlTech}/eslint.svg` },
     { name: "Prettier", url: `${baseUrlTech}/prettier.svg` },
-    { name: "Winston", url: `${baseUrlTech}/winston.svg` },
 
-    // Design & Prototyping
-    { name: "Figma", url: `${baseUrlTech}/figma-icon.svg` },
 
     // Legacy Support
     { name: "jQuery", url: `${baseUrlTech}/jquery.svg` },

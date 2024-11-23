@@ -82,6 +82,7 @@ export const thingsIDo: ThingsIDo[] = [
         image: "/assets/images/statics.svg",
         tech: [
             { name: "AWS", url: `${baseUrlTech}/aws.svg` },
+            { name: "Docker", url: `${baseUrlTech}/docker.svg` },
             { name: "Firebase", url: `${baseUrlTech}/firebase.svg` },
             { name: "MongoDB", url: `${baseUrlTech}/mongodb.svg` },
             { name: "Vercel", url: `${baseUrlTech}/vercel.svg` },
