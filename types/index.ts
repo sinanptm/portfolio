@@ -5,10 +5,10 @@ export interface Project {
     description: string;
     detailedDescription: string;
     technologies: number[];
-    link: string;
+    link?: string;
     githubLink: string;
     thumbnail: string;
-    demoLink: string;
+    demoLink?: string;
     achievements: string[];
     isLinkedin?: boolean;
     showGitStats?: true;

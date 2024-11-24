@@ -169,21 +169,25 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
                     )}
                     <Separator />
                     <div className="flex flex-wrap justify-between gap-2">
-                        <Button asChild className="flex-1">
-                            <Link href={project.link} prefetch={false} target="_blank" rel="noopener noreferrer">
-                                Visit Project
-                            </Link>
-                        </Button>
+                        {project.link && (
+                            <Button asChild className="flex-1">
+                                <Link href={project.link} prefetch={false} target="_blank" rel="noopener noreferrer">
+                                    Visit Project
+                                </Link>
+                            </Button>
+                        )}
                         <Button variant="outline" asChild className="flex-1">
                             <Link href={project.githubLink} prefetch={false} target="_blank" rel="noopener noreferrer">
                                 View on GitHub
                             </Link>
                         </Button>
-                        <Button variant="secondary" asChild className="flex-1">
-                            <Link href={project.demoLink} prefetch={false} target="_blank" rel="noopener noreferrer">
-                                {project.isLinkedin ? "View on LinkedIn" : "Watch Demo"}
-                            </Link>
-                        </Button>
+                        {project.demoLink && (
+                            <Button variant="secondary" asChild className="flex-1">
+                                <Link href={project.demoLink} prefetch={false} target="_blank" rel="noopener noreferrer">
+                                    {project.isLinkedin ? "View on LinkedIn" : "Watch Demo"}
+                                </Link>
+                            </Button>
+                        )}
                     </div>
                 </div>
             </DialogContent>

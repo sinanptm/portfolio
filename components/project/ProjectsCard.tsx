@@ -54,18 +54,20 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           whileHover="hover"
           animate="rest"
         >
+          {project.link && (
+            <ProjectButton
+              href={project.link}
+              handleMouseMove={handleMouseMove}
+              icon="/assets/social/world.svg"
+              text="Live"
+              onMouseEnter={() => handleHover('live')}
+              onMouseLeave={() => handleHover(null)}
+            >
+              <AnimatedTooltip show={hoveredItem === 'live'} text={project.link} rotate={rotate} translateX={translateX} />
+            </ProjectButton>
+          )}
           <ProjectButton
-            href={project.link}
             handleMouseMove={handleMouseMove}
-            icon="/assets/social/world.svg"
-            text="Live"
-            onMouseEnter={() => handleHover('live')}
-            onMouseLeave={() => handleHover(null)}
-          >
-            <AnimatedTooltip show={hoveredItem === 'live'} text={project.link} rotate={rotate} translateX={translateX} />
-          </ProjectButton>
-          <ProjectButton
-          handleMouseMove={handleMouseMove}
             href={project.githubLink}
             icon="/assets/social/github.svg"
             text="GitHub"
@@ -74,16 +76,18 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           >
             <AnimatedTooltip show={hoveredItem === 'github'} text={project.githubLink} rotate={rotate} translateX={translateX} />
           </ProjectButton>
-          <ProjectButton
-          handleMouseMove={handleMouseMove}
-            href={project.demoLink}
-            icon={`${project.isLinkedin ? '/assets/social/linkedin.svg' : '/assets/social/youtube.svg'}`}
-            text="Demo"
-            onMouseEnter={() => handleHover('demo')}
-            onMouseLeave={() => handleHover(null)}
-          >
-            <AnimatedTooltip show={hoveredItem === 'demo'} text={project.demoLink} rotate={rotate} translateX={translateX} />
-          </ProjectButton>
+          {project.demoLink && (
+            <ProjectButton
+              handleMouseMove={handleMouseMove}
+              href={project.demoLink}
+              icon={`${project.isLinkedin ? '/assets/social/linkedin.svg' : '/assets/social/youtube.svg'}`}
+              text="Demo"
+              onMouseEnter={() => handleHover('demo')}
+              onMouseLeave={() => handleHover(null)}
+            >
+              <AnimatedTooltip show={hoveredItem === 'demo'} text={project.demoLink} rotate={rotate} translateX={translateX} />
+            </ProjectButton>
+          )}
           <motion.div variants={buttonVariants}>
             <button
               onClick={() => onViewDetails(project)}
