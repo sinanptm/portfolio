@@ -87,6 +87,14 @@ export const metadata: Metadata = {
         ],
         countryName: "India",
     },
+    appleWebApp: {
+        capable: true,
+        title: "Sinan ptm Portfolio",
+        statusBarStyle: "black-translucent",
+    },
+    verification: {
+        google: "google815b889e8dec9b27", 
+    },
     twitter: {
         card: "summary_large_image",
         title: `${profile.name} | ${profile.title}`,
