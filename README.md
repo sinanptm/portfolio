@@ -7,7 +7,6 @@
   <a href="https://github.com/sinanptm/portfolio"><img src="https://img.shields.io/badge/-Responsive-blue?style=for-the-badge" alt="Responsive"></a>
   <a href="https://github.com/sinanptm/portfolio"><img src="https://img.shields.io/badge/-Interactive-green?style=for-the-badge" alt="Interactive"></a>
 </div>
-
 <div align="center">
   <h2>🚀 Portfolio Performance & SEO</h2>
   <img src="https://github.com/user-attachments/assets/c3b1a802-057d-448c-bf97-aa83dae1d1e3" alt="Lighthouse Performance Report" width="800">
