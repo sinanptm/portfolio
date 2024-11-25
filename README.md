@@ -11,30 +11,6 @@
 <div align="center">
   <h2>🚀 Portfolio Performance & SEO</h2>
   <img src="https://github.com/user-attachments/assets/c3b1a802-057d-448c-bf97-aa83dae1d1e3" alt="Lighthouse Performance Report" width="800">
-  
-  <h3>🌟 Key Metrics</h3>
-  <table>
-    <tr>
-      <th>Metric</th>
-      <th>Score</th>
-    </tr>
-    <tr>
-      <td><strong>Performance</strong></td>
-      <td>66/100</td>
-    </tr>
-    <tr>
-      <td><strong>Accessibility</strong></td>
-      <td>96/100</td>
-    </tr>
-    <tr>
-      <td><strong>Best Practices</strong></td>
-      <td>100/100</td>
-    </tr>
-    <tr>
-      <td><strong>SEO</strong></td>
-      <td>100/100</td>
-    </tr>
-  </table>
   <p><em>Achieving top scores in SEO, Best Practices, and Accessibility ensures a superior user experience and discoverability!</em></p>
 </div>
 
