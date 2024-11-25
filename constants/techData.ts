@@ -129,7 +129,9 @@ export const technologies: Tech[] = [
 
     // UI Component Libraries
     { name: "Radix UI", url: `${baseUrlTech}/radix-ui.svg` },
-    { name: "shadcn", url: `${baseUrlTech}/shadcn.svg` },
+    { name: "Shadcn", url: `${baseUrlTech}/shadcn.svg` },
+    { name: "Aceternity", url: `${baseUrlTech}/aceternity.png` },
+    { name: "Origin Ui", url: `${baseUrlTech}/origin.ico` },
 
 
     // Authentication & Authorization
