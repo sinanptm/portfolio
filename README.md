@@ -9,7 +9,25 @@
 [![Responsive](https://img.shields.io/badge/-Responsive-blue?style=for-the-badge)](https://github.com/sinanptm/portfolio)
 [![Interactive](https://img.shields.io/badge/-Interactive-green?style=for-the-badge)](https://github.com/sinanptm/portfolio)
 
----
+</div>
+<div align="center">
+
+# 🚀 Portfolio Performance & SEO
+
+<p align="center">
+  ![image](https://github.com/user-attachments/assets/c3b1a802-057d-448c-bf97-aa83dae1d1e3)
+</p>
+
+### 🌟 Key Metrics
+
+| **Metric**       | **Score** |
+|-------------------|-----------|
+| **Performance**  | 66/100    |
+| **Accessibility**| 96/100    |
+| **Best Practices**| 100/100  |
+| **SEO**          | 100/100  |
+
+<p style="font-size: 1.2em"><em>Achieving top scores in SEO, Best Practices, and Accessibility ensures a superior user experience and discoverability!</em></p>
 
 </div>
 
