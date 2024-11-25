@@ -1,187 +1,201 @@
 <div align="center">
-  
-# 🌟 3D Interactive Portfolio
-
-<p style="font-size: 1.2em"><em>A unique and immersive way to showcase your skills and projects</em></p>
-
-[![3D Environment](https://img.shields.io/badge/-3D%20Environment-blueviolet?style=for-the-badge)](https://github.com/sinanptm/portfolio)
-[![Customizable](https://img.shields.io/badge/-Customizable-orange?style=for-the-badge)](https://github.com/sinanptm/portfolio)
-[![Responsive](https://img.shields.io/badge/-Responsive-blue?style=for-the-badge)](https://github.com/sinanptm/portfolio)
-[![Interactive](https://img.shields.io/badge/-Interactive-green?style=for-the-badge)](https://github.com/sinanptm/portfolio)
-
+  <h1>🌟 3D Interactive Portfolio</h1>
+  <p><em>A unique and immersive way to showcase your skills and projects</em></p>
+  <br>
+  <a href="https://github.com/sinanptm/portfolio"><img src="https://img.shields.io/badge/-3D%20Environment-blueviolet?style=for-the-badge" alt="3D Environment"></a>
+  <a href="https://github.com/sinanptm/portfolio"><img src="https://img.shields.io/badge/-Customizable-orange?style=for-the-badge" alt="Customizable"></a>
+  <a href="https://github.com/sinanptm/portfolio"><img src="https://img.shields.io/badge/-Responsive-blue?style=for-the-badge" alt="Responsive"></a>
+  <a href="https://github.com/sinanptm/portfolio"><img src="https://img.shields.io/badge/-Interactive-green?style=for-the-badge" alt="Interactive"></a>
 </div>
+
 <div align="center">
-
-# 🚀 Portfolio Performance & SEO
-
-<p align="center">
-  <p align="center">
+  <h2>🚀 Portfolio Performance & SEO</h2>
   <img src="https://github.com/user-attachments/assets/c3b1a802-057d-448c-bf97-aa83dae1d1e3" alt="Lighthouse Performance Report" width="800">
-</p>
-</p>
-
-### 🌟 Key Metrics
-
-| **Metric**       | **Score** |
-|-------------------|-----------|
-| **Performance**  | 66/100    |
-| **Accessibility**| 96/100    |
-| **Best Practices**| 100/100  |
-| **SEO**          | 100/100  |
-
-<p style="font-size: 1.2em"><em>Achieving top scores in SEO, Best Practices, and Accessibility ensures a superior user experience and discoverability!</em></p>
-
+  
+  <h3>🌟 Key Metrics</h3>
+  <table>
+    <tr>
+      <th>Metric</th>
+      <th>Score</th>
+    </tr>
+    <tr>
+      <td><strong>Performance</strong></td>
+      <td>66/100</td>
+    </tr>
+    <tr>
+      <td><strong>Accessibility</strong></td>
+      <td>96/100</td>
+    </tr>
+    <tr>
+      <td><strong>Best Practices</strong></td>
+      <td>100/100</td>
+    </tr>
+    <tr>
+      <td><strong>SEO</strong></td>
+      <td>100/100</td>
+    </tr>
+  </table>
+  <p><em>Achieving top scores in SEO, Best Practices, and Accessibility ensures a superior user experience and discoverability!</em></p>
 </div>
 
+<h2>✨ Features</h2>
 
-## ✨ Features
+<h3>🌐 Progressive Web App (PWA)</h3>
+<ul>
+  <li><strong>Cross-Platform Installation:</strong> Install and use as a native app on:
+    <ul>
+      <li>💻 Desktop (Windows, macOS, Linux)</li>
+      <li>📱 Mobile devices (iOS, Android)</li>
+    </ul>
+  </li>
+  <li><strong>Offline Functionality:</strong> Access basic content without internet connection</li>
+  <li><strong>Fast Loading:</strong> Optimized performance with caching strategies</li>
+  <li><strong>Automatic Updates:</strong> Always stay up-to-date with the latest version</li>
+</ul>
 
-### 🌐 Progressive Web App (PWA)
-- **Cross-Platform Installation:** Install and use as a native app on:
-  - 💻 Desktop (Windows, macOS, Linux)
-  - 📱 Mobile devices (iOS, Android)
-- **Offline Functionality:** Access basic content without internet connection
-- **Fast Loading:** Optimized performance with caching strategies
-- **Automatic Updates:** Always stay up-to-date with the latest version
+<h3>📨 Email Integration</h3>
+<ul>
+  <li><strong>Contact Form Integration:</strong> Built-in contact form using Nodemailer</li>
+  <li><strong>Secure Communication:</strong> Encrypted email transmission</li>
+</ul>
 
-### 📨 Email Integration
-- **Contact Form Integration:** Built-in contact form using Nodemailer
-- **Secure Communication:** Encrypted email transmission
+<h3>🔄 GitHub Integration</h3>
+<ul>
+  <li><strong>Live Repository Data:</strong> Real-time fetch of:
+    <ul>
+      <li>Repository statistics</li>
+      <li>Contribution graph</li>
+      <li>Star counts</li>
+      <li>Fork metrics</li>
+    </ul>
+  </li>
+  <li><strong>Activity Timeline:</strong> Display recent GitHub activities</li>
+  <li><strong>Project Showcase:</strong> Automatic import of pinned repositories</li>
+  <li><strong>Rate Limit Handling:</strong> Optimized API calls with token authentication</li>
+</ul>
 
-### 🔄 GitHub Integration
-- **Live Repository Data:** Real-time fetch of:
-  - Repository statistics
-  - Contribution graph
-  - Star counts
-  - Fork metrics
-- **Activity Timeline:** Display recent GitHub activities
-- **Project Showcase:** Automatic import of pinned repositories
-- **Rate Limit Handling:** Optimized API calls with token authentication
+<h3>🎮 3D Models & Environment</h3>
+<ul>
+  <li><strong>Interactive Desktop Setup:</strong> Fully 3D rendered workspace</li>
+  <li><strong>Custom Model Import:</strong> Support for various 3D model formats</li>
+  <li><strong>Real-time Rendering:</strong> Smooth performance with Three.js</li>
+  <li><strong>Environment Mapping:</strong> Realistic lighting and reflections</li>
+  <li><strong>Mobile-Optimized:</strong> Responsive 3D rendering for all devices</li>
+</ul>
 
-### 🎮 3D Models & Environment
-- **Interactive Desktop Setup:** Fully 3D rendered workspace
-- **Custom Model Import:** Support for various 3D model formats
-- **Real-time Rendering:** Smooth performance with Three.js
-- **Environment Mapping:** Realistic lighting and reflections
-- **Mobile-Optimized:** Responsive 3D rendering for all devices
+<h3>🎯 Animations & Interactions</h3>
+<ul>
+  <li><strong>Smooth Page Transitions:</strong> Seamless navigation between sections</li>
+  <li><strong>Scroll Animations:</strong> Interactive elements reveal on scroll</li>
+  <li><strong>Hover Effects:</strong> Dynamic feedback on user interaction</li>
+  <li><strong>Loading Animations:</strong> Engaging loading states</li>
+  <li><strong>Particle Effects:</strong> Background particle system for visual appeal</li>
+</ul>
 
-### 🎯 Animations & Interactions
-- **Smooth Page Transitions:** Seamless navigation between sections
-- **Scroll Animations:** Interactive elements reveal on scroll
-- **Hover Effects:** Dynamic feedback on user interaction
-- **Loading Animations:** Engaging loading states
-- **Particle Effects:** Background particle system for visual appeal
+<h3>🎨 Additional Features</h3>
+<ul>
+  <li><strong>Responsive Design:</strong> Adapts to all screen sizes</li>
+  <li><strong>SEO Optimized:</strong> Enhanced search engine visibility</li>
+  <li><strong>Performance Optimized:</strong> Fast loading times</li>
+  <li><strong>Accessibility:</strong> WCAG compliant design elements</li>
+</ul>
 
-### 🎨 Additional Features
-- **Responsive Design:** Adapts to all screen sizes
-- **SEO Optimized:** Enhanced search engine visibility
-- **Performance Optimized:** Fast loading times
-- **Accessibility:** WCAG compliant design elements
+<h2>🛠 Installation</h2>
 
-  
+<ol>
+  <li><strong>Clone the repository:</strong>
+    <pre><code>git clone https://github.com/sinanptm/portfolio.git
+cd portfolio</code></pre>
+  </li>
+  <li><strong>Install dependencies:</strong>
+    <pre><code>pnpm install</code></pre>
+  </li>
+  <li><strong>Set up environment variables:</strong>
+    <ul>
+      <li>Create a <code>.env</code> file in the root directory</li>
+      <li>Add the following variables:
+        <pre><code>SENDER_EMAIL=your_email@example.com
+NODEMAILER_PASSKEY=your_nodemailer_password
+RECEIVER_EMAIL=recipient_email@example.com
+NEXT_PUBLIC_GITHUB_TOKEN=your_github_apiToken</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Start the development server:</strong>
+    <pre><code>pnpm run dev</code></pre>
+  </li>
+  <li><strong>View the portfolio:</strong>
+    <ul>
+      <li>Open your browser</li>
+      <li>Visit <code>http://localhost:3000</code></li>
+    </ul>
+  </li>
+</ol>
 
+<h2>🔧 Environment Variables</h2>
 
-## 🛠 Installation
+<table>
+  <tr>
+    <th>Variable</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>SENDER_EMAIL</code></td>
+    <td>Email address used to send contact form messages</td>
+  </tr>
+  <tr>
+    <td><code>NODEMAILER_PASSKEY</code></td>
+    <td>Password/API key for email service</td>
+  </tr>
+  <tr>
+    <td><code>RECEIVER_EMAIL</code></td>
+    <td>Email address where contact form messages will be received</td>
+  </tr>
+  <tr>
+    <td><code>NEXT_PUBLIC_GITHUB_TOKEN</code></td>
+    <td>For getting Github Stats and Activities with more Rate Limit</td>
+  </tr>
+</table>
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/sinanptm/portfolio.git
-   cd portfolio
-   ```
+<h2>🎨 Customization</h2>
 
-2. **Install dependencies:**
-   ```bash
-   pnpm install
-   ```
+<h3>Content Modification</h3>
+<p>All content is stored in the <code>constants</code> folder for easy personalization:</p>
 
-3. **Set up environment variables:**
-   - Create a `.env` file in the root directory
-   - Add the following variables:
-     ```env
-     SENDER_EMAIL=your_email@example.com
-     NODEMAILER_PASSKEY=your_nodemailer_password
-     RECEIVER_EMAIL=recipient_email@example.com
-     NEXT_PUBLIC_GITHUB_TOKEN=your_github_apiToken
-     ```
+<ol>
+  <li><strong>Update Personal Information:</strong>
+    <ul>
+      <li>Navigate to <code>constants/index.ts</code></li>
+      <li>Modify values to reflect your:
+        <ul>
+          <li>Personal information</li>
+          <li>Skills</li>
+          <li>Projects</li>
+          <li>Experience</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Metadata Updates:</strong>
+    <ul>
+      <li>Open <code>app/layout.ts</code></li>
+      <li>Update metadata fields with your information</li>
+    </ul>
+  </li>
+</ol>
 
-4. **Start the development server:**
-   ```bash
-   pnpm run dev
-   ```
+<h3>3D Environment Customization</h3>
 
-5. **View the portfolio:**
-   - Open your browser
-   - Visit `http://localhost:3000`
-
-<br>
-
-## 🔧 Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `SENDER_EMAIL` | Email address used to send contact form messages |
-| `NODEMAILER_PASSKEY` | Password/API key for email service |
-| `RECEIVER_EMAIL` | Email address where contact form messages will be received |
-| `NEXT_PUBLIC_GITHUB_TOKEN` | For getting Github Stats and Activities with more Rate Limit |
-
-<br>
-
-## 🎨 Customization
-
-### Content Modification
-All content is stored in the `constants` folder for easy personalization:
-
-1. **Update Personal Information:**
-   - Navigate to `constants/index.ts`
-   - Modify values to reflect your:
-     - Personal information
-     - Skills
-     - Projects
-     - Experience
-
-2. **Metadata Updates:**
-   - Open `app/layout.ts`
-   - Update metadata fields with your information
-
-### 3D Environment Customization
-
-**Desktop Wallpaper:**
-1. Navigate to `/public/desktop/textures`
-2. Replace `desktop.png` with your image
-   > ⚠️ **Note:** The model displays a mirror reflection, so rotate your image horizontally before saving
-
-<br>
-
-## 👥 Contributing
-
-Contributions are always welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create your feature branch:
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. Open a Pull Request
-
-
-<br>
+<p><strong>Desktop Wallpaper:</strong></p>
+<ol>
+  <li>Navigate to <code>/public/desktop/textures</code></li>
+  <li>Replace <code>desktop.png</code> with your image
+    <blockquote>
+      <p>⚠️ <strong>Note:</strong> The model displays a mirror reflection, so rotate your image horizontally before saving</p>
+    </blockquote>
+  </li>
+</ol>
 
 <div align="center">
-
-## 💝 Support & Community
-
-[![Star this repo](https://img.shields.io/github/stars/sinanptm/portfolio?style=social)](https://github.com/sinanptm/portfolio)
-
-Made with ❤️ by [Muhammed Sinan](https://github.com/sinanptm)
-
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
+  <p>Made with ❤️ by <a href="https://github.com/sinanptm">Muhammed Sinan</a></p>
 </div>
