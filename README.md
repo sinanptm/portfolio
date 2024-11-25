@@ -15,7 +15,9 @@
 # 🚀 Portfolio Performance & SEO
 
 <p align="center">
-  ![image](https://github.com/user-attachments/assets/c3b1a802-057d-448c-bf97-aa83dae1d1e3)
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/c3b1a802-057d-448c-bf97-aa83dae1d1e3" alt="Lighthouse Performance Report" width="800">
+</p>
 </p>
 
 ### 🌟 Key Metrics
