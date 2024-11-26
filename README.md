@@ -19,8 +19,9 @@
 
 <div align="center" style="margin-top: 40px;">
   <h2 style="color: #4a4a4a; font-size: 2.5em;">🚀 Portfolio Performance & SEO</h2>
-  <img src="https://github.com/user-attachments/assets/c3b1a802-057d-448c-bf97-aa83dae1d1e3" alt="Lighthouse Performance Report" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://github.com/user-attachments/assets/9dff0d78-2638-44cc-9ff8-30fbaef53bdf" alt="Lighthouse Performance Report" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 20px;">Achieving top scores in SEO, Best Practices, and Accessibility ensures a superior user experience and discoverability!</p>
+  <a href="https://pagespeed.web.dev/analysis/https-sinanptm-vercel-app/3z4ph2gi3s?hl=en_GB&form_factor=desktop">Lighthouse Performance Report</a>
 </div>
 
 <h2 style="color: #4a4a4a; font-size: 2.5em; margin-top: 40px;">✨ Features</h2>
