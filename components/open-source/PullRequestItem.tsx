@@ -98,22 +98,24 @@ const PullRequestItem = ({ pr, index }: { pr: PullRequest; index: number; }) => 
             <span className="text-gray-400">{pr.changed_files} Files Changed</span>
           </motion.div>
         </motion.div>
-        <motion.svg
-          variants={iconVariants}
-          initial="hidden"
-          animate="visible"
-          className="w-5 h-5 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 10l7-7m0 0l7 7m-7-7v18"
-          />
-        </motion.svg>
+        <Link href={pr.html_url}>
+          <motion.svg
+            variants={iconVariants}
+            initial="hidden"
+            animate="visible"
+            className="w-5 h-5 text-gray-400 hover:text-blue-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
+          </motion.svg>
+        </Link>
       </div>
     </motion.li>
   );
