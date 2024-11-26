@@ -19,7 +19,7 @@
 
 <div align="center" style="margin-top: 40px;">
   <h2 style="color: #4a4a4a; font-size: 2.5em;">🚀 Portfolio Performance & SEO</h2>
-  <img src="https://github.com/user-attachments/assets/c3b1a802-057d-448c-bf97-aa83dae1d1e3" alt="Lighthouse Performance Report" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://github.com/user-attachments/assets/e86fd49b-c9de-4ecc-a54f-503dd8565382" alt="Lighthouse Performance Report" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 20px;">Achieving top scores in SEO, Best Practices, and Accessibility ensures a superior user experience and discoverability!</p>
 </div>
 
