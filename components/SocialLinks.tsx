@@ -37,7 +37,7 @@ const SocialLinks = () => {
 
                     <Link
                         href={link.href}
-                        className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-300"
+                        className="flex items-center justify-center h-9 w-10 sm:w-12 sm:h-12 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-300"
                         target="_blank"
                         rel="noopener noreferrer"
                         prefetch={false}

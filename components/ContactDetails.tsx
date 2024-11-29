@@ -38,7 +38,7 @@ const ContactDetails = () => {
                     <SocialLinks />
                     <Link href="/resume" passHref>
                     <motion.div variants={buttonVariants} whileHover={buttonHover}>
-                        <Button className="inline-flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white transition-colors duration-300 py-3 px-6 relative overflow-hidden group">
+                        <Button className="inline-flex bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white transition-colors duration-300 w-full sm:py-3 px-6 relative overflow-hidden group">
                             <span className="relative z-10">View My Resume</span>
                             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                         </Button>
