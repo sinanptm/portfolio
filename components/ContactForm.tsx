@@ -36,7 +36,7 @@ const Contact = () => {
       animate={{ opacity: 1, y: 0 }}
       variants={containerVariants}
       transition={{ duration: 0.5 }}
-      className="w-full lg:w-1/2 p-4 sm:p-6 md:p-8 rounded-lg relative overflow-hidden bg-opacity-80 bg-gray-900 backdrop-blur-md shadow-lg"
+      className="w-full lg:w-1/2 max-w-[580px] mx-auto p-4 sm:p-6 md:p-8 rounded-lg relative overflow-hidden bg-opacity-80 bg-gray-900 backdrop-blur-md shadow-lg"
       style={{
         boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
       }}

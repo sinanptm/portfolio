@@ -16,7 +16,7 @@ const ContactDetails = () => {
             variants={containerVariants}
         >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
-                <div className="w-full md:w-1/2 flex flex-col items-center">
+                <div className="w-full md:w-1/2 sm:pr-28 flex flex-col items-center">
                     <motion.div variants={imageVariants} className="relative w-[350px] h-[350px] rounded-full overflow-hidden ring-4 ring-purple-500/20" >
                         <Image
                             src="/assets/images/me.jpg"
