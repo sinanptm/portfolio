@@ -27,9 +27,9 @@ const Contributions = () => {
         ]);
 
         setPrData([
+          { status: "merged", count: prStats.merged, fill: "hsl(var(--chart-2))" },
           { status: "open", count: prStats.open, fill: "hsl(var(--chart-1))" },
-          { status: "closed", count: prStats.closed, fill: "hsl(var(--chart-2))" },
-          { status: "merged", count: prStats.merged, fill: "hsl(var(--chart-3))" },
+          { status: "closed", count: prStats.closed, fill: "hsl(var(--chart-3))" },
         ]);
 
         setIssueData([
