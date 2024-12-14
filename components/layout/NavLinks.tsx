@@ -18,9 +18,9 @@ const NavLink = ({
     <Link href={href}>
         <motion.span
             className={`text-6xl sm:text-7xl lg:text-8xl tracking-tighter font-source-code-pro
-            ${isActive 
-                ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600' 
-                : 'text-white hover:text-slate-600'} 
+            ${isActive
+                    ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600'
+                    : 'text-white hover:text-slate-600'} 
             transition-all duration-300`}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -61,15 +61,23 @@ const NavLinks = ({ setSheetOpen }: { setSheetOpen: Dispatch<SetStateAction<bool
             onClick={handleClick}
         >
             {navLinks.map(({ href, label }, index) => (
-                <NavLink 
-                    key={href} 
-                    href={href} 
-                    isActive={isActive(href)} 
+                <NavLink
+                    key={href}
+                    href={href}
+                    isActive={isActive(href)}
                     index={index}
                 >
                     {label}
                 </NavLink>
             ))}
+            <NavLink
+                key={'/resume'}
+                href={'/resume'}
+                isActive={isActive('resume')}
+                index={navLinks.length}
+            >
+                Resume
+            </NavLink>
         </motion.nav>
     );
 };

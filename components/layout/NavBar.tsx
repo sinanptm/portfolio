@@ -4,17 +4,36 @@ import { memo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SocialLinks from "./SocialLinks";
 import NavLinks from "./NavLinks";
-import Logo from "./Logo";
+import Logo from "../Logo";
+import { navLinks } from "@/constants";
+import Link from "next/link";
+import { itemVariants } from "@/style";
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="sticky top-0 w-full z-50">
+        <nav className={`sticky top-0 w-full z-50 ${!isOpen && "backdrop-blur-3xl"}`}>
             <div className="relative">
-
-                <div className="flex items-center justify-between h-16 w-full z-50 bg-transparent px-4 sm:px-6 lg:px-8">
-                    <Logo onClick={()=>setIsOpen(false)} />
+                <div className="flex items-center justify-between h-16 w-full z-50 px-4 sm:px-6 lg:px-8">
+                    <Logo onClick={() => setIsOpen(false)} />
+                    <nav className="hidden md:flex">
+                        {navLinks.map((item) => (
+                            <Link key={item.href} href={item.href} passHref>
+                                <motion.p
+                                    className="text-sm font-medium px-3 py-2 rounded-md transition-colors hover:text-blue-500"
+                                    whileHover={{
+                                        scale: 1.05,
+                                        transition: { duration: 0.2 }
+                                    }}
+                                    whileTap={{ scale: 0.95 }}
+                                    variants={itemVariants}
+                                >
+                                    {item.label}
+                                </motion.p>
+                            </Link>
+                        ))}
+                    </nav>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="relative z-50 inline-flex flex-col items-center justify-center w-8 h-8 space-y-2 p-1"
@@ -48,7 +67,7 @@ const NavBar = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="fixed inset-0 z-40 bg-black px-4 sm:px-6 lg:px-8"
+                            className="fixed inset-0 z-40 px-4 sm:px-6 lg:px-8 bg-black"
                         >
                             <div className="flex flex-col h-full pt-5">
                                 <NavLinks setSheetOpen={setIsOpen} />

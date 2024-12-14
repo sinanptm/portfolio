@@ -7,7 +7,7 @@ const Logo = ({ onClick }: { onClick: () => void; }) => {
         <Link href="/" className="flex items-center space-x-2 z-50">
             <motion.span
                 onClick={onClick}
-                className="font-bold text-xl font-source-code-pro text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"
+                className="font-bold text-xl font-source-code-pro text-transparent bg-clip-text bg-gradient-to-r  from-blue-500 to-purple-600"
                 whileHover={{
                     scale: 1.1,
                     transition: { duration: 0.2 },
