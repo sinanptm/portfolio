@@ -1,0 +1,78 @@
+import { navLinks } from '@/constants';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Dispatch, memo, SetStateAction, useCallback } from 'react';
+
+const NavLink = ({
+    href,
+    children,
+    isActive = false,
+    index
+}: {
+    href: string;
+    children: React.ReactNode;
+    isActive?: boolean;
+    index: number;
+}) => (
+    <Link href={href}>
+        <motion.span
+            className={`text-6xl sm:text-7xl lg:text-8xl tracking-tighter font-source-code-pro
+            ${isActive 
+                ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600' 
+                : 'text-white hover:text-slate-600'} 
+            transition-all duration-300`}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+                delay: index * 0.1,
+                duration: 0.5,
+                ease: 'easeOut'
+            }}
+        >
+            {children}
+        </motion.span>
+    </Link>
+);
+
+const NavLinks = ({ setSheetOpen }: { setSheetOpen: Dispatch<SetStateAction<boolean>>; }) => {
+    const pathname = usePathname();
+
+    const isActive = useCallback((href: string) => {
+        if (href === '/' && pathname === '/') return true;
+        if (pathname === href) return true;
+        if (href !== '/' && pathname.startsWith(href)) return true;
+        return false;
+    }, [pathname]);
+
+    const handleClick = useCallback((e: React.MouseEvent<HTMLElement>) => {
+        const target = e.target as HTMLElement;
+        console.log(target.tagName)
+        if (target.tagName === 'SPAN') {
+            setSheetOpen(false);
+        }
+    }, [setSheetOpen]);
+
+    return (
+        <motion.nav
+            className="flex flex-col mt-32 sm:mt-12 flex-grow"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            onClick={handleClick}
+        >
+            {navLinks.map(({ href, label }, index) => (
+                <NavLink 
+                    key={href} 
+                    href={href} 
+                    isActive={isActive(href)} 
+                    index={index}
+                >
+                    {label}
+                </NavLink>
+            ))}
+        </motion.nav>
+    );
+};
+
+export default memo(NavLinks);

@@ -15,13 +15,44 @@ export const profile = {
 export const hostedUrl = "https://sinanptm.vercel.app";
 
 export const socialMediaLinks = [
-    { title: "LinkedIn", icon: "/assets/social/linkedin.svg", href: "https://www.linkedin.com/in/sinanptm" },
-    { title: "GitHub", icon: "/assets/social/github.svg", href: "https://github.com/sinanptm" },
-    { title: 'Stack Overflow', icon: '/assets/social/stackoverflow.png', href: 'https://stackoverflow.com/users/25472984/sinan' },
-    { title: "LeetCode", icon: "/assets/social/leetcode.jpg", href: "https://leetcode.com/u/Sinan_z" },
-    { title: "Email", icon: "/assets/social/email.svg", href: "mailto:muhammedsinan0549@gmail.com@gmail.com" },
-    { title: "Twitter", icon: "/assets/social/x.png", href: "https://x.com/sinanptm" }
+    { 
+        title: "LinkedIn", 
+        icon: "/assets/social/linkedin.svg", 
+        href: "https://www.linkedin.com/in/sinanptm",  
+        smLabel: "LN", 
+    },
+    { 
+        title: "GitHub", 
+        icon: "/assets/social/github.svg", 
+        href: "https://github.com/sinanptm",  
+        smLabel: "GH", 
+    },
+    { 
+        title: 'Stack Overflow', 
+        icon: '/assets/social/stackoverflow.png', 
+        href: 'https://stackoverflow.com/users/25472984/sinan', 
+        smLabel: "SO",
+    },
+    { 
+        title: "LeetCode", 
+        icon: "/assets/social/leetcode.jpg", 
+        href: "https://leetcode.com/u/Sinan_z", 
+        smLabel: "LC", 
+    },
+    { 
+        title: "Email", 
+        icon: "/assets/social/email.svg", 
+        href: "mailto:muhammedsinan0549@gmail.com", 
+        smLabel: "EM", 
+    },
+    { 
+        title: "Twitter", 
+        icon: "/assets/social/x.png", 
+        href: "https://x.com/sinanptm", 
+        smLabel: "TW", 
+    },
 ];
+
 
 export const quotes = [
     {

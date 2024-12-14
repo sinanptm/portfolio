@@ -52,7 +52,9 @@ const config: Config = {
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
-				}
+				},
+				"blue-start": "#3b82f6",
+				"purple-end": "#8b5cf6",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -63,6 +65,13 @@ const config: Config = {
 				'fira-code': ['Fira Code', 'monospace'],
 				'source-code-pro': ['Source Code Pro', 'monospace'],
 			},
+			backgroundImage: {
+				"blue-purple": "linear-gradient(to right, #3b82f6, #8b5cf6)",
+			},
+			textColor: {
+				"blue-start": "#3b82f6",
+				"purple-end": "#8b5cf6",
+			}
 		}
 	},
 

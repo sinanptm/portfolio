@@ -27,7 +27,7 @@ export default memo(function Projects() {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="text-center absolute inset-x-0 top-0 z-10 pt-16 pb-8 bg-gradient-to-b from-background to-transparent"
+        className="text-center absolute inset-x-0 top-0 z-10 pt-16 pb-8"
       >
         <motion.h2 className="heading" variants={textVariants}>
           My Projects
