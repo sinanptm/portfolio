@@ -1,7 +1,7 @@
 import { navLinks } from '@/constants';
+import useIsActiveLink from '@/hooks/useIsActiveLink';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { Dispatch, memo, SetStateAction, useCallback } from 'react';
 
 const NavLink = ({
@@ -36,14 +36,7 @@ const NavLink = ({
 );
 
 const NavLinks = ({ setSheetOpen }: { setSheetOpen: Dispatch<SetStateAction<boolean>>; }) => {
-    const pathname = usePathname();
-
-    const isActive = useCallback((href: string) => {
-        if (href === '/' && pathname === '/') return true;
-        if (pathname === href) return true;
-        if (href !== '/' && pathname.startsWith(href)) return true;
-        return false;
-    }, [pathname]);
+    const isActive = useIsActiveLink()
 
     const handleClick = useCallback((e: React.MouseEvent<HTMLElement>) => {
         const target = e.target as HTMLElement;
@@ -73,7 +66,7 @@ const NavLinks = ({ setSheetOpen }: { setSheetOpen: Dispatch<SetStateAction<bool
             <NavLink
                 key={'/resume'}
                 href={'/resume'}
-                isActive={isActive('resume')}
+                isActive={isActive('/resume')}
                 index={navLinks.length}
             >
                 Resume

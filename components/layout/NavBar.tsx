@@ -8,9 +8,11 @@ import Logo from "../Logo";
 import { navLinks } from "@/constants";
 import Link from "next/link";
 import { itemVariants } from "@/style";
+import useIsActiveLink from "@/hooks/useIsActiveLink";
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const isActive = useIsActiveLink();
 
     return (
         <nav className={`sticky top-0 w-full z-50 ${!isOpen && "backdrop-blur-3xl"}`}>
@@ -21,7 +23,9 @@ const NavBar = () => {
                         {navLinks.map((item) => (
                             <Link key={item.href} href={item.href} passHref>
                                 <motion.p
-                                    className="text-sm font-medium px-3 py-2 rounded-md transition-colors hover:text-blue-500"
+                                    className={`text-sm font-medium px-3 py-2 rounded-md ${isActive(item.href)
+                                        ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600'
+                                        : 'text-white hover:text-slate-600'}`}
                                     whileHover={{
                                         scale: 1.05,
                                         transition: { duration: 0.2 }
