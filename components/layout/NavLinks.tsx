@@ -47,7 +47,6 @@ const NavLinks = ({ setSheetOpen }: { setSheetOpen: Dispatch<SetStateAction<bool
 
     const handleClick = useCallback((e: React.MouseEvent<HTMLElement>) => {
         const target = e.target as HTMLElement;
-        console.log(target.tagName)
         if (target.tagName === 'SPAN') {
             setSheetOpen(false);
         }

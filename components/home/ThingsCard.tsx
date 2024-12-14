@@ -26,9 +26,11 @@ const ThingCard = ({ name, image, tech, capabilities }: ThingsIDo) => {
                     src={image}
                     alt={`${name} Illustration`}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-contain"
                     loading="lazy"
                 />
+
             </motion.div>
 
             <motion.div className="space-y-8" variants={containerVariants}>
