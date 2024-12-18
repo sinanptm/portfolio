@@ -58,8 +58,6 @@ export type ChartDataType = {
     fill: string;
 }[];
 
-
-
 export type ProjectButtonProps = {
     href: string;
     icon: string;
@@ -68,4 +66,4 @@ export type ProjectButtonProps = {
     onMouseLeave: () => void;
     children: ReactNode;
     handleMouseMove: (event: MouseEvent<HTMLElement>) => void;
-  };
+};

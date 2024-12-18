@@ -106,6 +106,8 @@ export const technologies: Tech[] = [
     // DevOps & CI/CD
     { name: "Docker", url: `${baseUrlTech}/docker.svg` },
     { name: "GitHub Actions", url: `${baseUrlTech}/github-action.svg` },
+    { name: "Jest", url: `${baseUrlTech}/jest.png` },
+    { name: "Redis", url: `${baseUrlTech}/redis.png` },
 
     // State-management
     { name: "Redux", url: `${baseUrlTech}/redux.svg` },
@@ -123,7 +125,7 @@ export const technologies: Tech[] = [
     { name: "Framer Motion", url: `${baseUrlTech}/framer-motion.svg` },
     // { name: "Styled Components", url: `${baseUrlTech}/styled-components.svg` },
     { name: "Bootstrap", url: `${baseUrlTech}/bootstrap.svg` },
-    
+
     // Design & Prototyping
     { name: "Figma", url: `${baseUrlTech}/figma-icon.svg` },
 
@@ -137,6 +139,7 @@ export const technologies: Tech[] = [
     // Authentication & Authorization
     { name: "JWT", url: `${baseUrlTech}/jwt.svg` },
     { name: "OAuth", url: `${baseUrlTech}/oauth.svg` },
+    { name: "Passport Js", url: `${baseUrlTech}/passport.png` },
 
     // APIs & Utilities
     { name: "Axios", url: `${baseUrlTech}/axios.svg` },
