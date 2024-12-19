@@ -131,6 +131,7 @@ export const technologies: Tech[] = [
 
     // UI Component Libraries
     { name: "Radix UI", url: `${baseUrlTech}/radix-ui.svg` },
+    { name: "Mui UI", url: `${baseUrlTech}/mui.png` },
     { name: "Shadcn", url: `${baseUrlTech}/shadcn.svg` },
     { name: "Aceternity", url: `${baseUrlTech}/aceternity.png` },
     { name: "Origin Ui", url: `${baseUrlTech}/origin.ico` },
@@ -158,7 +159,7 @@ export const technologies: Tech[] = [
 
     { name: "Winston", url: `${baseUrlTech}/winston.svg` },
     { name: "NPM", url: `${baseUrlTech}/npm.svg` },
-    // { name: "Nodemon", url: `${baseUrlTech}/nodemon.svg` },
+    { name: "PM2", url: `${baseUrlTech}/pm2.png` },
     { name: "PNPM", url: `${baseUrlTech}/pnpm.png` },
     { name: "YARN", url: `${baseUrlTech}/yarn.png` },
 
