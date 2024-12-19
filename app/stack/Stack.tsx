@@ -3,7 +3,7 @@ import { useState, useCallback, ChangeEvent, useMemo } from 'react';
 import Technologies from '@/components/Technologies';
 import { motion, AnimatePresence } from 'framer-motion';
 import { technologies } from "@/constants/techData";
-import { IconSearch, IconCode, IconServer, IconCloudComputing, IconTestPipe, IconServer2 } from '@tabler/icons-react';
+import { IconSearch } from '@tabler/icons-react';
 import Expertise from '@/components/Expertise';
 
 const Stack = () => {
