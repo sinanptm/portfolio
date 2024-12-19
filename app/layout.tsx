@@ -8,6 +8,7 @@ import { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
 import metadata from "./metadata";
 import "../style/globals.css";
+import "../style/search.css"
 
 const firaCode = Fira_Code({ subsets: ['latin'] });
 const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });
