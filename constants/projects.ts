@@ -177,7 +177,6 @@ export const projects: Project[] = [
         technologies: [0, 18, 19, 13, 65, 64, 66, 67, 29, 30, 38, 31, 50], 
         link: "https://shortify.avm-ayurvedic.online",
         githubLink: "https://github.com/sinanptm/shortify",
-        showGitStats: true,
         thumbnail: "/assets/projects/shortify.png",
         achievements: [
             "🔐 Implemented Google OAuth 2.0 with Passport.js",
