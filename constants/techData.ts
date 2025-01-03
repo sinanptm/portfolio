@@ -66,7 +66,11 @@ export const skills: Tech[] = [
     { name: "Nextjs 15", url: `${badgeBase}/Next%20JS-15-black?style=flat&logo=next.js&logoColor=white` },
     { name: "React 19", url: `${badgeBase}/React-19-%2320232a?style=flat&logo=react&logoColor=%2361DAF` },
     { name: "Hostinger", url: `${badgeBase}/Hostinger-%23F7931E.svg?style=flat&logo=hostinger&logoColor=white` },
-    { name: "Multer", url: `${badgeBase}/Multer-%23FEFEFE.svg?style=flat&logo=multer&logoColor=black` }
+    { name: "Multer", url: `${badgeBase}/Multer-%23FEFEFE.svg?style=flat&logo=multer&logoColor=black` },
+    { name: "Jest", url: `${badgeBase}/jest-%23C21325.svg?style=flat&logo=jest&logoColor=white` },
+    { name: "Redis", url: `${badgeBase}/redis-%23DC382D.svg?style=flat&logo=redis&logoColor=white` },
+    { name: "Passport", url: `${badgeBase}/passport-%2340AEF0.svg?style=flat&logo=passport&logoColor=white` },
+    { name: "Geolocation", url: `${badgeBase}/Geolocation-%233E6E93.svg?style=flat&logo=google-maps&logoColor=white` },
 ];
 export const baseUrlTech = "/assets/tech";
 export const technologies: Tech[] = [

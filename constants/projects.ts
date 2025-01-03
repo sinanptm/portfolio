@@ -69,7 +69,11 @@ const INDEXES = {
     "Nextjs 15": 60,
     "React 19": 61,
     "Hostinger": 62,
-    "Multer": 63
+    "Multer": 63,
+    "Jest": 64,
+    "Redis": 65,
+    "Passport": 66,
+    "Geolocation": 67,
 };
 
 export const projects: Project[] = [
@@ -167,6 +171,32 @@ export const projects: Project[] = [
         ]
     },
     {
+        title: "Shortify: URL Shortener API",
+        description: "A scalable URL shortening service with advanced analytics and Google authentication.",
+        detailedDescription: "A comprehensive URL shortening API featuring Google OAuth integration, Redis caching, detailed analytics with geolocation tracking, and topic-based organization. Built with TypeScript and Node.js, it includes advanced features like custom alias support, real-time analytics, and robust security measures. The system utilizes Redis for performance optimization and implements detailed click tracking with geographic distribution analysis.",
+        technologies: [0, 18, 19, 13, 65, 64, 66, 67, 29, 30, 38, 31, 50], 
+        link: "https://shortify.avm-ayurvedic.online",
+        githubLink: "https://github.com/sinanptm/shortify",
+        showGitStats: true,
+        thumbnail: "/assets/projects/shortify.png",
+        achievements: [
+            "🔐 Implemented Google OAuth 2.0 with Passport.js",
+            "⚡ Optimized performance with Redis caching system",
+            "📊 Built comprehensive analytics with geolocation tracking",
+            "🔒 Secured endpoints with JWT and HTTP-only cookies",
+            "📈 Developed topic-based URL organization system",
+            "🛡️ Implemented rate limiting and security measures",
+            "🧪 Added comprehensive test coverage with Jest",
+            "📱 Created detailed device and browser analytics",
+            "🌍 Integrated geolocation-based tracking system",
+            "🔄 Built custom collision detection for aliases",
+            "📊 Developed comparative analytics dashboard",
+            "🚀 Deployed with Nginx for high availability",
+            "📈 Implemented real-time click tracking",
+            "🛡️ Added URL sanitization and XSS protection"
+        ]
+    },
+    {
         title: "URL Shortener",
         description: "A URL shortener with click tracking and personalized dashboards.",
         detailedDescription: "Developed with MERN stack and NestJS, this app offers URL shortening, click tracking, and personalized user dashboards. It provides experience in NestJS, focusing on modular architecture and dependency injection.",
@@ -194,6 +224,32 @@ export const projects: Project[] = [
         achievements: [
             "Integrated Radix UI and Redux Toolkit.",
             "Experienced with CI for deployment and testing."
+        ]
+    },
+    {
+        title: "Role-Based Candidate Management",
+        description: "A modern, secure, simple and scalable system for managing candidates with role-based access control.",
+        detailedDescription: "A comprehensive candidate management platform featuring role-based access control, secure file uploads with AWS S3 presigned URLs, and real-time profile management. Built with TypeScript throughout the stack, it implements secure authentication, file handling, and extensive API endpoints for both admin and candidate portals.",
+        technologies: [0, 3, 18, 19, 13, 7, 20, 27, 33, 28, 29, 42, 56],  
+        link: "https://candidate-management-psi.vercel.app",
+        githubLink: "https://github.com/sinanptm/candidate-management",
+        showGitStats: true,
+        thumbnail: "/assets/projects/c-manage.png", 
+        achievements: [
+            "🔐 Implemented secure JWT authentication with refresh tokens",
+            "📁 Built secure file management system using AWS S3 presigned URLs",
+            "👥 Created comprehensive role-based access control system",
+            "🎨 Developed responsive UI with Tailwind CSS and shadcn/ui",
+            "🔒 Implemented end-to-end type safety with TypeScript",
+            "🚀 Deployed frontend on Vercel and backend on AWS EC2",
+            "📊 Created admin dashboard with analytics and candidate management",
+            "🔄 Built RESTful API with Express.js following best practices",
+            "📱 Developed responsive design supporting all device sizes",
+            "🛡️ Implemented secure cookie-based session management",
+            "📄 Added comprehensive document upload and verification system",
+            "⚡ Optimized performance with proper data caching",
+            "🔍 Integrated advanced search and filtering capabilities",
+            "📈 Added real-time progress tracking for candidates"
         ]
     },
     {
