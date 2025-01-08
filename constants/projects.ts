@@ -153,24 +153,6 @@ export const projects: Project[] = [
         ]
     },
     {
-        title: "Sahithyolsav Manager",
-        description: "Program management app for SSF Kerala with features for managing events and participants.",
-        detailedDescription: "Developed in three days using the MERN stack, this app includes mark lists, participant management, and caching for performance boosts. The UI is optimized for fast load times, and JWT authentication ensures data security.",
-        technologies: [3, 4, 19, 18, 13],
-        link: "https://sahityotsav-manager.onrender.com",
-        githubLink: "https://github.com/sinanptm/Program-manager",
-        isLinkedin: true,
-        demoLink: "https://www.linkedin.com/posts/sinanptm_mern-react-redux-activity-7220717132450254848-7bGb?utm_source=share&utm_medium=member_desktop",
-        thumbnail: "/assets/projects/program-manager.png",
-        achievements: [
-            "Boosted performance by 70% through memoization.",
-            "Smart caching reduced API calls by 80%.",
-            "JWT authentication for security.",
-            "Implemented mark lists and participant management.",
-            "Utilized Mui Components for a smooth user experience."
-        ]
-    },
-    {
         title: "Shortify: URL Shortener API",
         description: "A scalable URL shortening service with advanced analytics and Google authentication.",
         detailedDescription: "A comprehensive URL shortening API featuring Google OAuth integration, Redis caching, detailed analytics with geolocation tracking, and topic-based organization. Built with TypeScript and Node.js, it includes advanced features like custom alias support, real-time analytics, and robust security measures. The system utilizes Redis for performance optimization and implements detailed click tracking with geographic distribution analysis.",
@@ -193,6 +175,24 @@ export const projects: Project[] = [
             "🚀 Deployed with Nginx for high availability",
             "📈 Implemented real-time click tracking",
             "🛡️ Added URL sanitization and XSS protection"
+        ]
+    },
+    {
+        title: "Sahithyolsav Manager",
+        description: "Program management app for SSF Kerala with features for managing events and participants.",
+        detailedDescription: "Developed in three days using the MERN stack, this app includes mark lists, participant management, and caching for performance boosts. The UI is optimized for fast load times, and JWT authentication ensures data security.",
+        technologies: [3, 4, 19, 18, 13],
+        link: "https://sahityotsav-manager.onrender.com",
+        githubLink: "https://github.com/sinanptm/Program-manager",
+        isLinkedin: true,
+        demoLink: "https://www.linkedin.com/posts/sinanptm_mern-react-redux-activity-7220717132450254848-7bGb?utm_source=share&utm_medium=member_desktop",
+        thumbnail: "/assets/projects/program-manager.png",
+        achievements: [
+            "Boosted performance by 70% through memoization.",
+            "Smart caching reduced API calls by 80%.",
+            "JWT authentication for security.",
+            "Implemented mark lists and participant management.",
+            "Utilized Mui Components for a smooth user experience."
         ]
     },
     {
