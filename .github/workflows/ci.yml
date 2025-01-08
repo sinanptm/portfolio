@@ -33,7 +33,7 @@ jobs:
         run: pnpm install
 
       - name: Run Linter
-        run: pnpm lint
+        run: pnpm lint 
 
       - name: Build project
-        run: npm run build
+        run: pnpm build
