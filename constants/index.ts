@@ -54,20 +54,6 @@ export const socialMediaLinks = [
 ];
 
 
-export const quotes = [
-    {
-        text: "Engineering scalable systems with precision and creativity.",
-        subtitle: "System Design",
-    },
-    {
-        text: "Building innovative solutions that empower businesses to grow.",
-        subtitle: "Development Vision",
-    },
-    {
-        text: "Blending code and design for intuitive digital experiences.",
-        subtitle: "User-Centric Approach",
-    },
-];
 
 export const navLinks = [
     { href: "/", label: "Home" },
@@ -90,39 +76,58 @@ export const thingsIDo: ThingsIDo[] = [
         image: "/assets/images/fullstack.svg",
         tech: [
             { name: "TypeScript", url: `${baseUrlTech}/typescript.svg` },
-            { name: "NodeJS", url: `${baseUrlTech}/nodejs.svg` },
             { name: "React", url: `${baseUrlTech}/react.svg` },
             { name: "Next.js", url: `${baseUrlTech}/nextjs.svg` },
-            { name: "ExpressJS", url: `${baseUrlTech}/express.svg` },
+            { name: "NodeJS", url: `${baseUrlTech}/nodejs.svg` },
             { name: "Nest JS", url: `${baseUrlTech}/nestjs.svg` },
-            { name: "WebRTC", url: `${baseUrlTech}/webrtc.svg` },
-            { name: "Socket.io", url: `${baseUrlTech}/socket-io.svg` },
+            { name: "Redux", url: `${baseUrlTech}/redux.svg` },
+            { name: "React Query", url: `${baseUrlTech}/react-query.svg` },
             { name: "Tailwind", url: `${baseUrlTech}/tailwind.svg` },
-            { name: "Sass", url: `${baseUrlTech}/saas.svg` },
+            { name: "Shadcn", url: `${baseUrlTech}/shadcn.svg` },
+            { name: "WebRTC", url: `${baseUrlTech}/webrtc.svg` },
         ],
         capabilities: [
-            { text: 'Building responsive website front end using React and NextJs', icon: '💻' },
-            { text: 'Creating application backend in Node, Express & NestJs', icon: '⚙️' },
-            { text: 'Writing clean and maintainable code following best practices', icon: '✨' },
+            { text: 'Developing modern web applications with React, Next.js, and TypeScript', icon: '💻' },
+            { text: 'Building robust backend services with Node.js and NestJS', icon: '⚙️' },
+            { text: 'Implementing real-time features using WebRTC and state management', icon: '🔄' },
         ]
     },
     {
-        name: "Cloud Infra-Architecture",
+        name: "Cloud Architecture & Database Management",
         image: "/assets/images/statics.svg",
         tech: [
             { name: "AWS", url: `${baseUrlTech}/aws.svg` },
-            { name: "Docker", url: `${baseUrlTech}/docker.svg` },
             { name: "Firebase", url: `${baseUrlTech}/firebase.svg` },
             { name: "MongoDB", url: `${baseUrlTech}/mongodb.svg` },
-            { name: "Vercel", url: `${baseUrlTech}/vercel.svg` },
-            { name: "Nginx", url: `${baseUrlTech}/nginx.svg` },
             { name: "Postgres", url: `${baseUrlTech}/postgresql.svg` },
+            { name: "Redis", url: `${baseUrlTech}/redis.png` },
+            { name: "Vercel", url: `${baseUrlTech}/vercel.svg` },
+            { name: "Cloudinary", url: `${baseUrlTech}/cloudinary.png` },
+            { name: "Nginx", url: `${baseUrlTech}/nginx.svg` },
         ],
         capabilities: [
-            { text: 'Designing and managing scalable cloud infrastructure on AWS, Firebase, and Vercel', icon: '☁️' },
-            { text: 'Implementing secure and efficient database solutions using MongoDB, Postgres and Nginx', icon: '🔒' },
-            { text: 'Optimizing application deployment pipelines and ensuring high availability across environments', icon: '🚀' },
+            { text: 'Designing scalable cloud infrastructure and database architectures', icon: '☁️' },
+            { text: 'Implementing caching strategies with Redis and performance optimization', icon: '⚡' },
+            { text: 'Managing data storage solutions across SQL and NoSQL databases', icon: '💾' },
+        ]
+    },
+    {
+        name: "DevOps & Quality Assurance",
+        image: "/assets/images/devops.svg",
+        tech: [
+            { name: "Docker", url: `${baseUrlTech}/docker.svg` },
+            { name: "GitHub Actions", url: `${baseUrlTech}/github-action.svg` },
+            { name: "Jest", url: `${baseUrlTech}/jest.png` },
+            { name: "ESLint", url: `${baseUrlTech}/eslint.svg` },
+            { name: "Prettier", url: `${baseUrlTech}/prettier.svg` },
+            { name: "PM2", url: `${baseUrlTech}/pm2.png` },
+            { name: "Winston", url: `${baseUrlTech}/winston.svg` },
+            { name: "Postman", url: `${baseUrlTech}/postman.svg` },
+        ],
+        capabilities: [
+            { text: 'Implementing CI/CD pipelines with Docker and GitHub Actions', icon: '🔄' },
+            { text: 'Writing comprehensive test suites using Jest and maintaining code quality', icon: '✅' },
+            { text: 'Managing application logging, monitoring, and deployment processes', icon: '📊' },
         ]
     }
 ];
-
