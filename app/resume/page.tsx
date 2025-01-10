@@ -1,4 +1,5 @@
 import PdfViewer from '@/components/ui/pdfViewer';
+import { hostedUrl } from '@/constants';
 import { Metadata } from 'next';
 import { memo } from 'react';
 
@@ -23,7 +24,10 @@ export const metadata:Metadata = {
     title: "Resume | Muhammed Sinan",
     description: "Professional resume of Muhammed Sinan - Full Stack Developer specializing in MERN stack development",
     images: ["/screenshots/resume-og.png"],
-  }
+  },
+  alternates: {
+    canonical: `${hostedUrl}/resume`,
+  },
 };
 
 const page = () => {

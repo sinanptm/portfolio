@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Stack from "./Stack";
+import { hostedUrl } from "@/constants";
 
 export const metadata: Metadata = {
   title: "Technology Stack",
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
     description: "Discover the modern tech stack and development tools I use to build powerful web applications",
     images: ["/screenshots/stack-og.png"],
   },
+  alternates:{
+    canonical: `${hostedUrl}/stack`
+  }
 };
 
 const StackPage = () => <Stack />;

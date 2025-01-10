@@ -31,7 +31,7 @@ const ProjectButton = ({ href, icon, text, onMouseEnter, onMouseLeave, children,
         // onMouseMove={handleMouseMove}
         className={cn(buttonBaseStyles, "transition-colors duration-300 hover:bg-gray-600 hover:text-blue-700")}
       >
-        <Image width={10} height={10} src={icon} alt={text} className="w-3 h-3 mr-1" />
+        <Image width={10} height={10} src={icon} alt={`${text} Lint`} className="w-3 h-3 mr-1" />
         {text}
       </button>
     </Link>

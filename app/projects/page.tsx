@@ -1,3 +1,4 @@
+import { hostedUrl } from '@/constants';
 import Project from './Project';
 import { Metadata } from 'next';
 
@@ -22,7 +23,10 @@ export const metadata:Metadata = {
       title: "Projects | Muhammed Sinan",
       description: "Portfolio of innovative web development projects built with modern technologies",
       images: ["/screenshots/projects-og.png"],
-  }
+  },
+  alternates: {
+    canonical: `${hostedUrl}/projects`,
+  },
 };
 
 const page = () => {
