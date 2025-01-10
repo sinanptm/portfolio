@@ -9,16 +9,16 @@ import dynamic from 'next/dynamic';
 import { motion } from "framer-motion";
 import { containerVariants, techIconVariants } from '@/style';
 
-const AnimatedTooltip = dynamic(() => import("./AnimatedTooltip"), { 
-    ssr: false 
+const AnimatedTooltip = dynamic(() => import("./AnimatedTooltip"), {
+    ssr: false
 });
 
 const SocialLinks = () => {
     const { rotate, translateX, handleHover, hoveredItem, handleMouseMove } = useTooltip();
 
     const renderSocialLink = (link: typeof socialMediaLinks[number], index: number) => {
-        const hiddenClass = (link.smLabel === "SO" || link.smLabel === "LC") 
-            ? "hidden sm:flex" 
+        const hiddenClass = (link.smLabel === "SO" || link.smLabel === "LC")
+            ? "hidden sm:flex"
             : "";
 
         return (
@@ -47,17 +47,17 @@ const SocialLinks = () => {
                     rel="noopener noreferrer"
                     prefetch={false}
                     onMouseMove={handleMouseMove}
-                    aria-label={`Visit ${link.title}`} 
+                    aria-label={`Visit ${link.title}`}
                 >
                     <Image
                         src={link.icon}
                         alt={link.title}
-                        width={24}
-                        height={24}
+                        width={link.width}
+                        height={link.height}
                         aria-hidden={true}
-                        priority={true}
-                        className="w-6 h-6"
-                        sizes="(max-width: 768px) 1.4rem, 1.9rem"
+                        priority={false}
+                        className="w-6 h-6 object-contain"
+                        // sizes="(max-width: 768px) 1.4rem, 1.9rem"
                     />
                 </Link>
             </motion.li>
