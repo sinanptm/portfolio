@@ -44,6 +44,8 @@ const SocialLinks = () => {
                     className="flex items-center justify-center h-14 w-14 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
+                    prefetch={false}
+                    onMouseMove={handleMouseMove}
                     aria-label={`Visit ${link.title}`}
                 >
                     <Image
