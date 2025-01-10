@@ -55,9 +55,8 @@ const SocialLinks = () => {
                         width={link.width}
                         height={link.height}
                         aria-hidden={true}
-                        priority={false}
+                        priority={true}
                         className="w-6 h-6 object-contain"
-                        // sizes="(max-width: 768px) 1.4rem, 1.9rem"
                     />
                 </Link>
             </motion.li>
