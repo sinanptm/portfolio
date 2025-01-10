@@ -20,48 +20,36 @@ export const socialMediaLinks = [
       icon: '/assets/social/linkedin.svg',
       href: 'https://www.linkedin.com/in/sinanptm',
       smLabel: 'LN',
-      width: 24,
-      height: 24,
     },
     {
       title: 'GitHub',
       icon: '/assets/social/github.svg',
       href: 'https://github.com/sinanptm',
       smLabel: 'GH',
-      width: 24,
-      height: 24,
     },
     {
       title: 'Stack Overflow',
       icon: '/assets/social/stackoverflow.png',
       href: 'https://stackoverflow.com/users/25472984/sinan',
       smLabel: 'SO',
-      width: 24,
-      height: 24,
     },
     {
       title: 'LeetCode',
       icon: '/assets/social/leetcode.jpg',
       href: 'https://leetcode.com/u/Sinan_z',
       smLabel: 'LC',
-      width: 24,
-      height: 24,
     },
     {
       title: 'Email',
       icon: '/assets/social/email.svg',
       href: 'mailto:muhammedsinan0549@gmail.com',
       smLabel: 'EM',
-      width: 24,
-      height: 24,
     },
     {
       title: 'Twitter',
       icon: '/assets/social/x.png',
       href: 'https://x.com/sinanptm',
       smLabel: 'TW',
-      width: 24,
-      height: 24,
     }
   ];
 

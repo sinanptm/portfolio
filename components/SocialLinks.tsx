@@ -4,14 +4,11 @@ import { socialMediaLinks } from '@/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTooltip } from '@/hooks/useTooltip';
-import { memo } from 'react';
-import dynamic from 'next/dynamic';
+import { memo, lazy, Suspense } from 'react';
 import { motion } from "framer-motion";
 import { containerVariants, techIconVariants } from '@/style';
 
-const AnimatedTooltip = dynamic(() => import("./AnimatedTooltip"), {
-    ssr: false
-});
+const AnimatedTooltip = lazy(() => import("./AnimatedTooltip"));
 
 const SocialLinks = () => {
     const { rotate, translateX, handleHover, hoveredItem, handleMouseMove } = useTooltip();
@@ -31,13 +28,15 @@ const SocialLinks = () => {
                 aria-label={`${link.title} link: ${link.title}`}
             >
                 {hoveredItem === link.href && (
-                    <AnimatedTooltip
-                        rotate={rotate}
-                        translateX={translateX}
-                        text={link.title}
-                        show={hoveredItem === link.href}
-                        isLink={true}
-                    />
+                    <Suspense fallback={null}>
+                        <AnimatedTooltip
+                            rotate={rotate}
+                            translateX={translateX}
+                            text={link.title}
+                            show={hoveredItem === link.href}
+                            isLink={true}
+                        />
+                    </Suspense>
                 )}
 
                 <Link
@@ -45,17 +44,14 @@ const SocialLinks = () => {
                     className="flex items-center justify-center h-14 w-14 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors duration-300"
                     target="_blank"
                     rel="noopener noreferrer"
-                    prefetch={false}
-                    onMouseMove={handleMouseMove}
                     aria-label={`Visit ${link.title}`}
                 >
                     <Image
                         src={link.icon}
                         alt={link.title}
-                        width={link.width}
-                        height={link.height}
-                        aria-hidden={true}
-                        priority={true}
+                        width={24}
+                        height={24}
+                        loading="lazy"
                         className="w-6 h-6 object-contain"
                     />
                 </Link>
