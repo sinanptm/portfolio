@@ -52,7 +52,7 @@ export default memo(function Projects() {
           variants={containerVariants}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
         >
-          <Link href="#projects" prefetch={false} className="block">
+          <Link href="#projects" aria-label="See sinanptm's projects" prefetch={false} className="block">
             <div className="w-[35px] h-[64px] rounded-3xl border-4 border-primary/50 flex justify-center items-start p-2">
               <motion.div
                 animate={{
