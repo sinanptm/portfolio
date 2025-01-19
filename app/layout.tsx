@@ -1,23 +1,19 @@
-import { Analytics } from "@vercel/analytics/react";
-import { Fira_Code, Source_Code_Pro } from 'next/font/google';
+import { getPersonSchema, getWebsiteSchema } from "@/lib/schema";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import ThemeProvider from "@/components/layout/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
+import { firaCode, sourceCodePro } from "./fonts";
 import NavBar from "@/components/layout/NavBar";
 import { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
 import metadata from "./metadata";
 import "../style/globals.css";
-import "../style/search.css"
-
-const firaCode = Fira_Code({ subsets: ['latin'] });
-const sourceCodePro = Source_Code_Pro({ subsets: ['latin'] });
-
-export { metadata };
+import "../style/search.css";
 
 const layout = ({ children }: Readonly<RootLayoutProps>) => {
   return (
-    <html lang="en" suppressHydrationWarning >
+    <html lang="en" suppressHydrationWarning>
       <body
         className={
           cn("bg-background antialiased relative remove-scrollbar",
@@ -25,6 +21,18 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
           )}
         suppressHydrationWarning={true}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                getPersonSchema(),
+                getWebsiteSchema()
+              ]
+            }, null, 2)
+          }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -39,8 +47,7 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
       </body>
     </html>
   );
-
 };
-
+export { metadata };
 
 export default layout;

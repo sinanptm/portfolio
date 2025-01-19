@@ -11,6 +11,9 @@ export const profile = {
     title:"Full Stack Developer",
     gitHubUserName: "sinanptm",
     xUserName: "sinanptm",
+    linkedin:'https://www.linkedin.com/in/sinanptm',
+    x:'https://x.com/sinanptm'
+
 };
 export const hostedUrl = "https://sinanptm.vercel.app";
 
