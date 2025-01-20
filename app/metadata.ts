@@ -125,7 +125,13 @@ export const metadata: Metadata = {
     category: "technology",
     classification: "Portfolio Website",
     metadataBase: new URL(hostedUrl),
-    assets: '/assets'
+    assets: '/assets',
+    other: {
+        "google-site-verification": "google815b889e8dec9b27",
+        "msapplication-TileColor": "#d830dc",
+        "msapplication-TileImage": "/icons/ms-icon-144x144.png",
+        "msapplication-config": "/browserconfig.xml"
+      },
 };
 
 export default metadata;
