@@ -11,9 +11,8 @@ import {
 } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
 import { GitHubStats, ProjectModelProps } from "@/types";
-import { skills } from "@/constants/techData";
 import { getRepositoryStats } from "@/lib/github/gitRepositoryStats";
-
+import TechnologyIcon from "./Technologies";
 
 const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
     const [isMounted, setIsMounted] = useState(false);
@@ -40,16 +39,7 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
     const MemoizedTechnologies = useMemo(() => {
         if (!project) return null;
 
-        return project.technologies.map((techIndex) => (
-            <Image
-                key={techIndex}
-                src={skills[techIndex].url}
-                alt={skills[techIndex].name}
-                width={80}
-                height={20}
-                className="h-6"
-            />
-        ));
+        return project.technologies.map((techIndex, i) => <TechnologyIcon key={i} techIndex={techIndex} />);
     }, [project]);
 
     if (!isMounted || !project) {
