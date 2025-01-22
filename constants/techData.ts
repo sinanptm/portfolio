@@ -71,6 +71,9 @@ export const skills: Tech[] = [
     { name: "Redis", url: `${badgeBase}/redis-%23DC382D.svg?style=flat&logo=redis&logoColor=white` },
     { name: "Passport", url: `${badgeBase}/passport-%2340AEF0.svg?style=flat&logo=passport&logoColor=white` },
     { name: "Geolocation", url: `${badgeBase}/Geolocation-%233E6E93.svg?style=flat&logo=google-maps&logoColor=white` },
+    { name: "Geolocation", url: `${badgeBase}/Geolocation-%233E6E93.svg?style=flat&logo=google-maps&logoColor=white` },
+    { name: "Framer Motion", url: `${badgeBase}/Framer-Motion-%23000000.svg?style=flat&logo=framer&logoColor=white` }
+
 ];
 export const baseUrlTech = "/assets/tech";
 export const technologies: Tech[] = [

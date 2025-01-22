@@ -3,8 +3,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: {
-        default: `Muhammed Sinan | Full Stack Developer | MERN Stack Expert`,
-        template: "%s | Muhammed Sinan",
+        default: `Muhammed Sinan - Full Stack Developer | MERN Stack Expert`,
+        template: "%s | Muhammed Sinan - Full Stack Developer",
     },
     description: "Full Stack Developer specializing in MERN stack. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Available for collaboration.",
     keywords: [

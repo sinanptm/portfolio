@@ -74,6 +74,7 @@ const INDEXES = {
     "Redis": 65,
     "Passport": 66,
     "Geolocation": 67,
+    "Framer motion": 68
 };
 
 export const projects: Project[] = [
@@ -131,32 +132,31 @@ export const projects: Project[] = [
         ]
     },
     {
-        title: "Readify: Article Management Platform",
-        description: "Discover, read, and manage your favorite articles effortlessly.",
-        detailedDescription: "Readify is an article management platform featuring anonymous posting, theme customization, and a personalized feed. The platform is built with Next.js 15, TailwindCSS, and Radix UI, and uses MongoDB for data storage. Cloudinary handles image uploads, and JWT ensures secure access. The project is deployed on Vercel with GitHub Actions for CI/CD.",
-        technologies: [60, 13, 59, 0, 61, 58, 29, 27, 15, 36, 18],
-        link: "http://readify-gamma.vercel.app",
-        githubLink: "https://github.com/sinanptm/readify",
-        isLinkedin: true,
-        thumbnail: "/assets/projects/readify.png",
-        demoLink: "https://www.linkedin.com/posts/sinanptm_nuqs-statemanagement-urlpersistence-activity-7259535302615080961-F5Pf?utm_source=share&utm_medium=member_desktop",
+        title: "PTM Kalari: Bridging Tradition with Technology",
+        description: "A progressive web application showcasing PTM Kalarisangam - bridging ancient Indian martial arts and healing traditions with modern technology.",
+        detailedDescription: "A feature-rich PWA optimized for performance and usability, incorporating modern web technologies to preserve cultural heritage. PTM Kalari includes offline support, push notifications, analytics, and internationalization, all while delivering an app-like experience.",
+        technologies: [60, 3, 0, 69, 20, 27, 33, 58, 51, 36],
+        link: "https://ptmkalari.vercel.app",
+        githubLink: "https://github.com/sinanptm/ptm",
+        thumbnail: "/assets/projects/ptm.png",
+        demoLink: "https://www.youtube.com/channel/UCLM9UEYxJMq2lXXjycxeOTQ",
         achievements: [
-            "🕶️ Anonymous Posting: Share thoughts without an account.",
-            "🎨 Theme Customization: Toggle between light and dark themes.",
-            "📖 Personalized Feed: Customize your article feed.",
-            "👍 Like & Share: Interact with favorite articles.",
-            "🔍 Search with Debounce: Smooth, responsive searching.",
-            "📸 Cloudinary Image Uploads: Effortless image management.",
-            "📊 Nuqs State Management: Efficient search and pagination.",
-            "🔐 JWT Authentication: Secure and private access.",
-            "💻 Deployed with Vercel and GitHub Actions for CI/CD."
-        ]
+            "🏆 Got first ranking in Google search for 'PTM Kalari'.",
+            "🌍 Built with full i18n (internationalization) support.",
+            "📱 Offline functionality for seamless user experience.",
+            "🔄 Background synchronization for data reliability.",
+            "📊 Integrated Vercel Analytics for detailed performance insights.",
+            "🖼️ Leveraged WebP/AVIF for optimized image delivery.",
+            "🎨 Modern UI with Framer Motion and Radix UI.",
+            "🛠️ Deployed with CI/CD pipelines for robust production workflows.",
+            "🚀 Lighthouse scores: 97/100 Performance, 100/100 Accessibility, 100/100 Best Practices, 100/100 SEO.",
+        ],
     },
     {
         title: "Shortify: URL Shortener API",
         description: "A scalable URL shortening service with advanced analytics and Google authentication.",
         detailedDescription: "A comprehensive URL shortening API featuring Google OAuth integration, Redis caching, detailed analytics with geolocation tracking, and topic-based organization. Built with TypeScript and Node.js, it includes advanced features like custom alias support, real-time analytics, and robust security measures. The system utilizes Redis for performance optimization and implements detailed click tracking with geographic distribution analysis.",
-        technologies: [0, 18, 19, 13, 65, 64, 66, 67, 29, 30, 38, 31, 50], 
+        technologies: [0, 18, 19, 13, 65, 64, 66, 67, 29, 30, 38, 31, 50],
         link: "https://shortify.avm-ayurvedic.online",
         githubLink: "https://github.com/sinanptm/shortify",
         thumbnail: "/assets/projects/shortify.png",
@@ -175,6 +175,28 @@ export const projects: Project[] = [
             "🚀 Deployed with Nginx for high availability",
             "📈 Implemented real-time click tracking",
             "🛡️ Added URL sanitization and XSS protection"
+        ]
+    },
+    {
+        title: "Readify: Article Management Platform",
+        description: "Discover, read, and manage your favorite articles effortlessly.",
+        detailedDescription: "Readify is an article management platform featuring anonymous posting, theme customization, and a personalized feed. The platform is built with Next.js 15, TailwindCSS, and Radix UI, and uses MongoDB for data storage. Cloudinary handles image uploads, and JWT ensures secure access. The project is deployed on Vercel with GitHub Actions for CI/CD.",
+        technologies: [2, 0, 3, 20, 21, 24, 27, 33, 36, 37,],
+        link: "http://readify-gamma.vercel.app",
+        githubLink: "https://github.com/sinanptm/readify",
+        isLinkedin: true,
+        thumbnail: "/assets/projects/readify.png",
+        demoLink: "https://www.linkedin.com/posts/sinanptm_nuqs-statemanagement-urlpersistence-activity-7259535302615080961-F5Pf?utm_source=share&utm_medium=member_desktop",
+        achievements: [
+            "🕶️ Anonymous Posting: Share thoughts without an account.",
+            "🎨 Theme Customization: Toggle between light and dark themes.",
+            "📖 Personalized Feed: Customize your article feed.",
+            "👍 Like & Share: Interact with favorite articles.",
+            "🔍 Search with Debounce: Smooth, responsive searching.",
+            "📸 Cloudinary Image Uploads: Effortless image management.",
+            "📊 Nuqs State Management: Efficient search and pagination.",
+            "🔐 JWT Authentication: Secure and private access.",
+            "💻 Deployed with Vercel and GitHub Actions for CI/CD."
         ]
     },
     {
@@ -229,11 +251,11 @@ export const projects: Project[] = [
         title: "Role-Based Candidate Management",
         description: "A modern, secure, simple and scalable system for managing candidates with role-based access control.",
         detailedDescription: "A comprehensive candidate management platform featuring role-based access control, secure file uploads with AWS S3 presigned URLs, and real-time profile management. Built with TypeScript throughout the stack, it implements secure authentication, file handling, and extensive API endpoints for both admin and candidate portals.",
-        technologies: [0, 3, 18, 19, 13, 7, 20, 27, 33, 28, 29, 42, 56],  
+        technologies: [0, 3, 18, 19, 13, 7, 20, 27, 33, 28, 29, 42, 56],
         link: "https://candidate-management-psi.vercel.app",
         githubLink: "https://github.com/sinanptm/candidate-management",
         showGitStats: true,
-        thumbnail: "/assets/projects/c-manage.png", 
+        thumbnail: "/assets/projects/c-manage.png",
         achievements: [
             "🔐 Implemented secure JWT authentication with refresh tokens",
             "📁 Built secure file management system using AWS S3 presigned URLs",
