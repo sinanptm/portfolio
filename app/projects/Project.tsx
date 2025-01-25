@@ -70,7 +70,7 @@ export default memo(function Projects() {
         </motion.div>
       </div>
       
-      <div className="mx-auto lg:mx-8 px-4 py-16" id="projects">
+      <div className="container mx-auto  py-16" id="projects">
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
