@@ -1,4 +1,4 @@
-import { getPersonSchema, getWebsiteSchema } from "@/lib/schema";
+import { getPersonSchema, getWebsiteSchema } from "@/app/schema";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import ThemeProvider from "@/components/layout/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";

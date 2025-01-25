@@ -134,7 +134,7 @@ export const projects: Project[] = [
     {
         title: "PTM Kalari: Bridging Tradition with Technology",
         description: "A progressive web application showcasing PTM Kalarisangam - bridging ancient Indian martial arts and healing traditions with modern technology.",
-        detailedDescription: "A feature-rich PWA optimized for performance and usability, incorporating modern web technologies to preserve cultural heritage. PTM Kalari includes offline support, push notifications, analytics, and internationalization, all while delivering an app-like experience.",
+        detailedDescription: "A feature-rich PWA optimized for performance and usability, incorporating modern web technologies to preserve cultural heritage.",
         technologies: [60, 3, 0, 69, 20, 27, 33, 58, 51, 36],
         link: "https://ptmkalari.vercel.app",
         githubLink: "https://github.com/sinanptm/ptm",

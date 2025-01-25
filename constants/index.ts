@@ -12,7 +12,8 @@ export const profile = {
     gitHubUserName: "sinanptm",
     xUserName: "sinanptm",
     linkedin:'https://www.linkedin.com/in/sinanptm',
-    x:'https://x.com/sinanptm'
+    x:'https://x.com/sinanptm',
+    instagram:"https://www.instagram.com/si_an_z"
 
 };
 export const hostedUrl = "https://sinanptm.vercel.app";
