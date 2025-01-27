@@ -80,7 +80,7 @@ const INDEXES = {
 export const projects: Project[] = [
     {
         title: "AVM Ayurvedic: Hospital Management",
-        description: "A wellness platform with AI-powered health insights and Ayurvedic consultations.",
+        description: "A wellness platform with AI-powered health insights, video consultations, and secure payment processing.",
         detailedDescription: "A comprehensive Ayurvedic platform with video consultations, secure payments, and real-time notifications. Optimized for performance with Google Lighthouse 90+ scores. The backend is designed for scalability and secure data handling using Node.js, Express.js, and MongoDB on AWS. It includes role-based authorization and is deployed frontend with Vercel, utilizing GitHub Actions for CI/CD.",
         technologies: [1, 18, 19, 13, 9, 10, 17, 20, 21, 22, 23, 24, 25, 26, 27, 62, 28, 29, 30, 31, 32, 33, 51, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
         link: "http://avm-ayurvedic.online",
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     },
     {
         title: "Trends: E-commerce Store",
-        description: "A full-featured e-commerce platform with dynamic product management and payment integration.",
+        description: "A full-featured e-commerce platform with dynamic product management and secure payment integration.",
         detailedDescription: "Trends is an e-commerce store with secure authentication, Razorpay payment integration, and extensive product management. It has features like real-time chat for customer support, order tracking, and a comprehensive admin panel for managing products and sales reports. Deployed on AWS with NGINX for scalability and reliability.",
         technologies: [18, 19, 13, 29, 7, 44, 23, 63, 30, 62, 38, 39, 54, 57, 49, 56],
         link: "https://trendsonline.online",
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     },
     {
         title: "Shortify: URL Shortener API",
-        description: "A scalable URL shortening service with advanced analytics and Google authentication.",
+        description: "A scalable URL shortening service with advanced analytics and Google authentication integration.",
         detailedDescription: "A comprehensive URL shortening API featuring Google OAuth integration, Redis caching, detailed analytics with geolocation tracking, and topic-based organization. Built with TypeScript and Node.js, it includes advanced features like custom alias support, real-time analytics, and robust security measures. The system utilizes Redis for performance optimization and implements detailed click tracking with geographic distribution analysis.",
         technologies: [0, 18, 19, 13, 65, 64, 66, 67, 29, 30, 38, 31, 50],
         link: "https://shortify.avm-ayurvedic.online",
@@ -179,7 +179,7 @@ export const projects: Project[] = [
     },
     {
         title: "Readify: Article Management Platform",
-        description: "Discover, read, and manage your favorite articles effortlessly.",
+        description:"A modern platform for discovering and managing articles with personalized feeds and theme customization.",
         detailedDescription: "Readify is an article management platform featuring anonymous posting, theme customization, and a personalized feed. The platform is built with Next.js 15, TailwindCSS, and Radix UI, and uses MongoDB for data storage. Cloudinary handles image uploads, and JWT ensures secure access. The project is deployed on Vercel with GitHub Actions for CI/CD.",
         technologies: [2, 0, 3, 20, 21, 24, 27, 33, 36, 37,],
         link: "http://readify-gamma.vercel.app",
@@ -201,7 +201,7 @@ export const projects: Project[] = [
     },
     {
         title: "Sahithyolsav Manager",
-        description: "Program management app for SSF Kerala with features for managing events and participants.",
+        description:"A program management system with participant tracking and mark list generation for event organization.",
         detailedDescription: "Developed in three days using the MERN stack, this app includes mark lists, participant management, and caching for performance boosts. The UI is optimized for fast load times, and JWT authentication ensures data security.",
         technologies: [3, 4, 19, 18, 13],
         link: "https://sahityotsav-manager.onrender.com",
@@ -219,7 +219,7 @@ export const projects: Project[] = [
     },
     {
         title: "URL Shortener",
-        description: "A URL shortener with click tracking and personalized dashboards.",
+        description: "A URL shortening platform with click tracking analytics and personalized user dashboard features.",
         detailedDescription: "Developed with MERN stack and NestJS, this app offers URL shortening, click tracking, and personalized user dashboards. It provides experience in NestJS, focusing on modular architecture and dependency injection.",
         technologies: [2, 18, 13, 3, 21],
         link: "https://url-shortener-sooty-five.vercel.app",
@@ -234,7 +234,7 @@ export const projects: Project[] = [
     },
     {
         title: "Ace-Quiz: Quiz App",
-        description: "A quiz application built with Next.js and TypeScript following clean architecture principles.",
+        description:  "A modern quiz application with clean architecture implementation and automated deployment workflow.",
         detailedDescription: "This quiz app focuses on scalability and maintainable code, using tools like Radix UI and Redux for efficient state management. GitHub workflows and CI enhance deployment and testing capabilities.",
         technologies: [1, 0, 13, 4, 19, 18, 27, 33],
         link: "https://quiz-app-six-dusky.vercel.app",
@@ -249,7 +249,7 @@ export const projects: Project[] = [
     },
     {
         title: "Role-Based Candidate Management",
-        description: "A modern, secure, simple and scalable system for managing candidates with role-based access control.",
+        description: "A secure candidate management system with role-based access control and file handling features.",
         detailedDescription: "A comprehensive candidate management platform featuring role-based access control, secure file uploads with AWS S3 presigned URLs, and real-time profile management. Built with TypeScript throughout the stack, it implements secure authentication, file handling, and extensive API endpoints for both admin and candidate portals.",
         technologies: [0, 3, 18, 19, 13, 7, 20, 27, 33, 28, 29, 42, 56],
         link: "https://candidate-management-psi.vercel.app",
@@ -275,7 +275,7 @@ export const projects: Project[] = [
     },
     {
         title: "OLX & Netflix Clones",
-        description: "Clones of Netflix and OLX with real-time data and secure authentication.",
+        description: "Platform clones featuring real-time data synchronization and secure authentication implementation.",
         detailedDescription: "These clones, developed using React and Firebase, showcase responsive design and real-time data. TMDb API is used in the Netflix clone for movie data, and Firebase handles authentication and image uploads for the OLX clone.",
         technologies: [3, 22],
         githubLink: "https://github.com/sinanptm/OLX-clone",
