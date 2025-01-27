@@ -3,7 +3,7 @@ import { GITHUB_API_BASE_URL, githubApiHeaders } from ".";
 import { GitHubApiError } from "../../types/github";
 
 
-const extractRepoInfo = (githubLink: string): { owner: string; repo: string } | null => {
+const extractRepoInfo = (githubLink: string): { owner: string; repo: string; } | null => {
     const match = githubLink.match(/github\.com\/([^/]+)\/([^/]+)/);
     if (!match) return null;
     const [, owner, repo] = match;
@@ -11,11 +11,11 @@ const extractRepoInfo = (githubLink: string): { owner: string; repo: string } | 
 };
 
 const fetchWithAuth = async (url: string) => {
-    const response = await fetch(url, { 
+    const response = await fetch(url, {
         headers: githubApiHeaders,
-        cache:"force-cache"
-     });
-    
+        next: { revalidate: 14400 }
+    });
+
     if (!response.ok) {
         const error: GitHubError = await response.json();
         throw new GitHubApiError(
@@ -24,7 +24,7 @@ const fetchWithAuth = async (url: string) => {
             error
         );
     }
-    
+
     return response;
 };
 
@@ -86,7 +86,7 @@ export const getRepositoryIssues = async (
     if (!repoInfo) return null;
 
     const { owner, repo } = repoInfo;
-    
+
     try {
         const response = await fetchWithAuth(
             `${GITHUB_API_BASE_URL}/repos/${owner}/${repo}/issues?state=${state}&page=${page}&per_page=${perPage}`
@@ -108,7 +108,7 @@ export const getRepositoryPullRequests = async (
     if (!repoInfo) return null;
 
     const { owner, repo } = repoInfo;
-    
+
     try {
         const response = await fetchWithAuth(
             `${GITHUB_API_BASE_URL}/repos/${owner}/${repo}/pulls?state=${state}&page=${page}&per_page=${perPage}`
