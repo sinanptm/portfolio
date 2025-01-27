@@ -52,7 +52,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
                 onClick={() => onViewDetails(project)}
                 className="text-xs text-blue-500 hover:text-blue-600 transition-colors duration-300"
               >
-                Show More..
+                Show all..
               </button>
             )}
 

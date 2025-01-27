@@ -40,7 +40,7 @@ export default memo(function Projects() {
         </motion.p>
       </motion.div>
       <div className="relative w-full h-[calc(100vh-4rem)] min-h-[400px]">
-        {/* <ComputerCanvas /> */}
+        <ComputerCanvas />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
