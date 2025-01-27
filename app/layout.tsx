@@ -9,7 +9,6 @@ import { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
 import metadata from "./metadata";
 import "../style/globals.css";
-import "../style/search.css";
 
 const layout = ({ children }: Readonly<RootLayoutProps>) => {
   return (

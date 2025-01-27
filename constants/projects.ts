@@ -132,27 +132,6 @@ export const projects: Project[] = [
         ]
     },
     {
-        title: "PTM Kalari: Bridging Tradition with Technology",
-        description: "A progressive web application showcasing PTM Kalarisangam - bridging ancient Indian martial arts and healing traditions with modern technology.",
-        detailedDescription: "A feature-rich PWA optimized for performance and usability, incorporating modern web technologies to preserve cultural heritage.",
-        technologies: [60, 3, 0, 69, 20, 27, 33, 58, 51, 36],
-        link: "https://ptmkalari.vercel.app",
-        githubLink: "https://github.com/sinanptm/ptm",
-        thumbnail: "/assets/projects/ptm.png",
-        demoLink: "https://www.youtube.com/channel/UCLM9UEYxJMq2lXXjycxeOTQ",
-        achievements: [
-            "🏆 Got first ranking in Google search for 'PTM Kalari'.",
-            "🌍 Built with full i18n (internationalization) support.",
-            "📱 Offline functionality for seamless user experience.",
-            "🔄 Background synchronization for data reliability.",
-            "📊 Integrated Vercel Analytics for detailed performance insights.",
-            "🖼️ Leveraged WebP/AVIF for optimized image delivery.",
-            "🎨 Modern UI with Framer Motion and Radix UI.",
-            "🛠️ Deployed with CI/CD pipelines for robust production workflows.",
-            "🚀 Lighthouse scores: 97/100 Performance, 100/100 Accessibility, 100/100 Best Practices, 100/100 SEO.",
-        ],
-    },
-    {
         title: "Shortify: URL Shortener API",
         description: "A scalable URL shortening service with advanced analytics and Google authentication.",
         detailedDescription: "A comprehensive URL shortening API featuring Google OAuth integration, Redis caching, detailed analytics with geolocation tracking, and topic-based organization. Built with TypeScript and Node.js, it includes advanced features like custom alias support, real-time analytics, and robust security measures. The system utilizes Redis for performance optimization and implements detailed click tracking with geographic distribution analysis.",
@@ -176,6 +155,27 @@ export const projects: Project[] = [
             "📈 Implemented real-time click tracking",
             "🛡️ Added URL sanitization and XSS protection"
         ]
+    },
+    {
+        title: "PTM Kalari Website",
+        description: "A feature-rich PWA optimized for performance and usability, incorporating modern web technologies.",
+        detailedDescription: "A progressive web application showcasing PTM Kalarisangam - bridging ancient Indian martial arts and healing traditions with modern technology.",
+        technologies: [60, 3, 0, 69, 20, 27, 33, 58, 51, 36],
+        link: "https://ptmkalari.vercel.app",
+        githubLink: "https://github.com/sinanptm/ptm",
+        thumbnail: "/assets/projects/ptm.png",
+        demoLink: "https://www.youtube.com/channel/UCLM9UEYxJMq2lXXjycxeOTQ",
+        achievements: [
+            "🏆 Got first ranking in Google search for 'PTM Kalari'.",
+            "🌍 Built with full i18n (internationalization) support.",
+            "📱 Offline functionality for seamless user experience.",
+            "🔄 Background synchronization for data reliability.",
+            "📊 Integrated Vercel Analytics for detailed performance insights.",
+            "🖼️ Leveraged WebP/AVIF for optimized image delivery.",
+            "🎨 Modern UI with Framer Motion and Radix UI.",
+            "🛠️ Deployed with CI/CD pipelines for robust production workflows.",
+            "🚀 Lighthouse scores: 97/100 Performance, 100/100 Accessibility, 100/100 Best Practices, 100/100 SEO.",
+        ],
     },
     {
         title: "Readify: Article Management Platform",
