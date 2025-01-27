@@ -9,7 +9,6 @@ import ProjectButton from "@/components/project/Button";
 import { cn } from "@/lib/utils";
 import { buttonBaseStyles } from "@/style";
 import TechnologyIcon from "./Technologies";
-import useScreen from "@/hooks/useScreen";
 
 type ProjectCardProps = {
   project: Project;
@@ -18,8 +17,6 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
   const { hoveredItem, rotate, translateX, handleHover, handleMouseMove } = useTooltip();
-  const { isMobile } = useScreen();
-  const technologiesCount = isMobile ? 3 : 4;
 
   return (
     <div className="rounded-xl group/bento hover:shadow-xl transition duration-300 shadow-input dark:shadow-none p-4 bg-black flex flex-col h-full">
@@ -47,21 +44,21 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
         <p className="text-sm text-muted-foreground mb-4 flex-grow">{project.description}</p>
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
-            {project.technologies.slice(0, technologiesCount).map((techIndex, index) => (
+            {project.technologies.slice(0, 3).map((techIndex, index) => (
               <TechnologyIcon key={index} techIndex={techIndex} />
             ))}
-            {project.technologies.length > technologiesCount && (
+            {project.technologies.length > 3 && (
               <button
                 onClick={() => onViewDetails(project)}
                 className="text-xs text-blue-500 hover:text-blue-600 transition-colors duration-300"
               >
-                More..
+                Show More..
               </button>
             )}
 
           </div>
         </div>
-        <motion.div className="flex flex-wrap gap-x-4 gap-y-2" initial="rest" whileHover="hover" animate="rest">
+        <motion.div className="flex flex-wrap gap-x-2 gap-y-2" initial="rest" whileHover="hover" animate="rest">
           {project.link && (
             <ProjectButton
               href={project.link}
