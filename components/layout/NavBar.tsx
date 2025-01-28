@@ -15,7 +15,7 @@ const NavBar = () => {
     const isActive = useIsActiveLink();
 
     return (
-        <nav className={`sticky top-0 w-full z-50 ${!isOpen && "backdrop-blur-3xl"}`}>
+        <nav className={`sticky top-0 w-full z-50 ${!isOpen && "backdrop-blur-sm"}`}>
             <div className="relative">
                 <div className="flex items-center justify-between h-16 w-full z-50 px-4 sm:px-6 lg:px-8">
                     <Logo onClick={() => setIsOpen(false)} />
