@@ -1,6 +1,6 @@
 import { hostedUrl, profile } from "@/constants";
 
-export const getPersonSchema = () => ({
+export const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": `${hostedUrl}#person`, 
@@ -61,9 +61,9 @@ export const getPersonSchema = () => ({
     addressRegion: "Kerala",
     addressCountry: "IN"
   }
-});
+};
 
-export const getWebsiteSchema = () => ({
+export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": `${hostedUrl}#website`,
@@ -76,4 +76,4 @@ export const getWebsiteSchema = () => ({
   copyrightYear: new Date().getFullYear(),
   datePublished: "2025-01-01",
   dateModified: new Date().toISOString()
-});
+};

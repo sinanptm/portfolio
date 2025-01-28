@@ -1,6 +1,6 @@
-import { getPersonSchema, getWebsiteSchema } from "@/app/schema";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import ThemeProvider from "@/components/layout/ThemeProvider";
+import { personSchema, websiteSchema } from "@/app/schema";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { firaCode, sourceCodePro } from "./fonts";
@@ -26,8 +26,8 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@graph": [
-                getPersonSchema(),
-                getWebsiteSchema()
+                personSchema,
+                websiteSchema
               ]
             }, null, 2)
           }}
