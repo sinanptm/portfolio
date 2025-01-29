@@ -25,15 +25,7 @@ const About = () => {
                         <motion.div
                             className="relative aspect-square w-full h-64 sm:h-auto max-w-xl mx-auto"
                             variants={imageVariants}
-                        >
-                            <Image
-                                src="/assets/profile-image.jpg"
-                                alt="Profile picture"
-                                fill
-                                className="object-contain opacity-0"
-                                priority
-                            />
-                            
+                        >  
                             <Image
                                 src="/assets/images/sitting.svg"
                                 alt="Illustration of a developer sitting at a desk, coding with a laptop and books around"
