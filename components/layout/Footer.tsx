@@ -1,13 +1,18 @@
-"use client"
-import Link from "next/link"
-import { socialMediaLinks, profile, navLinks } from "@/constants"
-import Image from "next/image"
-import { memo, useMemo } from "react"
-import { motion } from "framer-motion"
+"use client";
+import Link from "next/link";
+import { socialMediaLinks, profile, navLinks } from "@/constants";
+import Image from "next/image";
+import { memo, useMemo } from "react";
+import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "@/style";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
-  const year = useMemo(() => new Date().getFullYear(), [])
+  const year = useMemo(() => new Date().getFullYear(), []);
+  const pathname = usePathname();
+  if (pathname === '/resume') {
+    return null;
+  }
 
   return (
     <motion.footer
@@ -87,8 +92,8 @@ const Footer = () => {
         </motion.div>
       </div>
     </motion.footer>
-  )
-}
+  );
+};
 
 export default memo(Footer)
 
