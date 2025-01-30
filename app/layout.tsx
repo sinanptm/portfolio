@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import metadata from "./metadata";
 import "../style/globals.css";
 import Footer from "@/components/layout/Footer";
+import { memo } from "react";
 
 const layout = ({ children }: Readonly<RootLayoutProps>) => {
   return (
@@ -30,7 +31,7 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
                 personSchema,
                 websiteSchema
               ]
-            }, null, 2)
+            })
           }}
         />
         <ThemeProvider
@@ -51,4 +52,4 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
 };
 export { metadata };
 
-export default layout;
+export default memo(layout);

@@ -1,9 +1,9 @@
+import TypewriterEffect from '@/components/ui/typewriter-effect';
 import { TYPEWRITER_WORDS } from '@/constants';
 import About from '@/components/home/About';
 import Name from '@/components/home/Name';
-import { memo } from 'react';
 import Image from 'next/image';
-import TypewriterEffect from '@/components/ui/typewriter-effect';
+import { memo } from 'react';
 
 
 const HomePage = () => {
@@ -16,7 +16,7 @@ const HomePage = () => {
           alt="Muhammed sinan - Mern stack developer"
           width={1}
           height={1}
-          priority={false}
+          loading='lazy'
           className="opacity-0"
         />
       </div>
