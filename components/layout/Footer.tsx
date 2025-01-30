@@ -29,21 +29,22 @@ const Footer = () => {
                 >
                   <span className="sr-only">{link.title}</span>
                   <Image
-                    src={link.icon || "/placeholder.svg"}
+                    src={link.icon}
                     alt={`${link.title} icon`}
                     width={24}
                     height={24}
+                    loading="lazy"
                     className="w-6 h-6 object-contain"
                   />
                 </Link>
               ))}
             </div>
           </div>
-          <nav className="mt-8 md:mt-0 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <nav className="mt-8 md:mt-0 animate-slide-up">
             <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase mb-4">Navigation</h3>
             <ul className="space-y-2">
-              {navLinks.map((link, index) => (
-                <li key={link.href} className="animate-slide-up" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
+              {navLinks.map((link) => (
+                <li key={link.href} className="animate-slide-up">
                   <Link
                     href={link.href}
                     className="text-base text-muted-foreground hover:text-foreground transition-colors duration-300 hover:translate-x-1 inline-block"
@@ -52,7 +53,7 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-              <li className="animate-slide-up" style={{ animationDelay: `${0.3 + navLinks.length * 0.1}s` }}>
+              <li className="animate-slide-up">
                 <Link
                   href={"/resume"}
                   className="text-base text-muted-foreground hover:text-foreground transition-colors duration-300 hover:translate-x-1 inline-block"
@@ -63,7 +64,7 @@ const Footer = () => {
             </ul>
           </nav>
         </div>
-        <div className="mt-8 border-t border-gray-200 pt-4 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+        <div className="mt-8 border-t border-gray-200 pt-4 animate-fade-in">
           <p className="text-sm text-muted-foreground text-center">
             &copy; {year} {profile.name}. All rights reserved.
           </p>
