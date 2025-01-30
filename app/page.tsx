@@ -1,13 +1,9 @@
 import { TYPEWRITER_WORDS } from '@/constants';
 import About from '@/components/home/About';
 import Name from '@/components/home/Name';
-import { memo, Suspense } from 'react';
-import dynamic from 'next/dynamic';
+import { memo } from 'react';
 import Image from 'next/image';
-
-const TypewriterEffect = dynamic(() => import('@/components/ui/typewriter-effect'), {
-  ssr: false
-});
+import TypewriterEffect from '@/components/ui/typewriter-effect';
 
 
 const HomePage = () => {
@@ -32,9 +28,7 @@ const HomePage = () => {
               <Name />
             </header>
             <article>
-              <Suspense>
-                <TypewriterEffect words={TYPEWRITER_WORDS} />
-              </Suspense>
+              <TypewriterEffect words={TYPEWRITER_WORDS} />
             </article>
           </div>
         </div>
