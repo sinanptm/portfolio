@@ -9,6 +9,7 @@ import { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
 import metadata from "./metadata";
 import "../style/globals.css";
+import Footer from "@/components/layout/Footer";
 
 const layout = ({ children }: Readonly<RootLayoutProps>) => {
   return (
@@ -40,6 +41,7 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
             <NavBar />
             {children}
             <Toaster />
+            <Footer />
           </HeroHighlight>
           <Analytics debug={false} />
         </ThemeProvider>

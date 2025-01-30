@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { memo } from 'react';
 
-const Logo = ({ onClick }: { onClick: () => void; }) => {
+const Logo = ({ onClick }: { onClick?: () => void; }) => {
     return (
         <Link href="/" className="flex items-center space-x-2 z-50">
             <motion.span

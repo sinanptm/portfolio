@@ -50,7 +50,7 @@ const SocialLinks = () => {
                 >
                     <Image
                         src={link.icon}
-                        alt={link.title}
+                        alt={`${link.title} icon`}
                         width={24}
                         height={24}
                         loading="lazy"
