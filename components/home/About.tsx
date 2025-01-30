@@ -31,7 +31,7 @@ const About = () => {
                                 alt="Illustration of a developer sitting at a desk, coding with a laptop and books around"
                                 fill
                                 className="object-contain"
-                                loading="lazy"
+                                priority
                             />
                         </motion.div>
 
