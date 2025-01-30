@@ -57,7 +57,7 @@ const ThingCard = ({ name, image, tech, capabilities }: ThingsIDo) => {
                                 alt={tech.name}
                                 fill
                                 sizes="(max-width: 768px) 2.5rem, (max-width: 1200px) 3.5rem, 2.5rem"
-                                loading="lazy"
+                                priority
                                 className="object-contain p-1 transition-transform duration-200"
                             />
                             <AnimatedTooltip
