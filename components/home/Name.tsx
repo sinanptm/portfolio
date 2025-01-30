@@ -1,7 +1,9 @@
 'use client';
+
 import { profile } from '@/constants';
 import { containerVariants } from '@/style';
 import { motion } from 'framer-motion';
+import { memo } from 'react';
 
 const Name = () => {
     return (
@@ -16,4 +18,4 @@ const Name = () => {
     );
 };
 
-export default Name;
+export default memo(Name);

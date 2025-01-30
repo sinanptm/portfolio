@@ -17,6 +17,20 @@ export const profile = {
 };
 export const hostedUrl = "https://sinanptm.vercel.app";
 
+export const TYPEWRITER_WORDS = [
+  { text: "I" },
+  { text: "Build" },
+  { text: "Innovative" },
+  { text: "Digital" },
+  { text: "Solutions" },
+  { text: "With" },
+  { text: "Precision" },
+  { text: "And" },
+  { text: "Passion" },
+  { text: "!" }
+];
+
+
 export const socialMediaLinks = [
     {
       title: 'LinkedIn',

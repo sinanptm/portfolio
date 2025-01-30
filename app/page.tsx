@@ -1,55 +1,48 @@
-import { TypewriterEffect } from '@/components/ui/typewriter-effect';
+import { TYPEWRITER_WORDS } from '@/constants';
 import About from '@/components/home/About';
 import Name from '@/components/home/Name';
+import { memo, Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { memo } from 'react';
 
-const page = () => {
-  const words = [
-    { text: "I" },
-    { text: "Build" },
-    { text: "Innovative", },
-    { text: "Digital", },
-    { text: "Solutions", },
-    { text: "With", },
-    { text: "Precision" },
-    { text: "And" },
-    { text: "Passion" },
-    { text: "!" },
-  ];
+const TypewriterEffect = dynamic(() => import('@/components/ui/typewriter-effect'), {
+  ssr: false
+});
+
+
+const HomePage = () => {
   return (
     <main className='flex flex-col pt-12'>
-      {/* Profile image for Seo */}
-      <div className='relative'>
+      {/* Optimized SEO Image */}
+      <div className='relative h-0 w-0'>
         <Image
           src="/assets/profile-image.jpg"
           alt="Muhammed sinan - Mern stack developer"
-          fill
-          className="object-contain opacity-0"
-          loading='lazy'
+          width={1}
+          height={1}
+          priority={false}
+          className="opacity-0"
         />
       </div>
 
-      {/* <Hero /> */}
       <section className="w-full mx-auto sm:px-16 px-6 pb-10">
-        <div className={`pb-7 mx-auto flex flex-row items-start gap-5`}>
-          <div className="flex flex-col justify-center items-center mt-5 ml-5">
-          </div>
+        <div className="pb-7 mx-auto flex flex-row items-start gap-5">
           <div>
             <header>
               <Name />
             </header>
             <article>
-              <TypewriterEffect words={words} />
+              <Suspense>
+                <TypewriterEffect words={TYPEWRITER_WORDS} />
+              </Suspense>
             </article>
           </div>
         </div>
       </section>
 
-      {/* About section */}
       <About />
     </main>
   );
 };
 
-export default memo(page);
+export default memo(HomePage);

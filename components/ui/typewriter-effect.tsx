@@ -2,9 +2,9 @@
 
 import { cn } from "@/lib/utils";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
-import { useEffect } from "react";
+import { memo, useEffect } from "react";
 
-export const TypewriterEffect = ({
+const TypewriterEffect = ({
   words,
   className,
   cursorClassName,
@@ -184,3 +184,5 @@ export const TypewriterEffectSmooth = ({
     </div>
   );
 };
+
+export default memo(TypewriterEffect)

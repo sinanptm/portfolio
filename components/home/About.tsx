@@ -1,14 +1,14 @@
 'use client';
 
 import { buttonHover, buttonVariants, containerVariants, fadeInUp, imageVariants, staggerChildren } from '@/style';
-import { motion } from 'framer-motion';
-import { memo } from 'react';
 import { profile, thingsIDo } from '@/constants';
-import ThingsCard from './ThingsCard';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '../ui/button';
 import SocialLinks from '../SocialLinks';
+import { motion } from 'framer-motion';
+import ThingsCard from './ThingsCard';
+import { Button } from '../ui/button';
+import Image from 'next/image';
+import { memo } from 'react';
+import Link from 'next/link';
 
 const About = () => {
     return (
