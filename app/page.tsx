@@ -12,7 +12,7 @@ const page = () => {
           alt="Muhammed sinan - Mern stack developer"
           fill
           className="object-contain opacity-0"
-          priority
+          loading='lazy'
         />
       </div>
       <Hero />
