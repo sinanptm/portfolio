@@ -3,16 +3,14 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: {
-        default: `Muhammed Sinan - Full Stack Developer | MERN Stack Expert`,
+        default: `Muhammed Sinan - Full Stack Developer `,
         template: "%s | Muhammed Sinan - Full Stack Developer",
     },
     description: "Full Stack Developer specializing in MERN stack. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Available for collaboration.",
     keywords: [
         "Muhammed Sinan",
-        "Muhammed Sinan India",
         "Muhammed Sinan Developer",
-        "Muhammed Sinan Kerala",
-        "Muhammed Sinan Kozhikode",
+        "Muhammed Sinan Pavukkandy, Kozhikode, Kerala, India 673614",
         "sinanptm Portfolio",
         "Muhammed sinan projects",
         "Muhammed sinan tech stack",
