@@ -3,7 +3,7 @@ import { hostedUrl, profile } from "@/constants";
 export const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": `${hostedUrl}#person`, 
+  "@id": `${hostedUrl}#person`,
   name: profile.name,
   alternateName: "sinanptm",
   jobTitle: "Full Stack Web Developer",
@@ -14,7 +14,7 @@ export const personSchema = {
   birthDate: "2005-06-02",
   nationality: "Indian",
   keywords: [
-    "Web Development", "Full Stack", "JavaScript", 
+    "Web Development", "Full Stack", "JavaScript",
     "React", "Node.js", "TypeScript"
   ],
   sameAs: [
@@ -25,36 +25,12 @@ export const personSchema = {
   ],
   knowsLanguage: ["Malayalam", "English"],
   knowsAbout: [
-    "Web Development", "MERN Stack", 
-    "TypeScript", "JavaScript", 
+    "Web Development", "MERN Stack",
+    "TypeScript", "JavaScript",
     "NodeJS", "ExpressJS", "Nest JS",
-    "ReactJS", "Next JS", "Vite",
-    "MongoDB", "Postgres", "MySQL",
-    "AWS", "Docker", "Nginx", "Vercel",
-    "WebRTC", "State Management", 
-    "Authentication", "API Development"
+    "ReactJS", "Next JS",
+    "MongoDB", "API Development"
   ],
-  skills: [
-    {
-      "@type": "DefinedTerm",
-      name: "Languages",
-      hasDefinedTerm: ["TypeScript", "JavaScript"]
-    },
-    {
-      "@type": "DefinedTerm", 
-      name: "Backend Frameworks",
-      hasDefinedTerm: ["NodeJS", "ExpressJS", "Nest JS"]
-    },
-    {
-      "@type": "DefinedTerm",
-      name: "Frontend Technologies",
-      hasDefinedTerm: ["ReactJS", "Next JS", "Vite"]
-    }
-  ],
-  worksFor: {
-    "@type": "Organization",
-    name: "Freelance/Independent"
-  },
   address: {
     "@type": "PostalAddress",
     addressLocality: "Kozhikode",

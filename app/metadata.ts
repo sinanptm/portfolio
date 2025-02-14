@@ -22,14 +22,14 @@ export const metadata: Metadata = {
         "Kerala Full Stack Developer",
         "India MERN Stack Developer",
         "Kozhikode Software Engineer",
-        "MERN Stack Projects Showcase",
         "Portfolio Web Developer India",
-        "Muhammed Sinan MERN Projects",
+        "Muhammed Sinan MERN",
         "Software Engineer Portfolio India",
         "MERN Developer in Kerala",
         "Muhammed Sinan Professional Portfolio",
         "Top MERN Stack Developer India",
         "Next.js Developer Portfolio",
+        "Muhammed sinan kozhikode"
     ],
     authors: [
         {
