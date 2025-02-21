@@ -16,7 +16,7 @@ const HomePage = () => {
           alt="Muhammed sinan - Mern stack developer"
           width={1}
           height={1}
-          loading='lazy'
+          priority
           className="opacity-0"
         />
       </div>
