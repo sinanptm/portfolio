@@ -115,7 +115,7 @@ export const projects: Project[] = [
         description: "A full-featured e-commerce platform with dynamic product management and secure payment integration.",
         detailedDescription: "Trends is an e-commerce store with secure authentication, Razorpay payment integration, and extensive product management. It has features like real-time chat for customer support, order tracking, and a comprehensive admin panel for managing products and sales reports. Deployed on AWS with NGINX for scalability and reliability.",
         technologies: [18, 19, 13, 29, 7, 44, 23, 63, 30, 62, 38, 39, 54, 57, 49, 56],
-        link: "https://trendsonline.online",
+        link: "https://ecommerse-project.onrender.com",
         githubLink: "https://github.com/sinanptm/ecommerse-project",
         thumbnail: "/assets/projects/trends.png",
         demoLink: "https://youtu.be/8w6HqmgeDcA",
