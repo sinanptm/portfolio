@@ -15,7 +15,7 @@ export const profile = {
     x:'https://x.com/sinanptm',
     instagram:"https://www.instagram.com/si_an_z"
 };
-export const hostedUrl = "https://sinanptm.vercel.app";
+export const hostedUrl = "https://muhammedsinan.space";
 
 export const TYPEWRITER_WORDS = [
   { text: "I" },
