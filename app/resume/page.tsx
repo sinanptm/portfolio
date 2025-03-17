@@ -1,5 +1,5 @@
 import PdfViewer from '@/components/ui/pdfViewer';
-import { hostedUrl } from '@/constants';
+import { canonicalUrl } from '@/constants';
 import { Metadata } from 'next';
 import { memo } from 'react';
 
@@ -26,7 +26,7 @@ export const metadata:Metadata = {
     images: ["/screenshots/resume-og.png"],
   },
   alternates: {
-    canonical: `${hostedUrl}/resume`,
+    canonical: `${canonicalUrl}/resume`,
   },
 };
 

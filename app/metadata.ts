@@ -1,4 +1,4 @@
-import { hostedUrl, profile } from "@/constants";
+import { canonicalUrl, hostedUrl, profile } from "@/constants";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -115,9 +115,9 @@ export const metadata: Metadata = {
     },
     manifest: "/manifest.json",
     alternates: {
-        canonical: hostedUrl,
+        canonical: canonicalUrl,
         languages: {
-            "en-US": hostedUrl,
+            "en-US": canonicalUrl,
         },
     },
     category: "technology",

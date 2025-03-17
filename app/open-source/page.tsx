@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import OpenSource from "./OpenSource";
-import { hostedUrl } from "@/constants";
+import { canonicalUrl } from "@/constants";
 
 export const metadata: Metadata = {
     title: "Open Source",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         images: ["/screenshots/opensource-og.png.png"],
     },
     alternates: {
-        canonical:  `${hostedUrl}/open-source`,
+        canonical:  `${canonicalUrl}/open-source`,
       },
 };
 

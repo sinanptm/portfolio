@@ -1,4 +1,4 @@
-import { hostedUrl } from '@/constants';
+import { canonicalUrl } from '@/constants';
 import Project from './Project';
 import { Metadata } from 'next';
 
@@ -25,7 +25,7 @@ export const metadata:Metadata = {
       images: ["/screenshots/projects-og.png"],
   },
   alternates: {
-    canonical: `${hostedUrl}/projects`,
+    canonical: `${canonicalUrl}/projects`,
   },
 };
 

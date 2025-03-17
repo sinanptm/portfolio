@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Stack from "./Stack";
-import { hostedUrl } from "@/constants";
+import { canonicalUrl } from "@/constants";
 
 export const metadata: Metadata = {
   title: "Technology Stack",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     images: ["/screenshots/stack-og.png"],
   },
   alternates:{
-    canonical: `${hostedUrl}/stack`
+    canonical: `${canonicalUrl}/stack`
   }
 };
 

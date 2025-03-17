@@ -1,4 +1,5 @@
 'use client';
+
 import { memo } from 'react';
 import { globeConfig, globArcs } from "@/constants/glob";
 import ContactForm from '@/components/ContactForm';
