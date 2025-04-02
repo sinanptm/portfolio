@@ -71,7 +71,7 @@ export const metadata: Metadata = {
         statusBarStyle: "black-translucent",
     },
     verification: {
-        google: "google815b889e8dec9b27",
+        google: "google332e521595495b52",
     },
     twitter: {
         card: "summary_large_image",
@@ -125,11 +125,11 @@ export const metadata: Metadata = {
     metadataBase: new URL(hostedUrl),
     assets: '/assets',
     other: {
-        "google-site-verification": "google815b889e8dec9b27",
+        "google-site-verification": "google332e521595495b52",
         "msapplication-TileColor": "#d830dc",
         "msapplication-TileImage": "/icons/ms-icon-144x144.png",
         "msapplication-config": "/browserconfig.xml"
-      },
+    },
 };
 
 export default metadata;
