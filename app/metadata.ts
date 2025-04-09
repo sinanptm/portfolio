@@ -10,11 +10,11 @@ export const metadata: Metadata = {
     keywords: [
         "Muhammed Sinan",
         "Muhammed Sinan Developer",
-        "Muhammed Sinan Pavukkandy, Kozhikode, Kerala, India 673614",
+        "Muhammed Sinan Pavukkandy, Kozhikode, Kerala",
         "sinanptm Portfolio",
         "Muhammed sinan projects",
         "Muhammed sinan tech stack",
-        "Contact Muhammed sinan",
+        "Muhammed sinan Portfolio",
         "Full Stack Developer Portfolio",
         "MERN Stack Specialist",
         "React Developer Portfolio",
