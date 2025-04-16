@@ -1,9 +1,14 @@
+'use client';
+
 import Link from "next/link"
 import { socialMediaLinks, profile, navLinks } from "@/constants"
 import Image from "next/image"
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const year = new Date().getFullYear()
+  const pathname = usePathname();
+  if(pathname==='/resume') return null
 
   return (
     <footer className="bg-background border-t animate-fade-in">
