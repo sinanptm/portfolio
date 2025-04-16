@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import OpenSource from "./OpenSource";
+import OpenSource from "../../components/OpenSource";
 import { canonicalUrl } from "@/constants";
 
 export const metadata: Metadata = {

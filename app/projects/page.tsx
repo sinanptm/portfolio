@@ -1,5 +1,5 @@
 import { canonicalUrl } from '@/constants';
-import Project from './Project';
+import Project from '@/components/project/Project';
 import { Metadata } from 'next';
 
 export const metadata:Metadata = {

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Stack from "./Stack";
+import Stack from "../../components/Stack";
 import { canonicalUrl } from "@/constants";
 
 export const metadata: Metadata = {
