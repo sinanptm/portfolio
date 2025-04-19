@@ -30,7 +30,9 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-  return <Contact />;
+  return (
+    <Contact />
+  );
 }
 
 export default page;

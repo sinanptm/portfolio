@@ -30,7 +30,11 @@ export const metadata: Metadata = {
 };
 
 
-const OpenSourcePage = () => <OpenSource />;
+const OpenSourcePage = () => {
+    return (
+        <OpenSource />
+    )
+};
 
 
 export default OpenSourcePage;
