@@ -62,7 +62,7 @@ const About = () => {
                                                 width={12}
                                                 height={12}
                                                 alt="Star"
-                                                loading="lazy"
+                                                priority={false}
                                                 className="w-5 h-5 text-yellow-500"
                                             />
                                             Star me on GitHub
