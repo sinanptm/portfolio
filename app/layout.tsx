@@ -1,6 +1,6 @@
+import { personSchema, siteNavigationSchema, websiteSchema } from "@/app/schema";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import ThemeProvider from "@/components/layout/ThemeProvider";
-import { personSchema, websiteSchema } from "@/app/schema";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { firaCode, sourceCodePro } from "./fonts";
@@ -29,7 +29,8 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
               "@context": "https://schema.org",
               "@graph": [
                 personSchema,
-                websiteSchema
+                websiteSchema,
+                siteNavigationSchema,
               ]
             })
           }}

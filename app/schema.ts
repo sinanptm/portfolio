@@ -13,23 +13,11 @@ export const personSchema = {
   url: hostedUrl,
   birthDate: "2005-06-02",
   nationality: "Indian",
-  keywords: [
-    "Web Development", "Full Stack", "JavaScript",
-    "React", "Node.js", "TypeScript"
-  ],
   sameAs: [
     profile.gitHub,
     profile.linkedin,
     profile.x,
     profile.instagram
-  ],
-  knowsLanguage: ["Malayalam", "English"],
-  knowsAbout: [
-    "Web Development", "MERN Stack",
-    "TypeScript", "JavaScript",
-    "NodeJS", "ExpressJS", "Nest JS",
-    "ReactJS", "Next JS",
-    "MongoDB", "API Development"
   ],
   address: {
     "@type": "PostalAddress",
@@ -52,4 +40,25 @@ export const websiteSchema = {
   copyrightYear: new Date().getFullYear(),
   datePublished: "2025-01-01",
   dateModified: new Date().toISOString()
+};
+
+export const siteNavigationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  "name": [
+    "Home",
+    "Projects",
+    "Open Source",
+    "Stack",
+    "Contact Me",
+    "Resume"
+  ],
+  "url": [
+    `${hostedUrl}/`,
+    `${hostedUrl}/projects`,
+    `${hostedUrl}/open-source`,
+    `${hostedUrl}/stack`,
+    `${hostedUrl}/contact`,
+    `${hostedUrl}/resume`
+  ]
 };
