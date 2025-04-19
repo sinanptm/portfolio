@@ -6,7 +6,7 @@ export const metadata: Metadata = {
         default: `Muhammed Sinan - Full Stack Developer `,
         template: "%s | Muhammed Sinan - Full Stack Developer",
     },
-    description: "Full Stack Developer specializing in MERN stack. Building scalable web applications with React, Node.js, Express, MongoDB, and Next.js. Available for collaboration.",
+    description: "Full Stack Developer specializing in MERN stack. Building scalable web apps with React, Node.js, Express, MongoDB, and Next.js. Open for collaboration.",
     keywords: [
         "Muhammed Sinan",
         "Muhammed Sinan Developer",
