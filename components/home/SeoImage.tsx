@@ -19,7 +19,7 @@ const SeoImage = () => {
         width={1200}
         height={630}
         priority
-        quality={80}
+        quality={65}
       />
     </div>
   );
