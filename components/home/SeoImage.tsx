@@ -1,3 +1,4 @@
+// components/home/SeoImage.jsx
 import Image from "next/image";
 import { memo } from "react";
 
@@ -18,7 +19,7 @@ const SeoImage = () => {
         width={1200}
         height={630}
         priority
-        quality={70}
+        quality={65}
       />
     </div>
   );
