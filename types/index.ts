@@ -19,6 +19,23 @@ export interface Tech {
     url: string;
 }
 
+export type Experience = {
+    id: string;
+    company: string;
+    role: string;
+    type: 'fulltime' | 'contract' | 'freelance' | 'internship';
+    duration: {
+        start: string;
+        end: string | 'Present';
+    };
+    location: string;
+    description: string;
+    responsibilities: string[];
+    technologies: string[];
+    achievements: string[];
+    logo: string;
+};
+
 export interface RootLayoutProps {
     readonly children: React.ReactNode;
 }
@@ -50,6 +67,18 @@ export type ThingsIDo = {
         text: string;
         icon: string;
     }[];
+};
+
+export type TimelineEntry = {
+    id: string;
+    title: string;
+    company: string;
+    duration: {
+        start: string;
+        end: string | 'Present';
+    };
+    description: string;
+    type: 'fulltime' | 'contract' | 'freelance' | 'internship';
 };
 
 export type ChartDataType = {

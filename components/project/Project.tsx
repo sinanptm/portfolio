@@ -12,7 +12,7 @@ import dynamic from "next/dynamic";
 
 const ComputerCanvas = dynamic(() => import("../../components/3D/ComputerCanvas"), { ssr: false });
 
-export default memo(function Projects() {
+const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -69,7 +69,7 @@ export default memo(function Projects() {
           </Link>
         </motion.div>
       </div>
-      
+
       <div className="container mx-auto  py-16" id="projects">
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -90,4 +90,6 @@ export default memo(function Projects() {
       )}
     </section>
   );
-});
+};
+
+export default memo(Projects);

@@ -76,6 +76,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/projects", label: "Projects" },
   { href: "/open-source", label: "Open Source" },
+  { href: "/experience", label: "Experience" },
   { href: "/stack", label: "Stack" },
   { href: "/contact", label: "Contact Me" },
 ];
