@@ -1,9 +1,18 @@
+// components/home/SeoImage.jsx
 import Image from "next/image";
 import { memo } from "react";
 
 const SeoImage = () => {
   return (
-    <div className="relative w-full h-48 md:h-64 mb-8 rounded-lg overflow-hidden">
+    <div
+      className="absolute overflow-hidden"
+      style={{
+        width: "1px",
+        height: "1px",
+        position: "absolute",
+        left: "-9999px",
+      }}
+    >
       <Image
         src="/assets/profile-image.jpg"
         alt="Muhammed sinan - MERN stack developer"
@@ -11,8 +20,6 @@ const SeoImage = () => {
         height={630}
         priority
         quality={80}
-        className="object-cover"
-        sizes="(max-width: 768px) 100vw, 50vw"
       />
     </div>
   );
