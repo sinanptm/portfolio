@@ -1,4 +1,4 @@
-import { hostedUrl, profile } from "@/constants";
+import { hostedUrl, navLinks, profile } from "@/constants";
 
 export const personSchema = {
   "@context": "https://schema.org",
@@ -45,20 +45,6 @@ export const websiteSchema = {
 export const siteNavigationSchema = {
   "@context": "https://schema.org",
   "@type": "SiteNavigationElement",
-  "name": [
-    "Home",
-    "Projects",
-    "Open Source",
-    "Stack",
-    "Contact Me",
-    "Resume"
-  ],
-  "url": [
-    `${hostedUrl}/`,
-    `${hostedUrl}/projects`,
-    `${hostedUrl}/open-source`,
-    `${hostedUrl}/stack`,
-    `${hostedUrl}/contact`,
-    `${hostedUrl}/resume`
-  ]
+  "name": navLinks.map(el => el.label),
+  "url": navLinks.map(el => `${hostedUrl}/${el.href}`)
 };

@@ -25,7 +25,7 @@ const Expertise = () => {
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative z-10">
                 {expertiseAreas.map((area, index) => (
                     <motion.div
-                        key={area.title}
+                        key={index}
                         className="flex flex-col items-center text-center p-4"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
