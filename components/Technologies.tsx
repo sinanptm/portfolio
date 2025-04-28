@@ -12,6 +12,7 @@ const Technologies = () => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
       transition={{ duration: 0.3, delay: i * 0.05 }}
+      className="custom-shadow"
     >
       <CardSpotlight className="p-4 flex flex-col items-center justify-center">
         <div className="mb-2 sm:mb-3">

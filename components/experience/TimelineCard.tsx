@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, useCallback, MouseEvent } from "react";
 import type { TimelineEntry } from "@/types";
 
 interface TimelineCardProps {
@@ -12,7 +12,32 @@ interface TimelineCardProps {
 
 const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
     const [isHovered, setIsHovered] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const cardRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+    useEffect(() => {
+        if (isMobile) {
+            const timer = setTimeout(
+                () => {
+                    setIsHovered(true);
+                },
+                300 + index * 200,
+            );
+
+            return () => clearTimeout(timer);
+        }
+    }, [isMobile, index]);
 
     const cardVariants = {
         hidden: {
@@ -20,7 +45,7 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
             x: isEven ? -50 : 50,
             y: 30,
             rotateY: isEven ? -5 : 5,
-            rotateX: 5
+            rotateX: 5,
         },
         visible: {
             opacity: 1,
@@ -37,12 +62,12 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
             },
         },
         hover: {
-            y: -8,
-            scale: 1.02,
+            y: isMobile ? -4 : -8,
+            scale: isMobile ? 1.01 : 1.02,
             transition: {
                 type: "spring",
                 stiffness: 400,
-                damping: 20
+                damping: 20,
             },
         },
     };
@@ -61,9 +86,8 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
         }),
     };
 
-    // Mouse parallax effect for card content
-    const handleMouseMove = (e: React.MouseEvent) => {
-        if (!cardRef.current) return;
+    const handleMouseMove = useCallback((e: MouseEvent) => {
+        if (!cardRef.current || isMobile) return;
 
         const rect = cardRef.current.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -72,36 +96,57 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
         const xPercent = x / rect.width - 0.5;
         const yPercent = y / rect.height - 0.5;
 
-        const elements = cardRef.current.querySelectorAll('.parallax-element');
+        const elements = cardRef.current.querySelectorAll(".parallax-element");
         elements.forEach((el) => {
-            const intensity = parseFloat(el.getAttribute('data-intensity') || '1');
-            (el as HTMLElement).style.transform = `translate(${xPercent * 10 * intensity}px, ${yPercent * 10 * intensity}px)`;
+            const intensity = Number.parseFloat(el.getAttribute("data-intensity") || "1")
+                ; (el as HTMLElement).style.transform = `translate(${xPercent * 10 * intensity}px, ${yPercent * 10 * intensity}px)`;
         });
-    };
+    }, [isMobile]);
 
-    const handleMouseLeave = () => {
+    const handleMouseLeave = useCallback(() => {
+        if (isMobile) return;
         setIsHovered(false);
         if (!cardRef.current) return;
 
-        const elements = cardRef.current.querySelectorAll('.parallax-element');
+        const elements = cardRef.current.querySelectorAll(".parallax-element");
         elements.forEach((el) => {
-            (el as HTMLElement).style.transform = 'translate(0px, 0px)';
+            ; (el as HTMLElement).style.transform = "translate(0px, 0px)";
         });
-    };
+    }, [isMobile]);
+
+    useEffect(() => {
+        if (!isMobile || !cardRef.current || !isHovered) return;
+
+        const elements = cardRef.current.querySelectorAll(".parallax-element");
+        elements.forEach((el, i) => {
+            const intensity = Number.parseFloat(el.getAttribute("data-intensity") || "1");
+            const delay = i * 0.1
+                ; (el as HTMLElement).style.transition = `transform 0.8s ease ${delay}s`
+                ; (el as HTMLElement).style.transform =
+                    `translate(${(Math.random() * 2 - 1) * 3 * intensity}px, ${(Math.random() * 2 - 1) * 3 * intensity}px)`;
+        });
+
+        return () => {
+            elements.forEach((el) => {
+                ; (el as HTMLElement).style.transform = "translate(0px, 0px)";
+            });
+        };
+    }, [isMobile, isHovered]);
 
     return (
-        <div className={`flex justify-start pt-16 sm:pt-24 md:pt-32 md:gap-6 lg:gap-10 ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}>
-            {/* Timeline marker with number - enhanced */}
+        <div
+            className={`flex justify-start pt-16 sm:pt-24 md:pt-32 md:gap-6 lg:gap-10 ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
+        >
             <motion.div
                 className="sticky flex flex-col md:flex-row z-40 items-center top-24 sm:top-32 md:top-40 self-start"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 transition={{
                     duration: 0.6,
                     type: "spring",
                     stiffness: 200,
-                    damping: 20
+                    damping: 20,
                 }}
             >
                 <div className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 absolute left-0 rounded-full bg-zinc-800/80 backdrop-blur-sm flex items-center justify-center border-2 border-violet-500/40 shadow-lg shadow-violet-500/20">
@@ -136,7 +181,7 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
                         duration: 0.6,
                         delay: 0.2,
                         type: "spring",
-                        stiffness: 100
+                        stiffness: 100,
                     }}
                 >
                     {entry.company}
@@ -150,9 +195,10 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
-                whileHover="hover"
+                whileHover={isMobile ? undefined : "hover"}
+                animate={isMobile && isHovered ? "hover" : undefined}
                 viewport={{ once: true, margin: "-100px" }}
-                onMouseEnter={() => setIsHovered(true)}
+                onMouseEnter={() => !isMobile && setIsHovered(true)}
                 onMouseLeave={handleMouseLeave}
                 onMouseMove={handleMouseMove}
                 aria-label={`${entry.title} at ${entry.company}`}
@@ -174,39 +220,39 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
                         transition={{ duration: 0.4 }}
                     />
 
-                    {/* Animated particles effect on hover */}
+                    {/* Animated particles effect on hover - more visible on mobile */}
                     {isHovered && (
                         <>
-                            {[...Array(6)].map((_, i) => (
+                            {[...Array(isMobile ? 8 : 6)].map((_, i) => (
                                 <motion.div
                                     key={i}
                                     className="absolute w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-violet-400/60"
                                     initial={{
                                         x: Math.random() * 100 - 50,
                                         y: Math.random() * 100 - 50,
-                                        opacity: 0
+                                        opacity: 0,
                                     }}
                                     animate={{
                                         x: Math.random() * 200 - 100,
                                         y: Math.random() * 200 - 100,
-                                        opacity: [0, 0.8, 0],
-                                        scale: [0, 1, 0]
+                                        opacity: [0, isMobile ? 1 : 0.8, 0],
+                                        scale: [0, 1, 0],
                                     }}
                                     transition={{
                                         duration: 2 + Math.random() * 2,
-                                        repeat: Infinity,
-                                        delay: Math.random() * 0.5
+                                        repeat: Number.POSITIVE_INFINITY,
+                                        delay: Math.random() * 0.5,
                                     }}
                                 />
                             ))}
                         </>
                     )}
 
-                    {/* Animated corner accent */}
+                    {/* Animated corner accent - more visible on mobile */}
                     <motion.div
                         className="absolute top-0 right-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 overflow-hidden"
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: isHovered ? 1 : 0.3 }}
+                        animate={{ opacity: isHovered ? (isMobile ? 1 : 1) : isMobile ? 0.5 : 0.3 }}
                         transition={{ duration: 0.4 }}
                     >
                         <div className="absolute top-0 right-0 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-violet-500/30 rotate-45 transform origin-bottom-left"></div>
@@ -234,9 +280,7 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
                             custom={1}
                             viewport={{ once: true }}
                         >
-                            <h4 className="text-xl sm:text-2xl font-bold text-zinc-100">
-                                {entry.title}
-                            </h4>
+                            <h4 className="text-xl sm:text-2xl font-bold text-zinc-100">{entry.title}</h4>
                         </motion.div>
 
                         <motion.div
@@ -270,13 +314,13 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
                         {entry.description}
                     </motion.p>
 
-                    {/* Enhanced animated accent line */}
+                    {/* Enhanced animated accent line - more visible on mobile */}
                     <motion.div
                         className="absolute bottom-0 left-0 h-0.5 sm:h-1 bg-gradient-to-r from-violet-600 via-indigo-500 to-transparent"
-                        initial={{ width: "0%" }}
+                        initial={{ width: isMobile ? "30%" : "0%" }}
                         animate={{
-                            width: isHovered ? "100%" : "30%",
-                            boxShadow: isHovered ? "0 0 10px rgba(139, 92, 246, 0.5)" : "none"
+                            width: isHovered ? "100%" : isMobile ? "50%" : "30%",
+                            boxShadow: isHovered ? "0 0 10px rgba(139, 92, 246, 0.5)" : "none",
                         }}
                         transition={{ duration: 0.8 }}
                     />

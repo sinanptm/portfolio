@@ -1,11 +1,11 @@
 'use client';
 import { Suspense, useState, FC, memo } from "react";
 import dynamic from 'next/dynamic';
-import { Canvas, GroupProps } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload } from "@react-three/drei";
 import CanvasLoader from "./CanvasLoader";
 
-const Computers = dynamic<GroupProps>(() => import('./Computer').then(mod => mod.default),
+const Computers = dynamic(() => import('./Computer').then(mod => mod.default),
   {
     ssr: false,
     loading: () => <CanvasLoader />

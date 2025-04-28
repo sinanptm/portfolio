@@ -37,7 +37,7 @@ export type Experience = {
 };
 
 export interface RootLayoutProps {
-    readonly children: React.ReactNode;
+    children: ReactNode;
 }
 
 export type ProjectModelProps = {

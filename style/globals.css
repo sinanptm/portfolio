@@ -1,18 +1,103 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@plugin "tailwindcss-animate";
+@config '../tailwind.config.ts';
+
+@theme {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+  --blue-start: #3b82f6;
+  --purple-end: #8b5cf6;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
   }
 }
 
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bg-blue-purple {
+  background-image: linear-gradient(to right, var(--blue-start), var(--purple-end));
+}
+
+.custom-shadow {
+  transition: box-shadow 0.3s ease;
+}
+
+.custom-shadow:hover {
+  box-shadow: 4px 3px 7px 3px rgba(105, 3, 121, 0.25);
+}
+
+
+
 @layer base {
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
   .remove-scrollbar::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-    border-radius: 0px;
+    width: 0;
+    height: 0;
+    border-radius: 0;
   }
 
   .remove-scrollbar::-webkit-scrollbar-track {
@@ -21,7 +106,7 @@
 
   .remove-scrollbar::-webkit-scrollbar-thumb {
     background: transparent;
-    border-radius: 0px;
+    border-radius: 0;
   }
 
   .remove-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -29,65 +114,12 @@
   }
 
   .heading {
-    font-size: 1.875rem;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 1rem;
+    @apply text-[1.875rem] font-[900] text-center mb-4;
   }
 
   @media (min-width: 640px) {
     .heading {
-      font-size: 2.25rem;
-      margin-bottom: 2rem;
+      @apply text-[2.25rem] mb-8;
     }
   }
-}
-
-@layer base {
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
-}
-
-
-@layer base {
-  * {
-    @apply border-[var(--border)];
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  color-scheme: dark;
 }

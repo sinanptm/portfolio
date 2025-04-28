@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Experience from '@/components/experience/Experience';
+import Experience from '@/components/Experience';
 import { canonicalUrl } from '@/constants';
 
 export const metadata: Metadata = {

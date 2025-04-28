@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
@@ -14,16 +15,16 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/_next/image", 
+        source: "/_next/image",
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable", 
+            value: "public, max-age=31536000, immutable",
           },
         ],
       },
       {
-        source: "/assets/:path*", 
+        source: "/assets/:path*",
         headers: [
           {
             key: "Cache-Control",
