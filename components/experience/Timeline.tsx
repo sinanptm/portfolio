@@ -158,7 +158,7 @@ export const Timeline = ({ data }: TimelineProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
             >
-                <div className="w-24 sm:w-20 h-1.5 sm:h-1 bg-gradient-to-r from-transparent via-violet-500 to-transparent rounded-full shadow-[0_0_10px_rgba(139,92,246,0.5)]" />
+                <div className="w-24 sm:w-20 h-1 bg-gradient-to-r from-transparent via-violet-500 to-transparent rounded-full shadow-[0_0_10px_rgba(139,92,246,0.5)]" />
             </motion.div>
         </motion.div>
     );

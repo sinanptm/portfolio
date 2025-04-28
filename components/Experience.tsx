@@ -27,7 +27,7 @@ const Experience = () => {
     return (
         <main
             ref={containerRef}
-            className="flex flex-col min-h-screen relative overflow-hidden max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:py-8 lg:px-8"
+            className="flex flex-col min-h-screen relative overflow-hidden max-w-7xl mx-auto py-5 sm:px-6 lg:py-8 lg:px-8"
         >
 
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
