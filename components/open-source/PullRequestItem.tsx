@@ -58,7 +58,7 @@ const PullRequestItem = ({ pr, index }: { pr: PullRequest; index: number; }) => 
       initial="hidden"
       animate="visible"
       custom={index}
-      className={`${colors[index % colors.length]} p-4 rounded-lg overflow-hidden`}
+      className={`${colors[index % colors.length]} p-4 rounded-lg overflow-hidden custom-shadow`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >

@@ -13,6 +13,18 @@ export const Timeline = ({ data }: TimelineProps) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     useEffect(() => {
         if (ref.current) {
@@ -55,33 +67,30 @@ export const Timeline = ({ data }: TimelineProps) => {
                     <TimelineCard key={entry.id} entry={entry} isEven={index % 2 === 0} index={index} />
                 ))}
 
-                {/* Enhanced timeline line with premium effects */}
                 <div
                     style={{ height: height + "px" }}
-                    className="absolute left-4 sm:left-6 md:left-8 top-0 w-[2px] sm:w-[3px] bg-gradient-to-b from-transparent via-violet-600/20 to-transparent"
+                    className="absolute left-4 sm:left-6 md:left-8 top-0 w-[2px] sm:w-[3px] bg-gradient-to-b from-transparent via-violet-600/30 to-transparent"
                     aria-hidden="true"
                 >
-                    {/* Animated progress line */}
                     <motion.div
                         style={{
                             height: heightTransform,
                             opacity: opacityTransform,
                         }}
-                        className="absolute inset-x-0 top-0 w-[2px] sm:w-[3px] bg-gradient-to-t from-violet-600 via-violet-500 to-transparent rounded-full"
+                        className="absolute inset-x-0 top-0 w-[3px] sm:w-[3px] bg-gradient-to-t from-violet-600 via-violet-500 to-transparent rounded-full shadow-[0_0_8px_rgba(139,92,246,0.6)]"
                     />
 
-                    {/* Animated floating particles */}
-                    {[...Array(8)].map((_, i) => (
+                    {[...Array(isMobile ? 12 : 8)].map((_, i) => (
                         <motion.div
                             key={i}
-                            className="absolute w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-violet-500/80 left-1/2 -translate-x-1/2 shadow-lg shadow-violet-500/50"
+                            className="absolute w-2 h-2 sm:w-2 sm:h-2 rounded-full bg-violet-500/80 left-1/2 -translate-x-1/2 shadow-lg shadow-violet-500/50"
                             style={{
-                                top: `${(i + 1) * 12}%`,
+                                top: `${(i + 1) * (isMobile ? 8 : 12)}%`,
                                 opacity: opacityTransform,
                             }}
                             animate={{
-                                y: [0, 15, 0],
-                                scale: [1, 1.3, 1],
+                                y: [0, isMobile ? 10 : 15, 0],
+                                scale: [1, isMobile ? 1.5 : 1.3, 1],
                                 opacity: [0.5, 0.9, 0.5],
                                 boxShadow: [
                                     "0 0 3px rgba(139, 92, 246, 0.3)",
@@ -90,52 +99,51 @@ export const Timeline = ({ data }: TimelineProps) => {
                                 ],
                             }}
                             transition={{
-                                duration: 5,
+                                duration: isMobile ? 4 : 5,
                                 repeat: Number.POSITIVE_INFINITY,
-                                delay: i * 0.7,
+                                delay: i * (isMobile ? 0.5 : 0.7),
                                 ease: "easeInOut",
                             }}
                         />
                     ))}
 
-                    {/* Timeline nodes with enhanced effects */}
                     {data.map((_, idx) => (
                         <motion.div
                             key={`node-${idx}`}
-                            className="absolute w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-violet-500/40 left-1/2 -translate-x-1/2 shadow-lg shadow-violet-500/50 z-10"
+                            className="absolute w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-violet-500/50 left-1/2 -translate-x-1/2 shadow-lg shadow-violet-500/50 z-10"
                             style={{
                                 top: `${(idx + 0.5) * (100 / data.length)}%`,
                                 opacity: opacityTransform,
                             }}
                             animate={{
                                 boxShadow: [
-                                    "0 0 5px rgba(139, 92, 246, 0.3)",
-                                    "0 0 20px rgba(139, 92, 246, 0.7)",
-                                    "0 0 5px rgba(139, 92, 246, 0.3)",
+                                    "0 0 5px rgba(139, 92, 246, 0.4)",
+                                    "0 0 20px rgba(139, 92, 246, 0.8)",
+                                    "0 0 5px rgba(139, 92, 246, 0.4)",
                                 ],
+                                scale: isMobile ? [1, 1.1, 1] : [1, 1, 1],
                             }}
                             transition={{
-                                duration: 4,
+                                duration: isMobile ? 3 : 4,
                                 repeat: Number.POSITIVE_INFINITY,
-                                delay: idx * 0.7,
+                                delay: idx * (isMobile ? 0.5 : 0.7),
                                 ease: "easeInOut",
                             }}
                         />
                     ))}
 
-                    {/* Pulsing glow effect at the bottom of the active line */}
                     <motion.div
-                        className="absolute w-8 h-8 rounded-full bg-violet-500/20 left-1/2 -translate-x-1/2 blur-md"
+                        className="absolute w-10 h-10 sm:w-8 sm:h-8 rounded-full bg-violet-500/30 left-1/2 -translate-x-1/2 blur-md"
                         style={{
                             top: heightTransform,
                             opacity: opacityTransform,
                         }}
                         animate={{
-                            scale: [1, 1.5, 1],
-                            opacity: [0.3, 0.7, 0.3],
+                            scale: isMobile ? [1, 1.8, 1] : [1, 1.5, 1],
+                            opacity: isMobile ? [0.4, 0.8, 0.4] : [0.3, 0.7, 0.3],
                         }}
                         transition={{
-                            duration: 2,
+                            duration: isMobile ? 1.5 : 2,
                             repeat: Number.POSITIVE_INFINITY,
                             ease: "easeInOut",
                         }}
@@ -143,7 +151,6 @@ export const Timeline = ({ data }: TimelineProps) => {
                 </div>
             </div>
 
-            {/* Final decorative element */}
             <motion.div
                 className="w-full flex justify-center mt-16"
                 initial={{ opacity: 0, y: 20 }}
@@ -151,7 +158,7 @@ export const Timeline = ({ data }: TimelineProps) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
             >
-                <div className="w-20 h-1 bg-gradient-to-r from-transparent via-violet-500 to-transparent rounded-full" />
+                <div className="w-24 sm:w-20 h-1.5 sm:h-1 bg-gradient-to-r from-transparent via-violet-500 to-transparent rounded-full shadow-[0_0_10px_rgba(139,92,246,0.5)]" />
             </motion.div>
         </motion.div>
     );

@@ -1,15 +1,15 @@
 import { personSchema, siteNavigationSchema, websiteSchema } from "@/app/schema";
-import { HeroHighlight } from "@/components/ui/hero-highlight";
+import HighlightBackground from "@/components/HighlightBackground";
+import ThemeProvider from "@/components/layout/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { firaCode, sourceCodePro } from "./fonts";
+import Footer from "@/components/layout/Footer";
 import NavBar from "@/components/layout/NavBar";
 import type { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
 import metadata from "./metadata";
 import "@/style/globals.css";
-import Footer from "@/components/layout/Footer";
-import ThemeProvider from "@/components/layout/ThemeProvider";
 
 const layout = ({ children }: RootLayoutProps) => {
   return (
@@ -31,7 +31,7 @@ const layout = ({ children }: RootLayoutProps) => {
             }),
           }}
         />
-        <HeroHighlight>
+        <HighlightBackground>
           <NavBar />
           <ThemeProvider
             attribute="class"
@@ -41,7 +41,7 @@ const layout = ({ children }: RootLayoutProps) => {
           </ThemeProvider>
           <Toaster />
           <Footer />
-        </HeroHighlight>
+        </HighlightBackground>
         <Analytics debug={false} />
       </body>
     </html>

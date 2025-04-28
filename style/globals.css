@@ -78,6 +78,16 @@
   background-image: linear-gradient(to right, var(--blue-start), var(--purple-end));
 }
 
+.custom-shadow {
+  transition: box-shadow 0.3s ease;
+}
+
+.custom-shadow:hover {
+  box-shadow: 4px 3px 7px 3px rgba(105, 3, 121, 0.25);
+}
+
+
+
 @layer base {
   body {
     background-color: hsl(var(--background));

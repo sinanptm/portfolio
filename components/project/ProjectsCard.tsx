@@ -19,7 +19,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
   const { hoveredItem, rotate, translateX, handleHover, handleMouseMove } = useTooltip();
 
   return (
-    <div className="rounded-xl group/bento hover:shadow-xl transition duration-300 shadow-input dark:shadow-none p-4 bg-black flex flex-col h-full">
+    <div className="rounded-xl group/bento transition duration-300 custom-shadow p-4 bg-black flex flex-col h-full">
       <motion.div className="overflow-hidden rounded-md mb-4" initial="rest" whileHover="hover" animate="rest">
         <motion.div variants={imageVariants}>
           <Image

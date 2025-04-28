@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { memo, useEffect, useState, useRef } from "react";
 import { containerVariants, staggerChildren } from "@/style";
 import { timelineData } from "@/constants/timeline";
-import Timeline from "./Timeline";
+import Timeline from "./experience/Timeline";
 
 const Experience = () => {
     const [mounted, setMounted] = useState(false);
@@ -27,7 +27,7 @@ const Experience = () => {
     return (
         <main
             ref={containerRef}
-            className="flex flex-col min-h-screen relative overflow-hidden"
+            className="flex flex-col min-h-screen relative overflow-hidden max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:py-8 lg:px-8"
         >
 
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">

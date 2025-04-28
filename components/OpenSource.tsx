@@ -11,8 +11,8 @@ import Link from "next/link";
 import { memo } from "react";
 
 const OpenSource = () => {
-    const { handleHover, hoveredItem, rotate, translateX , handleMouseMove} = useTooltip();
-    
+    const { handleHover, hoveredItem, rotate, translateX, handleMouseMove } = useTooltip();
+
     return (
         <motion.section
             className="relative w-full min-h-screen mx-auto px-4 sm:px-6 lg:px-8 py-6"
@@ -20,7 +20,7 @@ const OpenSource = () => {
             animate="visible"
             variants={containerVariants}
         >
-            <div className="max-w-7xl mx-auto space-y-16">
+            <div className="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:py-8 lg:px-8 space-y-16">
                 <motion.h2 variants={titleVariants} className="heading text-3xl sm:text-4xl font-bold text-center mb-4 sm:mb-8">Contributed Organizations</motion.h2>
                 <div className="flex flex-wrap items-center justify-center gap-16">
                     {openSourceOrganizations.map((org) => (

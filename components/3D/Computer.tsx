@@ -2,8 +2,7 @@
 import { useRef, useEffect, useMemo, FC, memo } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { Mesh, type Group, type Object3D } from 'three';
-import type { SpotLightProps } from '@react-three/fiber';
+import { Mesh, SpotLight, type Group, type Object3D } from 'three';
 import useScreen from "@/hooks/useScreen";
 
 
@@ -27,12 +26,12 @@ const Computers: FC = () => {
       groundColor: "black"
     },
     spotLight: {
-      position: [-20, 50, 100],
+      // position: [-20, 50, 100],
       angle: 0.19,
       penumbra: 1,
       intensity: 1,
       castShadow: true,
-    } satisfies Partial<SpotLightProps>,
+    } satisfies Partial<SpotLight>,
     pointLight: {
       intensity: 2
     }
