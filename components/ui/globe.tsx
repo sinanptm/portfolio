@@ -3,15 +3,9 @@
 import { useEffect, useRef, useMemo, useCallback } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
-import { useThree, Object3DNode, Canvas, extend } from "@react-three/fiber";
+import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "@/constants/glob.json";
-
-declare module "@react-three/fiber" {
-  interface ThreeElements {
-    threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
-  }
-}
 
 extend({ ThreeGlobe });
 
@@ -174,6 +168,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     return () => clearInterval(interval);
   }, [globeData]);
 
+  // @ts-expect-error proper-type
   return <threeGlobe ref={globeRef} />;
 }
 
