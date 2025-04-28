@@ -1,25 +1,25 @@
 import { personSchema, siteNavigationSchema, websiteSchema } from "@/app/schema";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
-import ThemeProvider from "@/components/layout/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/toaster";
 import { firaCode, sourceCodePro } from "./fonts";
 import NavBar from "@/components/layout/NavBar";
-import { RootLayoutProps } from "@/types";
+import type { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
 import metadata from "./metadata";
-import "../style/globals.css";
+import "@/style/globals.css";
 import Footer from "@/components/layout/Footer";
-import { memo } from "react";
+import ThemeProvider from "@/components/layout/ThemeProvider";
 
-const layout = ({ children }: Readonly<RootLayoutProps>) => {
+const layout = ({ children }: RootLayoutProps) => {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={
-          cn("bg-background antialiased relative remove-scrollbar",
-            firaCode.className, sourceCodePro.className
-          )}
+        className={cn(
+          "antialiased relative remove-scrollbar",
+          firaCode.className,
+          sourceCodePro.className,
+        )}
         suppressHydrationWarning={true}
       >
         <script
@@ -27,30 +27,26 @@ const layout = ({ children }: Readonly<RootLayoutProps>) => {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@graph": [
-                personSchema,
-                websiteSchema,
-                siteNavigationSchema,
-              ]
-            })
+              "@graph": [personSchema, websiteSchema, siteNavigationSchema],
+            }),
           }}
         />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-        >
-          <HeroHighlight>
-            <NavBar />
+        <HeroHighlight>
+          <NavBar />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+          >
             {children}
-            <Toaster />
-            <Footer />
-          </HeroHighlight>
-          <Analytics debug={false} />
-        </ThemeProvider>
+          </ThemeProvider>
+          <Toaster />
+          <Footer />
+        </HeroHighlight>
+        <Analytics debug={false} />
       </body>
     </html>
   );
 };
 export { metadata };
 
-export default memo(layout);
+export default layout;
