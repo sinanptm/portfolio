@@ -4,10 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Expertise from '@/components/experience/Expertise';
 
 const Stack = () => {
-
   return (
-    <section className="relative w-full min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl">
+    <section className="relative w-full min-h-screen ">
+      <div className="max-w-7xl mx-auto px-5 py-16 sm:px-6 lg:px-10">
         <AnimatePresence mode='popLayout'>
           <motion.h1
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-4"
