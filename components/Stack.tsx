@@ -4,10 +4,13 @@ import Technologies from '@/components/Technologies';
 import { motion, AnimatePresence } from 'framer-motion';
 import useScreen from '@/hooks/useScreen';
 import dynamic from 'next/dynamic';
-const KeyBoard = dynamic(() => import("@/components/KeyBoard"));
+import { useState } from 'react';
+
+const KeyBoard = dynamic(() => import("@/components/keyboard/KeyBoard"));
 
 const Stack = () => {
-  const { isMobile } = useScreen()
+  const { isMobile } = useScreen();
+  const [typedString, setTypedString] = useState("")
   return (
     <section className="relative w-full min-h-screen ">
       <AnimatePresence mode='popLayout'>
@@ -31,7 +34,7 @@ const Stack = () => {
           </motion.p>
 
 
-          {!isMobile && <KeyBoard />}
+          {!isMobile && <KeyBoard setTypedString={setTypedString} typedString={typedString} />}
 
           <motion.div
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8"

@@ -149,3 +149,74 @@ export const thingsIDo: ThingsIDo[] = [
     ]
   }
 ];
+
+// Keyboard theming
+export const KEYBOARD_THEME = {
+  baseColor: "purple",
+  glowColor: "rgba(139, 92, 246, 0.7)", // Tailwind purple-500
+  keyGradient: "from-purple-500/40 via-violet-500/30 to-indigo-500/40",
+  activeKeyGradient: "from-purple-500/80 via-violet-500/70 to-indigo-500/80",
+  hoverKeyGradient: "from-purple-500/60 via-violet-500/50 to-indigo-500/60",
+};
+
+// CSS Animations
+export const CSS_ANIMATIONS = `
+  @keyframes ripple {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
+  .animate-ripple {
+    animation: ripple 0.8s ease-out;
+  }
+  
+  @keyframes breathe {
+    0%, 100% {
+      box-shadow: 0 0 15px 5px rgba(139, 92, 246, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 25px 10px rgba(139, 92, 246, 0.6);
+    }
+  }
+  
+  .keyboard-glow {
+    animation: breathe 3s infinite ease-in-out;
+    animation-play-state: running !important;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(10px) scale(0.95);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.95);
+    }
+  }
+
+  .key-popup-animation {
+    animation: appear 2s ease-in-out;
+  }
+`;
+
+// Audio file path
+export const AUDIO_SRC = "/keyboardpress.mp3";
+
+// Timing constants
+export const KEY_PRESS_DURATION = 150;
+export const POPUP_DURATION = 2000;
