@@ -16,24 +16,305 @@ import {
   IconVolume,
   IconVolume2,
   IconVolume3,
+  IconSearch,
+  IconWorld,
+  IconCommand,
+  IconCaretLeftFilled,
+  IconCaretDownFilled,
 } from "@tabler/icons-react";
-import { IconSearch } from "@tabler/icons-react";
-import { IconWorld } from "@tabler/icons-react";
-import { IconCommand } from "@tabler/icons-react";
-import { IconCaretLeftFilled } from "@tabler/icons-react";
-import { IconCaretDownFilled } from "@tabler/icons-react";
-import { memo, useCallback, useEffect, useRef, useState } from "react";
+import { memo, ReactNode, useCallback, useEffect, useRef, useState } from "react";
+import { RootLayoutProps } from "@/types";
+
+const audioContext =
+  typeof window !== "undefined" ? new (window.AudioContext || (window as any).webkitAudioContext)() : null;
+let audioBuffer: AudioBuffer | null = null;
+
+const preloadAudio = async () => {
+  if (!audioContext) return;
+
+  try {
+    const response = await fetch("/keyboardpress.mp3");
+    const arrayBuffer = await response.arrayBuffer();
+    audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+  } catch (error) {
+    console.error("Error loading audio:", error);
+  }
+};
+
+const playKeySound = () => {
+  if (!audioContext || !audioBuffer) return;
+
+  const source = audioContext.createBufferSource();
+  source.buffer = audioBuffer;
+  source.connect(audioContext.destination);
+  source.start(0);
+};
+
+const Row = memo(({ children }: RootLayoutProps) => {
+  return <div className="flex gap-1 mb-1 w-full flex-shrink-0 justify-center">{children}</div>;
+});
+Row.displayName = "Row";
+
+const KBtn = memo(
+  ({
+    className,
+    children,
+    childrenClassName,
+    backlit = true
+  }: {
+    className?: string;
+    children?: ReactNode;
+    childrenClassName?: string;
+    backlit?: boolean;
+  }) => {
+    const [isPressed, setIsPressed] = useState(false);
+    const [glowIntensity, setGlowIntensity] = useState(0.3); // Start with some glow
+
+    // Create ripple effect when key is pressed
+    const rippleRef = useRef<HTMLDivElement>(null);
+
+    const handleClick = useCallback(() => {
+      // Play sound
+      playKeySound();
+
+      // Set pressed state
+      setIsPressed(true);
+
+      // Increase glow intensity with fade effect
+      setGlowIntensity(1);
+
+      // Create ripple effect
+      if (rippleRef.current) {
+        rippleRef.current.classList.remove("animate-ripple");
+        setTimeout(() => {
+          if (rippleRef.current) {
+            rippleRef.current.classList.add("animate-ripple");
+          }
+        }, 10);
+      }
+
+      // Reset pressed state after a short delay
+      const timer = setTimeout(() => setIsPressed(false), 150);
+
+      // Gradually decrease glow intensity but keep a minimum
+      const glowTimer = setTimeout(() => {
+        const fadeInterval = setInterval(() => {
+          setGlowIntensity((prev) => {
+            const newIntensity = prev - 0.05;
+            if (newIntensity <= 0.3) {
+              clearInterval(fadeInterval);
+              return 0.3; // Always maintain some glow
+            }
+            return newIntensity;
+          });
+        }, 30);
+
+        setTimeout(() => clearInterval(fadeInterval), 900);
+      }, 200);
+
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(glowTimer);
+      };
+    }, []);
+
+    return (
+      <div
+        className={cn(
+          "p-[1px] rounded-md cursor-pointer transition-all duration-150 group relative key-glow",
+          "bg-gradient-to-br from-purple-500/40 via-violet-500/30 to-indigo-500/40",
+          isPressed && "bg-gradient-to-br from-purple-500/80 via-violet-500/70 to-indigo-500/80",
+          "hover:bg-gradient-to-br hover:from-purple-500/60 hover:via-violet-500/50 hover:to-indigo-500/60",
+        )}
+        onClick={handleClick}
+        style={{
+          boxShadow: `0 0 ${10 + glowIntensity * 15}px ${glowIntensity * 5}px rgba(139, 92, 246, ${0.3 + glowIntensity * 0.4})`,
+          transition: "box-shadow 0.2s ease-in-out",
+        }}
+      >
+        <div
+          className={cn(
+            "h-10 w-10 bg-[#0A090D] rounded-md flex items-center justify-center transition-all relative overflow-hidden",
+            className,
+            isPressed && "bg-[#1A191D] transform scale-95",
+            "group-hover:bg-[#15141A] border border-purple-500/20 group-hover:border-purple-500/40",
+          )}
+          style={{
+            boxShadow: isPressed
+              ? "0px -0.5px 2px 0 rgba(147, 51, 234, 0.5) inset, -0.5px 0px 2px 0 rgba(147, 51, 234, 0.5) inset"
+              : "0px -0.5px 2px 0 rgba(147, 51, 234, 0.2) inset, -0.5px 0px 2px 0 rgba(147, 51, 234, 0.2) inset",
+          }}
+        >
+          {/* Ripple effect element */}
+          <div
+            ref={rippleRef}
+            className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-violet-500/20 opacity-0"
+          />
+
+          {/* Key glow effect */}
+          <div
+            className="absolute inset-0 rounded-md transition-opacity duration-300"
+            style={{
+              background: "radial-gradient(circle at center, rgba(139, 92, 246, 0.8) 0%, transparent 70%)",
+              opacity: 0.2 + glowIntensity * 0.5,
+            }}
+          />
+
+          <div
+            className={cn(
+              "text-neutral-200 text-[8px] w-full flex justify-center items-center flex-col relative z-10",
+              childrenClassName,
+              "text-purple-100/90",
+              isPressed && "text-purple-200",
+              "group-hover:text-purple-100",
+            )}
+          >
+            {children}
+          </div>
+
+          {/* Bottom edge glow */}
+          <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-purple-500/0 via-purple-500/70 to-purple-500/0 opacity-80 transition-opacity" />
+        </div>
+      </div>
+    );
+  },
+);
+KBtn.displayName = "KBtn";
+
+const CommandKey = memo(() => (
+  <KBtn className="w-14">
+    <div className="w-full h-full relative">
+      <div className="pl-2 absolute bottom-[-14px]">
+        <span className="block">command</span>
+      </div>
+      <div className="absolute top-[-12px] right-[4px]">
+        <IconCommand className="h-2 w-2" />
+      </div>
+    </div>
+  </KBtn>
+));
+CommandKey.displayName = "CommandKey";
+
+const OptionKey = memo(() => (
+  <KBtn>
+    <div className="w-full h-full py-1 relative">
+      <div className="pl-1.5 absolute bottom-[-10px]">
+        <span className="block">option</span>
+      </div>
+      <div className="absolute top-[-8px] right-[4px]">
+        <svg
+          fill="none"
+          version="1.1"
+          id="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          className="h-2 w-2"
+        >
+          <rect stroke="currentColor" strokeWidth={2} x="18" y="5" width="10" height="2" />
+          <polygon stroke="currentColor" strokeWidth={2} points="10.6,5 4,5 4,7 9.4,7 18.4,27 28,27 28,25 19.6,25 " />
+          <rect id="_Transparent_Rectangle_" className="st0" width="32" height="32" stroke="none" />
+        </svg>
+      </div>
+    </div>
+  </KBtn>
+));
+OptionKey.displayName = "OptionKey";
 
 const Keyboard = () => {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const isMountedRef = useRef(false);
+  const keyboardRef = useRef<HTMLDivElement>(null);
+
+  // Purple color settings
+  const purpleColor = {
+    baseColor: "purple",
+    glowColor: "rgba(139, 92, 246, 0.7)", // Tailwind purple-500
+    keyGradient: "from-purple-500/40 via-violet-500/30 to-indigo-500/40",
+  };
 
   useEffect(() => {
-    audioRef.current = new Audio("/keyboardpress.mp3");
+    if (typeof window !== "undefined" && !isMountedRef.current) {
+      isMountedRef.current = true;
+
+      const resumeAudio = () => {
+        if (audioContext?.state === "suspended") {
+          audioContext.resume();
+        }
+        document.removeEventListener("click", resumeAudio);
+      };
+      document.addEventListener("click", resumeAudio);
+
+      preloadAudio();
+
+      // Add animation styles
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes ripple {
+          0% {
+            transform: scale(0.8);
+            opacity: 0.7;
+          }
+          100% {
+            transform: scale(2);
+            opacity: 0;
+          }
+        }
+        
+        .animate-ripple {
+          animation: ripple 0.8s ease-out;
+        }
+        
+        @keyframes breathe {
+          0%, 100% {
+            box-shadow: 0 0 15px 5px rgba(139, 92, 246, 0.4);
+          }
+          50% {
+            box-shadow: 0 0 25px 10px rgba(139, 92, 246, 0.6);
+          }
+        }
+        
+        .keyboard-glow {
+          animation: breathe 3s infinite ease-in-out;
+          animation-play-state: running !important;
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Force animations to always run even when tab isn't focused
+      document.addEventListener("visibilitychange", () => {
+        const keyboardEl = keyboardRef.current;
+        if (keyboardEl) {
+          keyboardEl.style.animationPlayState = "running";
+        }
+
+        // Force all keys to maintain glow effect
+        const allKeys = document.querySelectorAll(".key-glow");
+        allKeys.forEach(key => {
+          (key as HTMLElement).style.animationPlayState = "running";
+        });
+      });
+    }
+
+    return () => {
+      document.removeEventListener("click", () => { });
+      document.removeEventListener("visibilitychange", () => { });
+    };
   }, []);
 
+  // Add ambient glow to entire keyboard - now purple
+  const keyboardGlowStyle = {
+    boxShadow: `0 0 25px 7px ${purpleColor.glowColor}`,
+  };
+
   return (
-    <div className="mx-auto h-full backdrop:blur-sm p-2 items-center justify-center">
-      <div className="h-full rounded-md mx-auto p-3">
+    <div className="mx-auto max-w-fit backdrop:blur-sm items-center justify-center will-change-transform">
+      <div
+        ref={keyboardRef}
+        className={cn(
+          "rounded-xl mx-auto p-3 bg-black/90 border border-purple-500/30 keyboard-glow"
+        )}
+        style={keyboardGlowStyle}
+      >
+
         <Row>
           <KBtn className="w-14">esc</KBtn>
           <KBtn>
@@ -275,7 +556,7 @@ const Keyboard = () => {
           <KBtn className="w-[94px]">shift</KBtn>
         </Row>
 
-        {/* sixth Row */}
+        {/* Sixth Row */}
         <Row>
           <KBtn>
             <div className="w-full h-full py-1 relative">
@@ -325,126 +606,8 @@ const Keyboard = () => {
           </div>
         </Row>
       </div>
-      <audio ref={audioRef} src="/keyboardpress.mp3" preload="auto" />
     </div>
   );
-};
-
-const KBtn = memo(({
-  className,
-  children,
-  childrenClassName,
-  backlit = true,
-}: {
-  className?: string;
-  children?: React.ReactNode;
-  childrenClassName?: string;
-  backlit?: boolean;
-}) => {
-  const [isPressed, setIsPressed] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    audioRef.current = new Audio("/keyboardpress.mp3");
-  }, []);
-
-  const handleClick = useCallback(() => {
-    // Play sound
-    if (audioRef.current) {
-      audioRef.current.currentTime = 0;
-      audioRef.current.play().catch((err) => console.error("Error playing sound:", err));
-    }
-
-    // Visual feedback
-    setIsPressed(true);
-    setTimeout(() => setIsPressed(false), 150);
-  }, []);
-
-  return (
-    <div
-      className={cn(
-        "p-[1px] rounded-md cursor-pointer transition-all duration-150",
-        backlit && "bg-white/[0.2] shadow-lg shadow-white/20",
-        isPressed && "bg-purple-500/50 shadow-purple-500/30",
-      )}
-      onClick={handleClick}
-    >
-      <div
-        className={cn(
-          "h-10 w-10 bg-[#0A090D] rounded-md flex items-center justify-center transition-all",
-          className,
-          isPressed && "bg-[#1A191D] transform scale-95",
-        )}
-        style={{
-          boxShadow: isPressed
-            ? "0px -0.5px 2px 0 #2D2D3F inset, -0.5px 0px 2px 0 #2D2D3F inset"
-            : "0px -0.5px 2px 0 #0D0D0F inset, -0.5px 0px 2px 0 #0D0D0F inset",
-        }}
-      >
-        <div
-          className={cn(
-            "text-neutral-200 text-[8px] w-full flex justify-center items-center flex-col",
-            childrenClassName,
-            backlit && "text-white",
-            isPressed && "text-purple-200",
-          )}
-        >
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-});
-
-KBtn.displayName = "KBtn";
-
-const Row = memo(({ children }: { children: React.ReactNode; }) => {
-  return <div className="flex gap-1 mb-1 w-full flex-shrink-0 justify-center">{children}</div>;
-});
-
-Row.displayName = "Row";
-
-const CommandKey = memo(() => (
-  <KBtn className="w-14">
-    <div className=" w-full h-full relative">
-      <div className="pl-2 absolute bottom-[-14px]">
-        <span className="block">command</span>
-      </div>
-      <div className="absolute top-[-12px] right-[4px]">
-        <IconCommand className="h-2 w-2" />
-      </div>
-    </div>
-  </KBtn>
-));
-
-CommandKey.displayName = "CommandKey";
-
-const OptionKey = memo(() => {
-  return (
-    <KBtn>
-      <div className="w-full h-full py-1 relative">
-        <div className="pl-1.5 absolute bottom-[-10px]">
-          <span className="block">option</span>
-        </div>
-        <div className="absolute top-[-8px] right-[4px]">
-          <svg
-            fill="none"
-            version="1.1"
-            id="icon"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 32 32"
-            className="h-2 w-2"
-          >
-            <rect stroke="currentColor" strokeWidth={2} x="18" y="5" width="10" height="2" />
-            <polygon stroke="currentColor" strokeWidth={2} points="10.6,5 4,5 4,7 9.4,7 18.4,27 28,27 28,25 19.6,25 " />
-            <rect id="_Transparent_Rectangle_" className="st0" width="32" height="32" stroke="none" />
-          </svg>
-        </div>
-      </div>
-    </KBtn>
-  );
-});
-
-OptionKey.displayName = "OptionKey"
+}
 
 export default memo(Keyboard);

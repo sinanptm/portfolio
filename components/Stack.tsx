@@ -1,13 +1,17 @@
 'use client';
+
 import Technologies from '@/components/Technologies';
 import { motion, AnimatePresence } from 'framer-motion';
-import Expertise from '@/components/experience/Expertise';
+import useScreen from '@/hooks/useScreen';
+import dynamic from 'next/dynamic';
+const KeyBoard = dynamic(() => import("@/components/KeyBoard"));
 
 const Stack = () => {
+  const { isMobile } = useScreen()
   return (
     <section className="relative w-full min-h-screen ">
-      <div className="max-w-7xl mx-auto px-5 py-16 sm:px-6 lg:px-10">
-        <AnimatePresence mode='popLayout'>
+      <AnimatePresence mode='popLayout'>
+        <div className="max-w-7xl mx-auto px-5 py-16 sm:px-6 lg:px-10 space-y-10">
           <motion.h1
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-4"
             initial={{ opacity: 0, y: -20 }}
@@ -22,12 +26,12 @@ const Stack = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Explore the cutting-edge technologies I leverage to craft powerful, efficient, and scalable solutions. <br />
+            Explore the cutting-edge technologies I leverage to craft efficient, and scalable solutions. <br />
             From concept to deployment, I bring expertise in every aspect of the development lifecycle.
           </motion.p>
 
-          <Expertise />
 
+          {!isMobile && <KeyBoard />}
 
           <motion.div
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8"
@@ -37,8 +41,8 @@ const Stack = () => {
           >
             <Technologies />
           </motion.div>
-        </AnimatePresence>
-      </div>
+        </div>
+      </AnimatePresence>
     </section>
   );
 };

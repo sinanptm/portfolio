@@ -5,14 +5,11 @@ import { memo, useEffect, useState, useRef } from "react";
 import { containerVariants, staggerChildren } from "@/style";
 import { timelineData } from "@/constants/timeline";
 import Timeline from "./experience/Timeline";
-import useScreen from "@/hooks/useScreen";
-import dynamic from "next/dynamic";
-const KeyBoard = dynamic(() => import("./KeyBoard"))
+import Expertise from "./experience/Expertise";
 
 const Experience = () => {
     const [mounted, setMounted] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
-    const { isMobile } = useScreen()
 
     // Parallax scroll effect for background elements
     const { scrollYProgress } = useScroll({
@@ -130,7 +127,8 @@ const Experience = () => {
                         </motion.p>
                     </div>
 
-                    {!isMobile && <KeyBoard />}
+                    <Expertise />
+
 
                     <Timeline data={timelineData} />
                 </motion.div>
