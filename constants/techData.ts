@@ -101,6 +101,7 @@ export const technologies: Tech[] = [
     { name: "AWS", url: `${baseUrlTech}/aws.svg` },
     { name: "Cloudinary", url: `${baseUrlTech}/cloudinary.png` },
     { name: "Firebase", url: `${baseUrlTech}/firebase.svg` },
+    { name: "Supabase", url: `${baseUrlTech}/supabase.png` },
     { name: "Vercel", url: `${baseUrlTech}/vercel.svg` },
     { name: "Render", url: `${baseUrlTech}/render.svg` },
     { name: "Nginx", url: `${baseUrlTech}/nginx.svg` },
