@@ -2,9 +2,9 @@ import Image from "next/image";
 import { memo } from "react";
 import CardSpotlight from "./ui/card-spotlight";
 import { motion } from 'framer-motion';
-import { technologies } from "@/constants/techData";
+import { Tech } from "@/types";
 
-const Technologies = () => {
+const Technologies = ({ technologies }: { technologies: Tech[]; }) => {
   return technologies.map(({ name, url }, i) => (
     <motion.div
       key={i}

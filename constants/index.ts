@@ -149,3 +149,9 @@ export const thingsIDo: ThingsIDo[] = [
     ]
   }
 ];
+// Audio file path
+export const AUDIO_SRC = "/keyboardpress.mp3";
+
+// Timing constants
+export const KEY_PRESS_DURATION = 150;
+

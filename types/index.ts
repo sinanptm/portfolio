@@ -96,3 +96,9 @@ export type ProjectButtonProps = {
     children: ReactNode;
     handleMouseMove: (event: MouseEvent<HTMLElement>) => void;
 };
+
+export interface RootLayoutProps {
+    children: ReactNode;
+}
+
+

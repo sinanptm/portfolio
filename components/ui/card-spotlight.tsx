@@ -1,7 +1,7 @@
 "use client";
 
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
-import React, { MouseEvent as ReactMouseEvent, useState } from "react";
+import { MouseEvent as ReactMouseEvent, useState } from "react";
 import CanvasRevealEffect from "@/components/ui/canvas-reveal-effect";
 import { cn } from "@/lib/utils";
 
