@@ -1,10 +1,10 @@
 "use client"
 
-import { KEYBOARD_THEME } from "@/constants";
+import { KEYBOARD_THEME } from "@/style";
 import { cn } from "@/lib/utils";
 import { memo, type ReactNode, useCallback, useRef, useEffect, useState } from "react"
 
-export interface KBtnProps {
+interface KBtnProps {
     className?: string;
     children?: ReactNode;
     childrenClassName?: string;
@@ -60,7 +60,7 @@ const KBtn = ({ className = "", children, childrenClassName = "", keyValue, onKe
     }, [])
 
     return (
-        <div
+        <button
             className={cn(
                 "p-[1px] rounded-md cursor-pointer transition-all duration-150 relative key-glow",
                 isWindowFocused
@@ -73,6 +73,7 @@ const KBtn = ({ className = "", children, childrenClassName = "", keyValue, onKe
             )}
             onClick={handleClick}
             onMouseEnter={handleMouseEnter}
+            name="KeyBoard Button"
             onMouseLeave={handleMouseLeave}
         >
             <div
@@ -148,7 +149,7 @@ const KBtn = ({ className = "", children, childrenClassName = "", keyValue, onKe
                     </>
                 )}
             </div>
-        </div>
+        </button>
     );
 };
 

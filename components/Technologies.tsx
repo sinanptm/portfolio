@@ -24,7 +24,7 @@ const Technologies = ({ technologies }: { technologies: Tech[]; }) => {
             className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
           />
         </div>
-        <h3 className="text-sm sm:text-base md:text-lg font-medium text-center">{name}</h3>
+        <h2 className="text-sm sm:text-base md:text-lg font-medium text-center">{name}</h2>
       </CardSpotlight>
     </motion.div>
   ));

@@ -24,17 +24,20 @@ import {
 } from "@tabler/icons-react"
 
 import { useKeyPress } from "../../hooks/useKeyPress";
-import { CSS_ANIMATIONS, KEYBOARD_THEME } from "@/constants";
+import { KEYBOARD_THEME } from "@/style";
 import Row from "./Row";
 import KBtn from "./KBtn";
 import { CommandKey, OptionKey } from "./SpecialKeys"
 
+import "@/style/keyboard-animations.css";
+
 interface KeyboardProps {
   typedString: string;
   setTypedString: (value: string) => void;
+  label: string;
 }
 
-const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
+const Keyboard = ({ typedString = "", setTypedString, label }: KeyboardProps) => {
   const keyboardRef = useRef<HTMLDivElement>(null);
   const { handleKeyPress, preloadAudio } = useKeyPress(typedString, setTypedString);
   const [isWindowFocused, setIsWindowFocused] = useState(true);
@@ -59,11 +62,6 @@ const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
 
     // Load audio
     preloadAudio()
-
-    // Add animation styles once
-    const style = document.createElement("style");
-    style.textContent = CSS_ANIMATIONS;
-    document.head.appendChild(style)
 
     // Force animations to always run even when the tab isn't focused
     const handleVisibilityChange = () => {
@@ -103,7 +101,7 @@ const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
           : "bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-purple-900/40 text-white/70 border-t border-x border-purple-500/30"
       )}>
         <div className="flex items-center gap-2">
-          <span>{typedString.trim() || "Type to filter..."}</span>
+          <span>{typedString.trim() || label}</span>
         </div>
       </div>
 

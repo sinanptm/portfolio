@@ -54,7 +54,11 @@ const Stack = () => {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="relative"
             >
-              <KeyBoard setTypedString={handleType} typedString={typedString} />
+              <KeyBoard
+                setTypedString={handleType}
+                typedString={typedString}
+                label='Type to filter Technologies...'
+              />
             </motion.div>
           )}
 
@@ -67,31 +71,6 @@ const Stack = () => {
           >
             <Technologies technologies={techs} />
           </motion.div>
-
-          {isMobile && (
-            <motion.div
-              className="mt-8 bg-purple-900/20 border border-purple-500/30 rounded-lg p-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <div className="relative">
-                <input
-                  type="text"
-                  value={typedString}
-                  onChange={(e) => setTypedString(e.target.value)}
-                  placeholder="Type to filter technologies..."
-                  className="w-full bg-black/50 border border-purple-500/50 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50"
-                />
-                <button
-                  onClick={() => setTypedString("")}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-purple-400 hover:text-purple-300"
-                >
-                  {typedString && "×"}
-                </button>
-              </div>
-            </motion.div>
-          )}
         </div>
       </AnimatePresence>
     </section>
