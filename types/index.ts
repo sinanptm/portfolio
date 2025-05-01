@@ -101,20 +101,4 @@ export interface RootLayoutProps {
     children: ReactNode;
 }
 
-export interface KBtnProps {
-    className?: string;
-    children?: ReactNode;
-    childrenClassName?: string;
-    keyValue?: string;
-    onKeyPress?: (key: string) => void;
-}
 
-export interface KeyboardProps {
-    typedString: string;
-    setTypedString: (value: string) => void;
-}
-
-export interface KeyPopupProps {
-    text: string;
-    isVisible: boolean;
-}

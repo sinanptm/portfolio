@@ -4,13 +4,27 @@ import Technologies from '@/components/Technologies';
 import { motion, AnimatePresence } from 'framer-motion';
 import useScreen from '@/hooks/useScreen';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { useCallback, useState, useEffect } from 'react';
+import { technologies } from '@/constants/techData';
 
 const KeyBoard = dynamic(() => import("@/components/keyboard/KeyBoard"));
 
 const Stack = () => {
   const { isMobile } = useScreen();
-  const [typedString, setTypedString] = useState("")
+  const [typedString, setTypedString] = useState("");
+  const [techs, setTechs] = useState(technologies);
+
+  const handleType = useCallback((val: string) => {
+    setTypedString(val);
+  }, []);
+
+  useEffect(() => {
+    const filteredTechs = technologies.filter((el) =>
+      el.name.toLocaleLowerCase().includes(typedString.toLocaleLowerCase())
+    );
+    setTechs(filteredTechs);
+  }, [typedString]); 
+
   return (
     <section className="relative w-full min-h-screen ">
       <AnimatePresence mode='popLayout'>
@@ -33,17 +47,51 @@ const Stack = () => {
             From concept to deployment, I bring expertise in every aspect of the development lifecycle.
           </motion.p>
 
-
-          {!isMobile && <KeyBoard setTypedString={setTypedString} typedString={typedString} />}
+          {!isMobile && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="relative"
+            >
+              <KeyBoard setTypedString={handleType} typedString={typedString} />
+            </motion.div>
+          )}
 
           <motion.div
             className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ staggerChildren: 0.05, delayChildren: 0.8 }}
           >
-            <Technologies />
+            <Technologies technologies={techs} />
           </motion.div>
+
+          {isMobile && (
+            <motion.div
+              className="mt-8 bg-purple-900/20 border border-purple-500/30 rounded-lg p-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <div className="relative">
+                <input
+                  type="text"
+                  value={typedString}
+                  onChange={(e) => setTypedString(e.target.value)}
+                  placeholder="Type to filter technologies..."
+                  className="w-full bg-black/50 border border-purple-500/50 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                />
+                <button
+                  onClick={() => setTypedString("")}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-purple-400 hover:text-purple-300"
+                >
+                  {typedString && "×"}
+                </button>
+              </div>
+            </motion.div>
+          )}
         </div>
       </AnimatePresence>
     </section>
@@ -51,4 +99,3 @@ const Stack = () => {
 };
 
 export default Stack;
-

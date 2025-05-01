@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { memo, useEffect, useRef } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import {
   IconBrightnessDown,
@@ -21,83 +21,99 @@ import {
   IconWorld,
   IconCaretLeftFilled,
   IconCaretDownFilled,
-} from "@tabler/icons-react";
+} from "@tabler/icons-react"
 
-import { KeyboardProps } from "../../types";
-import { useAudio } from "../../hooks/useAudio";
 import { useKeyPress } from "../../hooks/useKeyPress";
 import { CSS_ANIMATIONS, KEYBOARD_THEME } from "@/constants";
 import Row from "./Row";
 import KBtn from "./KBtn";
-import { CommandKey, OptionKey } from "./SpecialKeys";
+import { CommandKey, OptionKey } from "./SpecialKeys"
 
-/**
- * Main Keyboard component
- */
+interface KeyboardProps {
+  typedString: string;
+  setTypedString: (value: string) => void;
+}
+
 const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
   const keyboardRef = useRef<HTMLDivElement>(null);
-  const { preloadAudio } = useAudio();
-  const { showPopup, handleKeyPress } = useKeyPress(typedString, setTypedString);
+  const { handleKeyPress, preloadAudio } = useKeyPress(typedString, setTypedString);
+  const [isWindowFocused, setIsWindowFocused] = useState(true);
+
+  // Track window focus state
+  useEffect(() => {
+    const handleFocus = () => setIsWindowFocused(true);
+    const handleBlur = () => setIsWindowFocused(false);
+
+    window.addEventListener('focus', handleFocus);
+    window.addEventListener('blur', handleBlur);
+
+    return () => {
+      window.removeEventListener('focus', handleFocus);
+      window.removeEventListener('blur', handleBlur);
+    };
+  }, [])
 
   // Initialize keyboard on mount
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (typeof window === "undefined") return
 
     // Load audio
-    preloadAudio();
+    preloadAudio()
 
     // Add animation styles once
     const style = document.createElement("style");
     style.textContent = CSS_ANIMATIONS;
-    document.head.appendChild(style);
+    document.head.appendChild(style)
 
     // Force animations to always run even when the tab isn't focused
     const handleVisibilityChange = () => {
       if (keyboardRef.current) {
-        keyboardRef.current.style.animationPlayState = "running";
+        keyboardRef.current.style.animationPlayState = "running"
       }
 
       // Force all keys to maintain glow effect
-      const allKeys = document.querySelectorAll(".key-glow");
+      const allKeys = document.querySelectorAll(".key-glow")
       allKeys.forEach((key) => {
-        (key as HTMLElement).style.animationPlayState = "running";
+        ; (key as HTMLElement).style.animationPlayState = "running";
       });
-    };
+    }
 
-    document.addEventListener("visibilitychange", handleVisibilityChange);
+    document.addEventListener("visibilitychange", handleVisibilityChange)
 
     // Cleanup
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [preloadAudio]);
+  }, [preloadAudio])
 
   // Keyboard glow style
   const keyboardGlowStyle = {
-    boxShadow: `0 0 25px 7px ${KEYBOARD_THEME.glowColor}`,
-  };
+    boxShadow: isWindowFocused
+      ? `0 0 25px 7px ${KEYBOARD_THEME.glowColor}`
+      : `0 0 15px 5px ${KEYBOARD_THEME.unfocusedGlowColor}`,
+  }
 
   return (
     <div className="mx-auto max-w-fit backdrop:blur-sm items-center justify-center will-change-transform relative">
-      {/* Popup for typed text */}
-      <div
-        className={cn(
-          "absolute top-[-90px] left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 key-popup-animation",
-          showPopup ? "opacity-100" : "opacity-0"
-        )}
-      >
-        <div className="px-3 py-1 bg-purple-900/90 rounded-lg border border-purple-500/50 shadow-lg text-purple-100 font-mono text-lg backdrop-blur-sm">
-          {typedString || (
-            <span className="text-purple-500/50">Start typing...</span>
-          )}
-          <span className="inline-block w-2 h-5 bg-purple-400/80 ml-1 animate-pulse">|</span>
+      {/* Focus state indicator */}
+      <div className={cn(
+        "absolute -top-8 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-t-md text-xs font-mono transition-all duration-300",
+        isWindowFocused
+          ? "bg-gradient-to-r from-purple-900/80 via-indigo-900/80 to-purple-900/80 text-white border-t border-x border-purple-500/50"
+          : "bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-purple-900/40 text-white/70 border-t border-x border-purple-500/30"
+      )}>
+        <div className="flex items-center gap-2">
+          <span>{typedString.trim() || "Type to filter..."}</span>
         </div>
       </div>
 
       <div
         ref={keyboardRef}
         className={cn(
-          "rounded-xl mx-auto p-3 bg-black/90 border border-purple-500/30 keyboard-glow mt-8"
+          "rounded-xl mx-auto p-3 bg-black/90 border transition-all duration-300",
+          isWindowFocused
+            ? "border-purple-500/30 keyboard-glow"
+            : "border-purple-500/20 keyboard-glow-unfocused opacity-90"
         )}
         style={keyboardGlowStyle}
       >
@@ -213,18 +229,34 @@ const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
             <span className="block">+</span>
             <span className="block">=</span>
           </KBtn>
-          <KBtn className="w-14" keyValue="Backspace" onKeyPress={handleKeyPress}>delete</KBtn>
+          <KBtn className="w-14" keyValue="Backspace" onKeyPress={handleKeyPress}>
+            delete
+          </KBtn>
         </Row>
 
         {/* Third row */}
         <Row>
-          <KBtn className="w-14" keyValue="Tab" onKeyPress={handleKeyPress}>tab</KBtn>
-          <KBtn keyValue="q" onKeyPress={handleKeyPress}><span className="block">Q</span></KBtn>
-          <KBtn keyValue="w" onKeyPress={handleKeyPress}><span className="block">W</span></KBtn>
-          <KBtn keyValue="e" onKeyPress={handleKeyPress}><span className="block">E</span></KBtn>
-          <KBtn keyValue="r" onKeyPress={handleKeyPress}><span className="block">R</span></KBtn>
-          <KBtn keyValue="t" onKeyPress={handleKeyPress}><span className="block">T</span></KBtn>
-          <KBtn keyValue="y" onKeyPress={handleKeyPress}><span className="block">Y</span></KBtn>
+          <KBtn className="w-14" keyValue="Tab" onKeyPress={handleKeyPress}>
+            tab
+          </KBtn>
+          <KBtn keyValue="q" onKeyPress={handleKeyPress}>
+            <span className="block">Q</span>
+          </KBtn>
+          <KBtn keyValue="w" onKeyPress={handleKeyPress}>
+            <span className="block">W</span>
+          </KBtn>
+          <KBtn keyValue="e" onKeyPress={handleKeyPress}>
+            <span className="block">E</span>
+          </KBtn>
+          <KBtn keyValue="r" onKeyPress={handleKeyPress}>
+            <span className="block">R</span>
+          </KBtn>
+          <KBtn keyValue="t" onKeyPress={handleKeyPress}>
+            <span className="block">T</span>
+          </KBtn>
+          <KBtn keyValue="y" onKeyPress={handleKeyPress}>
+            <span className="block">Y</span>
+          </KBtn>
           <KBtn keyValue="u" onKeyPress={handleKeyPress}>
             <span className="block">U</span>
           </KBtn>
@@ -253,7 +285,9 @@ const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
 
         {/* Fourth Row */}
         <Row>
-          <KBtn className="w-19" onKeyPress={handleKeyPress}>caps lock</KBtn>
+          <KBtn className="w-19" onKeyPress={handleKeyPress}>
+            caps lock
+          </KBtn>
           <KBtn keyValue="a" onKeyPress={handleKeyPress}>
             <span className="block">A</span>
           </KBtn>
@@ -289,12 +323,16 @@ const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
             <span className="block">{`"`}</span>
             <span className="block">{`'`}</span>
           </KBtn>
-          <KBtn className="w-16" onKeyPress={handleKeyPress}>return</KBtn>
+          <KBtn className="w-16" onKeyPress={handleKeyPress}>
+            return
+          </KBtn>
         </Row>
 
         {/* Fifth Row */}
         <Row>
-          <KBtn className="w-[94px]" onKeyPress={handleKeyPress}>shift</KBtn>
+          <KBtn className="w-[94px]" onKeyPress={handleKeyPress}>
+            shift
+          </KBtn>
           <KBtn keyValue="z" onKeyPress={handleKeyPress}>
             <span className="block">Z</span>
           </KBtn>
@@ -328,7 +366,9 @@ const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
             <span className="block">{`?`}</span>
             <span className="block">{`/`}</span>
           </KBtn>
-          <KBtn className="w-[94px]" onKeyPress={handleKeyPress}>shift</KBtn>
+          <KBtn className="w-[94px]" onKeyPress={handleKeyPress}>
+            shift
+          </KBtn>
         </Row>
 
         {/* Sixth Row */}
@@ -355,7 +395,11 @@ const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
           </KBtn>
           <OptionKey />
           <CommandKey />
-          <KBtn className="w-[236px]" keyValue="Space" onKeyPress={handleKeyPress}></KBtn>
+          <KBtn
+            className={"w-[236px]"}
+            keyValue="Space"
+            onKeyPress={handleKeyPress}
+          ></KBtn>
           <CommandKey />
           <OptionKey />
           <div className="mt-1 h-10 p-[0.5px] rounded-[4px] flex flex-col justify-end items-center">
@@ -378,6 +422,6 @@ const Keyboard = ({ typedString = "", setTypedString }: KeyboardProps) => {
       </div>
     </div>
   );
-};
+}
 
 export default memo(Keyboard);

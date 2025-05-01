@@ -150,16 +150,6 @@ export const thingsIDo: ThingsIDo[] = [
   }
 ];
 
-// Keyboard theming
-export const KEYBOARD_THEME = {
-  baseColor: "purple",
-  glowColor: "rgba(139, 92, 246, 0.7)", // Tailwind purple-500
-  keyGradient: "from-purple-500/40 via-violet-500/30 to-indigo-500/40",
-  activeKeyGradient: "from-purple-500/80 via-violet-500/70 to-indigo-500/80",
-  hoverKeyGradient: "from-purple-500/60 via-violet-500/50 to-indigo-500/60",
-};
-
-// CSS Animations
 export const CSS_ANIMATIONS = `
   @keyframes ripple {
     0% {
@@ -181,12 +171,26 @@ export const CSS_ANIMATIONS = `
       box-shadow: 0 0 15px 5px rgba(139, 92, 246, 0.4);
     }
     50% {
-      box-shadow: 0 0 25px 10px rgba(139, 92, 246, 0.6);
+      box-shadow: 0 0 25px 10px rgba(139, 92, 246, 0.6), 0 0 35px 15px rgba(79, 70, 229, 0.3);
+    }
+  }
+
+  @keyframes breathe-unfocused {
+    0%, 100% {
+      box-shadow: 0 0 10px 3px rgba(139, 92, 246, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 15px 5px rgba(139, 92, 246, 0.3), 0 0 25px 10px rgba(79, 70, 229, 0.15);
     }
   }
   
   .keyboard-glow {
     animation: breathe 3s infinite ease-in-out;
+    animation-play-state: running !important;
+  }
+
+  .keyboard-glow-unfocused {
+    animation: breathe-unfocused 4s infinite ease-in-out;
     animation-play-state: running !important;
   }
 
@@ -212,6 +216,44 @@ export const CSS_ANIMATIONS = `
   .key-popup-animation {
     animation: appear 2s ease-in-out;
   }
+
+  @keyframes key-press {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(1px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .key-press-animation {
+    animation: key-press 0.15s ease-in-out;
+  }
+
+  @keyframes color-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .color-shift-animation {
+    background: linear-gradient(90deg,
+      rgba(139, 92, 246, 0.7),
+      rgba(79, 70, 229, 0.7),
+      rgba(59, 130, 246, 0.7),
+      rgba(139, 92, 246, 0.7));
+    background-size: 300% 100%;
+    animation: color-shift 3s infinite ease-in-out;
+  }
 `;
 
 // Audio file path
@@ -219,4 +261,12 @@ export const AUDIO_SRC = "/keyboardpress.mp3";
 
 // Timing constants
 export const KEY_PRESS_DURATION = 150;
-export const POPUP_DURATION = 2000;
+
+// Keyboard theme
+export const KEYBOARD_THEME = {
+  // Multi-color gradient with purple as the primary color
+  keyGradient: "from-purple-800 via-indigo-800 to-violet-900",
+  hoverKeyGradient: "from-purple-700 via-indigo-700 to-violet-800",
+  glowColor: "rgba(139, 92, 246, 0.5)",
+  unfocusedGlowColor: "rgba(139, 92, 246, 0.2)"
+};
