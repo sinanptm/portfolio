@@ -1,6 +1,5 @@
 import { Variants } from "framer-motion";
 
-// Keyboard theme
 export const KEYBOARD_THEME = {
   keyGradient: "from-purple-800 via-indigo-800 to-violet-900",
   hoverKeyGradient: "from-purple-700 via-indigo-700 to-violet-800",

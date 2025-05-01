@@ -39,9 +39,9 @@ const layout = ({ children }: RootLayoutProps) => {
           >
             {children}
           </ThemeProvider>
-          <Toaster />
-          <Footer />
         </HighlightBackground>
+        <Footer />
+        <Toaster />
         <Analytics debug={false} />
       </body>
     </html>
