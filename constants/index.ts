@@ -60,7 +60,7 @@ export const socialMediaLinks = [
   {
     title: 'Email',
     icon: '/assets/social/email.svg',
-    href: 'mailto:muhammedsinan0549@gmail.com',
+    href: 'mailto:sinan@codecords.com',
     smLabel: 'EM',
   },
   {
@@ -150,7 +150,7 @@ export const thingsIDo: ThingsIDo[] = [
   }
 ];
 // Audio file path
-export const AUDIO_SRC = "/keyboardpress.mp3";
+export const AUDIO_SRC = "/assets/keyboardpress.mp3";
 
 // Timing constants
 export const KEY_PRESS_DURATION = 150;
