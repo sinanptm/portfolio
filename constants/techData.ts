@@ -171,9 +171,6 @@ export const technologies: Tech[] = [
 
     // Code Quality & Logging
     { name: "ESLint", url: `${baseUrlTech}/eslint.svg` },
-    { name: "Prettier", url: `${baseUrlTech}/prettier.svg` },
-
-
     // Legacy Support
     { name: "jQuery", url: `${baseUrlTech}/jquery.svg` },
 ];
