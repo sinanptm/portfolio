@@ -34,8 +34,7 @@ const TypewriterEffect = ({
           width: "fit-content",
         },
         {
-          duration: 0.2,
-          delay: stagger(0.1, { startDelay: 0.3 }),
+          delay: stagger(0.03, { startDelay: 0.2 }),
           ease: "linear",
         }
       );
@@ -73,7 +72,7 @@ const TypewriterEffect = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          duration: 0.8,
+          duration: 0.3,
           repeat: Infinity,
           repeatType: "reverse",
         }}

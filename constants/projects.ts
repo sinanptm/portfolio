@@ -1,13 +1,12 @@
 import { Project } from "@/types";
 
-
 /**
- * Add this indexes to your project, According technologies you used.
+ * Add these indexes to your project according to technologies you used.
  */
 //eslint-disable-next-line
 const INDEXES = {
     "TypeScript": 0,
-    "Next JS": 1,
+    "Next.js": 1,
     "Nest.js": 2,
     "React": 3,
     "Redux": 4,
@@ -20,13 +19,13 @@ const INDEXES = {
     "Google AI": 11,
     "OpenAI": 12,
     "MongoDB": 13,
-    "Postgres": 14,
+    "PostgreSQL": 14,
     "Zod": 15,
     "Clean Architecture": 16,
     "SOLID Principles": 17,
-    "NodeJS": 18,
+    "Node.js": 18,
     "Express.js": 19,
-    "TailwindCSS": 20,
+    "Tailwind CSS": 20,
     "Vercel": 21,
     "Firebase": 22,
     "Razorpay": 23,
@@ -39,7 +38,7 @@ const INDEXES = {
     "OAuth": 30,
     "Joi": 31,
     "Winston": 32,
-    "shadcn": 33,
+    "Shadcn UI": 33,
     "Recharts": 34,
     "Prettier": 35,
     "ESLint": 36,
@@ -49,7 +48,7 @@ const INDEXES = {
     "Cloudflare": 40,
     "V0": 41,
     "React Hook Form": 42,
-    "Context-API": 43,
+    "Context API": 43,
     "JavaScript": 44,
     "MySQL": 45,
     "Bootstrap": 46,
@@ -65,8 +64,8 @@ const INDEXES = {
     "Cookies": 56,
     "EJS": 57,
     "Nuqs": 58,
-    "Clodinary": 59,
-    "Nextjs 15": 60,
+    "Cloudinary": 59,
+    "Next.js 15": 60,
     "React 19": 61,
     "Hostinger": 62,
     "Multer": 63,
@@ -74,7 +73,7 @@ const INDEXES = {
     "Redis": 65,
     "Passport": 66,
     "Geolocation": 67,
-    "Framer motion": 68
+    "Framer Motion": 68
 };
 
 export const projects: Project[] = [
@@ -82,7 +81,7 @@ export const projects: Project[] = [
         title: "AVM Ayurvedic: Hospital Management",
         description: "A wellness platform with AI-powered health insights, video consultations, and secure payment processing.",
         detailedDescription: "A comprehensive Ayurvedic platform with video consultations, secure payments, and real-time notifications. Optimized for performance with Google Lighthouse 90+ scores. The backend is designed for scalability and secure data handling using Node.js, Express.js, and MongoDB on AWS. It includes role-based authorization and is deployed frontend with Vercel, utilizing GitHub Actions for CI/CD.",
-        technologies: [1, 18, 19, 13, 9, 10, 17, 20, 21, 22, 23, 24, 25, 26, 27, 62, 28, 29, 30, 31, 32, 33, 51, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
+        technologies: [1, 18, 19, 13, 9, 10, 68, 17, 20, 21, 22, 23, 24, 25, 26, 27, 61, 28, 29, 30, 31, 32, 33, 51, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44],
         link: "http://avm-ayurvedic.online",
         githubLink: "https://github.com/sinanptm/hospital-management-system",
         showGitStats: true,
@@ -114,7 +113,7 @@ export const projects: Project[] = [
         title: "Trends: E-commerce Store",
         description: "A full-featured e-commerce platform with dynamic product management and secure payment integration.",
         detailedDescription: "Trends is an e-commerce store with secure authentication, Razorpay payment integration, and extensive product management. It has features like real-time chat for customer support, order tracking, and a comprehensive admin panel for managing products and sales reports. Deployed on AWS with NGINX for scalability and reliability.",
-        technologies: [18, 19, 13, 29, 7, 44, 23, 63, 30, 62, 38, 39, 54, 57, 49, 56],
+        technologies: [18, 19, 13, 29, 7, 44, 23, 62, 30, 61, 38, 39, 54, 57, 49, 56],
         link: "https://ecommerse-project.onrender.com",
         githubLink: "https://github.com/sinanptm/ecommerse-project",
         thumbnail: "/assets/projects/trends.png",
@@ -135,7 +134,7 @@ export const projects: Project[] = [
         title: "Shortify: URL Shortener API",
         description: "A scalable URL shortening service with advanced analytics and Google authentication integration.",
         detailedDescription: "A comprehensive URL shortening API featuring Google OAuth integration, Redis caching, detailed analytics with geolocation tracking, and topic-based organization. Built with TypeScript and Node.js, it includes advanced features like custom alias support, real-time analytics, and robust security measures. The system utilizes Redis for performance optimization and implements detailed click tracking with geographic distribution analysis.",
-        technologies: [0, 18, 19, 13, 65, 64, 66, 67, 29, 30, 38, 31, 50],
+        technologies: [0, 18, 19, 13, 64, 63, 65, 66, 29, 30, 38, 31, 50, 67],
         link: "https://shortify.avm-ayurvedic.online",
         githubLink: "https://github.com/sinanptm/shortify",
         thumbnail: "/assets/projects/shortify.png",
@@ -160,7 +159,7 @@ export const projects: Project[] = [
         title: "PTM Kalari Website",
         description: "A feature-rich PWA optimized for performance and usability, incorporating modern web technologies.",
         detailedDescription: "A progressive web application showcasing PTM Kalarisangam - bridging ancient Indian martial arts and healing traditions with modern technology.",
-        technologies: [60, 3, 0, 69, 20, 27, 33, 58, 51, 36],
+        technologies: [1, 3, 0, 68, 20, 27, 33, 58, 51, 36],
         link: "https://ptmkalari.vercel.app",
         githubLink: "https://github.com/sinanptm/ptm",
         thumbnail: "/assets/projects/ptm.png",
@@ -225,7 +224,7 @@ export const projects: Project[] = [
         link: "https://url-shortener-sooty-five.vercel.app",
         isLinkedin: true,
         githubLink: "https://github.com/sinanptm/url-shortener",
-        demoLink: "https://www.linkedin.com/posts/sinanptm_nestjs-typescript-nodejs-activity-7252588020401389568-tyYv?utm_source=share&utm_medium=member_desktop",
+        demoLink: "https://www.linkedin.com/posts/sinanptm_nestjs-typescript-nodejs-activity-7252588020401389567-tyYv?utm_source=share&utm_medium=member_desktop",
         thumbnail: "/assets/projects/url-shortener.png",
         achievements: [
             "Implemented click tracking and user dashboards.",

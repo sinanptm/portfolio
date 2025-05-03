@@ -67,7 +67,6 @@ const Stack = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ staggerChildren: 0.05, delayChildren: 0.8 }}
           >
             <Technologies technologies={techs} />
           </motion.div>
