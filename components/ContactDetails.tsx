@@ -16,18 +16,23 @@ const ContactDetails = () => {
             variants={containerVariants}
         >
             <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
-                <div className="w-full md:w-1/2 sm:pr-28 flex flex-col items-center">
-                    <motion.div variants={imageVariants} className="relative w-[350px] h-[350px] rounded-full overflow-hidden ring-4 ring-purple-500/20" >
+                <motion.div
+                    variants={imageVariants}
+                    className="relative w-[350px] h-[350px] flex items-center justify-center"
+                >
+                    <div className="absolute w-[300px] h-[300px] rounded-full bg-purple-500/20 ring-4 ring-purple-500/20"></div>
+
+                    <div className="relative w-[490px] h-[490px] mt-[49px]">
                         <Image
-                            src="/assets/images/me.jpg"
+                            src="/assets/avatar.png"
                             alt="Profile photo"
                             fill
-                            className="object-cover"
+                            className="object-contain"
                             sizes="(max-width: 768px) 100vw, 350px"
                             priority
                         />
-                    </motion.div>
-                </div>
+                    </div>
+                </motion.div>
 
                 <div className="w-full md:w-1/2">
                     <h2 className="text-2xl font-semibold text-white mb-6">Connect With Me</h2>
