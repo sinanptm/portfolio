@@ -57,7 +57,7 @@ const Stack = () => {
               <KeyBoard
                 setTypedString={handleType}
                 typedString={typedString}
-                label='Type to filter Technologies...'
+                label='Type to filter Techs..'
               />
             </motion.div>
           )}

@@ -1,8 +1,7 @@
 "use client";
 
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
-import { MouseEvent as ReactMouseEvent, useState } from "react";
-import CanvasRevealEffect from "@/components/ui/canvas-reveal-effect";
+import { memo, MouseEvent as ReactMouseEvent } from "react";
 import { cn } from "@/lib/utils";
 
 const CardSpotlight = ({
@@ -29,9 +28,6 @@ const CardSpotlight = ({
     mouseY.set(clientY - top);
   }
 
-  const [isHovering, setIsHovering] = useState(false);
-  const handleMouseEnter = () => setIsHovering(true);
-  const handleMouseLeave = () => setIsHovering(false);
   return (
     <div
       className={cn(
@@ -39,8 +35,6 @@ const CardSpotlight = ({
         className
       )}
       onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       {...props}
     >
       <motion.div
@@ -55,22 +49,10 @@ const CardSpotlight = ({
             )
           `,
         }}
-      >
-        {isHovering && (
-          <CanvasRevealEffect
-            animationSpeed={10}
-            containerClassName="bg-transparent absolute inset-0 pointer-events-none"
-            colors={[
-              [59, 130, 246],
-              [139, 92, 246],
-            ]}
-            dotSize={4}
-          />
-        )}
-      </motion.div>
+      />
       {children}
     </div>
   );
 };
 
-export default CardSpotlight;
+export default memo(CardSpotlight);

@@ -92,7 +92,7 @@ const Keyboard = ({ typedString = "", setTypedString, label }: KeyboardProps) =>
   }
 
   return (
-    <div className="mx-auto max-w-fit backdrop:blur-sm items-center justify-center will-change-transform relative">
+    <div className="mx-auto max-w-fit backdrop:blur-sm items-center justify-center will-change-transform relative ">
       {/* Focus state indicator */}
       <div className={cn(
         "absolute -top-8 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-t-md text-xs font-mono transition-all duration-300",
@@ -101,7 +101,7 @@ const Keyboard = ({ typedString = "", setTypedString, label }: KeyboardProps) =>
           : "bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-purple-900/40 text-white/70 border-t border-x border-purple-500/30"
       )}>
         <div className="flex items-center gap-2">
-          <span>{typedString.trim() || label}</span>
+          <input className="focus-visible:ring-0 active:ring-0 ring-0 outline-none" value={typedString.trim()} placeholder={label} onChange={(e) => setTypedString(e.target.value)} />
         </div>
       </div>
 
