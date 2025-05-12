@@ -1,17 +1,22 @@
-'use client'
-
 import { Html, useProgress } from "@react-three/drei"
-import { Progress } from "@/components/ui/progress"
+import { memo } from "react";
 
-export default function CanvasLoader() {
+const CanvasLoader = () => {
   const { progress } = useProgress()
-
   return (
     <Html center>
-      <div className="w-64 p-4 rounded-lg shadow-lg mt-32">
-        <Progress value={progress} className="w-full mb-0 h-1" />
-        <p className="text-center text-sm font-sm">{progress.toFixed(0)}%</p>
+      <div className="w-64 p-4 rounded-lg mt-32 flex flex-col items-center">
+        <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-gradient-to-r from-purple-600 to-violet-500"
+            style={{
+              width: `${progress}%`,
+              transition: "width 0.3s ease-out"
+            }}
+          />
+        </div>
       </div>
     </Html>
   )
 }
+export default memo(CanvasLoader);
