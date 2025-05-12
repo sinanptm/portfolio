@@ -25,13 +25,14 @@ const About = () => {
                         <motion.div
                             className="relative aspect-square w-full h-64 sm:h-auto max-w-xl mx-auto"
                             variants={imageVariants}
-                        >  
+                        >
                             <Image
                                 src="/assets/images/sitting.svg"
                                 alt="Illustration of a developer sitting at a desk, coding with a laptop and books around"
                                 fill
+                                priority={false}
+                                sizes="(max-width: 768px) 2.5rem, (max-width: 1200px) 3.5rem, 2.5rem"
                                 className="object-contain"
-                                priority
                             />
                         </motion.div>
 

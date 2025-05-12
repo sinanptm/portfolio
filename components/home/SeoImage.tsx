@@ -1,16 +1,13 @@
-// components/home/SeoImage.jsx
 import Image from "next/image";
 import { memo } from "react";
 
 const SeoImage = () => {
   return (
     <div
-      className="absolute overflow-hidden"
+      className="overflow-hidden"
       style={{
         width: "1px",
         height: "1px",
-        position: "absolute",
-        left: "-9999px",
       }}
     >
       <Image
