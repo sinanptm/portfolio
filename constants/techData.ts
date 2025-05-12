@@ -89,6 +89,10 @@ export const technologies: Tech[] = [
     { name: "Next JS", url: `${baseUrlTech}/nextjs.svg` },
     { name: "Vite", url: `${baseUrlTech}/vite.svg` },
 
+    // Mobile App Development
+    { name: "React Native", url: `${baseUrlTech}/react.svg` },
+    { name: "Expo", url: `${baseUrlTech}/expo.svg` },
+
     // Databases
     { name: "MongoDB", url: `${baseUrlTech}/mongodb.svg` },
     { name: "Postgres", url: `${baseUrlTech}/postgresql.svg` },
@@ -104,6 +108,10 @@ export const technologies: Tech[] = [
     { name: "Render", url: `${baseUrlTech}/render.svg` },
     { name: "Nginx", url: `${baseUrlTech}/nginx.svg` },
     { name: "Hostinger", url: `${baseUrlTech}/hostinger.png` },
+
+    // Backend Services / Headless CMS
+    { name: "Appwrite", url: `${baseUrlTech}/appwrite.svg` },
+    { name: "Strapi", url: `/assets/org/strapi.png` },
 
     // WebRTC & Real-Time Communication
     { name: "WebRTC", url: `${baseUrlTech}/webrtc.svg` },

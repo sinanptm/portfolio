@@ -93,21 +93,20 @@ export const thingsIDo: ThingsIDo[] = [
     name: "Full Stack Development",
     image: "/assets/images/fullstack.svg",
     tech: [
-      { name: "TypeScript", url: `${baseUrlTech}/typescript.svg` },
-      { name: "React", url: `${baseUrlTech}/react.svg` },
-      { name: "Next.js", url: `${baseUrlTech}/nextjs.svg` },
-      { name: "NodeJS", url: `${baseUrlTech}/nodejs.svg` },
+      { name: "Node JS", url: `${baseUrlTech}/nodejs.svg` },
+      { name: "Express JS", url: `${baseUrlTech}/express.svg` },
+      { name: "React JS", url: `${baseUrlTech}/react.svg` },
+      { name: "Next JS", url: `${baseUrlTech}/nextjs.svg` },
       { name: "Nest JS", url: `${baseUrlTech}/nestjs.svg` },
-      { name: "Redux", url: `${baseUrlTech}/redux.svg` },
-      { name: "React Query", url: `${baseUrlTech}/react-query.svg` },
+      { name: "Expo", url: `${baseUrlTech}/expo.svg` },
+      { name: "TypeScript", url: `${baseUrlTech}/typescript.svg` },
       { name: "Tailwind", url: `${baseUrlTech}/tailwind.svg` },
-      { name: "Shadcn", url: `${baseUrlTech}/shadcn.svg` },
       { name: "WebRTC", url: `${baseUrlTech}/webrtc.svg` },
     ],
     capabilities: [
       { text: 'Developing modern web applications with React, Next.js, and TypeScript', icon: '💻' },
       { text: 'Building robust backend services with Node.js and NestJS', icon: '⚙️' },
-      { text: 'Implementing real-time features using WebRTC and state management', icon: '🔄' },
+      { text: 'Creating cross-platform mobile applications using Expo and React Native', icon: '📱' }
     ]
   },
   {
