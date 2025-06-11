@@ -55,7 +55,7 @@ const About = () => {
                                 <Link href={profile.gitHub} prefetch={false}>
                                     <motion.div whileHover={buttonHover} variants={buttonVariants} whileTap={{ scale: 0.95 }}>
                                         <Button
-                                            className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white"
+                                            className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white cursor-pointer"
                                             aria-label='Star me on github'
                                         >
                                             <Image

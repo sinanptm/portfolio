@@ -40,7 +40,7 @@ const NavBar = () => {
                     </nav>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="relative z-50 inline-flex flex-col items-center justify-center w-8 h-8 space-y-2 p-1"
+                        className="relative z-50 inline-flex flex-col items-center justify-center w-8 h-8 space-y-2 p-1 cursor-pointer"
                         aria-label="Toggle menu"
                     >
                         <div className="relative w-8 h-8 flex items-center justify-center">
