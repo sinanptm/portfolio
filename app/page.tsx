@@ -4,6 +4,7 @@ import About from "@/components/home/About"
 import Name from "@/components/home/Name"
 import SeoImage from "@/components/home/SeoImage"
 import { memo } from "react"
+import DynamicMeshHero from "@/components/DynamicMeshHero";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <DynamicMeshHero />
 
       <About />
     </main>
