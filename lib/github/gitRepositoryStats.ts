@@ -13,7 +13,7 @@ const extractRepoInfo = (githubLink: string): { owner: string; repo: string; } |
 const fetchWithAuth = async (url: string) => {
     const response = await fetch(url, {
         headers: githubApiHeaders,
-        next: { revalidate: 14400 }
+        next: { revalidate: 60 * 10 }
     });
 
     if (!response.ok) {

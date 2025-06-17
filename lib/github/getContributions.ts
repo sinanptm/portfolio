@@ -8,7 +8,6 @@ export async function fetchUserPRStats(username: string): Promise<PullRequestSta
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:pr+state:open`,
       {
         headers: githubApiHeaders,
-        cache: "force-cache",
         next: {
           revalidate: 60 * 10 
         }
@@ -19,7 +18,6 @@ export async function fetchUserPRStats(username: string): Promise<PullRequestSta
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:pr+state:closed`,
       {
         headers: githubApiHeaders,
-        cache: "force-cache",
         next: {
           revalidate: 60 * 10 
         }
@@ -62,7 +60,6 @@ export async function fetchUserIssueStats(username: string): Promise<IssueStats>
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:issue+state:open`,
       {
         headers: githubApiHeaders,
-        cache: "force-cache",
         next: {
           revalidate: 60 * 10 
         }
@@ -98,7 +95,6 @@ export async function fetchAllUserPullRequests(username: string): Promise<PullRe
       `${GITHUB_API_BASE_URL}/search/issues?q=author:${username}+type:pr`,
       {
         headers: githubApiHeaders,
-        cache: "force-cache",
         next: {
           revalidate: 60 * 10 
         }
@@ -115,7 +111,6 @@ export async function fetchAllUserPullRequests(username: string): Promise<PullRe
       data.items.map(async (pr) => {
         const prDetailsResponse = await fetch(pr.pull_request.url, {
           headers: githubApiHeaders,
-          cache: "force-cache",
           next: {
             revalidate: 60 * 10 
           }
