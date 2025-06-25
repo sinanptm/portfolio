@@ -130,19 +130,19 @@ export const projects: Project[] = [
         isLinkedin: true,
         showGitStats: true,
         achievements: [
-            "🔐 MFA with email/password and OTP verification.",
-            "🌐 Google/GitHub OAuth with Firebase for secure login.",
-            "👥 RBAC with JWT for secure user/admin routes.",
-            "🛠️ Clean, modular architecture with independent logic.",
-            "📱 Responsive UI with Next.js 15 and Tailwind CSS.",
-            "🔄 Automated CI/CD using GitHub Actions.",
-            "🛡️ Security features including rate limiting, etc.",
-            "📊 Admin dashboard with comprehensive system analytics and insights.",
-            "🚀 Scalable deployment on Vercel for frontend and AWS with Nginx.",
-            "🧪 Comprehensive Jest unit and integration tests for reliability.",
-            "📧 Nodemailer for sending OTP and password reset email notifications.",
-            "🔍 End-to-end TypeScript for robust type safety across the stack.",
-            "🌟 Earned 30+ GitHub stars and strong social media recognition."
+            "🔐 Implemented multi-factor authentication with secure email/password login and OTP verification for enhanced user security.",
+            "🌐 Integrated Google and GitHub OAuth using Firebase, ensuring seamless and secure social login experiences.",
+            "👥 Established role-based access control with JWT, enabling secure and efficient management of user and admin routes.",
+            "🛠️ Designed a clean, modular architecture with independent logic layers, promoting maintainability and scalability.",
+            "📱 Crafted a fully responsive UI using Next.js 15 and Tailwind CSS, optimized for all device sizes.",
+            "🔄 Automated CI/CD pipelines with GitHub Actions, streamlining deployment and ensuring consistent updates.",
+            "🛡️ Incorporated robust security features, including rate limiting and input sanitization, to protect against common vulnerabilities.",
+            "📊 Developed an admin dashboard with comprehensive system analytics and insights for effective monitoring.",
+            "🚀 Achieved scalable deployment on Vercel for the frontend and AWS with Nginx for the backend, ensuring high availability.",
+            "🧪 Wrote comprehensive Jest unit and integration tests, ensuring reliability and robust code coverage.",
+            "📧 Utilized Nodemailer for sending OTP and password reset email notifications, enhancing user experience.",
+            "🔍 Ensured end-to-end TypeScript implementation for robust type safety and improved developer productivity.",
+            "🌟 Gained significant recognition with over 30 GitHub stars and strong engagement on social media platforms."
         ]
     },
     {
@@ -156,25 +156,25 @@ export const projects: Project[] = [
         thumbnail: "/assets/projects/avm.png",
         demoLink: "https://youtu.be/fpOPtDixtD4",
         achievements: [
-            "🌟 Achieved 90+ scores on Google Lighthouse for performance.",
-            "📹 Video Consultations: Global access with WebRTC and Socket.io.",
-            "🔔 Notifications: Real-time alerts via Socket.io.",
-            "🔐 Image Uploads: Securely managed with AWS S3 presigned URLs.",
-            "📅 Appointment Booking: Streamlined scheduling with reminders.",
-            "💳 Payments: Integrated Stripe for secure transactions.",
-            "🤖 AI Wellness Insights: Personalized health recommendations.",
-            "🌐 High-Performance Frontend: Optimized with Next.js and Vercel.",
-            "🔒 Role-Based Access Control for Admin, Doctor, and Patient.",
-            "📑 Prescription Management: Prescriptions Download for patients.",
-            "📊 Admin Dashboard: Analytics for effective management.",
-            "🛠️ Modular Architecture: Clean Architecture and SOLID principles.",
-            "⚙️ Logging: Error tracking with Winston.",
-            "📈 Analytics: Google and Vercel Analytics for optimization.",
-            "🔄 CI/CD: Automated deployment with GitHub Actions.",
-            "🖼️ SEO & Social: Open Graph and Twitter Card integration.",
-            "🎨 Responsive Design: Styled with TailwindCSS and Framer Motion.",
-            "🛡️ Data Validation: Schema validation with Zod and Joi.",
-            "🌐 Deployed on AWS with NGINX for scalability and reliability.",
+            "🌟 Achieved 90+ Google Lighthouse scores for performance, accessibility, and SEO, ensuring an optimized user experience.",
+            "📹 Enabled global video consultations using WebRTC and Socket.io, providing seamless real-time communication.",
+            "🔔 Implemented real-time notifications with Socket.io, keeping users informed with instant alerts.",
+            "🔐 Securely managed image uploads using AWS S3 presigned URLs, ensuring safe and efficient storage.",
+            "📅 Streamlined appointment booking with automated reminders, improving user engagement and scheduling efficiency.",
+            "💳 Integrated Stripe for secure and reliable payment processing, supporting multiple transaction types.",
+            "🤖 Provided AI-powered wellness insights, delivering personalized health recommendations based on user data.",
+            "🌐 Built a high-performance frontend with Next.js and Vercel, optimized for speed and scalability.",
+            "🔒 Enforced role-based access control for admin, doctor, and patient roles, ensuring secure data access.",
+            "📑 Enabled prescription management with downloadable PDFs for patients, enhancing usability.",
+            "📊 Created an admin dashboard with detailed analytics for efficient hospital management and decision-making.",
+            "🛠️ Followed clean architecture and SOLID principles, ensuring a modular and maintainable codebase.",
+            "⚙️ Implemented Winston for comprehensive error tracking and logging, improving debugging efficiency.",
+            "📈 Leveraged Google and Vercel Analytics for performance optimization and user behavior insights.",
+            "🔄 Automated CI/CD with GitHub Actions, ensuring reliable and frequent deployment cycles.",
+            "🖼️ Optimized SEO with Open Graph and Twitter Card integration, improving social media visibility.",
+            "🎨 Designed a responsive UI with TailwindCSS and Framer Motion, ensuring a modern and engaging experience.",
+            "🛡️ Ensured robust data validation using Zod and Joi, preventing invalid inputs and enhancing security.",
+            "🌐 Deployed on AWS with NGINX, ensuring high scalability and reliability for global access."
         ]
     },
     {
@@ -187,15 +187,15 @@ export const projects: Project[] = [
         thumbnail: "/assets/projects/trends.png",
         demoLink: "https://youtu.be/8w6HqmgeDcA",
         achievements: [
-            "Secure JWT-based authentication and OTP validation.",
-            "Integrated Razorpay payment gateway.",
-            "Comprehensive admin panel and sales tracking.",
-            "Deployed on AWS with NGINX for scalability and reliability.",
-            "Bootstrap for a responsive and modern UI.",
-            "PDFKIT For generating invoices.",
-            "Wallet for managing transactions.",
-            "Fully functional Cart and Wishlist functionality.",
-            "Customer support via chat."
+            "🔐 Implemented secure JWT-based authentication with OTP validation, ensuring robust user security.",
+            "💳 Integrated Razorpay payment gateway for seamless and secure online transactions across multiple payment methods.",
+            "📊 Developed a comprehensive admin panel with detailed sales tracking and reporting for business insights.",
+            "🌐 Deployed on AWS with NGINX, ensuring high scalability and reliability for handling large traffic volumes.",
+            "🎨 Utilized Bootstrap for a responsive and modern UI, optimized for cross-device compatibility.",
+            "📑 Leveraged PDFKit for generating professional invoices, improving transaction documentation for users.",
+            "💸 Introduced a wallet system for managing user transactions, enhancing payment flexibility and user experience.",
+            "🛒 Built fully functional cart and wishlist features, providing a seamless shopping experience for customers.",
+            "💬 Enabled real-time customer support via integrated chat functionality, improving user satisfaction and engagement."
         ]
     },
     {
@@ -207,20 +207,20 @@ export const projects: Project[] = [
         githubLink: "https://github.com/sinanptm/shortify",
         thumbnail: "/assets/projects/shortify.png",
         achievements: [
-            "🔐 Implemented Google OAuth 2.0 with Passport.js",
-            "⚡ Optimized performance with Redis caching system",
-            "📊 Built comprehensive analytics with geolocation tracking",
-            "🔒 Secured endpoints with JWT and HTTP-only cookies",
-            "📈 Developed topic-based URL organization system",
-            "🛡️ Implemented rate limiting and security measures",
-            "🧪 Added comprehensive test coverage with Jest",
-            "📱 Created detailed device and browser analytics",
-            "🌍 Integrated geolocation-based tracking system",
-            "🔄 Built custom collision detection for aliases",
-            "📊 Developed comparative analytics dashboard",
-            "🚀 Deployed with Nginx for high availability",
-            "📈 Implemented real-time click tracking",
-            "🛡️ Added URL sanitization and XSS protection"
+            "🔐 Integrated Google OAuth 2.0 with Passport.js, providing secure and user-friendly authentication.",
+            "⚡ Optimized performance with Redis caching, significantly reducing response times for high-traffic scenarios.",
+            "📊 Developed comprehensive analytics with geolocation tracking, offering detailed insights into URL click patterns.",
+            "🔒 Secured API endpoints with JWT and HTTP-only cookies, protecting against unauthorized access and attacks.",
+            "📈 Created a topic-based URL organization system, enabling users to categorize and manage links efficiently.",
+            "🛡️ Implemented rate limiting and security measures to safeguard the API from abuse and vulnerabilities.",
+            "🧪 Achieved high test coverage with Jest, ensuring reliability and robustness of the codebase.",
+            "📱 Provided detailed device and browser analytics, enhancing user understanding of audience behavior.",
+            "🌍 Integrated a geolocation-based tracking system for precise click distribution analysis across regions.",
+            "🔄 Built custom collision detection for URL aliases, ensuring unique and reliable short links.",
+            "📊 Developed a comparative analytics dashboard for users to evaluate link performance over time.",
+            "🚀 Deployed with Nginx for high availability and efficient load balancing under heavy traffic.",
+            "📈 Enabled real-time click tracking, providing instant feedback on URL performance.",
+            "🛡️ Added URL sanitization and XSS protection, ensuring safe link creation and usage"
         ]
     },
     {
@@ -233,16 +233,16 @@ export const projects: Project[] = [
         thumbnail: "/assets/projects/ptm.png",
         demoLink: "https://www.youtube.com/channel/UCLM9UEYxJMq2lXXjycxeOTQ",
         achievements: [
-            "🏆 Got first ranking in Google search for 'PTM Kalari'.",
-            "🌍 Built with full i18n (internationalization) support.",
-            "📱 Offline functionality for seamless user experience.",
-            "🔄 Background synchronization for data reliability.",
-            "📊 Integrated Vercel Analytics for detailed performance insights.",
-            "🖼️ Leveraged WebP/AVIF for optimized image delivery.",
-            "🎨 Modern UI with Framer Motion and Radix UI.",
-            "🛠️ Deployed with CI/CD pipelines for robust production workflows.",
-            "🚀 Lighthouse scores: 97/100 Performance, 100/100 Accessibility, 100/100 Best Practices, 100/100 SEO.",
-        ],
+            "🏆 Secured first ranking in Google search for 'PTM Kalari,' boosting visibility and organic traffic.",
+            "🌍 Implemented full i18n support, enabling seamless multilingual experiences for global users.",
+            "📱 Enabled offline functionality with PWA features, ensuring accessibility in low-connectivity environments.",
+            "🔄 Configured background synchronization for reliable data updates, even in unstable network conditions.",
+            "📊 Integrated Vercel Analytics for detailed performance insights, optimizing user experience and site efficiency.",
+            "🖼️ Optimized image delivery with WebP/AVIF formats, reducing load times and improving performance.",
+            "🎨 Designed a modern UI with Framer Motion and Radix UI, creating an engaging and intuitive interface.",
+            "🛠️ Deployed with automated CI/CD pipelines, ensuring consistent and error-free production workflows.",
+            "🚀 Achieved Lighthouse scores of 97/100 for Performance, 100/100 for Accessibility, Best Practices, and SEO"
+        ]
     },
     {
         title: "Readify: Article Management Platform",
@@ -255,15 +255,15 @@ export const projects: Project[] = [
         thumbnail: "/assets/projects/readify.png",
         demoLink: "https://www.linkedin.com/posts/sinanptm_nuqs-statemanagement-urlpersistence-activity-7259535302615080961-F5Pf?utm_source=share&utm_medium=member_desktop",
         achievements: [
-            "🕶️ Anonymous Posting: Share thoughts without an account.",
-            "🎨 Theme Customization: Toggle between light and dark themes.",
-            "📖 Personalized Feed: Customize your article feed.",
-            "👍 Like & Share: Interact with favorite articles.",
-            "🔍 Search with Debounce: Smooth, responsive searching.",
-            "📸 Cloudinary Image Uploads: Effortless image management.",
-            "📊 Nuqs State Management: Efficient search and pagination.",
-            "🔐 JWT Authentication: Secure and private access.",
-            "💻 Deployed with Vercel and GitHub Actions for CI/CD."
+            "🕶️ Enabled anonymous posting, allowing users to share content without requiring an account for enhanced privacy.",
+            "🎨 Provided theme customization with light and dark mode toggles, improving user comfort and accessibility.",
+            "📖 Built a personalized feed system, enabling users to curate articles based on their preferences.",
+            "👍 Implemented like and share functionalities, fostering user interaction and content engagement.",
+            "🔍 Integrated debounced search for smooth and responsive article discovery, optimizing performance.",
+            "📸 Managed image uploads efficiently with Cloudinary, ensuring fast and reliable media handling.",
+            "📊 Utilized Nuqs for efficient state management, streamlining search and pagination workflows.",
+            "🔐 Secured access with JWT authentication, protecting user data and ensuring private interactions.",
+            "💻 Deployed on Vercel with GitHub Actions for automated CI/CD, ensuring reliable and frequent updates"
         ]
     },
     {
@@ -277,11 +277,11 @@ export const projects: Project[] = [
         demoLink: "https://www.linkedin.com/posts/sinanptm_mern-react-redux-activity-7220717132450254848-7bGb?utm_source=share&utm_medium=member_desktop",
         thumbnail: "/assets/projects/program-manager.png",
         achievements: [
-            "Boosted performance by 70% through memoization.",
-            "Smart caching reduced API calls by 80%.",
-            "JWT authentication for security.",
-            "Implemented mark lists and participant management.",
-            "Utilized Mui Components for a smooth user experience."
+            "⚡ Improved performance by 70% through strategic memoization, optimizing rendering and data processing.",
+            "📉 Reduced API calls by 80% with smart caching techniques, enhancing application efficiency.",
+            "🔐 Implemented JWT authentication for secure access, protecting sensitive event and participant data.",
+            "📑 Developed mark lists and participant management features, streamlining event organization tasks.",
+            "🎨 Leveraged Mui Components for a smooth and intuitive user interface, improving user experience"
         ]
     },
     {
@@ -295,8 +295,8 @@ export const projects: Project[] = [
         demoLink: "https://www.linkedin.com/posts/sinanptm_nestjs-typescript-nodejs-activity-7252588020401389567-tyYv?utm_source=share&utm_medium=member_desktop",
         thumbnail: "/assets/projects/url-shortener.png",
         achievements: [
-            "Implemented click tracking and user dashboards.",
-            "Hands-on experience with NestJS and modular clean architecture.",
+            "📊 Implemented click tracking and personalized user dashboards, providing actionable insights for link performance.",
+            "🛠️ Gained hands-on experience with NestJS, focusing on modular clean architecture and dependency injection for scalability"
         ]
     },
     {
@@ -310,8 +310,8 @@ export const projects: Project[] = [
         isLinkedin: true,
         demoLink: "https://www.linkedin.com/posts/sinanptm_nextjs-typescript-cleanarchitecture-activity-7232711700452425729-J_81?utm_source=share&utm_medium=member_desktop",
         achievements: [
-            "Integrated Radix UI and Redux Toolkit.",
-            "Experienced with CI for deployment and testing."
+            "🎨 Integrated Radix UI and Redux Toolkit for efficient state management and a modern, accessible interface.",
+            "🔄 Leveraged CI pipelines for automated deployment and testing, ensuring a robust and reliable release process"
         ]
     },
     {
@@ -324,20 +324,20 @@ export const projects: Project[] = [
         showGitStats: true,
         thumbnail: "/assets/projects/c-manage.png",
         achievements: [
-            "🔐 Implemented secure JWT authentication with refresh tokens",
-            "📁 Built secure file management system using AWS S3 presigned URLs",
-            "👥 Created comprehensive role-based access control system",
-            "🎨 Developed responsive UI with Tailwind CSS and shadcn/ui",
-            "🔒 Implemented end-to-end type safety with TypeScript",
-            "🚀 Deployed frontend on Vercel and backend on AWS EC2",
-            "📊 Created admin dashboard with analytics and candidate management",
-            "🔄 Built RESTful API with Express.js following best practices",
-            "📱 Developed responsive design supporting all device sizes",
-            "🛡️ Implemented secure cookie-based session management",
-            "📄 Added comprehensive document upload and verification system",
-            "⚡ Optimized performance with proper data caching",
-            "🔍 Integrated advanced search and filtering capabilities",
-            "📈 Added real-time progress tracking for candidates"
+            "🔐 Implemented secure JWT authentication with refresh tokens, ensuring robust and seamless user sessions.",
+            "📁 Built a secure file management system with AWS S3 presigned URLs, enabling safe document uploads.",
+            "👥 Developed a comprehensive role-based access control system, managing permissions for admins and candidates.",
+            "🎨 Created a responsive UI with Tailwind CSS and shadcn/ui, optimized for all device sizes and accessibility.",
+            "🔒 Ensured end-to-end type safety with TypeScript, reducing runtime errors and improving code reliability.",
+            "🚀 Deployed frontend on Vercel and backend on AWS EC2, achieving high availability and performance.",
+            "📊 Built an admin dashboard with analytics and candidate management tools for efficient oversight.",
+            "🔄 Designed a RESTful API with Express.js, adhering to industry best practices for scalability.",
+            "📱 Optimized for responsive design, supporting seamless experiences across desktops, tablets, and mobiles.",
+            "🛡️ Implemented secure cookie-based session management, enhancing user data protection.",
+            "📄 Added a comprehensive document upload and verification system, streamlining candidate workflows.",
+            "⚡ Optimized performance with effective data caching strategies, reducing server load and latency.",
+            "🔍 Integrated advanced search and filtering capabilities, improving usability for candidate management.",
+            "📈 Enabled real-time progress tracking for candidates, enhancing transparency and engagement"
         ]
     },
     {
@@ -351,8 +351,8 @@ export const projects: Project[] = [
         isLinkedin: true,
         demoLink: "https://www.linkedin.com/posts/sinanptm_reactjs-firebase-tmdb-activity-7211610477729054720-nLr1?utm_source=share&utm_medium=member_desktop",
         achievements: [
-            "Integrated TMDb API for Netflix clone.",
-            "Firebase for secure authentication and image uploads."
+           "📡 Integrated TMDb API for the Netflix clone, enabling dynamic and real-time movie data retrieval.",
+           "🔐 Leveraged Firebase for secure authentication and efficient image uploads in the OLX clone, ensuring user safety"
         ]
     }
 ];
