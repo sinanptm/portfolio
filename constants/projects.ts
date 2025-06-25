@@ -92,21 +92,37 @@ export const projects: Project[] = [
         description: "A production-ready authentication system with clean architecture, featuring multi-factor authentication, OAuth, and role-based access control.",
         detailedDescription: "A comprehensive full-stack authentication template built with clean architecture principles, offering robust user authentication and authorization. It includes multi-factor authentication with OTP, Google and GitHub OAuth, and role-based access control for user and admin roles. The system is optimized for scalability with MongoDB, Redis caching, and a modular TypeScript-based stack. Deployed on Vercel and AWS with automated CI/CD pipelines using GitHub Actions.",
         technologies: [
-            0, 1,
-            5,
-            13, 15, 16,
-            17,
-            18,
-            19,
-            20,
-            21, 22, 27,
-            29, 31, 32, 33,
-            35, 36, 37,
-            42,
-            49, 61, 19,
-            64, 68,
-            74,
-            75, 76, 77, 78,],
+            0,  // TypeScript
+            18, // Node.js
+            19, // Express.js
+            1,  // Next.js
+            13, // MongoDB
+            76, // Inversify
+            16, // Clean Architecture
+            17, // SOLID Principles
+            20, // Tailwind CSS
+            75, // Zustand
+            77, // bcryptjs
+            78, // Nodemailer
+            27, // Radix UI
+            5,  // React Query
+            15, // Zod
+            21, // Vercel
+            22, // Firebase
+            29, // JWT
+            31, // Joi
+            32, // Winston
+            33, // Shadcn UI
+            35, // Prettier
+            36, // ESLint
+            37, // GitHub Actions
+            42, // React Hook Form
+            49, // Nodemon
+            61, // React 19
+            64, // Jest
+            68, // Framer Motion
+            74, // Lucide Icons
+        ],
         link: "https://full-stack-clean-auth-template.vercel.app",
         githubLink: "https://github.com/sinanptm/fullstack-clean-auth-template",
         thumbnail: "/assets/projects/auth-template.jpeg",

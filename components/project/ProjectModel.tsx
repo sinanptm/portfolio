@@ -66,9 +66,9 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
                         />
                     </div>
                     {project.showGitStats && githubStats && (
-                        <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+                        <div className="grid grid-cols-4 gap-3">
                             <Link href={`${project.githubLink}`}>
-                                <div className="flex items-center gap-1.5 bg-secondary/50 rounded-lg p-2">
+                                <div className="flex items-center gap-2 bg-secondary/50 rounded-lg p-3">
                                     <Image
                                         src={'/assets/icons/star.svg'}
                                         width={12}
@@ -83,7 +83,7 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
                                 </div>
                             </Link>
                             <Link href={`${project.githubLink}/forks`}>
-                                <div className="flex items-center gap-1.5 bg-secondary/50 rounded-lg p-2">
+                                <div className="flex items-center gap-2 bg-secondary/50 rounded-lg p-3">
                                     <Image
                                         src={'/assets/icons/fork.svg'}
                                         width={12}
@@ -98,7 +98,7 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
                                 </div>
                             </Link>
                             <Link href={`${project.githubLink}/issues`}>
-                                <div className="flex items-center gap-1.5 bg-secondary/50 rounded-lg p-2">
+                                <div className="flex items-center gap-2 bg-secondary/50 rounded-lg p-3">
                                     <div className="flex gap-1">
                                         <Image
                                             src={'/assets/icons/dot.svg'}
@@ -119,7 +119,7 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
                                 </div>
                             </Link>
                             <Link href={`${project.githubLink}/pulls`}>
-                                <div className="flex items-center gap-1.5 bg-secondary/50 rounded-lg p-2">
+                                <div className="flex items-center gap-2 bg-secondary/50 rounded-lg p-3">
                                     <Image
                                         src={'/assets/icons/pr.svg'}
                                         width={12}
