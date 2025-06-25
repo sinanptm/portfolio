@@ -71,7 +71,12 @@ export const skills: Tech[] = [
     { name: "Redis", url: `${badgeBase}/Redis-%23DC382D.svg?style=flat&logo=redis&logoColor=white` },
     { name: "Passport", url: `${badgeBase}/Passport-%2340AEF0.svg?style=flat&logo=passport&logoColor=white` },
     { name: "Geolocation", url: `${badgeBase}/Geolocation-%233E6E93.svg?style=flat&logo=google-maps&logoColor=white` },
-    { name: "Framer Motion", url: `${badgeBase}/Framer%20Motion-%23000000.svg?style=flat&logo=framer&logoColor=white` }
+    { name: "Framer Motion", url: `${badgeBase}/Framer%20Motion-%23000000.svg?style=flat&logo=framer&logoColor=white` },
+    { name: "Chalk", url: `${badgeBase}/Chalk-4A148C?style=flat&logo=chalk&logoColor=white` },
+    { name: "Commander", url: `${badgeBase}/Commander-6A1B9A?style=flat&logo=terminal&logoColor=white` },
+    { name: "Execa", url: `${badgeBase}/Execa-00796B?style=flat&logo=terminal&logoColor=white` },
+    { name: "Inquirer", url: `${badgeBase}/Inquirer-1565C0?style=flat&logo=inquirer&logoColor=white` },
+    { name: "Ora", url: `${badgeBase}/Ora-FF6F00?style=flat&logo=ora&logoColor=white` },
 ];
 export const baseUrlTech = "/assets/tech";
 export const technologies: Tech[] = [
@@ -137,8 +142,15 @@ export const technologies: Tech[] = [
     { name: "Three.JS", url: `${baseUrlTech}/threejs-1.svg` },
     { name: "Rombo", url: `${baseUrlTech}/rombo.svg` },
     { name: "Framer Motion", url: `${baseUrlTech}/framer-motion.svg` },
-    // { name: "Styled Components", url: `${baseUrlTech}/styled-components.svg` },
     { name: "Bootstrap", url: `${baseUrlTech}/bootstrap.svg` },
+
+    // CLI Tools
+    { name: "Chalk", url: `${baseUrlTech}/chalk.svg` },
+    { name: "Commander", url: `${baseUrlTech}/commander.svg` },
+    { name: "Execa", url: `${baseUrlTech}/execa.svg` },
+    { name: "Inquirer", url: `${baseUrlTech}/inquirer.svg` },
+    { name: "Ora", url: `${baseUrlTech}/ora.svg` },
+
 
     // Design & Prototyping
     { name: "Figma", url: `${baseUrlTech}/figma-icon.svg` },

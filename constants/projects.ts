@@ -73,7 +73,12 @@ const INDEXES = {
     "Redis": 65,
     "Passport": 66,
     "Geolocation": 67,
-    "Framer Motion": 68
+    "Framer Motion": 68,
+    "Chalk": 69,
+    "Commander": 70,
+    "Execa": 71,
+    "Inquirer": 71,
+    "Ora": 73,
 };
 
 export const projects: Project[] = [
@@ -178,7 +183,7 @@ export const projects: Project[] = [
     },
     {
         title: "Readify: Article Management Platform",
-        description:"A modern platform for discovering and managing articles with personalized feeds and theme customization.",
+        description: "A modern platform for discovering and managing articles with personalized feeds and theme customization.",
         detailedDescription: "Readify is an article management platform featuring anonymous posting, theme customization, and a personalized feed. The platform is built with Next.js 15, TailwindCSS, and Radix UI, and uses MongoDB for data storage. Cloudinary handles image uploads, and JWT ensures secure access. The project is deployed on Vercel with GitHub Actions for CI/CD.",
         technologies: [2, 0, 3, 20, 21, 24, 27, 33, 36, 37,],
         link: "http://readify-gamma.vercel.app",
@@ -200,7 +205,7 @@ export const projects: Project[] = [
     },
     {
         title: "Sahithyolsav Manager",
-        description:"A program management system with participant tracking and mark list generation for event organization.",
+        description: "A program management system with participant tracking and mark list generation for event organization.",
         detailedDescription: "Developed in three days using the MERN stack, this app includes mark lists, participant management, and caching for performance boosts. The UI is optimized for fast load times, and JWT authentication ensures data security.",
         technologies: [3, 4, 19, 18, 13],
         link: "https://sahityotsav-manager.onrender.com",
@@ -233,7 +238,7 @@ export const projects: Project[] = [
     },
     {
         title: "Ace-Quiz: Quiz App",
-        description:  "A modern quiz application with clean architecture implementation and automated deployment workflow.",
+        description: "A modern quiz application with clean architecture implementation and automated deployment workflow.",
         detailedDescription: "This quiz app focuses on scalability and maintainable code, using tools like Radix UI and Redux for efficient state management. GitHub workflows and CI enhance deployment and testing capabilities.",
         technologies: [1, 0, 13, 4, 19, 18, 27, 33],
         link: "https://quiz-app-six-dusky.vercel.app",
