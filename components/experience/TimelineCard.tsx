@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useState, useRef, useEffect, useCallback, MouseEvent } from "react";
 import type { TimelineEntry } from "@/types";
 
@@ -39,7 +39,7 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
         }
     }, [isMobile, index]);
 
-    const cardVariants = {
+    const cardVariants: Variants = {
         hidden: {
             opacity: 0,
             x: isEven ? -50 : 50,
@@ -72,9 +72,9 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
         },
     };
 
-    const textVariants = {
+    const textVariants: Variants = {
         hidden: { opacity: 0, y: 20 },
-        visible: (custom: number) => ({
+        visible: (custom) => ({
             opacity: 1,
             y: 0,
             transition: {
@@ -85,7 +85,6 @@ const TimelineCard = ({ entry, isEven, index }: TimelineCardProps) => {
             },
         }),
     };
-
     const handleMouseMove = useCallback((e: MouseEvent) => {
         if (!cardRef.current || isMobile) return;
 

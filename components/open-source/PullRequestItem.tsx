@@ -1,7 +1,7 @@
 'use client';
 
 import { memo } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { PullRequest } from "@/types/github";
 import Link from 'next/link';
 
@@ -21,7 +21,7 @@ const PullRequestItem = ({ pr, index }: { pr: PullRequest; index: number; }) => 
     'bg-blue-50/10'
   ];
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
@@ -34,7 +34,7 @@ const PullRequestItem = ({ pr, index }: { pr: PullRequest; index: number; }) => 
     }),
   };
 
-  const contentVariants = {
+  const contentVariants: Variants = {
     hidden: { opacity: 0, x: -20 },
     visible: {
       opacity: 1,
@@ -43,7 +43,7 @@ const PullRequestItem = ({ pr, index }: { pr: PullRequest; index: number; }) => 
     },
   };
 
-  const iconVariants = {
+  const iconVariants: Variants = {
     hidden: { opacity: 0, rotate: 0 },
     visible: {
       opacity: 1,

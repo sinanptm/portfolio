@@ -19,7 +19,7 @@ export const itemVariants: Variants = {
   }
 };
 
-export const containerVariants = {
+export const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -29,7 +29,7 @@ export const containerVariants = {
   },
 };
 
-export const imageVariants = {
+export const imageVariants: Variants = {
   hidden: { scale: 0.8, opacity: 0 },
   visible: {
     scale: 1,
@@ -42,7 +42,7 @@ export const imageVariants = {
   },
 };
 
-export const techIconVariants = {
+export const techIconVariants: Variants = {
   hidden: { scale: 0.8, opacity: 0 },
   visible: {
     scale: 1,
@@ -79,7 +79,7 @@ export const buttonVariants: Variants = {
   hover: { y: -3, opacity: 1 }
 };
 
-export const staggerVariants = {
+export const staggerVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i: number) => ({
     opacity: 1,
@@ -97,7 +97,7 @@ export const buttonHover = {
   transition: { duration: 0.2 }
 };
 
-export const staggerChildren = {
+export const staggerChildren: Variants = {
   visible: {
     transition: {
       staggerChildren: 0.2
@@ -105,7 +105,7 @@ export const staggerChildren = {
   }
 };
 
-export const articleVariants = {
+export const articleVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -115,7 +115,7 @@ export const articleVariants = {
   },
 };
 
-export const paragraphVariants = {
+export const paragraphVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -128,12 +128,12 @@ export const paragraphVariants = {
 };
 
 
-export const fadeInUp = {
+export const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
-export const fadeInLeft = {
+export const fadeInLeft: Variants = {
   hidden: { x: -50, opacity: 0 },
   visible: {
     x: 0,
@@ -142,7 +142,7 @@ export const fadeInLeft = {
   }
 };
 
-export const fadeInRight = {
+export const fadeInRight: Variants = {
   hidden: { x: 50, opacity: 0 },
   visible: {
     x: 0,

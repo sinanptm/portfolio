@@ -1,12 +1,12 @@
 'use client'
 
 import { memo } from "react"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion";
 import { PullRequest } from "@/types/github"
 import PullRequestItem from "./PullRequestItem"
 
 const PullRequestsList = ({ pullRequests }: { pullRequests: PullRequest[] }) => {
-  const listVariants = {
+  const listVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -17,7 +17,7 @@ const PullRequestsList = ({ pullRequests }: { pullRequests: PullRequest[] }) => 
     },
   }
 
-  const headerVariants = {
+  const headerVariants: Variants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
       opacity: 1,
