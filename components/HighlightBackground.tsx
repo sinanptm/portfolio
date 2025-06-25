@@ -7,7 +7,7 @@ import {
   useMotionTemplate,
   useSpring
 } from "framer-motion";
-import { memo, useRef, useEffect } from "react";
+import { memo, useRef, useEffect, useCallback } from "react";
 
 const HighlightBackground = ({ children }: RootLayoutProps) => {
   const mouseX = useMotionValue(0);
@@ -17,19 +17,18 @@ const HighlightBackground = ({ children }: RootLayoutProps) => {
 
   const ref = useRef<HTMLDivElement>(null);
 
-  const dotPattern = `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%23404040' id='pattern-circle' cx='10' cy='10' r='2.5'%3E%3C/circle%3E%3C/svg%3E")`;
+  const dotPattern = `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%23404040' id='pattern-circle' cx='10' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E")`;
 
-  function handleMouseMove({
+  const handleContainerMouseMove = useCallback(({
     currentTarget,
     clientX,
     clientY,
-  }: React.MouseEvent<HTMLDivElement>) {
+  }: React.MouseEvent<HTMLDivElement>) => {
     if (!currentTarget) return;
-    const { left, top } = currentTarget.getBoundingClientRect();
-
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
+    const rect = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - rect.left);
+    mouseY.set(clientY - rect.top);
+  }, [mouseX, mouseY]);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -38,14 +37,14 @@ const HighlightBackground = ({ children }: RootLayoutProps) => {
     mouseY.set(height / 2);
   }, [mouseX, mouseY]);
 
+
   return (
     <div
       className="relative w-full min-h-screen overflow-hidden"
-      onMouseMove={handleMouseMove}
+      onMouseMove={handleContainerMouseMove}
       ref={ref}
     >
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-        {/* Single purple glow */}
         <div className="absolute top-1/3 left-1/3 w-[30rem] h-[30rem] bg-purple-500/10 rounded-full filter blur-[120px]" />
 
         <div
@@ -66,14 +65,13 @@ const HighlightBackground = ({ children }: RootLayoutProps) => {
           background: useMotionTemplate`
             radial-gradient(
               600px circle at ${smoothX}px ${smoothY}px,
-              rgba(168, 85, 247, 0.08) 0%,
-              rgba(139, 92, 246, 0.02) 40%,
-              transparent 70%
+              rgba(168, 85, 247, 0.10) 0%,
+              rgba(139, 92, 246, 0.05) 30%,
+              transparent 60%
             )
           `
         }}
       />
-
       <div className="relative z-20">{children}</div>
     </div>
   );
