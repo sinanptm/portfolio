@@ -47,8 +47,8 @@ const ProjectModal = ({ isOpen, project, setOpen }: ProjectModelProps) => {
     }
 
     return (
-        <Dialog open={isOpen} onOpenChange={setOpen}>
-            <DialogContent className="sm:max-w-[625px] max-h-[90vh] overflow-y-auto">
+        <Dialog open={isOpen} onOpenChange={setOpen} modal>
+            <DialogContent className="sm:max-w-[1000px] max-h-[90vh] overflow-y-auto">
                 <DialogHeader>
                     <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
                     <DialogDescription>
