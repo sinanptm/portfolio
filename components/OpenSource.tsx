@@ -35,6 +35,7 @@ const OpenSource = () => {
                                     rotate={rotate}
                                     translateX={translateX}
                                     text={org.name}
+                                    isLink={false}
                                     show={hoveredItem === org.url}
                                 />
                                 <Link
