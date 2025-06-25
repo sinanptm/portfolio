@@ -11,7 +11,7 @@ const TechnologyIcon = ({ techIndex }: { techIndex: number }) => {
             alt={skill.name}
             width={80}
             height={20}
-            className="h-6"
+            className="h-6 cursor-pointer"
         />
     );
 };

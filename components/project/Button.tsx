@@ -29,7 +29,7 @@ const ProjectButton = ({ href, icon, text, onMouseEnter, onMouseLeave, children,
       <button
         // if you want the hover effect on links then you can add it 
         // onMouseMove={handleMouseMove}
-        className={cn(buttonBaseStyles, "transition-colors duration-300 hover:bg-gray-600 hover:text-blue-700")}
+        className={cn(buttonBaseStyles, "transition-colors cursor-pointer duration-300 hover:bg-gray-600 hover:text-blue-700")}
       >
         <Image width={10} height={10} src={icon} alt={`${text} Lint`} className="w-3 h-3 mr-1" />
         {text}

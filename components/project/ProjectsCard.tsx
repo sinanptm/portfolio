@@ -50,7 +50,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
             {project.technologies.length > 3 && (
               <button
                 onClick={() => onViewDetails(project)}
-                className="text-xs text-blue-500 hover:text-blue-600 transition-colors duration-300"
+                className="text-xs text-blue-500 cursor-pointer hover:text-blue-600 transition-colors duration-300"
               >
                 Show all..
               </button>
@@ -111,7 +111,7 @@ const ProjectCard = ({ project, onViewDetails }: ProjectCardProps) => {
           <motion.div variants={buttonVariants}>
             <button
               onClick={() => onViewDetails(project)}
-              className={cn(buttonBaseStyles, "transition-colors duration-300 hover:bg-gray-600 hover:text-slate-500")}
+              className={cn(buttonBaseStyles, " cursor-pointer transition-colors duration-300 hover:bg-gray-600 hover:text-slate-500")}
             >
               <Image width={10} height={10} src="/assets/icons/info.svg" alt="Info" className="w-3 h-3 mr-1" />
               More Details

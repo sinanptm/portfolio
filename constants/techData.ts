@@ -77,6 +77,11 @@ export const skills: Tech[] = [
     { name: "Execa", url: `${badgeBase}/Execa-00796B?style=flat&logo=terminal&logoColor=white` },
     { name: "Inquirer", url: `${badgeBase}/Inquirer-1565C0?style=flat&logo=inquirer&logoColor=white` },
     { name: "Ora", url: `${badgeBase}/Ora-FF6F00?style=flat&logo=ora&logoColor=white` },
+    { name: "Lucide Icons", url: `${badgeBase}/Lucide%20Icons-%23000000.svg?style=flat&logo=react&logoColor=white` },
+    { name: "Zustand", url: `${badgeBase}/Zustand-%232F2F2F.svg?style=flat&logo=react&logoColor=white` },
+    { name: "Inversify", url: `${badgeBase}/Inversify-%23FFD700.svg?style=flat&logo=javascript&logoColor=black` },
+    { name: "bcryptjs", url: `${badgeBase}/bcryptjs-%232E8B57.svg?style=flat&logo=javascript&logoColor=white` },
+    { name: "Nodemailer", url: `${badgeBase}/Nodemailer-%23FFA500.svg?style=flat&logo=node.js&logoColor=white` },
 ];
 export const baseUrlTech = "/assets/tech";
 export const technologies: Tech[] = [
