@@ -10,6 +10,7 @@ import type { RootLayoutProps } from "@/types";
 import { cn } from "@/lib/utils";
 import metadata from "./metadata";
 import "@/style/globals.css";
+import AccessibilityWidget from "@/components/AccessibilityWidget";
 
 const layout = ({ children }: RootLayoutProps) => {
   return (
@@ -32,6 +33,7 @@ const layout = ({ children }: RootLayoutProps) => {
           }}
         />
         <HighlightBackground>
+          <AccessibilityWidget />
           <NavBar />
           <ThemeProvider
             attribute="class"
