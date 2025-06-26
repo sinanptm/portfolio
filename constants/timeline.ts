@@ -4,10 +4,10 @@ export const timelineData: TimelineEntry[] = [
     {
         id: "codecords",
         title: "Full Stack Developer",
-        company: "Codecordes",
+        company: "Codecords",
         type: "fulltime",
         duration: {
-            start: "Mar 2024",
+            start: "Mar 2025",
             end: "Present",
         },
         description:
