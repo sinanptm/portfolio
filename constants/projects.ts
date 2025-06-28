@@ -123,8 +123,8 @@ export const projects: Project[] = [
             68, // Framer Motion
             74, // Lucide Icons
         ],
-        link: "https://full-stack-clean-auth-template.vercel.app",
-        githubLink: "https://github.com/sinanptm/fullstack-clean-auth-template",
+        link: "https://clean-auth-template.vercel.app",
+        githubLink: "https://github.com/sinanptm/clean-auth-template",
         thumbnail: "/assets/projects/auth-template.jpeg",
         demoLink: "https://www.linkedin.com/posts/sinanptm_webdevelopment-opensource-nextjs-activity-7340757181467607043-1qZd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEZ-UEEBRMD-TDWuU0pd3KhZH3Ti1MlQ-nU",
         isLinkedin: true,
