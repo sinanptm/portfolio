@@ -15,12 +15,14 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:py-8 lg:px-8">
         <div className="md:flex md:justify-between md:items-start">
           <div className="space-y-4 md:space-y-6 animate-slide-up">
-            <Link
-              href="/"
-              className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-80 transition-opacity duration-300"
-            >
-              {profile.name}
-            </Link>
+            <h3>
+              <Link
+                href="/"
+                className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-80 transition-opacity duration-300"
+              >
+                {profile.name}
+              </Link>
+            </h3>
             <p className="text-muted-foreground text-base max-w-md">
               Self-taught MERN stack developer passionate about building scalable, efficient applications.
             </p>
