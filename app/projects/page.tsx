@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Project from '@/components/Project';
 import { canonicalUrl } from '@/constants';
-import { projectsPageSchema, portfolioSchema } from './schema';
+import { projectsPageSchema } from './schema';
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -36,10 +36,7 @@ const page = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@graph": [projectsPageSchema, portfolioSchema],
-          }),
+          __html: JSON.stringify(projectsPageSchema),
         }}
       />
       <Project />

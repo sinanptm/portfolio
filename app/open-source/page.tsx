@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import OpenSource from "../../components/OpenSource";
 import { canonicalUrl } from "@/constants";
-import { openSourcePageSchema, contributionsSchema, developerProfileSchema } from './schema';
+import { openSourcePageSchema, contributionsSchema } from './schema';
 
 export const metadata: Metadata = {
     title: "Open Source",
@@ -38,7 +38,7 @@ const OpenSourcePage = () => {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@graph": [openSourcePageSchema, contributionsSchema, developerProfileSchema],
+                        "@graph": [openSourcePageSchema, contributionsSchema],
                     }),
                 }}
             />

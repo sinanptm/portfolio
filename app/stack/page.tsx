@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Stack from "../../components/Stack";
 import { canonicalUrl } from "@/constants";
-import { stackPageSchema, technologiesSchema, skillsSchema } from './schema';
+import { stackPageSchema, technologiesSchema, skillCategoriesSchema } from './schema';
 
 export const metadata: Metadata = {
   title: "Technology Stack",
@@ -37,7 +37,7 @@ const StackPage = () => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@graph": [stackPageSchema, technologiesSchema, skillsSchema],
+            "@graph": [stackPageSchema, technologiesSchema, skillCategoriesSchema],
           }),
         }}
       />

@@ -1,4 +1,4 @@
-import { hostedUrl, profile } from "@/constants";
+import { hostedUrl } from "@/constants";
 import { timelineData } from "@/constants/timeline";
 
 export const experiencePageSchema = {
@@ -6,25 +6,8 @@ export const experiencePageSchema = {
   "@type": "ProfilePage",
   "@id": `${hostedUrl}/experience#experiencepage`,
   url: `${hostedUrl}/experience`,
-  name: "Professional Experience - Muhammed Sinan",
-  description: "Explore Muhammed Sinan's professional journey as a full-stack developer, including work experience, achievements, and career growth.",
-  mainEntity: {
-    "@type": "Person",
-    "@id": `${hostedUrl}#person`,
-    name: profile.name,
-    jobTitle: "Full Stack Developer",
-    worksFor: timelineData.map(experience => ({
-      "@type": "Organization",
-      name: experience.company,
-      employee: {
-        "@type": "Person",
-        name: profile.name,
-        jobTitle: experience.title,
-        startDate: experience.duration.start,
-        endDate: experience.duration.end === "Present" ? new Date().toISOString().split('T')[0] : experience.duration.end
-      }
-    }))
-  },
+  name: "Professional Experience",
+  description: "Professional journey as a full-stack developer, including work experience and career growth.",
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -48,8 +31,8 @@ export const workExperienceSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "@id": `${hostedUrl}/experience#workexperience`,
-  name: "Work Experience",
-  description: "Professional work experience of Muhammed Sinan",
+  name: "Work Experience Timeline",
+  description: "Professional work experience and career progression",
   numberOfItems: timelineData.length,
   itemListElement: timelineData.map((experience, index) => ({
     "@type": "ListItem",
@@ -63,11 +46,6 @@ export const workExperienceSchema = {
       worksFor: {
         "@type": "Organization",
         name: experience.company
-      },
-      employee: {
-        "@type": "Person",
-        "@id": `${hostedUrl}#person`,
-        name: profile.name
       }
     }
   }))

@@ -1,4 +1,4 @@
-import { hostedUrl, profile } from "@/constants";
+import { hostedUrl } from "@/constants";
 import { technologies } from "@/constants/techData";
 
 export const stackPageSchema = {
@@ -6,20 +6,8 @@ export const stackPageSchema = {
   "@type": "ProfilePage",
   "@id": `${hostedUrl}/stack#stackpage`,
   url: `${hostedUrl}/stack`,
-  name: "Technology Stack - Muhammed Sinan",
-  description: "Explore the cutting-edge technologies and tools Muhammed Sinan uses for web development including React, Node.js, MongoDB, and more.",
-  mainEntity: {
-    "@type": "Person",
-    "@id": `${hostedUrl}#person`,
-    name: profile.name,
-    jobTitle: "Full Stack Developer",
-    knowsAbout: technologies.map(tech => tech.name),
-    hasSkill: technologies.map(tech => ({
-      "@type": "DefinedTerm",
-      name: tech.name,
-      description: `Proficient in ${tech.name} for web development`
-    }))
-  },
+  name: "Technology Stack",
+  description: "Technologies and tools used for web development including React, Node.js, MongoDB, and more.",
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
@@ -44,7 +32,7 @@ export const technologiesSchema = {
   "@type": "ItemList",
   "@id": `${hostedUrl}/stack#technologies`,
   name: "Development Technologies",
-  description: "Comprehensive list of technologies and tools used by Muhammed Sinan",
+  description: "Technologies and tools used for building scalable web applications",
   numberOfItems: technologies.length,
   itemListElement: technologies.map((tech, index) => ({
     "@type": "ListItem",
@@ -53,59 +41,53 @@ export const technologiesSchema = {
       "@type": "SoftwareApplication",
       name: tech.name,
       applicationCategory: "DeveloperTool",
-      operatingSystem: "Cross-platform",
-      description: `${tech.name} - Professional development tool used for building scalable web applications`,
-      author: {
-        "@type": "Person",
-        "@id": `${hostedUrl}#person`,
-        name: profile.name
-      }
+      description: `${tech.name} - Development tool for building web applications`
     }
   }))
 };
 
-export const skillsSchema = {
+export const skillCategoriesSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": `${hostedUrl}/stack#skills`,
-  name: profile.name,
-  jobTitle: "Full Stack Developer",
-  description: "Experienced developer with expertise across modern web technologies",
-  hasSkill: [
+  "@type": "ItemList",
+  "@id": `${hostedUrl}/stack#skillcategories`,
+  name: "Technical Skill Categories",
+  description: "Categorized technical skills and expertise areas",
+  itemListElement: [
     {
-      "@type": "DefinedTerm",
-      name: "Frontend Development",
-      description: "Expert in React, Next.js, TypeScript, and modern CSS frameworks"
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "DefinedTerm",
+        name: "Frontend Development",
+        description: "React, Next.js, TypeScript, Tailwind CSS"
+      }
     },
     {
-      "@type": "DefinedTerm",
-      name: "Backend Development",
-      description: "Proficient in Node.js, Express.js, NestJS, and API development"
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "DefinedTerm",
+        name: "Backend Development",
+        description: "Node.js, Express.js, NestJS, API development"
+      }
     },
     {
-      "@type": "DefinedTerm",
-      name: "Database Management",
-      description: "Experienced with MongoDB, PostgreSQL, MySQL, and Redis"
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "DefinedTerm",
+        name: "Database Management",
+        description: "MongoDB, PostgreSQL, MySQL, Redis"
+      }
     },
     {
-      "@type": "DefinedTerm",
-      name: "Cloud Services",
-      description: "Skilled in AWS, Firebase, Vercel, and cloud deployment"
-    },
-    {
-      "@type": "DefinedTerm",
-      name: "DevOps",
-      description: "Knowledgeable in Docker, GitHub Actions, and CI/CD pipelines"
-    }
-  ],
-  knowsLanguage: [
-    {
-      "@type": "Language",
-      name: "JavaScript"
-    },
-    {
-      "@type": "Language",
-      name: "TypeScript"
+      "@type": "ListItem",
+      position: 4,
+      item: {
+        "@type": "DefinedTerm",
+        name: "Cloud & DevOps",
+        description: "AWS, Docker, GitHub Actions, CI/CD"
+      }
     }
   ]
 };
