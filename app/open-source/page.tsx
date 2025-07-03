@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import OpenSource from "../../components/OpenSource";
 import { canonicalUrl } from "@/constants";
+import { openSourcePageSchema, contributionsSchema, developerProfileSchema } from './schema';
 
 export const metadata: Metadata = {
     title: "Open Source",
@@ -29,12 +30,21 @@ export const metadata: Metadata = {
       },
 };
 
-
 const OpenSourcePage = () => {
     return (
-        <OpenSource />
-    )
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [openSourcePageSchema, contributionsSchema, developerProfileSchema],
+                    }),
+                }}
+            />
+            <OpenSource />
+        </>
+    );
 };
-
 
 export default OpenSourcePage;

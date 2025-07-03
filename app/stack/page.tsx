@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Stack from "../../components/Stack";
 import { canonicalUrl } from "@/constants";
+import { stackPageSchema, technologiesSchema, skillsSchema } from './schema';
 
 export const metadata: Metadata = {
   title: "Technology Stack",
@@ -28,6 +29,21 @@ export const metadata: Metadata = {
   }
 };
 
-const StackPage = () => <Stack />;
+const StackPage = () => {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [stackPageSchema, technologiesSchema, skillsSchema],
+          }),
+        }}
+      />
+      <Stack />
+    </>
+  );
+};
 
 export default StackPage;

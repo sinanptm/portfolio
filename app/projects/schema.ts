@@ -35,8 +35,8 @@ export const projectsPageSchema = {
         codeRepository: project.githubLink,
         screenshot: `${hostedUrl}${project.thumbnail}`,
         featureList: project.achievements?.slice(0, 5) || [],
-        dateCreated: "2023", // You can make this more specific if you have creation dates
-        license: "MIT" // Adjust based on your actual license
+        dateCreated: "2023",
+        license: "MIT"
       }
     }))
   },

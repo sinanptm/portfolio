@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Experience from '@/components/Experience';
 import { canonicalUrl } from '@/constants';
+import { experiencePageSchema, workExperienceSchema } from './schema';
 
 export const metadata: Metadata = {
     title: "Experience | Muhammed Sinan",
@@ -30,7 +31,20 @@ export const metadata: Metadata = {
 };
 
 const ExperiencePage = () => {
-    return <Experience />;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@graph": [experiencePageSchema, workExperienceSchema],
+                    }),
+                }}
+            />
+            <Experience />
+        </>
+    );
 };
 
 export default ExperiencePage;
