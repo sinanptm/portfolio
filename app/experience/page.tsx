@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Experience from '@/components/Experience';
 import { canonicalUrl } from '@/constants';
 import { experiencePageSchema, workExperienceSchema } from './schema';
+import SchemaScripts from '@/components/SchemaScripts';
 
 export const metadata: Metadata = {
     title: "Experience | Muhammed Sinan",
@@ -33,15 +34,7 @@ export const metadata: Metadata = {
 const ExperiencePage = () => {
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@graph": [experiencePageSchema, workExperienceSchema],
-                    }),
-                }}
-            />
+            <SchemaScripts schemas={[experiencePageSchema, workExperienceSchema]} />
             <Experience />
         </>
     );

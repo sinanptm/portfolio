@@ -22,7 +22,7 @@ export const projectsPageSchema = {
         "@id": `${hostedUrl}/projects#project-${index}`,
         name: project.title,
         description: project.description,
-        url: project.link || project.githubLink,
+        url: project.githubLink,
         applicationCategory: "WebApplication",
         programmingLanguage: project.technologies.map(techIndex => skills[techIndex]?.name).filter(Boolean),
         codeRepository: project.githubLink,

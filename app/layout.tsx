@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import metadata from "./metadata";
 import "@/style/globals.css";
 import AccessibilityWidget from "@/components/AccessibilityWidget";
+import SchemaScripts from "@/components/SchemaScripts";
 
 const layout = ({ children }: RootLayoutProps) => {
   return (
@@ -23,15 +24,7 @@ const layout = ({ children }: RootLayoutProps) => {
         )}
         suppressHydrationWarning={true}
       >
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [personSchema, websiteSchema, siteNavigationSchema],
-            }),
-          }}
-        />
+        <SchemaScripts schemas={[personSchema, websiteSchema, siteNavigationSchema]} />
         <HighlightBackground>
           <AccessibilityWidget />
           <NavBar />
