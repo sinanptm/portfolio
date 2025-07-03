@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Project from '@/components/Project';
 import { canonicalUrl } from '@/constants';
 import { projectsPageSchema } from './schema';
+import SchemaScripts from '@/components/SchemaScripts';
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -33,12 +34,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(projectsPageSchema),
-        }}
-      />
+      <SchemaScripts schemas={[projectsPageSchema]} />
       <Project />
     </>
   );
