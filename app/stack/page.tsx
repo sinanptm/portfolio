@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Stack from "../../components/Stack";
 import { canonicalUrl } from "@/constants";
+import { stackPageSchema, technologiesSchema, skillCategoriesSchema } from './schema';
+import SchemaScripts from "@/components/SchemaScripts";
 
 export const metadata: Metadata = {
   title: "Technology Stack",
@@ -28,6 +30,13 @@ export const metadata: Metadata = {
   }
 };
 
-const StackPage = () => <Stack />;
+const StackPage = () => {
+  return (
+    <>
+      <SchemaScripts schemas={[stackPageSchema, technologiesSchema, skillCategoriesSchema]} />
+      <Stack />
+    </>
+  );
+};
 
 export default StackPage;

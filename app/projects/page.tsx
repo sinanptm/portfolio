@@ -1,6 +1,8 @@
-import { canonicalUrl } from '@/constants';
-import Project from '@/components/Project';
 import { Metadata } from 'next';
+import Project from '@/components/Project';
+import { canonicalUrl } from '@/constants';
+import { projectsPageSchema } from './schema';
+import SchemaScripts from '@/components/SchemaScripts';
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -31,7 +33,10 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <Project />
+    <>
+      <SchemaScripts schemas={[projectsPageSchema]} />
+      <Project />
+    </>
   );
 };
 

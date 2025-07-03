@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Experience from '@/components/Experience';
 import { canonicalUrl } from '@/constants';
+import { experiencePageSchema, workExperienceSchema } from './schema';
+import SchemaScripts from '@/components/SchemaScripts';
 
 export const metadata: Metadata = {
     title: "Experience | Muhammed Sinan",
@@ -30,7 +32,12 @@ export const metadata: Metadata = {
 };
 
 const ExperiencePage = () => {
-    return <Experience />;
+    return (
+        <>
+            <SchemaScripts schemas={[experiencePageSchema, workExperienceSchema]} />
+            <Experience />
+        </>
+    );
 };
 
 export default ExperiencePage;
