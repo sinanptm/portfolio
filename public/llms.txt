@@ -1,0 +1,30 @@
+# Muhammed Sinan - Full Stack Developer
+
+## Overview
+Muhammed Sinan is a Full Stack Developer specializing in the MERN stack, which includes MongoDB, Express, React, Node.js, and Next.js. He focuses on building scalable web applications and is open to collaboration opportunities.
+
+## Links
+
+### Personal Information
+- [Sinan](https://www.muhammedsinan.space/): <A brief introduction to Muhammed Sinan, highlighting his expertise and professional focus as a Full Stack Developer.>
+
+### Projects
+- [Projects](https://www.muhammedsinan.space/projects): <A showcase of various projects developed by Muhammed Sinan, demonstrating his skills and experience in web application development.>
+
+### Open Source Contributions
+- [Open Source](https://www.muhammedsinan.space/open-source): <Details about Muhammed Sinan's contributions to open source projects, reflecting his commitment to community and collaborative development.>
+
+- [Experience](https://www.muhammedsinan.space/experience): <An overview of Muhammed Sinan's professional background, including previous roles and responsibilities in software development.>
+
+### Technical Stack
+- [Stack](https://www.muhammedsinan.space/stack): <A detailed list of technologies and tools that Muhammed Sinan is proficient in, emphasizing his expertise in the MERN stack and related technologies.>
+
+### Contact Information
+- [Contact Me](https://www.muhammedsinan.space/contact): <Information on how to get in touch with Muhammed Sinan for potential collaborations or inquiries.>
+
+### Additional Links
+- [Star me on GitHub](https://github.com/sinanptm/portfolio): <A call to action encouraging users to star Muhammed Sinan's GitHub profile, showcasing his work and contributions.>
+- [Resume](https://www.muhammedsinan.space/resume): <A link to Muhammed Sinan's resume, providing a comprehensive view of his qualifications and professional journey.>
+
+### Title Reference
+- [Muhammed Sinan - Full Stack Developer](https://muhammedsinan.space/): <A reiteration of the main title, emphasizing his role and specialization in full stack development.>

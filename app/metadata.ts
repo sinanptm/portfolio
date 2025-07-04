@@ -128,7 +128,8 @@ export const metadata: Metadata = {
         "google-site-verification": "google332e521595495b52",
         "msapplication-TileColor": "#d830dc",
         "msapplication-TileImage": "/icons/ms-icon-144x144.png",
-        "msapplication-config": "/browserconfig.xml"
+        "msapplication-config": "/browserconfig.xml",
+        "llmls-txt": `${hostedUrl}/llmls.txt`
     },
 };
 
