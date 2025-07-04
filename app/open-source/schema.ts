@@ -6,6 +6,7 @@ export const openSourcePageSchema = {
   "@id": `${hostedUrl}/open-source#opensourcepage`,
   url: `${hostedUrl}/open-source`,
   name: "Open Source Contributions",
+  gitHubUrl: "https://github.com/sinanptm",
   description: "Contributions to open source projects and collaboration with the developer community.",
   breadcrumb: {
     "@type": "BreadcrumbList",

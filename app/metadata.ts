@@ -129,7 +129,7 @@ export const metadata: Metadata = {
         "msapplication-TileColor": "#d830dc",
         "msapplication-TileImage": "/icons/ms-icon-144x144.png",
         "msapplication-config": "/browserconfig.xml",
-        "llmls-txt": `${hostedUrl}/llmls.txt`
+        "llms-txt": `${hostedUrl}/llms.txt`
     },
 };
 
