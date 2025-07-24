@@ -3,7 +3,7 @@ import type { TimelineEntry } from "@/types";
 export const timelineData: TimelineEntry[] = [
     {
         id: "codecords",
-        title: "Full Stack Developer",
+        title: "Software Engineer",
         company: "Codecords",
         type: "fulltime",
         duration: {
