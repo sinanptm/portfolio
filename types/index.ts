@@ -19,6 +19,16 @@ export interface Tech {
     url: string;
 }
 
+export interface TechCategory {
+    id: string;
+    name: string;
+    description: string;
+    icon: string;
+    color: string;
+    technologies: Tech[];
+}
+
+
 export type Experience = {
     id: string;
     company: string;
