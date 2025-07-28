@@ -83,6 +83,7 @@ export const skills: Tech[] = [
     { name: "bcryptjs", url: `${badgeBase}/bcryptjs-%232E8B57.svg?style=flat&logo=javascript&logoColor=white` },
     { name: "Nodemailer", url: `${badgeBase}/Nodemailer-%23FFA500.svg?style=flat&logo=node.js&logoColor=white` },
 ];
+
 export const baseUrlTech = "/assets/tech";
 export const technologies: Tech[] = [
     // Languages
@@ -108,6 +109,12 @@ export const technologies: Tech[] = [
     { name: "Postgres", url: `${baseUrlTech}/postgresql.svg` },
     { name: "MySQL", url: `${baseUrlTech}/mysql.svg` },
 
+    // AI & Machine learning
+    { name: "Hugging Face", url: `${baseUrlTech}/huggingface.png` },
+    { name: "Gradio", url: `${baseUrlTech}/gradio.png` },
+    { name: "Google AI", url: `${baseUrlTech}/google-ai.svg` },
+    { name: "Together ai", url: `${baseUrlTech}/together-ai.png` },
+    { name: "OpenAI", url: `${baseUrlTech}/openai.svg` },
 
     // Cloud & Hosting
     { name: "AWS", url: `${baseUrlTech}/aws.svg` },
@@ -141,6 +148,7 @@ export const technologies: Tech[] = [
     // Payment Systems
     { name: "Stripe", url: `${baseUrlTech}/stripe.svg` },
     { name: "Razorpay", url: `${baseUrlTech}/razorpay.svg` },
+    { name: "Dodo Payments", url: `${baseUrlTech}/dodo.svg` },
 
     // Styling & Animations
     { name: "TailwindCSS", url: `${baseUrlTech}/tailwind.svg` },
@@ -166,6 +174,7 @@ export const technologies: Tech[] = [
     { name: "Shadcn", url: `${baseUrlTech}/shadcn.svg` },
     { name: "Aceternity", url: `${baseUrlTech}/aceternity.png` },
     { name: "Origin Ui", url: `${baseUrlTech}/origin.ico` },
+    { name: "Chart.js", url: `${baseUrlTech}/chartjs.svg` },
 
 
     // Authentication & Authorization
@@ -181,12 +190,9 @@ export const technologies: Tech[] = [
     { name: "Postman", url: `${baseUrlTech}/postman.svg` },
     { name: "Thunder Client", url: `${baseUrlTech}/thunder-client.png` },
 
-    // AI & Analytics
-    { name: "Google AI", url: `${baseUrlTech}/google-ai.svg` },
-    { name: "OpenAI", url: `${baseUrlTech}/openai.svg` },
+    //  Analytics
     { name: "Vercel Analytics", url: `${baseUrlTech}/vercel-analytics.svg` },
     { name: "Google Analytics", url: `${baseUrlTech}/google-analytics.svg` },
-    { name: "Chart.js", url: `${baseUrlTech}/chartjs.svg` },
 
     { name: "Winston", url: `${baseUrlTech}/winston.svg` },
     { name: "NPM", url: `${baseUrlTech}/npm.svg` },
