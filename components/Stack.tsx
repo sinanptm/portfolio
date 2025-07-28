@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import useScreen from '@/hooks/useScreen';
 import dynamic from 'next/dynamic';
 import { useCallback, useState, useEffect } from 'react';
-import { TechCategory } from '@/types';
 import { techCategories } from '@/constants/techData';
 
 const KeyBoard = dynamic(() => import("@/components/keyboard/KeyBoard"));
