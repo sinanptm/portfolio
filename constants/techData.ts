@@ -111,6 +111,8 @@ export const techCategories: TechCategory[] = [
 
             // HTTP & API Tools
             { name: "Axios", url: `${baseUrlTech}/axios.svg` },
+
+            { name: "SendGrid", url: `${baseUrlTech}/sendgrid.png` }
         ]
     },
     {
