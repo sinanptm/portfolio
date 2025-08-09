@@ -188,7 +188,7 @@ export const techCategories: TechCategory[] = [
     },
     {
         id: 'ai-payments',
-        name: 'AI & Payment Systems',
+        name: 'AI & Payment services',
         description: 'AI services and payment integration',
         icon: '🤖',
         color: 'from-violet-500 to-purple-500',
