@@ -1,5 +1,5 @@
+import { type Metadata } from "next";
 import { canonicalUrl, hostedUrl, profile } from "@/constants";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: {
